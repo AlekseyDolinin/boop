@@ -23,6 +23,7 @@
 		1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */; };
 		10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50925F174C400CD0CF6 /* Actions.swift */; };
 		10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */; };
+		10ABC50E25F1803F00CD0CF6 /* URLShortenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */; };
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerGoogleAds.swift; sourceTree = "<group>"; };
 		10ABC50925F174C400CD0CF6 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenGoogleAds.swift; sourceTree = "<group>"; };
+		10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLShortenerService.swift; sourceTree = "<group>"; };
 		38228792F87CF8A89B00B884 /* Pods-boop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boop.release.xcconfig"; path = "Target Support Files/Pods-boop/Pods-boop.release.xcconfig"; sourceTree = "<group>"; };
 		47F3F927E3E85A7B61DEBA31 /* Pods-pinch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.release.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.release.xcconfig"; sourceTree = "<group>"; };
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1099ED7925EC2E3300F53439 /* API.swift */,
+				10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
 				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
 				1099ED7725EC215E00F53439 /* StartView.swift in Sources */,
+				10ABC50E25F1803F00CD0CF6 /* URLShortenerService.swift in Sources */,
 				1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */,
 				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
