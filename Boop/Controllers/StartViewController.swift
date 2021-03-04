@@ -18,11 +18,11 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     
     enum Services: String {
         case urlShortenerService = "urlShortenerService"
-        case one = "1"
+        case rebrandly = "rebrandly"
         case two = "2"
     }
     
-    var nameSelectedService: Services = .urlShortenerService
+    var nameSelectedService: Services = .rebrandly
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,8 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         setGadFullView()
     }
     
+    
+    ///
     func createShortLink() {
         API.post(serviceName: nameSelectedService.rawValue, inputLongLink: longLink) { (responseShortLink) in
             print("response short link = \(responseShortLink)")
@@ -48,6 +50,8 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         }
     }
     
+    
+    ///
     func showControllerShare() {
         let shareController = UIActivityViewController(activityItems: [shortLink as Any], applicationActivities: nil)
         shareController.completionWithItemsHandler = {_, bool, _, _ in

@@ -7,5 +7,9 @@ target 'boop' do
 
   # Pods for boop
   
-  pod 'Google-Mobile-Ads-SDK', '~> 7.42.2'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'Alamofire', '~> 4.0'
+
+pod 'Google-Mobile-Ads-SDK', '~> 7.42.2'
+
 end

@@ -11,8 +11,10 @@ class API {
             urlShortenerService(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "1":
-            print("1")
+        case "rebrandly":
+            rebrandly(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
         case "2":
             print("2")
         default:
