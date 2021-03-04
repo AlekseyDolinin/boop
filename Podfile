@@ -7,5 +7,5 @@ target 'boop' do
 
   # Pods for boop
   
-  #pod 'Google-Mobile-Ads-SDK', '~> 7.42.2'
+  pod 'Google-Mobile-Ads-SDK', '~> 7.42.2'
 end

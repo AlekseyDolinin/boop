@@ -1,7 +1,7 @@
 import UIKit
-//import GoogleMobileAds
+import GoogleMobileAds
 
-class StartViewController: UIViewController/*,  GADBannerViewDelegate*/ {
+class StartViewController: UIViewController,  GADBannerViewDelegate, GADInterstitialDelegate {
     
     var startView: StartView! {
         guard isViewLoaded else { return nil }
@@ -9,7 +9,12 @@ class StartViewController: UIViewController/*,  GADBannerViewDelegate*/ {
     }
     
     let pasteboard = UIPasteboard.general
-//    var bannerView: GADBannerView!
+    
+    var bannerView: GADBannerView!
+    var interstitial: GADInterstitial!
+    
+    var countShowFullViewAds = 0
+    
     var longLink: String!
     var shortLink: String!
     
@@ -17,8 +22,8 @@ class StartViewController: UIViewController/*,  GADBannerViewDelegate*/ {
         super.viewDidLoad()
 
         startView.configure()
-//        setGadBanner()
-        
+        setGadBanner()
+        setGadFullView()
     }
 
     func createShortLink() {
@@ -31,18 +36,33 @@ class StartViewController: UIViewController/*,  GADBannerViewDelegate*/ {
                     self.startView.showMessage(text: "DONE 🤗")
                     self.startView.linkLabel.text = responseShortLink
                     self.shortLink = responseShortLink
-                    self.startView.clearButton.isHidden = false
+                    self.startView.alphaStackActionButtons(valueAlpha: 1.0, duration: 0.2)
                     self.startView.placeLinkButton.isUserInteractionEnabled = true
                 }
             }
         }
     }
     
+    func showControllerShare() {
+        
+//        if let dataGifForSend = dataGif {
+        let shareController = UIActivityViewController(activityItems: [shortLink as Any], applicationActivities: nil)
+            shareController.completionWithItemsHandler = {_, bool, _, _ in
+                if bool {
+                    print("it is done!")
+                } else {
+                    print("error send")
+                }
+            }
+            countShowFullViewAds = countShowFullViewAds + 1
+            present(shareController, animated: true, completion: nil)
+//        }
+    }
     
     @IBAction func tapPlaceLinkAction(_ sender: UIButton) {
         
         if startView.linkLabel.text == "Paste the link here" {
-            
+        
             let encodeString: String = (pasteboard.string)?.encodeUrl() ?? ""
             
             print("encodeString: \(encodeString)")
@@ -70,15 +90,8 @@ class StartViewController: UIViewController/*,  GADBannerViewDelegate*/ {
             } else {
                 startView.showMessage(text: "Not Found Link")
             }
-            
-        } else {
-            pasteboard.string = self.shortLink
-            startView.showMessage(text: "Link copied")
         }
     }
     
-    @IBAction func clear(_ sender: UIButton) {
-        startView.linkLabel.text = "Paste the link here"
-        self.startView.clearButton.isHidden = true
-    }
+
 }

@@ -5,14 +5,20 @@ class StartView: UIView {
     @IBOutlet weak var backViewLink: UIView!
     @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var placeLinkButton: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
+
     @IBOutlet weak var viewMessage: UIView!
     @IBOutlet weak var textMessage: UILabel!
+    
+    @IBOutlet weak var stackActionButtons: UIStackView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var copyButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
     func configure() {
         
         backViewLink.layer.cornerRadius = backViewLink.frame.height / 2
-        clearButton.isHidden = true
+//        stackActionButtons.alpha = 0
+        alphaStackActionButtons(valueAlpha: 0.0, duration: 0.0)
         viewMessage.alpha = 0
     }
     
@@ -37,6 +43,13 @@ class StartView: UIView {
             UIView.animate(withDuration: 0.1, animations: {
                 self.linkLabel.alpha = 1
             })
+        }
+    }
+    
+    
+    func alphaStackActionButtons(valueAlpha: CGFloat, duration: Double) {
+        UIView.animate(withDuration: duration) {
+            self.stackActionButtons.alpha = valueAlpha
         }
     }
 }

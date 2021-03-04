@@ -19,8 +19,8 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="pinch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="StartView" customModule="pinch" customModuleProvider="target">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="boop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="StartView" customModule="boop" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -34,10 +34,10 @@
                                 <rect key="frame" x="57" y="212" width="206" height="43"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="Opm-jd-Fru">
-                                        <rect key="frame" x="0.0" y="0.0" width="206" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="206.00000000000003" height="43"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Found Link" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-Sk-QtK">
-                                        <rect key="frame" x="0.0" y="8" width="206" height="21"/>
+                                        <rect key="frame" x="0.0" y="8" width="206" height="22"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                         <color key="textColor" name="Violet_Dark_"/>
                                         <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                 <rect key="frame" x="16" y="259" width="288" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste the link here" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL8-74-1fm">
-                                        <rect key="frame" x="16" y="11.5" width="256" height="27"/>
+                                        <rect key="frame" x="16" y="11" width="256" height="28"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="23"/>
                                         <color key="textColor" name="White_"/>
                                         <nil key="highlightedColor"/>
@@ -84,17 +84,47 @@
                                     <constraint firstItem="HL8-74-1fm" firstAttribute="centerY" secondItem="Q0j-IX-MBy" secondAttribute="centerY" id="qt3-sw-Ozj"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ci-kd-0tj">
-                                <rect key="frame" x="128" y="424" width="64" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="VlC-3F-WpC">
+                                <rect key="frame" x="46" y="333" width="228" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQD-85-HlX">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Bq5-av-Ir6"/>
+                                            <constraint firstAttribute="height" constant="60" id="iby-Jf-Ucn"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tf3-NV-AlE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lH7-Uc-U6l">
+                                        <rect key="frame" x="84" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="4hO-vk-7mC"/>
+                                            <constraint firstAttribute="height" constant="60" id="BW0-yS-AOt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="copy"/>
+                                        <connections>
+                                            <action selector="copyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EzD-M1-qTC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqg-Rm-p1L">
+                                        <rect key="frame" x="168" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Lwd-Ab-4JF"/>
+                                            <constraint firstAttribute="height" constant="60" id="sUw-xs-yA7"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="share"/>
+                                        <connections>
+                                            <action selector="shareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVL-5R-fgc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="Vvr-Qb-EeP"/>
-                                    <constraint firstAttribute="height" constant="64" id="W6b-Ze-pZa"/>
+                                    <constraint firstAttribute="height" constant="60" id="cRC-hp-g8X"/>
                                 </constraints>
-                                <state key="normal" image="clear"/>
-                                <connections>
-                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B1a-zx-dBw"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="Violet_"/>
                         <constraints>
@@ -102,20 +132,23 @@
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="88H-nI-7ub"/>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D5C-3W-azp"/>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="centerY" secondItem="oVW-cf-cpz" secondAttribute="centerY" id="Ox7-n7-LOu"/>
+                            <constraint firstItem="VlC-3F-WpC" firstAttribute="top" secondItem="Q0j-IX-MBy" secondAttribute="bottom" constant="24" id="OxV-9G-rSm"/>
                             <constraint firstItem="oVW-cf-cpz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ScM-bQ-sIa"/>
                             <constraint firstItem="oVW-cf-cpz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Taw-d0-yNz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q0j-IX-MBy" secondAttribute="trailing" constant="16" id="TxO-3R-i4z"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1ci-kd-0tj" secondAttribute="bottom" constant="80" id="UYx-Sc-iJr"/>
+                            <constraint firstItem="VlC-3F-WpC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZYd-YB-2N8"/>
                             <constraint firstItem="oVW-cf-cpz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sQO-xG-HdP"/>
                             <constraint firstItem="JWI-gY-FXf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ur4-UA-4Iv"/>
-                            <constraint firstItem="1ci-kd-0tj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vhK-US-o9Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
+                            <outlet property="backButton" destination="DQD-85-HlX" id="srk-Oh-ePU"/>
                             <outlet property="backViewLink" destination="Q0j-IX-MBy" id="hkp-TF-kLb"/>
-                            <outlet property="clearButton" destination="1ci-kd-0tj" id="iFe-MX-XpY"/>
+                            <outlet property="copyButton" destination="lH7-Uc-U6l" id="kYJ-o4-9bO"/>
                             <outlet property="linkLabel" destination="HL8-74-1fm" id="Vpt-Xn-kxl"/>
                             <outlet property="placeLinkButton" destination="HyI-50-ow9" id="XZa-9A-y7T"/>
+                            <outlet property="shareButton" destination="hqg-Rm-p1L" id="vNA-MB-9dD"/>
+                            <outlet property="stackActionButtons" destination="VlC-3F-WpC" id="0d3-O5-YrF"/>
                             <outlet property="textMessage" destination="oYT-Sk-QtK" id="hBE-fg-Fp1"/>
                             <outlet property="viewMessage" destination="JWI-gY-FXf" id="gz1-Kg-SZ0"/>
                         </connections>
@@ -127,9 +160,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="60" height="60"/>
         <image name="circles" width="568" height="568"/>
-        <image name="clear" width="64" height="64"/>
+        <image name="copy" width="60" height="60"/>
         <image name="message" width="206" height="43"/>
+        <image name="share" width="60" height="60"/>
         <namedColor name="Violet_">
             <color red="0.45490196078431372" green="0.38039215686274508" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,7 +20,9 @@
 		1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B07B25F01F3400695C37 /* JSONSerialization.swift */; };
 		1099ED7725EC215E00F53439 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7625EC215E00F53439 /* StartView.swift */; };
 		1099ED7A25EC2E3300F53439 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7925EC2E3300F53439 /* API.swift */; };
-		1099ED7C25ED732A00F53439 /* DetailGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7B25ED732A00F53439 /* DetailGoogleAds.swift */; };
+		1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */; };
+		10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50925F174C400CD0CF6 /* Actions.swift */; };
+		10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */; };
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +42,9 @@
 		1051B07B25F01F3400695C37 /* JSONSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerialization.swift; sourceTree = "<group>"; };
 		1099ED7625EC215E00F53439 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		1099ED7925EC2E3300F53439 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		1099ED7B25ED732A00F53439 /* DetailGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGoogleAds.swift; sourceTree = "<group>"; };
+		1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerGoogleAds.swift; sourceTree = "<group>"; };
+		10ABC50925F174C400CD0CF6 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenGoogleAds.swift; sourceTree = "<group>"; };
 		38228792F87CF8A89B00B884 /* Pods-boop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boop.release.xcconfig"; path = "Target Support Files/Pods-boop/Pods-boop.release.xcconfig"; sourceTree = "<group>"; };
 		47F3F927E3E85A7B61DEBA31 /* Pods-pinch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.release.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.release.xcconfig"; sourceTree = "<group>"; };
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,13 +88,12 @@
 				1051B07325EED79B00695C37 /* Info.plist */,
 				1036511E25EC1C24003F03D0 /* AppDelegate.swift */,
 				1036512225EC1C24003F03D0 /* Main.storyboard */,
-				1036512525EC1C27003F03D0 /* Assets.xcassets */,
 				1036512725EC1C27003F03D0 /* LaunchScreen.storyboard */,
 				1099ED7825EC217D00F53439 /* Views */,
 				1099ED7525EC212F00F53439 /* Controllers */,
 				1036513025EC1D62003F03D0 /* Extention&Utils */,
-				1036513325EC1F31003F03D0 /* Fonts */,
-				1099ED7925EC2E3300F53439 /* API.swift */,
+				10ABC50725F16DBC00CD0CF6 /* Network */,
+				10ABC50825F16DDE00CD0CF6 /* Resourses */,
 			);
 			path = Boop;
 			sourceTree = "<group>";
@@ -119,7 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				1036512025EC1C24003F03D0 /* StartViewController.swift */,
-				1099ED7B25ED732A00F53439 /* DetailGoogleAds.swift */,
+				10ABC50925F174C400CD0CF6 /* Actions.swift */,
+				1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */,
+				10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,6 +135,23 @@
 				1099ED7625EC215E00F53439 /* StartView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		10ABC50725F16DBC00CD0CF6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1099ED7925EC2E3300F53439 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		10ABC50825F16DDE00CD0CF6 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				1036512525EC1C27003F03D0 /* Assets.xcassets */,
+				1036513325EC1F31003F03D0 /* Fonts */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 		B3CA5024CF7F48A6A2F8C29B /* Pods */ = {
@@ -162,6 +184,7 @@
 				1036511725EC1C24003F03D0 /* Sources */,
 				1036511825EC1C24003F03D0 /* Frameworks */,
 				1036511925EC1C24003F03D0 /* Resources */,
+				E0E7EE7BBECDB262C1F13ADC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,6 +245,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E0E7EE7BBECDB262C1F13ADC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-boop/Pods-boop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-boop/Pods-boop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boop/Pods-boop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E34074C6BA25DE9CD7BBEB3A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,8 +295,10 @@
 				1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */,
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
+				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
 				1099ED7725EC215E00F53439 /* StartView.swift in Sources */,
-				1099ED7C25ED732A00F53439 /* DetailGoogleAds.swift in Sources */,
+				1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */,
+				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
 				1099ED7A25EC2E3300F53439 /* API.swift in Sources */,
 			);
