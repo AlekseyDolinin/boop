@@ -27,6 +27,10 @@
 		1036513725EC1F55003F03D0 /* AdventPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1036513425EC1F55003F03D0 /* AdventPro-Regular.ttf */; };
 		1036513825EC1F55003F03D0 /* AdventPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1036513525EC1F55003F03D0 /* AdventPro-Medium.ttf */; };
 		1036513925EC1F55003F03D0 /* AdventPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1036513625EC1F55003F03D0 /* AdventPro-Light.ttf */; };
+		103C5F5625F56A41004916E5 /* QRCodeModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C5F5525F56A41004916E5 /* QRCodeModalViewController.swift */; };
+		103C5F5825F56A54004916E5 /* QRCodeModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C5F5725F56A54004916E5 /* QRCodeModalView.swift */; };
+		103C5F5A25F57332004916E5 /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C5F5925F57332004916E5 /* CIImage.swift */; };
+		103C5F5D25F57371004916E5 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103C5F5C25F57371004916E5 /* URL.swift */; };
 		1051B07A25F01D7500695C37 /* UIString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B07925F01D7500695C37 /* UIString.swift */; };
 		1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B07B25F01F3400695C37 /* JSONSerialization.swift */; };
 		1099ED7725EC215E00F53439 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7625EC215E00F53439 /* StartView.swift */; };
@@ -61,6 +65,10 @@
 		1036513425EC1F55003F03D0 /* AdventPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Regular.ttf"; sourceTree = "<group>"; };
 		1036513525EC1F55003F03D0 /* AdventPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Medium.ttf"; sourceTree = "<group>"; };
 		1036513625EC1F55003F03D0 /* AdventPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Light.ttf"; sourceTree = "<group>"; };
+		103C5F5525F56A41004916E5 /* QRCodeModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeModalViewController.swift; sourceTree = "<group>"; };
+		103C5F5725F56A54004916E5 /* QRCodeModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeModalView.swift; sourceTree = "<group>"; };
+		103C5F5925F57332004916E5 /* CIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
+		103C5F5C25F57371004916E5 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		1051B07325EED79B00695C37 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1051B07925F01D7500695C37 /* UIString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIString.swift; sourceTree = "<group>"; };
 		1051B07B25F01F3400695C37 /* JSONSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerialization.swift; sourceTree = "<group>"; };
@@ -137,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				1036513125EC1D7D003F03D0 /* UIColors.swift */,
+				103C5F5925F57332004916E5 /* CIImage.swift */,
+				103C5F5C25F57371004916E5 /* URL.swift */,
 				1051B07925F01D7500695C37 /* UIString.swift */,
 				1051B07B25F01F3400695C37 /* JSONSerialization.swift */,
 			);
@@ -154,13 +164,30 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		1099ED7525EC212F00F53439 /* Controllers */ = {
+		103C5F5325F569FB004916E5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				1036512025EC1C24003F03D0 /* StartViewController.swift */,
 				10ABC50925F174C400CD0CF6 /* Actions.swift */,
 				102A845525F5121B00D78619 /* DelegatesStartVC.swift */,
 				10ABC51125F18AE400CD0CF6 /* ADS */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		103C5F5425F56A1A004916E5 /* QRCodeModal */ = {
+			isa = PBXGroup;
+			children = (
+				103C5F5525F56A41004916E5 /* QRCodeModalViewController.swift */,
+			);
+			path = QRCodeModal;
+			sourceTree = "<group>";
+		};
+		1099ED7525EC212F00F53439 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				103C5F5325F569FB004916E5 /* Main */,
+				103C5F5425F56A1A004916E5 /* QRCodeModal */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				1099ED7625EC215E00F53439 /* StartView.swift */,
+				103C5F5725F56A54004916E5 /* QRCodeModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,10 +375,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103C5F5A25F57332004916E5 /* CIImage.swift in Sources */,
 				102A845225F4F5D500D78619 /* Adfly.swift in Sources */,
 				1036512125EC1C24003F03D0 /* StartViewController.swift in Sources */,
 				102A844C25F4D87600D78619 /* Tinycc copy.swift in Sources */,
 				1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */,
+				103C5F5D25F57371004916E5 /* URL.swift in Sources */,
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
 				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
@@ -361,7 +391,9 @@
 				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
 				102A844825F44B5600D78619 /* Bitly.swift in Sources */,
 				102A845625F5121B00D78619 /* DelegatesStartVC.swift in Sources */,
+				103C5F5825F56A54004916E5 /* QRCodeModalView.swift in Sources */,
 				102A845025F4EDE200D78619 /* Isgd copy.swift in Sources */,
+				103C5F5625F56A41004916E5 /* QRCodeModalViewController.swift in Sources */,
 				102A845425F500AE00D78619 /* Shortio.swift in Sources */,
 				10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */,
 				102A845925F513A500D78619 /* ServiceCell.swift in Sources */,

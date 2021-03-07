@@ -33,7 +33,9 @@ extension StartViewController {
     ///
     @IBAction func generateQRCode(_ sender: UIButton) {
         print("generateQRCode")
-
+        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
+        vc.linkForQRCode = shortLink
+        present(vc, animated: true)
     }
     
     
