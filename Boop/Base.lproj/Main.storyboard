@@ -90,8 +90,8 @@
                                     <constraint firstItem="HL8-74-1fm" firstAttribute="centerY" secondItem="Q0j-IX-MBy" secondAttribute="centerY" id="qt3-sw-Ozj"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="VlC-3F-WpC">
-                                <rect key="frame" x="46" y="333" width="228" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VlC-3F-WpC">
+                                <rect key="frame" x="10" y="333" width="300" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQD-85-HlX">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -105,18 +105,29 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lH7-Uc-U6l">
-                                        <rect key="frame" x="84" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="80" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="4hO-vk-7mC"/>
                                             <constraint firstAttribute="height" constant="60" id="BW0-yS-AOt"/>
                                         </constraints>
                                         <state key="normal" image="copy"/>
                                         <connections>
-                                            <action selector="copyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EzD-M1-qTC"/>
+                                            <action selector="copyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dTn-9G-tE8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxc-oo-HXr">
+                                        <rect key="frame" x="160" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="3o8-D1-KbX"/>
+                                            <constraint firstAttribute="width" constant="60" id="zJA-ZX-tva"/>
+                                        </constraints>
+                                        <state key="normal" image="qr"/>
+                                        <connections>
+                                            <action selector="generateQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xR0-wX-VoK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqg-Rm-p1L">
-                                        <rect key="frame" x="168" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="240" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Lwd-Ab-4JF"/>
                                             <constraint firstAttribute="height" constant="60" id="sUw-xs-yA7"/>
@@ -235,6 +246,7 @@
         <image name="circles" width="568" height="568"/>
         <image name="copy" width="60" height="60"/>
         <image name="message" width="206" height="43"/>
+        <image name="qr" width="60" height="60"/>
         <image name="share" width="60" height="60"/>
         <namedColor name="Violet_">
             <color red="0.45490196078431372" green="0.38039215686274508" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

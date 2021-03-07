@@ -31,6 +31,13 @@ extension StartViewController {
     
     
     ///
+    @IBAction func generateQRCode(_ sender: UIButton) {
+        print("generateQRCode")
+
+    }
+    
+    
+    ///
     @IBAction func tapPlaceLinkAction(_ sender: UIButton) {
         if startView.linkLabel.text == "Paste the link here" {
             let encodeString: String = (pasteboard.string)?.encodeUrl() ?? ""
