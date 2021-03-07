@@ -18,6 +18,7 @@ extension StartViewController: UICollectionViewDelegate, UICollectionViewDataSou
         for cell in startView.collectionServices.visibleCells {
             if let index = (startView.collectionServices.indexPath(for: cell))?.row {
                 indexSelectedService = index
+                startView.pagination.currentPage = index
                 StartViewController.selectedService = arrayKeysServices[index]
                 startView.linkLabel.text = "Paste the link here"
                 startView.alphaStackActionButtons(valueAlpha: 0.0, duration: 0)

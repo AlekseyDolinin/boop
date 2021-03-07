@@ -37,13 +37,21 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         startView.collectionServices.delegate = self
         startView.collectionServices.dataSource = self
+        
         startView.configure()
         setGadBanner()
         setGadFullView()
+        setPagination()
     }
     
+    func setPagination() {
+        startView.pagination.numberOfPages = arrayKeysServices.count
+        startView.pagination.currentPage = indexSelectedService
+        startView.pagination.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+    }
     
     ///
     func createShortLink() {
