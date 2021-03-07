@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102A844625F444C000D78619 /* Rebrandly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844525F444C000D78619 /* Rebrandly.swift */; };
+		102A844825F44B5600D78619 /* Bitly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844725F44B5600D78619 /* Bitly.swift */; };
+		102A844A25F4520900D78619 /* Polrproject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844925F4520900D78619 /* Polrproject.swift */; };
+		102A844C25F4D87600D78619 /* Tinycc copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844B25F4D87600D78619 /* Tinycc copy.swift */; };
+		102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844D25F4DE9F00D78619 /* Chlli copy.swift */; };
+		102A845025F4EDE200D78619 /* Isgd copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844F25F4EDE100D78619 /* Isgd copy.swift */; };
+		102A845225F4F5D500D78619 /* Adfly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A845125F4F5D500D78619 /* Adfly.swift */; };
+		102A845425F500AE00D78619 /* Shortio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A845325F500AE00D78619 /* Shortio.swift */; };
 		1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036511E25EC1C24003F03D0 /* AppDelegate.swift */; };
 		1036512125EC1C24003F03D0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036512025EC1C24003F03D0 /* StartViewController.swift */; };
 		1036512425EC1C24003F03D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1036512225EC1C24003F03D0 /* Main.storyboard */; };
@@ -24,11 +32,19 @@
 		10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50925F174C400CD0CF6 /* Actions.swift */; };
 		10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */; };
 		10ABC50E25F1803F00CD0CF6 /* URLShortenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */; };
-		10ABC51025F1843000CD0CF6 /* Rebrandly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50F25F1843000CD0CF6 /* Rebrandly.swift */; };
+		10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50F25F1843000CD0CF6 /* TinyURL.swift */; };
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102A844525F444C000D78619 /* Rebrandly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rebrandly.swift; sourceTree = "<group>"; };
+		102A844725F44B5600D78619 /* Bitly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitly.swift; sourceTree = "<group>"; };
+		102A844925F4520900D78619 /* Polrproject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polrproject.swift; sourceTree = "<group>"; };
+		102A844B25F4D87600D78619 /* Tinycc copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tinycc copy.swift"; sourceTree = "<group>"; };
+		102A844D25F4DE9F00D78619 /* Chlli copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chlli copy.swift"; sourceTree = "<group>"; };
+		102A844F25F4EDE100D78619 /* Isgd copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Isgd copy.swift"; sourceTree = "<group>"; };
+		102A845125F4F5D500D78619 /* Adfly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adfly.swift; sourceTree = "<group>"; };
+		102A845325F500AE00D78619 /* Shortio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortio.swift; sourceTree = "<group>"; };
 		1036511B25EC1C24003F03D0 /* boop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1036511E25EC1C24003F03D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1036512025EC1C24003F03D0 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +64,7 @@
 		10ABC50925F174C400CD0CF6 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenGoogleAds.swift; sourceTree = "<group>"; };
 		10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLShortenerService.swift; sourceTree = "<group>"; };
-		10ABC50F25F1843000CD0CF6 /* Rebrandly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rebrandly.swift; sourceTree = "<group>"; };
+		10ABC50F25F1843000CD0CF6 /* TinyURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyURL.swift; sourceTree = "<group>"; };
 		38228792F87CF8A89B00B884 /* Pods-boop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boop.release.xcconfig"; path = "Target Support Files/Pods-boop/Pods-boop.release.xcconfig"; sourceTree = "<group>"; };
 		47F3F927E3E85A7B61DEBA31 /* Pods-pinch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.release.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.release.xcconfig"; sourceTree = "<group>"; };
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +161,15 @@
 			children = (
 				1099ED7925EC2E3300F53439 /* API.swift */,
 				10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */,
-				10ABC50F25F1843000CD0CF6 /* Rebrandly.swift */,
+				102A844525F444C000D78619 /* Rebrandly.swift */,
+				10ABC50F25F1843000CD0CF6 /* TinyURL.swift */,
+				102A844725F44B5600D78619 /* Bitly.swift */,
+				102A844B25F4D87600D78619 /* Tinycc copy.swift */,
+				102A844D25F4DE9F00D78619 /* Chlli copy.swift */,
+				102A844F25F4EDE100D78619 /* Isgd copy.swift */,
+				102A844925F4520900D78619 /* Polrproject.swift */,
+				102A845125F4F5D500D78619 /* Adfly.swift */,
+				102A845325F500AE00D78619 /* Shortio.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -305,18 +329,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102A845225F4F5D500D78619 /* Adfly.swift in Sources */,
 				1036512125EC1C24003F03D0 /* StartViewController.swift in Sources */,
+				102A844C25F4D87600D78619 /* Tinycc copy.swift in Sources */,
 				1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */,
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
 				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
+				102A844A25F4520900D78619 /* Polrproject.swift in Sources */,
 				1099ED7725EC215E00F53439 /* StartView.swift in Sources */,
 				10ABC50E25F1803F00CD0CF6 /* URLShortenerService.swift in Sources */,
 				1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */,
 				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
-				10ABC51025F1843000CD0CF6 /* Rebrandly.swift in Sources */,
+				102A844825F44B5600D78619 /* Bitly.swift in Sources */,
+				102A845025F4EDE200D78619 /* Isgd copy.swift in Sources */,
+				102A845425F500AE00D78619 /* Shortio.swift in Sources */,
+				10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */,
+				102A844625F444C000D78619 /* Rebrandly.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
 				1099ED7A25EC2E3300F53439 /* API.swift in Sources */,
+				102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

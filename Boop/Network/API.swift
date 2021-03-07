@@ -15,8 +15,38 @@ class API {
             rebrandly(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "2":
-            print("2")
+        case "tinyURL":
+            tinyURL(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+        case "bitly":
+            bitly(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+        case "tinycc":
+            tinycc(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+        case "chlli":
+            chlli(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+        case "isgd":
+            isgd(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+        case "polrproject":
+            polrproject(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+        case "adfly":
+            adfly(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+        case "shortio":
+            shortio(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
         default:
             break
         }

@@ -19,10 +19,18 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     enum Services: String {
         case urlShortenerService = "urlShortenerService"
         case rebrandly = "rebrandly"
-        case two = "2"
+        case tinyURL = "tinyURL"
+        case bitly = "bitly"
+        case tinycc = "tinycc"
+        case chlli = "chlli"
+        case isgd = "isgd"
+        case polrproject = "polrproject"
+        case adfly = "adfly"
+        case shortio = "shortio"
+        
     }
     
-    var nameSelectedService: Services = .rebrandly
+    var nameSelectedService: Services = .tinyURL
     
     override func viewDidLoad() {
         super.viewDidLoad()
