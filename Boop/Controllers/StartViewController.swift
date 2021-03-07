@@ -42,8 +42,14 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         startView.configure()
         setGadBanner()
         setGadFullView()
+        setPagination()
     }
     
+    func setPagination() {
+        startView.pagination.numberOfPages = arrayKeysServices.count
+        startView.pagination.currentPage = indexSelectedService
+        startView.pagination.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+    }
     
     ///
     func createShortLink() {

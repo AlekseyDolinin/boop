@@ -203,14 +203,19 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-b6-5mo">
+                                <rect key="frame" x="140.5" y="152" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" name="Violet_"/>
                         <constraints>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="top" secondItem="JWI-gY-FXf" secondAttribute="bottom" constant="4" id="12R-JD-P7J"/>
+                            <constraint firstItem="8hJ-b6-5mo" firstAttribute="top" secondItem="ENn-iK-tIu" secondAttribute="bottom" constant="-8" id="1Gf-xL-DAe"/>
                             <constraint firstItem="ENn-iK-tIu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7ny-1W-nGx"/>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="88H-nI-7ub"/>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D5C-3W-azp"/>
                             <constraint firstItem="ENn-iK-tIu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="IP5-pX-ijc"/>
+                            <constraint firstItem="8hJ-b6-5mo" firstAttribute="centerX" secondItem="ENn-iK-tIu" secondAttribute="centerX" id="MqI-9b-EVL"/>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="centerY" secondItem="oVW-cf-cpz" secondAttribute="centerY" id="Ox7-n7-LOu"/>
                             <constraint firstItem="VlC-3F-WpC" firstAttribute="top" secondItem="Q0j-IX-MBy" secondAttribute="bottom" constant="24" id="OxV-9G-rSm"/>
                             <constraint firstItem="oVW-cf-cpz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ScM-bQ-sIa"/>
@@ -228,6 +233,7 @@
                             <outlet property="collectionServices" destination="ENn-iK-tIu" id="FXw-HF-Zbu"/>
                             <outlet property="copyButton" destination="lH7-Uc-U6l" id="kYJ-o4-9bO"/>
                             <outlet property="linkLabel" destination="HL8-74-1fm" id="Vpt-Xn-kxl"/>
+                            <outlet property="pagination" destination="8hJ-b6-5mo" id="XDn-dJ-ggY"/>
                             <outlet property="placeLinkButton" destination="HyI-50-ow9" id="XZa-9A-y7T"/>
                             <outlet property="shareButton" destination="hqg-Rm-p1L" id="vNA-MB-9dD"/>
                             <outlet property="stackActionButtons" destination="VlC-3F-WpC" id="0d3-O5-YrF"/>
