@@ -43,12 +43,20 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         setGadBanner()
         setGadFullView()
         setPagination()
+        getVersionApp()
     }
     
     func setPagination() {
         startView.pagination.numberOfPages = arrayKeysServices.count
         startView.pagination.currentPage = indexSelectedService
         startView.pagination.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+    }
+    
+    /// получение номера версии приложения
+    func getVersionApp() {
+        let nsObject: AnyObject? = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as AnyObject
+        let version = nsObject as! String
+        startView.versionLabel.text = "version: \(version)"
     }
     
     ///

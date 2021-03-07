@@ -40,10 +40,10 @@
                                 <rect key="frame" x="57" y="212" width="206" height="43"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="Opm-jd-Fru">
-                                        <rect key="frame" x="0.0" y="0.0" width="206.00000000000003" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="206" height="43"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Found Link" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-Sk-QtK">
-                                        <rect key="frame" x="0.0" y="8" width="206" height="22"/>
+                                        <rect key="frame" x="0.0" y="8" width="206" height="21"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                         <color key="textColor" name="Violet_Dark_"/>
                                         <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                 <rect key="frame" x="16" y="259" width="288" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste the link here" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL8-74-1fm">
-                                        <rect key="frame" x="16" y="11" width="256" height="28"/>
+                                        <rect key="frame" x="16" y="11.5" width="256" height="27"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="23"/>
                                         <color key="textColor" name="White_"/>
                                         <nil key="highlightedColor"/>
@@ -206,6 +206,12 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-b6-5mo">
                                 <rect key="frame" x="140.5" y="152" width="39" height="37"/>
                             </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXG-nM-vIJ">
+                                <rect key="frame" x="143" y="535.5" width="34.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
+                                <color key="textColor" name="Violet_Dark_"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Violet_"/>
                         <constraints>
@@ -213,6 +219,7 @@
                             <constraint firstItem="8hJ-b6-5mo" firstAttribute="top" secondItem="ENn-iK-tIu" secondAttribute="bottom" constant="-8" id="1Gf-xL-DAe"/>
                             <constraint firstItem="ENn-iK-tIu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7ny-1W-nGx"/>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="88H-nI-7ub"/>
+                            <constraint firstItem="hXG-nM-vIJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BSM-PM-dP8"/>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D5C-3W-azp"/>
                             <constraint firstItem="ENn-iK-tIu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="IP5-pX-ijc"/>
                             <constraint firstItem="8hJ-b6-5mo" firstAttribute="centerX" secondItem="ENn-iK-tIu" secondAttribute="centerX" id="MqI-9b-EVL"/>
@@ -224,6 +231,7 @@
                             <constraint firstItem="VlC-3F-WpC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZYd-YB-2N8"/>
                             <constraint firstItem="oVW-cf-cpz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sQO-xG-HdP"/>
                             <constraint firstItem="JWI-gY-FXf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ur4-UA-4Iv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hXG-nM-vIJ" secondAttribute="bottom" constant="16" id="xtX-5I-rgn"/>
                             <constraint firstItem="ENn-iK-tIu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y27-Tb-SHt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -238,6 +246,7 @@
                             <outlet property="shareButton" destination="hqg-Rm-p1L" id="vNA-MB-9dD"/>
                             <outlet property="stackActionButtons" destination="VlC-3F-WpC" id="0d3-O5-YrF"/>
                             <outlet property="textMessage" destination="oYT-Sk-QtK" id="hBE-fg-Fp1"/>
+                            <outlet property="versionLabel" destination="hXG-nM-vIJ" id="Kpd-bL-hxj"/>
                             <outlet property="viewMessage" destination="JWI-gY-FXf" id="gz1-Kg-SZ0"/>
                         </connections>
                     </view>

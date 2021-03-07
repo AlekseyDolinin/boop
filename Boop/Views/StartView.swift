@@ -2,6 +2,7 @@ import UIKit
 
 class StartView: UIView {
     
+    @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var backViewLink: UIView!
     @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var placeLinkButton: UIButton!
