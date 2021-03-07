@@ -18,10 +18,10 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     var shortLink: String!
     
     enum KeysService: String {
-        case Shortener = "https://goolnk.com/******"
         case Rebrandly = "rebrand.ly/*******"
         case Chlli = "chl.li/*****"
         case Isgd = "https://is.gd/******"
+        case Shortener = "https://goolnk.com/******"
         case TinyURL = "3"
         case Bitly = "4"
         case Tinycc = "5"
@@ -30,7 +30,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         case Shortio = "10"
     }
     
-    var arrayKeysServices: [KeysService] = [.Shortener, .Rebrandly, .Chlli, .Isgd/*, .TinyURL, .Bitly, .Tinycc, .Polrproject, .Adfly, .Shortio*/]
+    var arrayKeysServices: [KeysService] = [.Rebrandly, .Chlli, .Isgd, .Shortener/*, .TinyURL, .Bitly, .Tinycc, .Polrproject, .Adfly, .Shortio*/]
     
     var indexSelectedService = 0
     static var selectedService: KeysService = .Shortener
