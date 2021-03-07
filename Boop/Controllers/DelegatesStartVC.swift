@@ -20,7 +20,7 @@ extension StartViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 indexSelectedService = index
                 StartViewController.selectedService = arrayKeysServices[index]
                 startView.linkLabel.text = "Paste the link here"
-                
+                startView.alphaStackActionButtons(valueAlpha: 0.0, duration: 0)
             }
         }
     }
