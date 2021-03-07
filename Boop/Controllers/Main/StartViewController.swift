@@ -10,13 +10,6 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         return (view as! StartView)
     }
     
-    let pasteboard = UIPasteboard.general
-    var bannerView: GADBannerView!
-    var interstitial: GADInterstitial!
-    var countShowFullViewAds = 0
-    var longLink: String!
-    var shortLink: String!
-    
     enum KeysService: String {
         case Rebrandly = "rebrand.ly/*******"
         case Chlli = "chl.li/*****"
@@ -30,8 +23,14 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         case Shortio = "10"
     }
     
+    let pasteboard = UIPasteboard.general
+    var bannerView: GADBannerView!
+    var interstitial: GADInterstitial!
+    var countShowFullViewAds = 0
+    var longLink: String!
+    var shortLink: String!
+    var pressedButtonTag: Int!
     var arrayKeysServices: [KeysService] = [.Rebrandly, .Chlli, .Isgd, .Shortener/*, .TinyURL, .Bitly, .Tinycc, .Polrproject, .Adfly, .Shortio*/]
-    
     var indexSelectedService = 0
     static var selectedService: KeysService = .Shortener
     
@@ -86,7 +85,14 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
                 print("error send")
             }
         }
-        countShowFullViewAds = countShowFullViewAds + 1
         present(shareController, animated: true, completion: nil)
+    }
+    
+    ///
+    func showQRCode() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
+        vc.linkForQRCode = shortLink
+        vc.modalPresentationStyle = .popover
+        present(vc, animated: true)
     }
 }

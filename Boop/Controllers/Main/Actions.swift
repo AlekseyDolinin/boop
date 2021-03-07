@@ -5,12 +5,13 @@ extension StartViewController {
     
     ///
     @IBAction func shareAction(_ sender: UIButton) {
-        print("share")
-        if interstitial.isReady == true && countShowFullViewAds % 2 == 0 && countShowFullViewAds > 0 {
+        pressedButtonTag = sender.tag
+        if interstitial.isReady == true && countShowFullViewAds % 3 == 0 && countShowFullViewAds > 0 {
             print("ролик готов")
             interstitial.present(fromRootViewController: self)
         } else {
             print("showControllerShare")
+            countShowFullViewAds = countShowFullViewAds + 1
             showControllerShare()
         }
     }
@@ -32,11 +33,14 @@ extension StartViewController {
     
     ///
     @IBAction func generateQRCode(_ sender: UIButton) {
-        print("generateQRCode")
-        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
-        vc.linkForQRCode = shortLink
-        vc.modalPresentationStyle = .popover
-        present(vc, animated: true)
+        pressedButtonTag = sender.tag
+        if interstitial.isReady == true && countShowFullViewAds % 3 == 0 && countShowFullViewAds > 0 {
+            print("ролик готов")
+            interstitial.present(fromRootViewController: self)
+        } else {
+            countShowFullViewAds = countShowFullViewAds + 1
+            showQRCode()
+        }
     }
     
     

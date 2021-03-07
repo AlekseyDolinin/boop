@@ -9,9 +9,6 @@ class StartView: UIView {
     @IBOutlet weak var viewMessage: UIView!
     @IBOutlet weak var textMessage: UILabel!
     @IBOutlet weak var stackActionButtons: UIStackView!
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var copyButton: UIButton!
-    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var collectionServices: UICollectionView!
     @IBOutlet weak var pagination: UIPageControl!
     

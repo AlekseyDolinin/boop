@@ -17,9 +17,13 @@ extension StartViewController {
     
     /// Tells the delegate the interstitial had been animated off the screen.
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        print("сохранение картинки после рекламы")
+        print("действие после рекламы")
         interstitial = createAndLoadInterstitial() // перезагрузка рекламного банера
-        showControllerShare()
+        if pressedButtonTag == 3 {
+            showQRCode()
+        } else if pressedButtonTag == 4 {
+            showControllerShare()
+        }
     }
     
     /// Tells the delegate an ad request succeeded.
