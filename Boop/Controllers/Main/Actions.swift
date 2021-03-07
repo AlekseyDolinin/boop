@@ -35,6 +35,7 @@ extension StartViewController {
         print("generateQRCode")
         let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
         vc.linkForQRCode = shortLink
+        vc.modalPresentationStyle = .popover
         present(vc, animated: true)
     }
     

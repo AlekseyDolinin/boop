@@ -12,8 +12,17 @@ class QRCodeModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let qrURLImage = URL(string: "https://www.avanderlee.com")?.qrImage(using: UIColor(named: "Violet_Dark_")!)
+        let imageLogo = UIImage(named: "circleLogo")!
+        let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: UIColor(named: "Violet_Dark_")!, logo: imageLogo)
         qrCodeModalView.qrCodeImage.image = convert(cmage: qrURLImage!)
+        
+        qrCodeModalView.linkLabel.text = linkForQRCode
+        
+        if #available(iOS 13, *) {
+            qrCodeModalView.isHidden = true
+        } else {
+            qrCodeModalView.isHidden = false
+        }
     }
     
     func generateQRCode(from string: String) -> UIImage? {

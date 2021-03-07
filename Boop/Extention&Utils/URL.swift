@@ -3,8 +3,14 @@ import UIKit
 extension URL {
     
     /// Creates a QR code for the current URL in the given color.
-    func qrImage(using color: UIColor) -> CIImage? {
-        return qrImage?.tinted(using: color)
+    func qrImage(using color: UIColor, logo: UIImage? = nil) -> CIImage? {
+        let tintedQRImage = qrImage?.tinted(using: color)
+        
+        guard let logo = logo?.cgImage else {
+            return tintedQRImage
+        }
+        
+        return tintedQRImage?.combined(with: CIImage(cgImage: logo))
     }
     
     /// Returns a black and white QR code for this URL.
