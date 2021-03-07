@@ -26,7 +26,7 @@ extension StartViewController {
     ///
     @IBAction func backAction(_ sender: UIButton) {
         startView.linkLabel.text = "Paste the link here"
-        self.startView.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
+        startView.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
     }
     
     
