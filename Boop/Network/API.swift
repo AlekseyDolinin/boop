@@ -4,51 +4,51 @@ class API {
     
     /// выбоор сервиса
     /// в serviceName приходит имя выбраного сервиса
-    class func post(serviceName: String, inputLongLink: String, completion: @escaping (String) -> Void) {
+    class func post(inputLongLink: String, completion: @escaping (String) -> Void) {
         
-        switch serviceName {
-        case "urlShortenerService":
+        let serviceKey = StartViewController.selectedService
+        
+        switch serviceKey {
+        case .Shortener:
             urlShortenerService(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "rebrandly":
+        case .Rebrandly:
             rebrandly(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "tinyURL":
+        case .TinyURL:
             tinyURL(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "bitly":
+        case .Bitly:
             bitly(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "tinycc":
+        case .Tinycc:
             tinycc(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "chlli":
+        case .Chlli:
             chlli(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "isgd":
+        case .Isgd:
             isgd(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "polrproject":
+        case .Polrproject:
             polrproject(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "adfly":
+        case .Adfly:
             adfly(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case "shortio":
+        case .Shortio:
             shortio(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        default:
-            break
         }
     }
 }

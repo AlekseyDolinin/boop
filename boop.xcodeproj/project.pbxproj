@@ -15,6 +15,9 @@
 		102A845025F4EDE200D78619 /* Isgd copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844F25F4EDE100D78619 /* Isgd copy.swift */; };
 		102A845225F4F5D500D78619 /* Adfly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A845125F4F5D500D78619 /* Adfly.swift */; };
 		102A845425F500AE00D78619 /* Shortio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A845325F500AE00D78619 /* Shortio.swift */; };
+		102A845625F5121B00D78619 /* DelegatesStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A845525F5121B00D78619 /* DelegatesStartVC.swift */; };
+		102A845925F513A500D78619 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A845825F513A500D78619 /* ServiceCell.swift */; };
+		102A846225F5478400D78619 /* AdventPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 102A846125F5478400D78619 /* AdventPro-Bold.ttf */; };
 		1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036511E25EC1C24003F03D0 /* AppDelegate.swift */; };
 		1036512125EC1C24003F03D0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036512025EC1C24003F03D0 /* StartViewController.swift */; };
 		1036512425EC1C24003F03D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1036512225EC1C24003F03D0 /* Main.storyboard */; };
@@ -45,6 +48,9 @@
 		102A844F25F4EDE100D78619 /* Isgd copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Isgd copy.swift"; sourceTree = "<group>"; };
 		102A845125F4F5D500D78619 /* Adfly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adfly.swift; sourceTree = "<group>"; };
 		102A845325F500AE00D78619 /* Shortio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortio.swift; sourceTree = "<group>"; };
+		102A845525F5121B00D78619 /* DelegatesStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatesStartVC.swift; sourceTree = "<group>"; };
+		102A845825F513A500D78619 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		102A846125F5478400D78619 /* AdventPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Bold.ttf"; sourceTree = "<group>"; };
 		1036511B25EC1C24003F03D0 /* boop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1036511E25EC1C24003F03D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1036512025EC1C24003F03D0 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102A845725F5137E00D78619 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				102A845825F513A500D78619 /* ServiceCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1036511225EC1C24003F03D0 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +123,7 @@
 				1036511E25EC1C24003F03D0 /* AppDelegate.swift */,
 				1036512225EC1C24003F03D0 /* Main.storyboard */,
 				1036512725EC1C27003F03D0 /* LaunchScreen.storyboard */,
+				102A845725F5137E00D78619 /* Cell */,
 				1099ED7825EC217D00F53439 /* Views */,
 				1099ED7525EC212F00F53439 /* Controllers */,
 				1036513025EC1D62003F03D0 /* Extention&Utils */,
@@ -132,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				1036513625EC1F55003F03D0 /* AdventPro-Light.ttf */,
+				102A846125F5478400D78619 /* AdventPro-Bold.ttf */,
 				1036513425EC1F55003F03D0 /* AdventPro-Regular.ttf */,
 				1036513525EC1F55003F03D0 /* AdventPro-Medium.ttf */,
 			);
@@ -143,6 +159,7 @@
 			children = (
 				1036512025EC1C24003F03D0 /* StartViewController.swift */,
 				10ABC50925F174C400CD0CF6 /* Actions.swift */,
+				102A845525F5121B00D78619 /* DelegatesStartVC.swift */,
 				10ABC51125F18AE400CD0CF6 /* ADS */,
 			);
 			path = Controllers;
@@ -277,6 +294,7 @@
 				1036512425EC1C24003F03D0 /* Main.storyboard in Resources */,
 				1036513725EC1F55003F03D0 /* AdventPro-Regular.ttf in Resources */,
 				1036513925EC1F55003F03D0 /* AdventPro-Light.ttf in Resources */,
+				102A846225F5478400D78619 /* AdventPro-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +360,11 @@
 				1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */,
 				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
 				102A844825F44B5600D78619 /* Bitly.swift in Sources */,
+				102A845625F5121B00D78619 /* DelegatesStartVC.swift in Sources */,
 				102A845025F4EDE200D78619 /* Isgd copy.swift in Sources */,
 				102A845425F500AE00D78619 /* Shortio.swift in Sources */,
 				10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */,
+				102A845925F513A500D78619 /* ServiceCell.swift in Sources */,
 				102A844625F444C000D78619 /* Rebrandly.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
 				1099ED7A25EC2E3300F53439 /* API.swift in Sources */,

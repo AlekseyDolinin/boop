@@ -26,6 +26,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>AdventPro-Light</string>
+		<string>AdventPro-Bold</string>
 		<string>AdventPro-Regular</string>
 		<string>AdventPro-Medium</string>
 	</array>

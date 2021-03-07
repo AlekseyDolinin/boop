@@ -35,8 +35,12 @@ extension StartViewController {
         if startView.linkLabel.text == "Paste the link here" {
             let encodeString: String = (pasteboard.string)?.encodeUrl() ?? ""
             print("encodeString: \(encodeString)")
+            
+            /// проверка вставлена ссылка или просто текст
             if let longLink = URL(string: encodeString), let scheme = longLink.scheme {
+                
                 let host: String! = longLink.host
+                
                 if host == "goolnk.com" {
                     startView.showMessage(text: "Not Found Link")
                     return
