@@ -92,7 +92,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     func showQRCode() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
         vc.linkForQRCode = shortLink
-        vc.modalPresentationStyle = .popover
-        present(vc, animated: true)
+        vc.modalPresentationStyle = .formSheet
+        present(vc, animated: true, completion: nil)
     }
 }
