@@ -2,7 +2,6 @@ import UIKit
 
 extension StartViewController {
 
-    
     ///
     @IBAction func shareAction(_ sender: UIButton) {
         pressedButtonTag = sender.tag
