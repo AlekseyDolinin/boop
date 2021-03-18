@@ -264,6 +264,7 @@
 			buildConfigurationList = 1036512D25EC1C27003F03D0 /* Build configuration list for PBXNativeTarget "boop" */;
 			buildPhases = (
 				E34074C6BA25DE9CD7BBEB3A /* [CP] Check Pods Manifest.lock */,
+				5EF7B64F5E84919A09459016 /* [CP] Prepare Artifacts */,
 				1036511725EC1C24003F03D0 /* Sources */,
 				1036511825EC1C24003F03D0 /* Frameworks */,
 				1036511925EC1C24003F03D0 /* Resources */,
@@ -329,6 +330,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5EF7B64F5E84919A09459016 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-boop/Pods-boop-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-boop/Pods-boop-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boop/Pods-boop-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E0E7EE7BBECDB262C1F13ADC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -550,11 +568,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
 				INFOPLIST_FILE = "$(SRCROOT)/Boop/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -570,11 +589,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
 				INFOPLIST_FILE = "$(SRCROOT)/Boop/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

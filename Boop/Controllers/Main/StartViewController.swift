@@ -1,5 +1,7 @@
 import UIKit
 import GoogleMobileAds
+import AppTrackingTransparency
+import AdSupport
 
 class StartViewController: UIViewController,  GADBannerViewDelegate, GADInterstitialDelegate {
     
@@ -44,6 +46,15 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         setPagination()
         getVersionApp()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if #available(iOS 14, *) {
+            requestIDFA()
+        }
+    }
+    
     
     func setPagination() {
         startView.pagination.numberOfPages = arrayKeysServices.count
@@ -94,5 +105,14 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         vc.linkForQRCode = shortLink
         vc.modalPresentationStyle = .formSheet
         present(vc, animated: true, completion: nil)
+    }
+    
+    
+    ///
+    func requestIDFA() {
+      ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+        // Tracking authorization completed. Start loading ads here.
+        // loadAd()
+      })
     }
 }

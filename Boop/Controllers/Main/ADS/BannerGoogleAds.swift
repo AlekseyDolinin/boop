@@ -9,8 +9,8 @@ extension StartViewController {
         }
 
         bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //demo
-//        bannerView.adUnitID = "ca-app-pub-8093774413708674/4226978835"
+//        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //demo
+        bannerView.adUnitID = "ca-app-pub-8093774413708674/4226978835"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self

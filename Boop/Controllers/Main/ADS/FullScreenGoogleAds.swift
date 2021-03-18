@@ -8,8 +8,8 @@ extension StartViewController {
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910") //demo)
-//        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8093774413708674/8226342711")
+//        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910") //demo)
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8093774413708674/8226342711")
         interstitial.delegate = self
         interstitial.load(GADRequest())
         return interstitial
