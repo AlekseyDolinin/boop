@@ -23,6 +23,10 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         case Polrproject = "8"
         case Adfly = "9"
         case Shortio = "10"
+        case Shortio = "https://clck.ru"
+        case Shortio = "https://www.lnnkin.com/api-integration/guide"
+        case Shortio = "https://to.click"
+        case Shortio = "http://www.tiny-url.info"
     }
     
     let pasteboard = UIPasteboard.general
