@@ -7,10 +7,15 @@ extension StartViewController {
         if let banner = bannerView {
             banner.removeFromSuperview()
         }
-
+        
         bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-//        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" //demo
+        
+        #if DEBUG
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #else
         bannerView.adUnitID = "ca-app-pub-8093774413708674/4226978835"
+        #endif
+
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self

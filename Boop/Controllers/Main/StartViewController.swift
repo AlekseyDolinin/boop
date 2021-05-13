@@ -1,6 +1,5 @@
 import UIKit
 import GoogleMobileAds
-import AppTrackingTransparency
 import AdSupport
 
 class StartViewController: UIViewController,  GADBannerViewDelegate, GADInterstitialDelegate {
@@ -17,16 +16,15 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         case Chlli = "chl.li/*****"
         case Isgd = "https://is.gd/******"
         case Shortener = "https://goolnk.com/******"
-        case TinyURL = "3"
         case Bitly = "4"
         case Tinycc = "5"
         case Polrproject = "8"
         case Adfly = "9"
         case Shortio = "10"
-        case Shortio = "https://clck.ru"
-        case Shortio = "https://www.lnnkin.com/api-integration/guide"
-        case Shortio = "https://to.click"
-        case Shortio = "http://www.tiny-url.info"
+        case Click = "https://clck.ru"
+        case Lnnkin = "https://www.lnnkin.com/api-integration/guide"
+        case ToClick = "https://to.click"
+        case TinyURL = "http://www.tiny-url.info"
     }
     
     let pasteboard = UIPasteboard.general
@@ -49,16 +47,11 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         setGadFullView()
         setPagination()
         getVersionApp()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
         
-        if #available(iOS 14, *) {
-            requestIDFA()
-        }
+        showModalAppTrackingDescription()
+        NotificationCenter.default.addObserver(self, selector: #selector(requestTrackingAuthorization), name: Notification.Name("requestAppTracking"), object: nil)
+
     }
-    
     
     func setPagination() {
         startView.pagination.numberOfPages = arrayKeysServices.count
@@ -109,14 +102,5 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         vc.linkForQRCode = shortLink
         vc.modalPresentationStyle = .formSheet
         present(vc, animated: true, completion: nil)
-    }
-    
-    
-    ///
-    func requestIDFA() {
-      ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-        // Tracking authorization completed. Start loading ads here.
-        // loadAd()
-      })
     }
 }

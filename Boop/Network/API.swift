@@ -49,6 +49,8 @@ class API {
             shortio(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
+        default:
+            break
         }
     }
 }

@@ -40,6 +40,8 @@
 		10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */; };
 		10ABC50E25F1803F00CD0CF6 /* URLShortenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */; };
 		10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50F25F1843000CD0CF6 /* TinyURL.swift */; };
+		10B0E632264DC67D00003DA1 /* AppTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E631264DC67D00003DA1 /* AppTracking.swift */; };
+		10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */; };
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenGoogleAds.swift; sourceTree = "<group>"; };
 		10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLShortenerService.swift; sourceTree = "<group>"; };
 		10ABC50F25F1843000CD0CF6 /* TinyURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyURL.swift; sourceTree = "<group>"; };
+		10B0E631264DC67D00003DA1 /* AppTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTracking.swift; sourceTree = "<group>"; };
+		10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTrackingModalViewController.swift; sourceTree = "<group>"; };
 		38228792F87CF8A89B00B884 /* Pods-boop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boop.release.xcconfig"; path = "Target Support Files/Pods-boop/Pods-boop.release.xcconfig"; sourceTree = "<group>"; };
 		47F3F927E3E85A7B61DEBA31 /* Pods-pinch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.release.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.release.xcconfig"; sourceTree = "<group>"; };
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +174,7 @@
 				1036512025EC1C24003F03D0 /* StartViewController.swift */,
 				10ABC50925F174C400CD0CF6 /* Actions.swift */,
 				102A845525F5121B00D78619 /* DelegatesStartVC.swift */,
+				10B0E631264DC67D00003DA1 /* AppTracking.swift */,
 				10ABC51125F18AE400CD0CF6 /* ADS */,
 			);
 			path = Main;
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				103C5F5325F569FB004916E5 /* Main */,
+				10B0E633264DD6CB00003DA1 /* AppTrackingModal */,
 				103C5F5425F56A1A004916E5 /* QRCodeModal */,
 			);
 			path = Controllers;
@@ -235,6 +241,14 @@
 				10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */,
 			);
 			path = ADS;
+			sourceTree = "<group>";
+		};
+		10B0E633264DD6CB00003DA1 /* AppTrackingModal */ = {
+			isa = PBXGroup;
+			children = (
+				10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */,
+			);
+			path = AppTrackingModal;
 			sourceTree = "<group>";
 		};
 		B3CA5024CF7F48A6A2F8C29B /* Pods */ = {
@@ -400,6 +414,7 @@
 				1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */,
 				103C5F5D25F57371004916E5 /* URL.swift in Sources */,
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
+				10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */,
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
 				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
 				102A844A25F4520900D78619 /* Polrproject.swift in Sources */,
@@ -411,6 +426,7 @@
 				102A845625F5121B00D78619 /* DelegatesStartVC.swift in Sources */,
 				103C5F5825F56A54004916E5 /* QRCodeModalView.swift in Sources */,
 				102A845025F4EDE200D78619 /* Isgd copy.swift in Sources */,
+				10B0E632264DC67D00003DA1 /* AppTracking.swift in Sources */,
 				103C5F5625F56A41004916E5 /* QRCodeModalViewController.swift in Sources */,
 				102A845425F500AE00D78619 /* Shortio.swift in Sources */,
 				10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */,
@@ -568,7 +584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
 				INFOPLIST_FILE = "$(SRCROOT)/Boop/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
 				INFOPLIST_FILE = "$(SRCROOT)/Boop/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -40,10 +40,10 @@
                                 <rect key="frame" x="57" y="212" width="206" height="43"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="Opm-jd-Fru">
-                                        <rect key="frame" x="0.0" y="0.0" width="206" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="206.00000000000003" height="43"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Found Link" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-Sk-QtK">
-                                        <rect key="frame" x="0.0" y="8" width="206" height="21"/>
+                                        <rect key="frame" x="0.0" y="8" width="206" height="22"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                         <color key="textColor" name="Violet_Dark_"/>
                                         <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                 <rect key="frame" x="16" y="259" width="288" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste the link here" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL8-74-1fm">
-                                        <rect key="frame" x="16" y="11.5" width="256" height="27"/>
+                                        <rect key="frame" x="16" y="11" width="256" height="28"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="23"/>
                                         <color key="textColor" name="White_"/>
                                         <nil key="highlightedColor"/>
@@ -207,7 +207,7 @@
                                 <rect key="frame" x="140.5" y="152" width="39" height="37"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXG-nM-vIJ">
-                                <rect key="frame" x="143" y="535.5" width="34.5" height="16.5"/>
+                                <rect key="frame" x="146" y="535" width="28.5" height="17"/>
                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
                                 <color key="textColor" name="Violet_Dark_"/>
                                 <nil key="highlightedColor"/>
@@ -348,17 +348,139 @@
             </objects>
             <point key="canvasLocation" x="766.875" y="32.74647887323944"/>
         </scene>
+        <!--App Tracking Modal View Controller-->
+        <scene sceneID="BYK-zI-aW1">
+            <objects>
+                <viewController storyboardIdentifier="AppTrackingModalViewController" id="nxn-sf-jWy" customClass="AppTrackingModalViewController" customModule="boop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="riF-JJ-Blw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow tracking on the next screen for:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHv-Ft-I1N">
+                                <rect key="frame" x="16" y="84" width="288" height="57.5"/>
+                                <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="24"/>
+                                <color key="textColor" name="White_"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jAT-7b-vVd">
+                                <rect key="frame" x="16" y="189.5" width="288" height="154.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="M2D-KC-ECe">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="hmb-sD-aQ8">
+                                                <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="qUE-5L-OOb"/>
+                                                    <constraint firstAttribute="width" constant="40" id="uUf-fP-bCW"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special ofers and promotions just for you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh2-dm-TXQ">
+                                                <rect key="frame" x="56" y="0.0" width="232" height="43.5"/>
+                                                <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
+                                                <color key="textColor" name="White_"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-z1-Btn">
+                                        <rect key="frame" x="0.0" y="55.5" width="288" height="43.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tap" translatesAutoresizingMaskIntoConstraints="NO" id="eeW-SZ-hJR">
+                                                <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="NDw-Q6-wuW"/>
+                                                    <constraint firstAttribute="width" constant="40" id="oYs-F4-ZV2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertisements that match your interests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa3-cN-Arr">
+                                                <rect key="frame" x="56" y="0.0" width="232" height="43.5"/>
+                                                <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
+                                                <color key="textColor" name="White_"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5iW-qh-qJc">
+                                        <rect key="frame" x="0.0" y="111" width="288" height="43.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagram" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-jY-Zqw">
+                                                <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="EK1-NH-uQW"/>
+                                                    <constraint firstAttribute="height" constant="40" id="oNO-6g-NaT"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An improved personalized experience over time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-dI-hP5">
+                                                <rect key="frame" x="56" y="0.0" width="232" height="43.5"/>
+                                                <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
+                                                <color key="textColor" name="White_"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can change this option later in the Setting app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjb-rW-heH">
+                                <rect key="frame" x="16" y="384" width="288" height="43.5"/>
+                                <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="18"/>
+                                <color key="textColor" name="White_"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAq-zc-6IP">
+                                <rect key="frame" x="60" y="483.5" width="200" height="50"/>
+                                <color key="backgroundColor" name="Violet_"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="aU4-dv-DKU"/>
+                                    <constraint firstAttribute="height" constant="50" id="mYS-Jh-e9L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="20"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" name="White_"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueAction:" destination="nxn-sf-jWy" eventType="touchUpInside" id="IAh-py-VLQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Violet_Dark_"/>
+                        <constraints>
+                            <constraint firstItem="vAq-zc-6IP" firstAttribute="centerX" secondItem="riF-JJ-Blw" secondAttribute="centerX" id="8pR-K9-FqO"/>
+                            <constraint firstItem="ZHv-Ft-I1N" firstAttribute="top" secondItem="cuS-4d-iDT" secondAttribute="top" constant="64" id="8rf-VZ-52B"/>
+                            <constraint firstItem="Wjb-rW-heH" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="16" id="C8V-Z1-73t"/>
+                            <constraint firstItem="ZHv-Ft-I1N" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="16" id="DJG-Yk-hNU"/>
+                            <constraint firstItem="jAT-7b-vVd" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="16" id="Iob-4l-wY1"/>
+                            <constraint firstItem="jAT-7b-vVd" firstAttribute="top" secondItem="ZHv-Ft-I1N" secondAttribute="bottom" constant="48" id="K01-40-Npx"/>
+                            <constraint firstItem="vAq-zc-6IP" firstAttribute="top" secondItem="Wjb-rW-heH" secondAttribute="bottom" constant="56" id="UP3-ng-vPx"/>
+                            <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="jAT-7b-vVd" secondAttribute="trailing" constant="16" id="Vmo-ee-cA8"/>
+                            <constraint firstItem="Wjb-rW-heH" firstAttribute="top" secondItem="jAT-7b-vVd" secondAttribute="bottom" constant="40" id="Xg7-ik-JQr"/>
+                            <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="Wjb-rW-heH" secondAttribute="trailing" constant="16" id="gdI-dh-blw"/>
+                            <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="ZHv-Ft-I1N" secondAttribute="trailing" constant="16" id="tqU-r4-aKK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cuS-4d-iDT"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="vAq-zc-6IP" id="Txq-di-ipY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yQ-sk-X25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1496.25" y="32.74647887323944"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back" width="60" height="60"/>
         <image name="circles" width="568" height="568"/>
         <image name="close" width="40" height="40"/>
         <image name="copy" width="60" height="60"/>
+        <image name="diagram" width="50" height="50"/>
+        <image name="heart" width="50" height="50"/>
         <image name="message" width="206" height="43"/>
         <image name="qr" width="60" height="60"/>
         <image name="save" width="60" height="60"/>
         <image name="share" width="60" height="60"/>
         <image name="share_purple" width="60" height="60"/>
+        <image name="tap" width="50" height="50"/>
         <namedColor name="Violet_">
             <color red="0.45490196078431372" green="0.38039215686274508" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
