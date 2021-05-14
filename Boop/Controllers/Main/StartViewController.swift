@@ -48,11 +48,20 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         setPagination()
         getVersionApp()
         
-        showModalAppTrackingDescription()
         NotificationCenter.default.addObserver(self, selector: #selector(requestTrackingAuthorization), name: Notification.Name("requestAppTracking"), object: nil)
-
+        
+        if let statusATT =  UserDefaults.standard.string(forKey: "statusATTKey") {
+            print("statusATT: \(statusATT)")
+            if statusATT == "notDetermined" {
+                showModalAppTrackingDescription()
+            }
+        } else {
+            /// если статус нил - запроса не было
+            showModalAppTrackingDescription()
+        }
     }
     
+    ///
     func setPagination() {
         startView.pagination.numberOfPages = arrayKeysServices.count
         startView.pagination.currentPage = indexSelectedService

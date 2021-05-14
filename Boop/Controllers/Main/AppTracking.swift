@@ -1,27 +1,48 @@
 import UIKit
-//import AppTrackingTransparency
+import AppTrackingTransparency
 
 extension StartViewController {
     
     func showModalAppTrackingDescription() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-//            guard #available(iOS 14, *) else { return }
+            guard #available(iOS 14, *) else { return }
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "AppTrackingModalViewController") as! AppTrackingModalViewController
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         }
     }
-
+    
     @objc open func requestTrackingAuthorization() {
-
+        
+        var statusAppTracking: String!
+        
         #if DEBUG
         print("requestTrackingAuthorization")
         #endif
-        
-//        ATTrackingManager.requestTrackingAuthorization { _ in
-//            DispatchQueue.main.async { [weak self] in
-//                // self?.router.close() or nothing to do
-//            }
-//        }
+        guard #available(iOS 14.5, *) else { return }
+        ATTrackingManager.requestTrackingAuthorization { status in
+            switch status {
+            case .notDetermined:
+                print("notDetermined")
+                statusAppTracking = "notDetermined"
+                break
+            case .restricted:
+                print("restricted")
+                statusAppTracking = "restricted"
+                break
+            case .denied:
+                print("denied")
+                statusAppTracking = "denied"
+                break
+            case .authorized:
+                print("authorized")
+                statusAppTracking = "authorized"
+                break
+            @unknown default:
+                break
+            }
+            UserDefaults.standard.setValue(statusAppTracking, forKey: "statusATTKey")
+        }
     }
-
+    
 }

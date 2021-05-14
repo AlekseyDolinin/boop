@@ -10,6 +10,6 @@ target 'boop' do
 pod 'SwiftyJSON', '~> 4.0'
 pod 'Alamofire', '~> 4.0'
 
-pod 'Google-Mobile-Ads-SDK', '~> 7.42.2'
+pod 'Google-Mobile-Ads-SDK', '~> 7.64.0'
 
 end
