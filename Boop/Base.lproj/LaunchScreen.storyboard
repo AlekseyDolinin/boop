@@ -19,14 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.050000000000000003" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circles" translatesAutoresizingMaskIntoConstraints="NO" id="vNl-Aj-BeX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.029999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circles" translatesAutoresizingMaskIntoConstraints="NO" id="vNl-Aj-BeX">
                                 <rect key="frame" x="-124" y="0.0" width="568" height="568"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vNl-Aj-BeX" secondAttribute="height" multiplier="1:1" id="LWX-dq-g11"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Uw-ee-fod">
-                                <rect key="frame" x="70.5" y="220" width="179" height="128"/>
+                                <rect key="frame" x="89.5" y="220" width="141" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="CCw-NB-277"/>
                                 </constraints>
@@ -39,7 +39,7 @@
                             <constraint firstItem="vNl-Aj-BeX" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="HDH-4P-Jo2"/>
                             <constraint firstItem="vNl-Aj-BeX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RKe-hK-m1I"/>
                             <constraint firstItem="1Uw-ee-fod" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RMu-Ge-KDZ"/>
-                            <constraint firstItem="1Uw-ee-fod" firstAttribute="width" secondItem="1Uw-ee-fod" secondAttribute="height" multiplier="14:10" id="Te5-LT-swf"/>
+                            <constraint firstItem="1Uw-ee-fod" firstAttribute="width" secondItem="1Uw-ee-fod" secondAttribute="height" multiplier="11:10" id="Te5-LT-swf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vNl-Aj-BeX" secondAttribute="bottom" id="wI2-Xb-0yJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -52,7 +52,7 @@
     </scenes>
     <resources>
         <image name="circles" width="568" height="568"/>
-        <image name="logo" width="169.5" height="119"/>
+        <image name="logo" width="159" height="119"/>
         <namedColor name="Violet_">
             <color red="0.45490196078431372" green="0.38039215686274508" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

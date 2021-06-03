@@ -357,16 +357,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow tracking on the next screen for:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHv-Ft-I1N">
-                                <rect key="frame" x="16" y="84" width="288" height="57.5"/>
+                                <rect key="frame" x="32" y="84" width="256" height="57.5"/>
                                 <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="24"/>
                                 <color key="textColor" name="White_"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jAT-7b-vVd">
-                                <rect key="frame" x="16" y="189.5" width="288" height="154.5"/>
+                                <rect key="frame" x="32" y="189.5" width="256" height="154.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="M2D-KC-ECe">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="43.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="hmb-sD-aQ8">
                                                 <rect key="frame" x="0.0" y="2" width="40" height="40"/>
@@ -376,7 +376,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special ofers and promotions just for you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh2-dm-TXQ">
-                                                <rect key="frame" x="56" y="0.0" width="232" height="43.5"/>
+                                                <rect key="frame" x="56" y="0.0" width="200" height="43.5"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                                 <color key="textColor" name="White_"/>
                                                 <nil key="highlightedColor"/>
@@ -384,7 +384,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-z1-Btn">
-                                        <rect key="frame" x="0.0" y="55.5" width="288" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="256" height="43.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tap" translatesAutoresizingMaskIntoConstraints="NO" id="eeW-SZ-hJR">
                                                 <rect key="frame" x="0.0" y="2" width="40" height="40"/>
@@ -394,7 +394,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertisements that match your interests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa3-cN-Arr">
-                                                <rect key="frame" x="56" y="0.0" width="232" height="43.5"/>
+                                                <rect key="frame" x="56" y="0.0" width="200" height="43.5"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                                 <color key="textColor" name="White_"/>
                                                 <nil key="highlightedColor"/>
@@ -402,7 +402,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5iW-qh-qJc">
-                                        <rect key="frame" x="0.0" y="111" width="288" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="111" width="256" height="43.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagram" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-jY-Zqw">
                                                 <rect key="frame" x="0.0" y="2" width="40" height="40"/>
@@ -412,7 +412,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An improved personalized experience over time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-dI-hP5">
-                                                <rect key="frame" x="56" y="0.0" width="232" height="43.5"/>
+                                                <rect key="frame" x="56" y="0.0" width="200" height="43.5"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                                 <color key="textColor" name="White_"/>
                                                 <nil key="highlightedColor"/>
@@ -422,7 +422,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can change this option later in the Setting app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjb-rW-heH">
-                                <rect key="frame" x="16" y="384" width="288" height="43.5"/>
+                                <rect key="frame" x="32" y="384" width="256" height="43.5"/>
                                 <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="18"/>
                                 <color key="textColor" name="White_"/>
                                 <nil key="highlightedColor"/>
@@ -447,15 +447,15 @@
                         <constraints>
                             <constraint firstItem="vAq-zc-6IP" firstAttribute="centerX" secondItem="riF-JJ-Blw" secondAttribute="centerX" id="8pR-K9-FqO"/>
                             <constraint firstItem="ZHv-Ft-I1N" firstAttribute="top" secondItem="cuS-4d-iDT" secondAttribute="top" constant="64" id="8rf-VZ-52B"/>
-                            <constraint firstItem="Wjb-rW-heH" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="16" id="C8V-Z1-73t"/>
-                            <constraint firstItem="ZHv-Ft-I1N" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="16" id="DJG-Yk-hNU"/>
-                            <constraint firstItem="jAT-7b-vVd" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="16" id="Iob-4l-wY1"/>
+                            <constraint firstItem="Wjb-rW-heH" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="32" id="C8V-Z1-73t"/>
+                            <constraint firstItem="ZHv-Ft-I1N" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="32" id="DJG-Yk-hNU"/>
+                            <constraint firstItem="jAT-7b-vVd" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="32" id="Iob-4l-wY1"/>
                             <constraint firstItem="jAT-7b-vVd" firstAttribute="top" secondItem="ZHv-Ft-I1N" secondAttribute="bottom" constant="48" id="K01-40-Npx"/>
                             <constraint firstItem="vAq-zc-6IP" firstAttribute="top" secondItem="Wjb-rW-heH" secondAttribute="bottom" constant="56" id="UP3-ng-vPx"/>
-                            <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="jAT-7b-vVd" secondAttribute="trailing" constant="16" id="Vmo-ee-cA8"/>
+                            <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="jAT-7b-vVd" secondAttribute="trailing" constant="32" id="Vmo-ee-cA8"/>
                             <constraint firstItem="Wjb-rW-heH" firstAttribute="top" secondItem="jAT-7b-vVd" secondAttribute="bottom" constant="40" id="Xg7-ik-JQr"/>
-                            <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="Wjb-rW-heH" secondAttribute="trailing" constant="16" id="gdI-dh-blw"/>
-                            <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="ZHv-Ft-I1N" secondAttribute="trailing" constant="16" id="tqU-r4-aKK"/>
+                            <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="Wjb-rW-heH" secondAttribute="trailing" constant="32" id="gdI-dh-blw"/>
+                            <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="ZHv-Ft-I1N" secondAttribute="trailing" constant="32" id="tqU-r4-aKK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cuS-4d-iDT"/>
                     </view>
