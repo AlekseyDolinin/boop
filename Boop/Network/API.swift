@@ -13,10 +13,6 @@ class API {
             urlShortenerService(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case .Rebrandly:
-            rebrandly(longLink: inputLongLink) { (outShortLink) in
-                completion(outShortLink)
-            }
         case .TinyURL:
             tinyURL(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)

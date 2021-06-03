@@ -44,6 +44,7 @@ extension StartViewController {
         if startView.linkLabel.text == "Paste the link here" {
             let encodeString: String = (pasteboard.string)?.encodeUrl() ?? ""
             print("encodeString: \(encodeString)")
+            print("selectedService: \(StartViewController.selectedService)")
             
             /// проверка вставлена ссылка или просто текст
             if let longLink = URL(string: encodeString), let scheme = longLink.scheme {

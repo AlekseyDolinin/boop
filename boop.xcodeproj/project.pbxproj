@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		102A844625F444C000D78619 /* Rebrandly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844525F444C000D78619 /* Rebrandly.swift */; };
 		102A844825F44B5600D78619 /* Bitly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844725F44B5600D78619 /* Bitly.swift */; };
 		102A844A25F4520900D78619 /* Polrproject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844925F4520900D78619 /* Polrproject.swift */; };
 		102A844C25F4D87600D78619 /* Tinycc copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844B25F4D87600D78619 /* Tinycc copy.swift */; };
@@ -46,7 +45,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		102A844525F444C000D78619 /* Rebrandly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rebrandly.swift; sourceTree = "<group>"; };
 		102A844725F44B5600D78619 /* Bitly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitly.swift; sourceTree = "<group>"; };
 		102A844925F4520900D78619 /* Polrproject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polrproject.swift; sourceTree = "<group>"; };
 		102A844B25F4D87600D78619 /* Tinycc copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tinycc copy.swift"; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 			children = (
 				1099ED7925EC2E3300F53439 /* API.swift */,
 				10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */,
-				102A844525F444C000D78619 /* Rebrandly.swift */,
 				10ABC50F25F1843000CD0CF6 /* TinyURL.swift */,
 				102A844725F44B5600D78619 /* Bitly.swift */,
 				102A844B25F4D87600D78619 /* Tinycc copy.swift */,
@@ -431,7 +428,6 @@
 				102A845425F500AE00D78619 /* Shortio.swift in Sources */,
 				10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */,
 				102A845925F513A500D78619 /* ServiceCell.swift in Sources */,
-				102A844625F444C000D78619 /* Rebrandly.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
 				1099ED7A25EC2E3300F53439 /* API.swift in Sources */,
 				102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */,

@@ -11,7 +11,6 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     }
     
     enum KeysService: String {
-        case Rebrandly = "rebrand.ly/*******"
         case Chlli = "chl.li/*****"
         case Isgd = "https://is.gd/******"
         case Shortener = "https://goolnk.com/******"
@@ -33,9 +32,9 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     var longLink: String!
     var shortLink: String!
     var pressedButtonTag: Int!
-    var arrayKeysServices: [KeysService] = [.Rebrandly, .Chlli, .Isgd, .Shortener/*, .TinyURL, .Bitly, .Tinycc, .Polrproject, .Adfly, .Shortio*/]
+    var arrayKeysServices: [KeysService] = [.Chlli, .Isgd, .Shortener/*, .TinyURL, .Bitly, .Tinycc, .Polrproject, .Adfly, .Shortio*/]
     var indexSelectedService = 0
-    static var selectedService: KeysService = .Shortener
+    static var selectedService: KeysService = .Chlli
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +78,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     ///
     func createShortLink() {
         API.post(inputLongLink: longLink) { (responseShortLink) in
-            print("response short link: \(responseShortLink)")
+            print("short link: \(responseShortLink)")
             DispatchQueue.main.async {
                 if responseShortLink != "" {
                     self.startView.showMessage(text: "DONE 🤗")
