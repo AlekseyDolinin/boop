@@ -28,7 +28,6 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     let pasteboard = UIPasteboard.general
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
-//    var countShowFullViewAds = 0
     var longLink: String!
     var shortLink: String!
     var pressedButtonTag: Int!
