@@ -9,30 +9,33 @@ class API {
         let serviceKey = StartViewController.selectedService
         
         switch serviceKey {
-        case .Shortener:
-            urlShortenerService(longLink: inputLongLink) { (outShortLink) in
-                completion(outShortLink)
-            }
-        case .TinyURL:
-            tinyURL(longLink: inputLongLink) { (outShortLink) in
-                completion(outShortLink)
-            }
-        case .Bitly:
-            bitly(longLink: inputLongLink) { (outShortLink) in
-                completion(outShortLink)
-            }
-        case .Tinycc:
-            tinycc(longLink: inputLongLink) { (outShortLink) in
-                completion(outShortLink)
-            }
+            
         case .Chlli:
             chlli(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
+            
         case .Isgd:
             isgd(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
+            
+        case .Shortener:
+            urlShortenerService(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+            
+        case .TinyURL:
+            tinyURL(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+            
+        case .Tinycc:
+            tinycc(longLink: inputLongLink) { (outShortLink) in
+                completion(outShortLink)
+            }
+
+
         case .Polrproject:
             polrproject(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)

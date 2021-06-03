@@ -11,10 +11,10 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     }
     
     enum KeysService: String {
-        case Chlli = "chl.li/*****"
-        case Isgd = "https://is.gd/******"
-        case Shortener = "https://goolnk.com/******"
-        case Bitly = "4"
+        case Chlli = "chl.li/*"
+        case Isgd = "https://is.gd/*"
+        case Shortener = "https://goolnk.com/*"
+        case TinyURL = "https://tiny.one/*"
         case Tinycc = "5"
         case Polrproject = "8"
         case Adfly = "9"
@@ -22,7 +22,6 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         case Click = "https://clck.ru"
         case Lnnkin = "https://www.lnnkin.com/api-integration/guide"
         case ToClick = "https://to.click"
-        case TinyURL = "http://www.tiny-url.info"
     }
     
     let pasteboard = UIPasteboard.general
@@ -31,7 +30,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     var longLink: String!
     var shortLink: String!
     var pressedButtonTag: Int!
-    var arrayKeysServices: [KeysService] = [.Chlli, .Isgd, .Shortener/*, .TinyURL, .Bitly, .Tinycc, .Polrproject, .Adfly, .Shortio*/]
+    var arrayKeysServices: [KeysService] = [.Chlli, .Isgd, .Shortener, .TinyURL/*, .Tinycc, .Polrproject, .Adfly, .Shortio*/]
     var indexSelectedService = 0
     static var selectedService: KeysService = .Chlli
     

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		102A844825F44B5600D78619 /* Bitly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844725F44B5600D78619 /* Bitly.swift */; };
 		102A844A25F4520900D78619 /* Polrproject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844925F4520900D78619 /* Polrproject.swift */; };
 		102A844C25F4D87600D78619 /* Tinycc copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844B25F4D87600D78619 /* Tinycc copy.swift */; };
 		102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844D25F4DE9F00D78619 /* Chlli copy.swift */; };
@@ -37,7 +36,7 @@
 		1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */; };
 		10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50925F174C400CD0CF6 /* Actions.swift */; };
 		10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */; };
-		10ABC50E25F1803F00CD0CF6 /* URLShortenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */; };
+		10ABC50E25F1803F00CD0CF6 /* Shortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50D25F1803F00CD0CF6 /* Shortener.swift */; };
 		10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50F25F1843000CD0CF6 /* TinyURL.swift */; };
 		10B0E632264DC67D00003DA1 /* AppTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E631264DC67D00003DA1 /* AppTracking.swift */; };
 		10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */; };
@@ -45,7 +44,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		102A844725F44B5600D78619 /* Bitly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitly.swift; sourceTree = "<group>"; };
 		102A844925F4520900D78619 /* Polrproject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polrproject.swift; sourceTree = "<group>"; };
 		102A844B25F4D87600D78619 /* Tinycc copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tinycc copy.swift"; sourceTree = "<group>"; };
 		102A844D25F4DE9F00D78619 /* Chlli copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chlli copy.swift"; sourceTree = "<group>"; };
@@ -77,7 +75,7 @@
 		1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerGoogleAds.swift; sourceTree = "<group>"; };
 		10ABC50925F174C400CD0CF6 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenGoogleAds.swift; sourceTree = "<group>"; };
-		10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLShortenerService.swift; sourceTree = "<group>"; };
+		10ABC50D25F1803F00CD0CF6 /* Shortener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortener.swift; sourceTree = "<group>"; };
 		10ABC50F25F1843000CD0CF6 /* TinyURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyURL.swift; sourceTree = "<group>"; };
 		10B0E631264DC67D00003DA1 /* AppTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTracking.swift; sourceTree = "<group>"; };
 		10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTrackingModalViewController.swift; sourceTree = "<group>"; };
@@ -209,12 +207,11 @@
 			isa = PBXGroup;
 			children = (
 				1099ED7925EC2E3300F53439 /* API.swift */,
-				10ABC50D25F1803F00CD0CF6 /* URLShortenerService.swift */,
-				10ABC50F25F1843000CD0CF6 /* TinyURL.swift */,
-				102A844725F44B5600D78619 /* Bitly.swift */,
-				102A844B25F4D87600D78619 /* Tinycc copy.swift */,
 				102A844D25F4DE9F00D78619 /* Chlli copy.swift */,
 				102A844F25F4EDE100D78619 /* Isgd copy.swift */,
+				10ABC50D25F1803F00CD0CF6 /* Shortener.swift */,
+				10ABC50F25F1843000CD0CF6 /* TinyURL.swift */,
+				102A844B25F4D87600D78619 /* Tinycc copy.swift */,
 				102A844925F4520900D78619 /* Polrproject.swift */,
 				102A845125F4F5D500D78619 /* Adfly.swift */,
 				102A845325F500AE00D78619 /* Shortio.swift */,
@@ -416,10 +413,9 @@
 				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
 				102A844A25F4520900D78619 /* Polrproject.swift in Sources */,
 				1099ED7725EC215E00F53439 /* StartView.swift in Sources */,
-				10ABC50E25F1803F00CD0CF6 /* URLShortenerService.swift in Sources */,
+				10ABC50E25F1803F00CD0CF6 /* Shortener.swift in Sources */,
 				1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */,
 				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
-				102A844825F44B5600D78619 /* Bitly.swift in Sources */,
 				102A845625F5121B00D78619 /* DelegatesStartVC.swift in Sources */,
 				103C5F5825F56A54004916E5 /* QRCodeModalView.swift in Sources */,
 				102A845025F4EDE200D78619 /* Isgd copy.swift in Sources */,
