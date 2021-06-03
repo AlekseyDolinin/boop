@@ -14,7 +14,7 @@ extension StartViewController {
         #else
         let interstitial = GADInterstitial(adUnitID: "ca-app-pub-8093774413708674/8226342711")
         #endif
-
+        
         interstitial.delegate = self
         interstitial.load(GADRequest())
         return interstitial
@@ -24,10 +24,16 @@ extension StartViewController {
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         print("действие после рекламы")
         interstitial = createAndLoadInterstitial() // перезагрузка рекламного банера
-        if pressedButtonTag == 3 {
+        
+        switch pressedButtonTag {
+        case 2:
+            copiedShortLink()
+        case 3:
             showQRCode()
-        } else if pressedButtonTag == 4 {
+        case 4:
             showControllerShare()
+        default:
+            break
         }
     }
     

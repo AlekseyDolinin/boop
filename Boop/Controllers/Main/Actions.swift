@@ -3,22 +3,13 @@ import UIKit
 extension StartViewController {
 
     ///
-    @IBAction func shareAction(_ sender: UIButton) {
+    @IBAction func action(_ sender: UIButton) {
+        /// в зависимости от тэга - разные действия
         pressedButtonTag = sender.tag
-        if interstitial.isReady == true && countShowFullViewAds % 3 == 0 && countShowFullViewAds > 0 {
+        if interstitial.isReady == true {
             print("ролик готов")
             interstitial.present(fromRootViewController: self)
-        } else {
-            print("showControllerShare")
-            countShowFullViewAds = countShowFullViewAds + 1
-            showControllerShare()
         }
-    }
-    
-    ///
-    @IBAction func copyAction(_ sender: UIButton) {
-        pasteboard.string = self.shortLink
-        startView.showMessage(text: "Link copied")
     }
     
     ///
@@ -27,18 +18,6 @@ extension StartViewController {
         startView.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
     }
     
-    ///
-    @IBAction func generateQRCode(_ sender: UIButton) {
-        pressedButtonTag = sender.tag
-        if interstitial.isReady == true && countShowFullViewAds % 3 == 0 && countShowFullViewAds > 0 {
-            print("ролик готов")
-            interstitial.present(fromRootViewController: self)
-        } else {
-            countShowFullViewAds = countShowFullViewAds + 1
-            showQRCode()
-        }
-    }
-        
     ///
     @IBAction func tapPlaceLinkAction(_ sender: UIButton) {
         if startView.linkLabel.text == "Paste the link here" {

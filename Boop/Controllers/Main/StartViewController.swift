@@ -28,7 +28,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     let pasteboard = UIPasteboard.general
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
-    var countShowFullViewAds = 0
+//    var countShowFullViewAds = 0
     var longLink: String!
     var shortLink: String!
     var pressedButtonTag: Int!
@@ -111,5 +111,11 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         vc.linkForQRCode = shortLink
         vc.modalPresentationStyle = .formSheet
         present(vc, animated: true, completion: nil)
+    }
+    
+    ///
+    func copiedShortLink() {
+        pasteboard.string = self.shortLink
+        startView.showMessage(text: "Link copied")
     }
 }

@@ -93,7 +93,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VlC-3F-WpC">
                                 <rect key="frame" x="10" y="333" width="300" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQD-85-HlX">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQD-85-HlX">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Bq5-av-Ir6"/>
@@ -104,7 +104,7 @@
                                             <action selector="backAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tf3-NV-AlE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lH7-Uc-U6l">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lH7-Uc-U6l">
                                         <rect key="frame" x="80" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="4hO-vk-7mC"/>
@@ -112,7 +112,7 @@
                                         </constraints>
                                         <state key="normal" image="copy"/>
                                         <connections>
-                                            <action selector="copyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dTn-9G-tE8"/>
+                                            <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rV4-Yh-ZjK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxc-oo-HXr">
@@ -123,7 +123,7 @@
                                         </constraints>
                                         <state key="normal" image="qr"/>
                                         <connections>
-                                            <action selector="generateQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xR0-wX-VoK"/>
+                                            <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KrV-gz-QGr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqg-Rm-p1L">
@@ -134,7 +134,7 @@
                                         </constraints>
                                         <state key="normal" image="share"/>
                                         <connections>
-                                            <action selector="shareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVL-5R-fgc"/>
+                                            <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xis-Pf-M26"/>
                                         </connections>
                                     </button>
                                 </subviews>
