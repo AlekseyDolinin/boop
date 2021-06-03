@@ -1,11 +1,11 @@
 import UIKit
-import AppTrackingTransparency
+#if canImport(AppTrackingTransparency)
 
 extension StartViewController {
     
     func showModalAppTrackingDescription() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            guard #available(iOS 14, *) else { return }
+            guard #available(iOS 14.5, *) else { return }
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "AppTrackingModalViewController") as! AppTrackingModalViewController
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
@@ -44,5 +44,5 @@ extension StartViewController {
             UserDefaults.standard.setValue(statusAppTracking, forKey: "statusATTKey")
         }
     }
-    
 }
+#endif

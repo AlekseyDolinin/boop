@@ -15,20 +15,17 @@ extension StartViewController {
         }
     }
     
-    
     ///
     @IBAction func copyAction(_ sender: UIButton) {
         pasteboard.string = self.shortLink
         startView.showMessage(text: "Link copied")
     }
     
-    
     ///
     @IBAction func backAction(_ sender: UIButton) {
         startView.linkLabel.text = "Paste the link here"
         startView.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
     }
-    
     
     ///
     @IBAction func generateQRCode(_ sender: UIButton) {
@@ -41,8 +38,7 @@ extension StartViewController {
             showQRCode()
         }
     }
-    
-    
+        
     ///
     @IBAction func tapPlaceLinkAction(_ sender: UIButton) {
         if startView.linkLabel.text == "Paste the link here" {

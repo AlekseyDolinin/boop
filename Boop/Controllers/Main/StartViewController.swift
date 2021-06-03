@@ -1,6 +1,5 @@
 import UIKit
 import GoogleMobileAds
-import AdSupport
 
 class StartViewController: UIViewController,  GADBannerViewDelegate, GADInterstitialDelegate {
     
@@ -48,6 +47,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         setPagination()
         getVersionApp()
         
+        #if canImport(AppTrackingTransparency)
         NotificationCenter.default.addObserver(self, selector: #selector(requestTrackingAuthorization), name: Notification.Name("requestAppTracking"), object: nil)
         
         if let statusATT =  UserDefaults.standard.string(forKey: "statusATTKey") {
@@ -59,6 +59,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
             /// если статус нил - запроса не было
             showModalAppTrackingDescription()
         }
+        #endif
     }
     
     ///
