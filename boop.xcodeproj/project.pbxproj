@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		102A844A25F4520900D78619 /* Polrproject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844925F4520900D78619 /* Polrproject.swift */; };
-		102A844C25F4D87600D78619 /* Tinycc copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844B25F4D87600D78619 /* Tinycc copy.swift */; };
 		102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844D25F4DE9F00D78619 /* Chlli copy.swift */; };
 		102A845025F4EDE200D78619 /* Isgd copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A844F25F4EDE100D78619 /* Isgd copy.swift */; };
 		102A845225F4F5D500D78619 /* Adfly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A845125F4F5D500D78619 /* Adfly.swift */; };
@@ -44,8 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		102A844925F4520900D78619 /* Polrproject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polrproject.swift; sourceTree = "<group>"; };
-		102A844B25F4D87600D78619 /* Tinycc copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tinycc copy.swift"; sourceTree = "<group>"; };
 		102A844D25F4DE9F00D78619 /* Chlli copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chlli copy.swift"; sourceTree = "<group>"; };
 		102A844F25F4EDE100D78619 /* Isgd copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Isgd copy.swift"; sourceTree = "<group>"; };
 		102A845125F4F5D500D78619 /* Adfly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adfly.swift; sourceTree = "<group>"; };
@@ -211,8 +207,6 @@
 				102A844F25F4EDE100D78619 /* Isgd copy.swift */,
 				10ABC50D25F1803F00CD0CF6 /* Shortener.swift */,
 				10ABC50F25F1843000CD0CF6 /* TinyURL.swift */,
-				102A844B25F4D87600D78619 /* Tinycc copy.swift */,
-				102A844925F4520900D78619 /* Polrproject.swift */,
 				102A845125F4F5D500D78619 /* Adfly.swift */,
 				102A845325F500AE00D78619 /* Shortio.swift */,
 			);
@@ -404,14 +398,12 @@
 				103C5F5A25F57332004916E5 /* CIImage.swift in Sources */,
 				102A845225F4F5D500D78619 /* Adfly.swift in Sources */,
 				1036512125EC1C24003F03D0 /* StartViewController.swift in Sources */,
-				102A844C25F4D87600D78619 /* Tinycc copy.swift in Sources */,
 				1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */,
 				103C5F5D25F57371004916E5 /* URL.swift in Sources */,
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */,
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
 				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
-				102A844A25F4520900D78619 /* Polrproject.swift in Sources */,
 				1099ED7725EC215E00F53439 /* StartView.swift in Sources */,
 				10ABC50E25F1803F00CD0CF6 /* Shortener.swift in Sources */,
 				1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */,

@@ -15,8 +15,6 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         case Isgd = "https://is.gd/*"
         case Shortener = "https://goolnk.com/*"
         case TinyURL = "https://tiny.one/*"
-        case Tinycc = "5"
-        case Polrproject = "8"
         case Adfly = "9"
         case Shortio = "10"
         case Click = "https://clck.ru"
@@ -30,7 +28,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     var longLink: String!
     var shortLink: String!
     var pressedButtonTag: Int!
-    var arrayKeysServices: [KeysService] = [.Chlli, .Isgd, .Shortener, .TinyURL/*, .Tinycc, .Polrproject, .Adfly, .Shortio*/]
+    var arrayKeysServices: [KeysService] = [.Chlli, .Isgd, .Shortener, .TinyURL/*, .Adfly, .Shortio*/]
     var indexSelectedService = 0
     static var selectedService: KeysService = .Chlli
     

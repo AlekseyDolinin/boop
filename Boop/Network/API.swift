@@ -29,17 +29,7 @@ class API {
             tinyURL(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-            
-        case .Tinycc:
-            tinycc(longLink: inputLongLink) { (outShortLink) in
-                completion(outShortLink)
-            }
 
-
-        case .Polrproject:
-            polrproject(longLink: inputLongLink) { (outShortLink) in
-                completion(outShortLink)
-            }
         case .Adfly:
             adfly(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
