@@ -9,6 +9,18 @@ extension StartViewController {
         if interstitial.isReady == true {
             print("ролик готов")
             interstitial.present(fromRootViewController: self)
+            
+        } else {
+            switch pressedButtonTag {
+            case 2:
+                copiedShortLink()
+            case 3:
+                showQRCode()
+            case 4:
+                showControllerShare()
+            default:
+                break
+            }
         }
     }
     
@@ -16,10 +28,13 @@ extension StartViewController {
     @IBAction func backAction(_ sender: UIButton) {
         startView.linkLabel.text = "Paste the link here"
         startView.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
+        self.longLink = nil
+        self.shortLink = nil
     }
     
     ///
     @IBAction func tapPlaceLinkAction(_ sender: UIButton) {
+        print("tapPlaceLinkAction")
         if startView.linkLabel.text == "Paste the link here" {
             let encodeString: String = (pasteboard.string)?.encodeUrl() ?? ""
             print("encodeString: \(encodeString)")
@@ -28,12 +43,16 @@ extension StartViewController {
             /// проверка вставлена ссылка или просто текст
             if let longLink = URL(string: encodeString), let scheme = longLink.scheme {
                 
-                let host: String! = longLink.host
+//                let host: String! = longLink.host
+//                print(host)
+//
+//
+//
+//                if host == "goolnk.com" {
+//                    startView.showMessage(text: "Not Found Link (Please, copy url to clipboard)")
+//                    return
+//                }
                 
-                if host == "goolnk.com" {
-                    startView.showMessage(text: "Not Found Link")
-                    return
-                }
                 if scheme == "https" || scheme == "http" {
                     startView.showMessage(text: "Please Wait...")
                     startView.linkLabel.text = pasteboard.string
@@ -45,7 +64,7 @@ extension StartViewController {
                     self.startView.animationLabel()
                 }
             } else {
-                startView.showMessage(text: "Not Found Link")
+                startView.showMessage(text: "Not Found Link \n(Please, copy url to clipboard)")
             }
         }
     }

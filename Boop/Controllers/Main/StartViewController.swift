@@ -10,16 +10,12 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         return (view as! StartView)
     }
     
-    enum KeysService: String {
+    enum Service: String {
         case Chlli = "chl.li/*"
         case Isgd = "https://is.gd/*"
         case Shortener = "https://goolnk.com/*"
         case TinyURL = "https://tiny.one/*"
-        case Adfly = "9"
-        case Shortio = "10"
-        case Click = "https://clck.ru"
-        case Lnnkin = "https://www.lnnkin.com/api-integration/guide"
-        case ToClick = "https://to.click"
+        case Click = "https://clck.ru/*"
     }
     
     let pasteboard = UIPasteboard.general
@@ -28,9 +24,9 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     var longLink: String!
     var shortLink: String!
     var pressedButtonTag: Int!
-    var arrayKeysServices: [KeysService] = [.Chlli, .Isgd, .Shortener, .TinyURL/*, .Adfly, .Shortio*/]
+    var arrayKeysServices: [Service] = [.Chlli, .Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
-    static var selectedService: KeysService = .Chlli
+    static var selectedService: Service = .Chlli
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,18 +71,23 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     func createShortLink() {
         API.post(inputLongLink: longLink) { (responseShortLink) in
             print("short link: \(responseShortLink)")
+            self.startView.placeLinkButton.isUserInteractionEnabled = true
             DispatchQueue.main.async {
                 if responseShortLink != "" {
-                    self.startView.showMessage(text: "DONE 🤗")
-                    self.startView.linkLabel.text = responseShortLink
-                    self.shortLink = responseShortLink
-                    self.startView.alphaStackActionButtons(valueAlpha: 1.0, duration: 0.2)
-                    self.startView.placeLinkButton.isUserInteractionEnabled = true
+                    self.showResult(resutShortUrl: responseShortLink)
+                } else {
+                    self.startView.showMessage(text: "ERROR ☹️")
                 }
             }
         }
     }
     
+    func showResult(resutShortUrl: String) {
+        self.startView.showMessage(text: "DONE 🤗")
+        self.startView.linkLabel.text = resutShortUrl
+        self.shortLink = resutShortUrl
+        self.startView.alphaStackActionButtons(valueAlpha: 1.0, duration: 0.2)
+    }
     
     ///
     func showControllerShare() {
@@ -98,7 +99,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
                 print("error send")
             }
         }
-        present(shareController, animated: true, completion: nil)
+        present(shareController, animated: true)
     }
     
     ///
@@ -106,7 +107,7 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
         let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
         vc.linkForQRCode = shortLink
         vc.modalPresentationStyle = .formSheet
-        present(vc, animated: true, completion: nil)
+        present(vc, animated: true)
     }
     
     ///

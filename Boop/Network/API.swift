@@ -6,9 +6,7 @@ class API {
     /// в serviceName приходит имя выбраного сервиса
     class func post(inputLongLink: String, completion: @escaping (String) -> Void) {
         
-        let serviceKey = StartViewController.selectedService
-        
-        switch serviceKey {
+        switch StartViewController.selectedService {
             
         case .Chlli:
             chlli(longLink: inputLongLink) { (outShortLink) in
@@ -30,14 +28,12 @@ class API {
                 completion(outShortLink)
             }
 
-        case .Adfly:
-            adfly(longLink: inputLongLink) { (outShortLink) in
+        case .Click:
+            click(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-        case .Shortio:
-            shortio(longLink: inputLongLink) { (outShortLink) in
-                completion(outShortLink)
-            }
+            
+            
         default:
             break
         }

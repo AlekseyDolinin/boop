@@ -12,6 +12,12 @@ class StartView: UIView {
     @IBOutlet weak var collectionServices: UICollectionView!
     @IBOutlet weak var pagination: UIPageControl!
     
+    override func awakeFromNib() {
+        viewMessage.clipsToBounds = true
+        viewMessage.layer.cornerRadius = 4
+    }
+    
+    
     func configure() {
         
         backViewLink.layer.cornerRadius = backViewLink.frame.height / 2
