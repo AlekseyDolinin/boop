@@ -1,5 +1,6 @@
 import UIKit
 #if canImport(AppTrackingTransparency)
+import AppTrackingTransparency
 
 extension StartViewController {
     
