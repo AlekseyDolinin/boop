@@ -8,11 +8,6 @@ class API {
         
         switch StartViewController.selectedService {
             
-        case .Chlli:
-            chlli(longLink: inputLongLink) { (outShortLink) in
-                completion(outShortLink)
-            }
-            
         case .Isgd:
             isgd(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
@@ -32,10 +27,6 @@ class API {
             click(longLink: inputLongLink) { (outShortLink) in
                 completion(outShortLink)
             }
-            
-            
-        default:
-            break
         }
     }
 }

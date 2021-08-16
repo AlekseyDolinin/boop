@@ -5,7 +5,7 @@ import SwiftyJSON
 extension API {
     class func tinyURL(longLink: String, completion: @escaping (String) -> Void) {
         
-        let key = "eGyT4JtIFWt5e1q3U3qCP7ptKnmjL1ToYCur2vYeGgvDb595GqumMJtF7Xj5"
+        let key = "jN5rKoyNJkWLH2ZZdWXcxT5z0BWegD75Q8ezIWkapnKRz5PXBGd1SaAWlmp7"
         
         let urlService = "https://api.tinyurl.com/create"
         

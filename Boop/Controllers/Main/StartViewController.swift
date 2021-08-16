@@ -11,7 +11,6 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     }
     
     enum Service: String {
-        case Chlli = "chl.li/*"
         case Isgd = "https://is.gd/*"
         case Shortener = "https://goolnk.com/*"
         case TinyURL = "https://tiny.one/*"
@@ -24,9 +23,9 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     var longLink: String!
     var shortLink: String!
     var pressedButtonTag: Int!
-    var arrayKeysServices: [Service] = [.Chlli, .Isgd, .Shortener, .TinyURL, .Click]
+    var arrayKeysServices: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
-    static var selectedService: Service = .Chlli
+    static var selectedService: Service = .Isgd
     
     override func viewDidLoad() {
         super.viewDidLoad()
