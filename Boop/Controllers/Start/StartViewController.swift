@@ -1,11 +1,11 @@
 import UIKit
 import GoogleMobileAds
 
-class StartViewController: UIViewController,  GADBannerViewDelegate, GADInterstitialDelegate {
+class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate {
     
     static let shared = StartViewController()
     
-    var startView: StartView! {
+    var viewSelf: StartView! {
         guard isViewLoaded else { return nil }
         return (view as! StartView)
     }
@@ -29,9 +29,9 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startView.collectionServices.delegate = self
-        startView.collectionServices.dataSource = self
-        startView.configure()
+        viewSelf.collectionServices.delegate = self
+        viewSelf.collectionServices.dataSource = self
+        viewSelf.configure()
         setGadBanner()
         setGadFullView()
         setPagination()
@@ -54,38 +54,38 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     
     ///
     func setPagination() {
-        startView.pagination.numberOfPages = arrayKeysServices.count
-        startView.pagination.currentPage = indexSelectedService
-        startView.pagination.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+        viewSelf.pagination.numberOfPages = arrayKeysServices.count
+        viewSelf.pagination.currentPage = indexSelectedService
+        viewSelf.pagination.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
     }
     
     /// получение номера версии приложения
     func getVersionApp() {
         let nsObject: AnyObject? = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as AnyObject
         let version = nsObject as! String
-        startView.versionLabel.text = "version: \(version)"
+        viewSelf.versionLabel.text = "version: \(version)"
     }
     
     ///
     func createShortLink() {
         API.post(inputLongLink: longLink) { (responseShortLink) in
             print("short link: \(responseShortLink)")
-            self.startView.placeLinkButton.isUserInteractionEnabled = true
+            self.viewSelf.placeLinkButton.isUserInteractionEnabled = true
             DispatchQueue.main.async {
                 if responseShortLink != "" {
                     self.showResult(resutShortUrl: responseShortLink)
                 } else {
-                    self.startView.showMessage(text: "ERROR ☹️")
+                    self.viewSelf.showMessage(text: "ERROR ☹️")
                 }
             }
         }
     }
     
     func showResult(resutShortUrl: String) {
-        self.startView.showMessage(text: "DONE 🤗")
-        self.startView.linkLabel.text = resutShortUrl
+        self.viewSelf.showMessage(text: "DONE 🤗")
+        self.viewSelf.linkLabel.text = resutShortUrl
         self.shortLink = resutShortUrl
-        self.startView.alphaStackActionButtons(valueAlpha: 1.0, duration: 0.2)
+        self.viewSelf.alphaStackActionButtons(valueAlpha: 1.0, duration: 0.2)
     }
     
     ///
@@ -112,6 +112,12 @@ class StartViewController: UIViewController,  GADBannerViewDelegate, GADIntersti
     ///
     func copiedShortLink() {
         pasteboard.string = self.shortLink
-        startView.showMessage(text: "Link copied")
+        viewSelf.showMessage(text: "Link copied")
+    }
+    
+    ///
+    @IBAction func openArchiveAction(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController") as! ArchiveViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

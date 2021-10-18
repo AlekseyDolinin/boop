@@ -15,13 +15,13 @@ extension StartViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        for cell in startView.collectionServices.visibleCells {
-            if let index = (startView.collectionServices.indexPath(for: cell))?.row {
+        for cell in viewSelf.collectionServices.visibleCells {
+            if let index = (viewSelf.collectionServices.indexPath(for: cell))?.row {
                 indexSelectedService = index
-                startView.pagination.currentPage = index
+                viewSelf.pagination.currentPage = index
                 StartViewController.selectedService = arrayKeysServices[index]
-                startView.linkLabel.text = "Paste the link here"
-                startView.alphaStackActionButtons(valueAlpha: 0.0, duration: 0)
+                viewSelf.linkLabel.text = "Paste the link here"
+                viewSelf.alphaStackActionButtons(valueAlpha: 0.0, duration: 0)
             }
         }
     }

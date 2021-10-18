@@ -30,7 +30,7 @@
 		1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051B07B25F01F3400695C37 /* JSONSerialization.swift */; };
 		1099ED7725EC215E00F53439 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7625EC215E00F53439 /* StartView.swift */; };
 		1099ED7A25EC2E3300F53439 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7925EC2E3300F53439 /* API.swift */; };
-		1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */; };
+		1099ED7C25ED732A00F53439 /* StartBannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099ED7B25ED732A00F53439 /* StartBannerGoogleAds.swift */; };
 		10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50925F174C400CD0CF6 /* Actions.swift */; };
 		10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */; };
 		10ABC50E25F1803F00CD0CF6 /* Shortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABC50D25F1803F00CD0CF6 /* Shortener.swift */; };
@@ -38,6 +38,8 @@
 		10B0E632264DC67D00003DA1 /* AppTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E631264DC67D00003DA1 /* AppTracking.swift */; };
 		10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */; };
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
+		91EA2D0A271D45A400EEC146 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */; };
+		91EA2D0F271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +68,7 @@
 		1051B07B25F01F3400695C37 /* JSONSerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerialization.swift; sourceTree = "<group>"; };
 		1099ED7625EC215E00F53439 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		1099ED7925EC2E3300F53439 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerGoogleAds.swift; sourceTree = "<group>"; };
+		1099ED7B25ED732A00F53439 /* StartBannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBannerGoogleAds.swift; sourceTree = "<group>"; };
 		10ABC50925F174C400CD0CF6 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenGoogleAds.swift; sourceTree = "<group>"; };
 		10ABC50D25F1803F00CD0CF6 /* Shortener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortener.swift; sourceTree = "<group>"; };
@@ -76,6 +78,8 @@
 		38228792F87CF8A89B00B884 /* Pods-boop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boop.release.xcconfig"; path = "Target Support Files/Pods-boop/Pods-boop.release.xcconfig"; sourceTree = "<group>"; };
 		47F3F927E3E85A7B61DEBA31 /* Pods-pinch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.release.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.release.xcconfig"; sourceTree = "<group>"; };
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
+		91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveBannerGoogleAds.swift; sourceTree = "<group>"; };
 		9C441682D755AA2C1FFB3547 /* Pods-pinch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.debug.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.debug.xcconfig"; sourceTree = "<group>"; };
 		C22ACD24A595DB77167AC3A6 /* Pods-boop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boop.debug.xcconfig"; path = "Target Support Files/Pods-boop/Pods-boop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,7 +162,7 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		103C5F5325F569FB004916E5 /* Main */ = {
+		103C5F5325F569FB004916E5 /* Start */ = {
 			isa = PBXGroup;
 			children = (
 				1036512025EC1C24003F03D0 /* StartViewController.swift */,
@@ -167,7 +171,7 @@
 				10B0E631264DC67D00003DA1 /* AppTracking.swift */,
 				10ABC51125F18AE400CD0CF6 /* ADS */,
 			);
-			path = Main;
+			path = Start;
 			sourceTree = "<group>";
 		};
 		103C5F5425F56A1A004916E5 /* QRCodeModal */ = {
@@ -181,7 +185,8 @@
 		1099ED7525EC212F00F53439 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				103C5F5325F569FB004916E5 /* Main */,
+				103C5F5325F569FB004916E5 /* Start */,
+				91EA2D0B271D45AD00EEC146 /* Archive */,
 				10B0E633264DD6CB00003DA1 /* AppTrackingModal */,
 				103C5F5425F56A1A004916E5 /* QRCodeModal */,
 			);
@@ -222,7 +227,7 @@
 		10ABC51125F18AE400CD0CF6 /* ADS */ = {
 			isa = PBXGroup;
 			children = (
-				1099ED7B25ED732A00F53439 /* BannerGoogleAds.swift */,
+				1099ED7B25ED732A00F53439 /* StartBannerGoogleAds.swift */,
 				10ABC50B25F1763400CD0CF6 /* FullScreenGoogleAds.swift */,
 			);
 			path = ADS;
@@ -234,6 +239,15 @@
 				10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */,
 			);
 			path = AppTrackingModal;
+			sourceTree = "<group>";
+		};
+		91EA2D0B271D45AD00EEC146 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */,
+				91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */,
+			);
+			path = Archive;
 			sourceTree = "<group>";
 		};
 		B3CA5024CF7F48A6A2F8C29B /* Pods */ = {
@@ -263,7 +277,6 @@
 			buildConfigurationList = 1036512D25EC1C27003F03D0 /* Build configuration list for PBXNativeTarget "boop" */;
 			buildPhases = (
 				E34074C6BA25DE9CD7BBEB3A /* [CP] Check Pods Manifest.lock */,
-				5EF7B64F5E84919A09459016 /* [CP] Prepare Artifacts */,
 				1036511725EC1C24003F03D0 /* Sources */,
 				1036511825EC1C24003F03D0 /* Frameworks */,
 				1036511925EC1C24003F03D0 /* Resources */,
@@ -285,7 +298,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "Aleksey Dolinin";
 				TargetAttributes = {
 					1036511A25EC1C24003F03D0 = {
@@ -329,23 +342,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5EF7B64F5E84919A09459016 /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boop/Pods-boop-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-boop/Pods-boop-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-boop/Pods-boop-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E0E7EE7BBECDB262C1F13ADC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,10 +395,12 @@
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */,
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
+				91EA2D0A271D45A400EEC146 /* ArchiveViewController.swift in Sources */,
 				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
 				1099ED7725EC215E00F53439 /* StartView.swift in Sources */,
 				10ABC50E25F1803F00CD0CF6 /* Shortener.swift in Sources */,
-				1099ED7C25ED732A00F53439 /* BannerGoogleAds.swift in Sources */,
+				91EA2D0F271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift in Sources */,
+				1099ED7C25ED732A00F53439 /* StartBannerGoogleAds.swift in Sources */,
 				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
 				102A845625F5121B00D78619 /* DelegatesStartVC.swift in Sources */,
 				103C5F5825F56A54004916E5 /* QRCodeModalView.swift in Sources */,
@@ -466,6 +464,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -527,6 +526,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

@@ -26,8 +26,8 @@ extension StartViewController {
     
     ///
     @IBAction func backAction(_ sender: UIButton) {
-        startView.linkLabel.text = "Paste the link here"
-        startView.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
+        viewSelf.linkLabel.text = "Paste the link here"
+        viewSelf.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
         self.longLink = nil
         self.shortLink = nil
     }
@@ -35,7 +35,7 @@ extension StartViewController {
     ///
     @IBAction func tapPlaceLinkAction(_ sender: UIButton) {
         print("tapPlaceLinkAction")
-        if startView.linkLabel.text == "Paste the link here" {
+        if viewSelf.linkLabel.text == "Paste the link here" {
             let encodeString: String = (pasteboard.string)?.encodeUrl() ?? ""
             print("encodeString: \(encodeString)")
             print("selectedService: \(StartViewController.selectedService)")
@@ -54,17 +54,17 @@ extension StartViewController {
 //                }
                 
                 if scheme == "https" || scheme == "http" {
-                    startView.showMessage(text: "Please Wait...")
-                    startView.linkLabel.text = pasteboard.string
+                    viewSelf.showMessage(text: "Please Wait...")
+                    viewSelf.linkLabel.text = pasteboard.string
                     self.longLink = longLink.absoluteString
-                    self.startView.placeLinkButton.isUserInteractionEnabled = false
+                    self.viewSelf.placeLinkButton.isUserInteractionEnabled = false
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         self.createShortLink()
                     }
-                    self.startView.animationLabel()
+                    self.viewSelf.animationLabel()
                 }
             } else {
-                startView.showMessage(text: "Not Found Link \n(Please, copy url to clipboard)")
+                viewSelf.showMessage(text: "Not Found Link \n(Please, copy url to clipboard)")
             }
         }
     }

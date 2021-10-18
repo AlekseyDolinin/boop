@@ -11,10 +11,12 @@ class StartView: UIView {
     @IBOutlet weak var stackActionButtons: UIStackView!
     @IBOutlet weak var collectionServices: UICollectionView!
     @IBOutlet weak var pagination: UIPageControl!
+    @IBOutlet weak var openArchiveButton: UIButton!
     
     override func awakeFromNib() {
         viewMessage.clipsToBounds = true
         viewMessage.layer.cornerRadius = 4
+        openArchiveButton.layer.cornerRadius = openArchiveButton.frame.height / 2
     }
     
     
