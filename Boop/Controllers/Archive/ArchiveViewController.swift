@@ -1,39 +1,24 @@
 import UIKit
 import GoogleMobileAds
 
-class ArchiveViewController: UIViewController, GADBannerViewDelegate {
-
+class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var viewSelf: ArchiveView! {
         guard isViewLoaded else { return nil }
         return (view as! ArchiveView)
     }
-    
+    var arrayArchive = [ArchiveLink]()
     var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewSelf.archiveTable.delegate = self
+        viewSelf.archiveTable.dataSource = self
+        
         setGadBanner()
         
-    }
-}
-
-
-
-import UIKit
-
-class ArchiveView: UIView {
-    
-    
-    override func awakeFromNib() {
-
+        navigationController?.title = "Archive"
         
-        
-    }
-    
-    
-    func configure() {
-
     }
 }

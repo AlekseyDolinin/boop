@@ -33,6 +33,12 @@ extension StartViewController {
     }
     
     ///
+    @IBAction func saveLinkAction(_ sender: UIButton) {
+        animationPulse()
+        createItem()
+    }
+    
+    ///
     @IBAction func tapPlaceLinkAction(_ sender: UIButton) {
         print("tapPlaceLinkAction")
         if viewSelf.linkLabel.text == "Paste the link here" {
@@ -42,17 +48,6 @@ extension StartViewController {
             
             /// проверка вставлена ссылка или просто текст
             if let longLink = URL(string: encodeString), let scheme = longLink.scheme {
-                
-//                let host: String! = longLink.host
-//                print(host)
-//
-//
-//
-//                if host == "goolnk.com" {
-//                    startView.showMessage(text: "Not Found Link (Please, copy url to clipboard)")
-//                    return
-//                }
-                
                 if scheme == "https" || scheme == "http" {
                     viewSelf.showMessage(text: "Please Wait...")
                     viewSelf.linkLabel.text = pasteboard.string

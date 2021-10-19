@@ -25,6 +25,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     var pressedButtonTag: Int!
     var arrayKeysServices: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
+    var arrayArchive = [ArchiveLink]()
     static var selectedService: Service = .Isgd
     
     override func viewDidLoad() {
@@ -116,8 +117,64 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     }
     
     ///
+    func createItem() {
+        let item = ArchiveLink(id: UUID().uuidString,
+                               name: nil,
+                               description: nil,
+                               shortLink: self.shortLink,
+                               longLink: self.longLink,
+                               date: Date())
+                
+        saveItemInArchive(item: item)
+    }
+    
+    
+    func saveItemInArchive(item: ArchiveLink) {
+    
+        arrayArchive.append(item)
+        
+        print(arrayArchive)
+        
+//        print(UserDefaults.standard.object(forKey: "arrayArchive"))
+//        print(item)
+//        var arrayArchive = [item]
+//
+//
+//        if let arrayArchiveRaw = UserDefaults.standard.object(forKey: "arrayArchive") {
+//            arrayArchive = arrayArchiveRaw as! [ArchiveLink]
+//        }
+//
+//
+//
+//        print(arrayArchive)
+//
+//        UserDefaults.standard.setValue(arrayArchive, forKey: "arrayArchive")
+//
+//        print(UserDefaults.standard.array(forKey: "arrayArchive"))
+        
+    }
+    
+    ///
+    func animationPulse() {
+        let pulse1 = CASpringAnimation(keyPath: "transform.scale")
+        pulse1.duration = 0.6
+        pulse1.fromValue = 1.0
+        pulse1.toValue = 1.2
+        pulse1.autoreverses = true
+        pulse1.repeatCount = 1
+        pulse1.initialVelocity = 0.5
+        pulse1.damping = 0.8
+        let animationGroup = CAAnimationGroup()
+        animationGroup.duration = 2.7
+        animationGroup.repeatCount = 1
+        animationGroup.animations = [pulse1]
+        self.viewSelf.openArchiveButton.layer.add(animationGroup, forKey: "pulse")
+    }
+    
+    ///
     @IBAction func openArchiveAction(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController") as! ArchiveViewController
+        vc.arrayArchive = self.arrayArchive
         navigationController?.pushViewController(vc, animated: true)
     }
 }

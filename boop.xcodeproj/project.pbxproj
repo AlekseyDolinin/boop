@@ -38,6 +38,10 @@
 		10B0E632264DC67D00003DA1 /* AppTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E631264DC67D00003DA1 /* AppTracking.swift */; };
 		10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */; };
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
+		918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528B9271E9461002AE8A0 /* ArchiveCell.swift */; };
+		918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */; };
+		918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BD271E94D1002AE8A0 /* ArchiveView.swift */; };
+		918528C0271E9A19002AE8A0 /* ArchiveLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BF271E9A19002AE8A0 /* ArchiveLink.swift */; };
 		91EA2D0A271D45A400EEC146 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */; };
 		91EA2D0F271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +82,10 @@
 		38228792F87CF8A89B00B884 /* Pods-boop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boop.release.xcconfig"; path = "Target Support Files/Pods-boop/Pods-boop.release.xcconfig"; sourceTree = "<group>"; };
 		47F3F927E3E85A7B61DEBA31 /* Pods-pinch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.release.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.release.xcconfig"; sourceTree = "<group>"; };
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		918528B9271E9461002AE8A0 /* ArchiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCell.swift; sourceTree = "<group>"; };
+		918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDelegates.swift; sourceTree = "<group>"; };
+		918528BD271E94D1002AE8A0 /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
+		918528BF271E9A19002AE8A0 /* ArchiveLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveLink.swift; sourceTree = "<group>"; };
 		91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveBannerGoogleAds.swift; sourceTree = "<group>"; };
 		9C441682D755AA2C1FFB3547 /* Pods-pinch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.debug.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				102A845825F513A500D78619 /* ServiceCell.swift */,
+				918528B9271E9461002AE8A0 /* ArchiveCell.swift */,
+				918528BF271E9A19002AE8A0 /* ArchiveLink.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -198,6 +208,7 @@
 			children = (
 				1099ED7625EC215E00F53439 /* StartView.swift */,
 				103C5F5725F56A54004916E5 /* QRCodeModalView.swift */,
+				918528BD271E94D1002AE8A0 /* ArchiveView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */,
+				918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */,
 				91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */,
 			);
 			path = Archive;
@@ -389,11 +401,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				103C5F5A25F57332004916E5 /* CIImage.swift in Sources */,
+				918528C0271E9A19002AE8A0 /* ArchiveLink.swift in Sources */,
 				1036512125EC1C24003F03D0 /* StartViewController.swift in Sources */,
 				1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */,
 				103C5F5D25F57371004916E5 /* URL.swift in Sources */,
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */,
+				918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */,
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
 				91EA2D0A271D45A400EEC146 /* ArchiveViewController.swift in Sources */,
 				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
@@ -408,11 +422,13 @@
 				10B0E632264DC67D00003DA1 /* AppTracking.swift in Sources */,
 				103C5F5625F56A41004916E5 /* QRCodeModalViewController.swift in Sources */,
 				102A845425F500AE00D78619 /* Click.swift in Sources */,
+				918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */,
 				10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */,
 				102A845925F513A500D78619 /* ServiceCell.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
 				1099ED7A25EC2E3300F53439 /* API.swift in Sources */,
 				102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */,
+				918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
