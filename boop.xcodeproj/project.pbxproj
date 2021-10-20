@@ -109,7 +109,6 @@
 			children = (
 				102A845825F513A500D78619 /* ServiceCell.swift */,
 				918528B9271E9461002AE8A0 /* ArchiveCell.swift */,
-				918528BF271E9A19002AE8A0 /* ArchiveLink.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -139,6 +138,7 @@
 				1036511E25EC1C24003F03D0 /* AppDelegate.swift */,
 				1036512225EC1C24003F03D0 /* Main.storyboard */,
 				1036512725EC1C27003F03D0 /* LaunchScreen.storyboard */,
+				918528BF271E9A19002AE8A0 /* ArchiveLink.swift */,
 				102A845725F5137E00D78619 /* Cell */,
 				1099ED7825EC217D00F53439 /* Views */,
 				1099ED7525EC212F00F53439 /* Controllers */,

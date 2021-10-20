@@ -1,5 +1,6 @@
 import UIKit
 import GoogleMobileAds
+import Foundation
 
 class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,5 +21,29 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         
         navigationController?.title = "Archive"
         
+        if let data = UserDefaults.standard.data(forKey: "arrayArchive") {
+            do {
+                let decoder = JSONDecoder()
+                let arrayArchiveRaw = try decoder.decode([ArchiveView].self, from: data)
+                print("arrayArchiveRaw: \(arrayArchiveRaw)")
+                
+                for i in arrayArchiveRaw {
+                    print(i.title)
+                    print(i.body)
+                    print(i.id)
+                }
+                
+            } catch {
+                print("Unable to Decode Notes (\(error))")
+            }
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        print(arrayArchive)
+
     }
 }

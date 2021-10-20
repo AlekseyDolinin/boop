@@ -1,5 +1,7 @@
 import UIKit
 import GoogleMobileAds
+import SwiftyJSON
+import Foundation
 
 class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate {
     
@@ -38,7 +40,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         setPagination()
         getVersionApp()
         
-        #if canImport(AppTrackingTransparency)
+#if canImport(AppTrackingTransparency)
         NotificationCenter.default.addObserver(self, selector: #selector(requestTrackingAuthorization), name: Notification.Name("requestAppTracking"), object: nil)
         
         if let statusATT =  UserDefaults.standard.string(forKey: "statusATTKey") {
@@ -50,7 +52,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
             /// если статус нил - запроса не было
             showModalAppTrackingDescription()
         }
-        #endif
+#endif
     }
     
     ///
@@ -117,41 +119,25 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     }
     
     ///
-    func createItem() {
-        let item = ArchiveLink(id: UUID().uuidString,
-                               name: nil,
-                               description: nil,
-                               shortLink: self.shortLink,
-                               longLink: self.longLink,
-                               date: Date())
-                
-        saveItemInArchive(item: item)
+    func createItem() -> ArchiveLink{
+        return ArchiveLink(id: UUID().uuidString,
+                           name: nil,
+                           description: nil,
+                           shortLink: self.shortLink,
+                           longLink: self.longLink,
+                           date: Date())
     }
     
     
-    func saveItemInArchive(item: ArchiveLink) {
-    
-        arrayArchive.append(item)
-        
-        print(arrayArchive)
-        
-//        print(UserDefaults.standard.object(forKey: "arrayArchive"))
-//        print(item)
-//        var arrayArchive = [item]
-//
-//
-//        if let arrayArchiveRaw = UserDefaults.standard.object(forKey: "arrayArchive") {
-//            arrayArchive = arrayArchiveRaw as! [ArchiveLink]
-//        }
-//
-//
-//
-//        print(arrayArchive)
-//
-//        UserDefaults.standard.setValue(arrayArchive, forKey: "arrayArchive")
-//
-//        print(UserDefaults.standard.array(forKey: "arrayArchive"))
-        
+    func saveItemInArchive() {
+        arrayArchive.append(createItem())
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(arrayArchive)
+            UserDefaults.standard.set(data, forKey: "arrayArchive")
+        } catch {
+            print("Unable to Encode Note (\(error))")
+        }
     }
     
     ///
@@ -169,12 +155,5 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         animationGroup.repeatCount = 1
         animationGroup.animations = [pulse1]
         self.viewSelf.openArchiveButton.layer.add(animationGroup, forKey: "pulse")
-    }
-    
-    ///
-    @IBAction func openArchiveAction(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController") as! ArchiveViewController
-        vc.arrayArchive = self.arrayArchive
-        navigationController?.pushViewController(vc, animated: true)
     }
 }

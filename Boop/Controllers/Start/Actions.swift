@@ -25,6 +25,12 @@ extension StartViewController {
     }
     
     ///
+    @IBAction func openArchiveAction(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
+        navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    ///
     @IBAction func backAction(_ sender: UIButton) {
         viewSelf.linkLabel.text = "Paste the link here"
         viewSelf.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
@@ -35,7 +41,7 @@ extension StartViewController {
     ///
     @IBAction func saveLinkAction(_ sender: UIButton) {
         animationPulse()
-        createItem()
+        saveItemInArchive()
     }
     
     ///
