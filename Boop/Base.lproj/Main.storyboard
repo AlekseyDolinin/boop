@@ -518,43 +518,40 @@
                                     <constraint firstAttribute="width" secondItem="9uc-E4-0Tv" secondAttribute="height" multiplier="1:1" id="ctk-Xu-IvD"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B1a-wW-FH3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B1a-wW-FH3">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="kKu-Xe-YCj">
-                                    <rect key="frame" x="0.0" y="156.5" width="320" height="78"/>
+                                    <rect key="frame" x="0.0" y="177" width="320" height="78"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArchiveCell" id="j2v-Aq-msF" customClass="ArchiveCell" customModule="boop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="320" height="89.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j2v-Aq-msF" id="mhy-pD-UsR">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pns-cR-TcX">
-                                                    <rect key="frame" x="8" y="0.0" width="304" height="81.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="304" height="102"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.12.12 / 12:15" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4U-q5-wEs">
-                                                            <rect key="frame" x="218" y="8" width="70" height="17"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="70" id="Nk3-mH-fo5"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4U-q5-wEs">
+                                                            <rect key="frame" x="16" y="16" width="272" height="17"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
                                                             <color key="textColor" name="White_"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shortlink" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQp-Dr-m75">
-                                                            <rect key="frame" x="16" y="16" width="194" height="22"/>
-                                                            <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
+                                                            <rect key="frame" x="16" y="37" width="272" height="24"/>
+                                                            <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="20"/>
                                                             <color key="textColor" name="White_"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longlink" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNf-pb-Zh0">
-                                                            <rect key="frame" x="16" y="46" width="280" height="19.5"/>
-                                                            <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longlink" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNf-pb-Zh0">
+                                                            <rect key="frame" x="16" y="69" width="272" height="17"/>
+                                                            <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
                                                             <color key="textColor" name="White_"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -562,14 +559,15 @@
                                                     <color key="backgroundColor" name="Violet_Dark_"/>
                                                     <constraints>
                                                         <constraint firstItem="eNf-pb-Zh0" firstAttribute="top" secondItem="KQp-Dr-m75" secondAttribute="bottom" constant="8" id="0ov-fl-35s"/>
-                                                        <constraint firstAttribute="trailing" secondItem="eNf-pb-Zh0" secondAttribute="trailing" constant="8" id="Hl7-3u-sbc"/>
-                                                        <constraint firstItem="KQp-Dr-m75" firstAttribute="top" secondItem="pns-cR-TcX" secondAttribute="top" constant="16" id="Lop-Fa-VKm"/>
-                                                        <constraint firstAttribute="trailing" secondItem="F4U-q5-wEs" secondAttribute="trailing" constant="16" id="N5y-Zf-dic"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KQp-Dr-m75" secondAttribute="trailing" constant="16" id="5r6-Np-MBd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="F4U-q5-wEs" secondAttribute="trailing" constant="16" id="Afi-hV-RMI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="eNf-pb-Zh0" secondAttribute="trailing" constant="16" id="Hl7-3u-sbc"/>
+                                                        <constraint firstItem="F4U-q5-wEs" firstAttribute="leading" secondItem="pns-cR-TcX" secondAttribute="leading" constant="16" id="Jz0-sC-fgz"/>
                                                         <constraint firstAttribute="bottom" secondItem="eNf-pb-Zh0" secondAttribute="bottom" constant="16" id="SxF-Cx-XHL"/>
                                                         <constraint firstItem="eNf-pb-Zh0" firstAttribute="leading" secondItem="pns-cR-TcX" secondAttribute="leading" constant="16" id="UVP-nh-XyO"/>
-                                                        <constraint firstItem="F4U-q5-wEs" firstAttribute="leading" secondItem="KQp-Dr-m75" secondAttribute="trailing" constant="8" id="Yq2-al-Ecf"/>
                                                         <constraint firstItem="KQp-Dr-m75" firstAttribute="leading" secondItem="pns-cR-TcX" secondAttribute="leading" constant="16" id="aHI-qO-4N6"/>
-                                                        <constraint firstItem="F4U-q5-wEs" firstAttribute="top" secondItem="pns-cR-TcX" secondAttribute="top" constant="8" id="aJb-ey-fuL"/>
+                                                        <constraint firstItem="F4U-q5-wEs" firstAttribute="top" secondItem="pns-cR-TcX" secondAttribute="top" constant="16" id="aJb-ey-fuL"/>
+                                                        <constraint firstItem="KQp-Dr-m75" firstAttribute="top" secondItem="F4U-q5-wEs" secondAttribute="bottom" constant="4" id="mYd-fd-4MF"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

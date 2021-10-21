@@ -7,10 +7,34 @@ class ArchiveCell: UITableViewCell {
     @IBOutlet weak var shortlink: UILabel!
     @IBOutlet weak var longlink: UILabel!
     
+    var archiveLink: ArchiveLink!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
+    }
+    
+    func setCell() {
+        setShortLink()
+        setLongtLink()
+        setDate()
+    }
+    
+    func setShortLink() {
+        shortlink.text = archiveLink.shortLink
+    }
+    
+    func setLongtLink() {
+        longlink.text = archiveLink.longLink
+    }
+    
+    func setDate() {
+        print(archiveLink.date)
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .short
+        dateLabel.text = dateFormatter.string(from: archiveLink.date)
     }
 }
 

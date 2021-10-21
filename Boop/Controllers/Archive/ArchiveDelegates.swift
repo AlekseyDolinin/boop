@@ -7,12 +7,9 @@ extension ArchiveViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let archiveCell = tableView.dequeueReusableCell(withIdentifier: "ArchiveCell", for: indexPath) as! ArchiveCell
-        
+        archiveCell.archiveLink = arrayArchive[indexPath.row]
+        archiveCell.setCell()
         return archiveCell
     }
-    
-    
-    
 }

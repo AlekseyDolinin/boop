@@ -27,7 +27,6 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     var pressedButtonTag: Int!
     var arrayKeysServices: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
-    var arrayArchive = [ArchiveLink]()
     static var selectedService: Service = .Isgd
     
     override func viewDidLoad() {
@@ -130,6 +129,16 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     
     func saveItemInArchive() {
+        var arrayArchive = [ArchiveLink]()
+        ///
+        if let data = UserDefaults.standard.data(forKey: "arrayArchive") {
+            do {
+                let decoder = JSONDecoder()
+                arrayArchive = try decoder.decode([ArchiveLink].self, from: data)
+            } catch {
+                print("Unable to Decode Notes (\(error))")
+            }
+        }
         arrayArchive.append(createItem())
         do {
             let encoder = JSONEncoder()
