@@ -3,7 +3,7 @@ import Alamofire
 import SwiftyJSON
 
 extension API {
-    class func click(longLink: String, completion: @escaping (String) -> Void) {
+    class func click(longLink: String, completion: @escaping (String) -> ()) {
         
         let urlService = "https://clck.ru/--?url=\(longLink)"
         

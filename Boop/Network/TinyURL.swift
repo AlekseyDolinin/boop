@@ -3,7 +3,7 @@ import Alamofire
 import SwiftyJSON
 
 extension API {
-    class func tinyURL(longLink: String, completion: @escaping (String) -> Void) {
+    class func tinyURL(longLink: String, completion: @escaping (String) -> ()) {
         
         let key = "jN5rKoyNJkWLH2ZZdWXcxT5z0BWegD75Q8ezIWkapnKRz5PXBGd1SaAWlmp7"
         

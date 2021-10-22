@@ -13,6 +13,14 @@ extension ArchiveViewController {
         return archiveCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
+        vc.linkForQRCode = arrayArchive[indexPath.row].shortLink
+        vc.modalPresentationStyle = .formSheet
+        present(vc, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
