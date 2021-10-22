@@ -104,14 +104,6 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     }
     
     ///
-    func showQRCode() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
-        vc.linkForQRCode = shortLink
-        vc.modalPresentationStyle = .formSheet
-        present(vc, animated: true)
-    }
-    
-    ///
     func copiedShortLink() {
         pasteboard.string = self.shortLink
         viewSelf.showMessage(text: "Link copied")
@@ -165,4 +157,5 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         animationGroup.animations = [pulse1]
         self.viewSelf.openArchiveButton.layer.add(animationGroup, forKey: "pulse")
     }
+
 }

@@ -28,8 +28,6 @@ extension StartViewController {
         switch pressedButtonTag {
         case 2:
             copiedShortLink()
-        case 3:
-            showQRCode()
         case 4:
             showControllerShare()
         default:

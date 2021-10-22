@@ -9,19 +9,24 @@ extension StartViewController {
         if interstitial.isReady == true {
             print("ролик готов")
             interstitial.present(fromRootViewController: self)
-            
         } else {
             switch pressedButtonTag {
             case 2:
                 copiedShortLink()
-            case 3:
-                showQRCode()
             case 4:
                 showControllerShare()
             default:
                 break
             }
         }
+    }
+    
+    ///
+    @IBAction func showQRCode(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
+        vc.linkForQRCode = shortLink
+        vc.modalPresentationStyle = .formSheet
+        present(vc, animated: true)
     }
     
     ///

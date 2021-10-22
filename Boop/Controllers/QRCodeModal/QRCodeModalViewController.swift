@@ -12,9 +12,9 @@ class QRCodeModalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let imageLogo = UIImage(named: "circleLogo")!
-        let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: UIColor(named: "Violet_Dark_")!, logo: imageLogo)
+//        let imageLogo = UIImage(named: "circleLogo")!
+//        let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: UIColor(named: "Violet_Dark_")!, logo: imageLogo)
+        let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: UIColor(named: "Violet_Dark_")!)
         qrCodeModalView.qrCodeImage.image = convert(cmage: qrURLImage!)
         qrCodeModalView.linkLabel.text = linkForQRCode
         
@@ -27,13 +27,11 @@ class QRCodeModalViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
         /// рендер UIImage
         let renderer = UIGraphicsImageRenderer(size: qrCodeModalView.backView.bounds.size)
         let renderImage: UIImage = renderer.image { ctx in
             qrCodeModalView.backView.drawHierarchy(in: qrCodeModalView.backView.bounds, afterScreenUpdates: true)
         }
-        
         /// Convert to data
         dataImageQRCode = renderImage.pngData()
     }
@@ -59,7 +57,7 @@ class QRCodeModalViewController: UIViewController {
     }
     
     @IBAction func closeView (_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
     
     @IBAction func shareQRCode (_ sender: UIButton) {
