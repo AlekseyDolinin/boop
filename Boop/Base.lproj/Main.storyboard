@@ -338,7 +338,7 @@
                                         </constraints>
                                         <state key="normal" image="share_purple"/>
                                         <connections>
-                                            <action selector="shareQRCode:" destination="wld-vQ-As2" eventType="touchUpInside" id="Yv4-9f-ppc"/>
+                                            <action selector="shareAction:" destination="wld-vQ-As2" eventType="touchUpInside" id="lJc-Ex-wc1"/>
                                         </connections>
                                     </button>
                                 </subviews>

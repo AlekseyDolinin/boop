@@ -1,6 +1,7 @@
 import UIKit
+import GoogleMobileAds
 
-class QRCodeModalViewController: UIViewController {
+class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
 
     var qrCodeModalView: QRCodeModalView! {
         guard isViewLoaded else {return nil}
@@ -9,9 +10,11 @@ class QRCodeModalViewController: UIViewController {
     
     var linkForQRCode: String!
     var dataImageQRCode: Data!
-    
+    var interstitial: GADInterstitial!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        setGadFullView()
 //        let imageLogo = UIImage(named: "circleLogo")!
 //        let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: UIColor(named: "Violet_Dark_")!, logo: imageLogo)
         let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: UIColor(named: "Violet_Dark_")!)
@@ -49,6 +52,7 @@ class QRCodeModalViewController: UIViewController {
         return nil
     }
     
+    ///
     func convert(cmage: CIImage) -> UIImage {
         let context: CIContext = CIContext.init(options: nil)
         let cgImage: CGImage = context.createCGImage(cmage, from: cmage.extent)!
@@ -56,11 +60,8 @@ class QRCodeModalViewController: UIViewController {
         return image
     }
     
-    @IBAction func closeView (_ sender: UIButton) {
-        dismiss(animated: true)
-    }
-    
-    @IBAction func shareQRCode (_ sender: UIButton) {
+    ///
+    func shareQRCode() {
         let shareController = UIActivityViewController(activityItems: [dataImageQRCode as Any], applicationActivities: nil)
         shareController.completionWithItemsHandler = {_, bool, _, _ in
             if bool {
@@ -72,6 +73,22 @@ class QRCodeModalViewController: UIViewController {
         present(shareController, animated: true, completion: nil)
     }
     
+    ///
+    @IBAction func closeView (_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    ///
+    @IBAction func shareAction (_ sender: UIButton) {
+        if interstitial.isReady == true {
+            print("ролик готов")
+            interstitial.present(fromRootViewController: self)
+        } else {
+            shareQRCode()
+        }
+    }
+    
+    ///
     @IBAction func saveQRCode (_ sender: UIButton) {
         print("saveQRCode")
     }
