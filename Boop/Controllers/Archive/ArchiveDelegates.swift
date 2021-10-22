@@ -12,4 +12,23 @@ extension ArchiveViewController {
         archiveCell.setCell()
         return archiveCell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            arrayArchive.remove(at: indexPath.row)
+            viewSelf.archiveTable.reloadData()
+            /// запись нового массива
+            do {
+                let encoder = JSONEncoder()
+                let data = try encoder.encode(arrayArchive)
+                UserDefaults.standard.set(data, forKey: "arrayArchive")
+            } catch {
+                print("Unable to Encode Note (\(error))")
+            }
+        }
+    }
 }

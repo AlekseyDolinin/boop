@@ -29,8 +29,6 @@ class ArchiveCell: UITableViewCell {
     }
     
     func setDate() {
-        print(archiveLink.date)
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .short

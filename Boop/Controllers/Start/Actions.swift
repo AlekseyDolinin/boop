@@ -10,14 +10,7 @@ extension StartViewController {
             print("ролик готов")
             interstitial.present(fromRootViewController: self)
         } else {
-            switch pressedButtonTag {
-            case 2:
-                copiedShortLink()
-            case 4:
-                showControllerShare()
-            default:
-                break
-            }
+            pressedButtonTag == 2 ? copiedShortLink() : showControllerShare()
         }
     }
     
@@ -30,7 +23,7 @@ extension StartViewController {
     }
     
     ///
-    @IBAction func openArchiveAction(_ sender: Any) {
+    @IBAction func openArchiveAction(_ sender: Any?) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
         navigationController?.pushViewController(vc!, animated: true)
     }
@@ -46,7 +39,7 @@ extension StartViewController {
     ///
     @IBAction func saveLinkAction(_ sender: UIButton) {
         animationPulse()
-        saveItemInArchive()
+        addItemInArchive()
     }
     
     ///
