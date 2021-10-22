@@ -29,6 +29,8 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
             } catch {
                 print("Unable to Decode Notes (\(error))")
             }
+        } else {
+            viewSelf.emptyLabel.isHidden = false
         }
     }
     

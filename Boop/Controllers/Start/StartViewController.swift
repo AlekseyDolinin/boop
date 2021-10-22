@@ -127,11 +127,15 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
             do {
                 let decoder = JSONDecoder()
                 self.arrayArchive = try decoder.decode([ArchiveLink].self, from: data)
+                print("arrayArchive_1: \(self.arrayArchive)")
                 completion (true)
             } catch {
                 print("Unable to Decode Notes (\(error))")
                 completion (false)
             }
+        } else {
+            print("Первая запись в архив")
+            completion (true)
         }
     }
     
@@ -142,7 +146,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
             /// если удалось прочитать и декодировать архив
             if bool == true {
                 ///проверка количества записей
-                if self.arrayArchive.count >= 5 {
+                if self.arrayArchive.count >= 10 {
                     ///
                     self.showAlert()
                 } else {

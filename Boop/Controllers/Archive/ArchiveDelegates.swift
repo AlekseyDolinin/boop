@@ -3,6 +3,7 @@ import UIKit
 extension ArchiveViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(arrayArchive.count)
         return arrayArchive.count
     }
     
