@@ -39,6 +39,7 @@
 		10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */; };
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
 		913B133B27228AE7008C8D7F /* ADFullScreenQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */; };
+		9152E048272685CB003FF6F0 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152E047272685CB003FF6F0 /* SafariViewController.swift */; };
 		918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528B9271E9461002AE8A0 /* ArchiveCell.swift */; };
 		918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */; };
 		918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BD271E94D1002AE8A0 /* ArchiveView.swift */; };
@@ -84,6 +85,7 @@
 		47F3F927E3E85A7B61DEBA31 /* Pods-pinch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.release.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.release.xcconfig"; sourceTree = "<group>"; };
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenQRCode.swift; sourceTree = "<group>"; };
+		9152E047272685CB003FF6F0 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		918528B9271E9461002AE8A0 /* ArchiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCell.swift; sourceTree = "<group>"; };
 		918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDelegates.swift; sourceTree = "<group>"; };
 		918528BD271E94D1002AE8A0 /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				91EA2D0B271D45AD00EEC146 /* Archive */,
 				10B0E633264DD6CB00003DA1 /* AppTrackingModal */,
 				103C5F5425F56A1A004916E5 /* QRCodeModal */,
+				9152E047272685CB003FF6F0 /* SafariViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				1036512125EC1C24003F03D0 /* StartViewController.swift in Sources */,
 				1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */,
 				103C5F5D25F57371004916E5 /* URL.swift in Sources */,
+				9152E048272685CB003FF6F0 /* SafariViewController.swift in Sources */,
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */,
 				918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */,
@@ -582,7 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
 				INFOPLIST_FILE = "$(SRCROOT)/Boop/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -590,7 +594,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.3;
+				MARKETING_VERSION = 5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -604,7 +608,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
 				INFOPLIST_FILE = "$(SRCROOT)/Boop/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -612,7 +616,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.3;
+				MARKETING_VERSION = 5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

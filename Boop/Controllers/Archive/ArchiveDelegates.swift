@@ -1,4 +1,5 @@
 import UIKit
+import SafariServices
 
 extension ArchiveViewController {
     
@@ -15,11 +16,33 @@ extension ArchiveViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
-        vc.linkForQRCode = arrayArchive[indexPath.row].shortLink
-        vc.modalPresentationStyle = .formSheet
-        present(vc, animated: true)
+        
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let actionCopy = UIAlertAction(title: "Copy short link to clipboard", style: .default) { action in
+            self.copyToClipboard(index: indexPath.row)
+        }
+        
+        let actionQR = UIAlertAction(title: "QR code", style: .default) { action in
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
+            vc.linkForQRCode = self.arrayArchive[indexPath.row].shortLink
+            vc.modalPresentationStyle = .formSheet
+            self.present(vc, animated: true)
+        }
+        
+        let actionOpenLink = UIAlertAction(title: "Open link", style: .default) { action in
+            if let url = URL(string: self.arrayArchive[indexPath.row].longLink) {
+                let vc = SafariViewController(url: url, configuration: SFSafariViewController.Configuration())
+                self.present(vc, animated: true)
+            }
+        }
+        
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { action in }
+        
+        actionSheet.addAction(actionCopy)
+        actionSheet.addAction(actionQR)
+        actionSheet.addAction(actionOpenLink)
+        actionSheet.addAction(actionCancel)
+        present(actionSheet, animated: true)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

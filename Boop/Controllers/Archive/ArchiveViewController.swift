@@ -39,13 +39,23 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         if gestureRecognizer.state == .began {
             let touchPoint = gestureRecognizer.location(in: viewSelf.archiveTable)
             if let indexPath = viewSelf.archiveTable.indexPathForRow(at: touchPoint) {
-                pasteboard.string = arrayArchive[indexPath.row].shortLink
-                let alert = UIAlertController(title: nil, message: "Link copied", preferredStyle: .alert)
-                present(alert, animated: true)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    alert.dismiss(animated: true)
-                }
+                copyToClipboard(index: indexPath.row)
             }
+        }
+    }
+    
+    ///
+    func copyToClipboard(index: Int) {
+        pasteboard.string = arrayArchive[index].shortLink
+        showAlertCopy()
+    }
+    
+    ///
+    func showAlertCopy() {
+        let alert = UIAlertController(title: nil, message: "Link copied", preferredStyle: .alert)
+        present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            alert.dismiss(animated: true)
         }
     }
     
