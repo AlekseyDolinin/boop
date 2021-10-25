@@ -1,8 +1,9 @@
 import UIKit
 import GoogleMobileAds
 import Foundation
+import GoogleMobileAds
 
-class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
+class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, GADInterstitialDelegate {
     
     var viewSelf: ArchiveView! {
         guard isViewLoaded else { return nil }
@@ -11,6 +12,8 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
     var arrayArchive = [ArchiveLink]()
     var bannerView: GADBannerView!
     let pasteboard = UIPasteboard.general
+    var interstitial: GADInterstitial!
+    var shortLink: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,7 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         viewSelf.archiveTable.delegate = self
         viewSelf.archiveTable.dataSource = self
         setGadBanner()
+        setGadFullView()
         setupLongPressGesture()
         
         if let data = UserDefaults.standard.data(forKey: "arrayArchive") {
@@ -65,5 +69,18 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         longPressGesture.minimumPressDuration = 1.0 // 1 second press
         longPressGesture.delegate = self
         viewSelf.archiveTable.addGestureRecognizer(longPressGesture)
+    }
+    
+    ///
+    func showControllerShare() {
+        let shareController = UIActivityViewController(activityItems: [self.shortLink as Any], applicationActivities: nil)
+        shareController.completionWithItemsHandler = {_, bool, _, _ in
+            if bool {
+                print("it is done!")
+            } else {
+                print("error send")
+            }
+        }
+        present(shareController, animated: true)
     }
 }

@@ -1,10 +1,10 @@
 import UIKit
 import SafariServices
+import GoogleMobileAds
 
 extension ArchiveViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(arrayArchive.count)
         return arrayArchive.count
     }
     
@@ -17,16 +17,26 @@ extension ArchiveViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        self.shortLink = self.arrayArchive[indexPath.row].shortLink
+        
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let actionCopy = UIAlertAction(title: "Copy short link to clipboard", style: .default) { action in
             self.copyToClipboard(index: indexPath.row)
         }
-        
         let actionQR = UIAlertAction(title: "QR code", style: .default) { action in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
-            vc.linkForQRCode = self.arrayArchive[indexPath.row].shortLink
+            vc.linkForQRCode = self.shortLink
             vc.modalPresentationStyle = .formSheet
             self.present(vc, animated: true)
+        }
+        
+        let actionShareLink = UIAlertAction(title: "Share link", style: .default) { action in
+            if self.interstitial.isReady == true {
+                print("ролик готов")
+                self.interstitial.present(fromRootViewController: self)
+            } else {
+                self.showControllerShare()
+            }
         }
         
         let actionOpenLink = UIAlertAction(title: "Open link", style: .default) { action in
@@ -35,11 +45,10 @@ extension ArchiveViewController {
                 self.present(vc, animated: true)
             }
         }
-        
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { action in }
-        
         actionSheet.addAction(actionCopy)
         actionSheet.addAction(actionQR)
+        actionSheet.addAction(actionShareLink)
         actionSheet.addAction(actionOpenLink)
         actionSheet.addAction(actionCancel)
         present(actionSheet, animated: true)
@@ -49,18 +58,22 @@ extension ArchiveViewController {
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            arrayArchive.remove(at: indexPath.row)
-            viewSelf.archiveTable.reloadData()
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title: nil) { (action, view, completion) in
+            self.arrayArchive.remove(at: indexPath.row)
+            self.viewSelf.archiveTable.reloadData()
             /// запись нового массива
             do {
                 let encoder = JSONEncoder()
-                let data = try encoder.encode(arrayArchive)
+                let data = try encoder.encode(self.arrayArchive)
                 UserDefaults.standard.set(data, forKey: "arrayArchive")
             } catch {
                 print("Unable to Encode Note (\(error))")
             }
+            completion(true)
         }
+        deleteAction.image = UIImage(named: "trash.png")
+        deleteAction.backgroundColor = .Violet_Dark_
+        return UISwipeActionsConfiguration(actions: [deleteAction/*, muteAction*/])
     }
 }

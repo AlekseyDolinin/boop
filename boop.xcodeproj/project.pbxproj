@@ -40,6 +40,7 @@
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
 		913B133B27228AE7008C8D7F /* ADFullScreenQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */; };
 		9152E048272685CB003FF6F0 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152E047272685CB003FF6F0 /* SafariViewController.swift */; };
+		9152E04A27268DF0003FF6F0 /* ADFullScreenArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152E04927268DF0003FF6F0 /* ADFullScreenArchive.swift */; };
 		918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528B9271E9461002AE8A0 /* ArchiveCell.swift */; };
 		918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */; };
 		918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BD271E94D1002AE8A0 /* ArchiveView.swift */; };
@@ -86,6 +87,7 @@
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenQRCode.swift; sourceTree = "<group>"; };
 		9152E047272685CB003FF6F0 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
+		9152E04927268DF0003FF6F0 /* ADFullScreenArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenArchive.swift; sourceTree = "<group>"; };
 		918528B9271E9461002AE8A0 /* ArchiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCell.swift; sourceTree = "<group>"; };
 		918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDelegates.swift; sourceTree = "<group>"; };
 		918528BD271E94D1002AE8A0 /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */,
 				918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */,
 				91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */,
+				9152E04927268DF0003FF6F0 /* ADFullScreenArchive.swift */,
 			);
 			path = Archive;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */,
 				918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */,
+				9152E04A27268DF0003FF6F0 /* ADFullScreenArchive.swift in Sources */,
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
 				91EA2D0A271D45A400EEC146 /* ArchiveViewController.swift in Sources */,
 				10ABC50C25F1763400CD0CF6 /* FullScreenGoogleAds.swift in Sources */,
