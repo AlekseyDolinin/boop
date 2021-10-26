@@ -8,7 +8,7 @@ extension StartViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             guard #available(iOS 14.5, *) else { return }
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "AppTrackingModalViewController") as! AppTrackingModalViewController
-            vc.modalPresentationStyle = .fullScreen
+            vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: true)
         }
     }

@@ -20,6 +20,5 @@ class ServiceCell: UICollectionViewCell {
         super.awakeFromNib()
         
         backView.layer.cornerRadius = 16
-        backView.backgroundColor = UIColor(white: 1, alpha: 0.1)
     }
 }

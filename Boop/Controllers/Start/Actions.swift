@@ -22,11 +22,11 @@ extension StartViewController {
         present(vc, animated: true)
     }
     
-    ///
-    @IBAction func openArchiveAction(_ sender: Any?) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
-        navigationController?.pushViewController(vc!, animated: true)
-    }
+//    ///
+//    @IBAction func openArchiveAction(_ sender: Any?) {
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
+//        navigationController?.pushViewController(vc!, animated: true)
+//    }
     
     ///
     @IBAction func backAction(_ sender: UIButton) {
@@ -39,7 +39,7 @@ extension StartViewController {
     ///
     @IBAction func saveLinkAction(_ sender: UIButton) {
         print("saveLinkAction")
-        animationPulse()
+//        animationPulse()
         addItemInArchive()
     }
     

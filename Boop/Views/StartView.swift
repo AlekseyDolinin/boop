@@ -2,7 +2,12 @@ import UIKit
 
 class StartView: UIView {
     
-    @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var copyButton: UIButton!
+    @IBOutlet weak var generationQRButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var saveInArchiveButton: UIButton!
+    
     @IBOutlet weak var backViewLink: UIView!
     @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var placeLinkButton: UIButton!
@@ -11,12 +16,27 @@ class StartView: UIView {
     @IBOutlet weak var stackActionButtons: UIStackView!
     @IBOutlet weak var collectionServices: UICollectionView!
     @IBOutlet weak var pagination: UIPageControl!
-    @IBOutlet weak var openArchiveButton: UIButton!
     
     override func awakeFromNib() {
+        
+//        backButton.setImage(UIImage(named: "back")?.withRenderingMode(.alwaysTemplate), for: .normal)
+//        backButton.setTitleColor(.Violet_Dark_, for: .normal)
+//
+//        copyButton.setImage(UIImage(named: "copy")?.withRenderingMode(.alwaysTemplate), for: .normal)
+//        copyButton.setTitleColor(.Violet_Dark_, for: .normal)
+//
+//        generationQRButton.setImage(UIImage(named: "qr")?.withRenderingMode(.alwaysTemplate), for: .normal)
+//        generationQRButton.setTitleColor(.Violet_Dark_, for: .normal)
+//
+//        shareButton.setImage(UIImage(named: "share")?.withRenderingMode(.alwaysTemplate), for: .normal)
+//        shareButton.setTitleColor(.Violet_Dark_, for: .normal)
+//
+//        saveInArchiveButton.setImage(UIImage(named: "markInArchive")?.withRenderingMode(.alwaysTemplate), for: .normal)
+//        saveInArchiveButton.setTitleColor(.Violet_Dark_, for: .normal)
+        
+        
         viewMessage.clipsToBounds = true
         viewMessage.layer.cornerRadius = 4
-        openArchiveButton.layer.cornerRadius = openArchiveButton.frame.height / 2
     }
     
     

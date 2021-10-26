@@ -32,13 +32,14 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.isHidden = true
         viewSelf.collectionServices.delegate = self
         viewSelf.collectionServices.dataSource = self
         viewSelf.configure()
-        setGadBanner()
+//        setGadBanner()
         setGadFullView()
         setPagination()
-        getVersionApp()
         
 #if canImport(AppTrackingTransparency)
         NotificationCenter.default.addObserver(self, selector: #selector(requestTrackingAuthorization), name: Notification.Name("requestAppTracking"), object: nil)
@@ -55,19 +56,19 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
 #endif
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true);
+        navigationController?.navigationBar.isHidden = true // for navigation bar hide
+        UIApplication.shared.isStatusBarHidden = true // for status bar hide
+    }
+    
     ///
     func setPagination() {
         viewSelf.pagination.numberOfPages = arrayKeysServices.count
         viewSelf.pagination.currentPage = indexSelectedService
         viewSelf.pagination.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
     }
-    
-    /// получение номера версии приложения
-    func getVersionApp() {
-        let nsObject: AnyObject? = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as AnyObject
-        let version = nsObject as! String
-        viewSelf.versionLabel.text = "version: \(version)"
-    }
+
     
     ///
     func createShortLink() {
@@ -164,7 +165,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         let alert = UIAlertController(title: "The archive is full", message: "You need to free up space", preferredStyle: .alert)
         let actionClose = UIAlertAction(title: "Close", style: .destructive)
         let actionGoToArchive = UIAlertAction(title: "Go to Archive", style: .default) { UIAlertAction in
-            self.openArchiveAction(nil)
+//            self.openArchiveAction(nil)
         }
         alert.addAction(actionGoToArchive)
         alert.addAction(actionClose)
@@ -182,20 +183,20 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         }
     }
     
-    ///
-    func animationPulse() {
-        let pulse1 = CASpringAnimation(keyPath: "transform.scale")
-        pulse1.duration = 0.6
-        pulse1.fromValue = 1.0
-        pulse1.toValue = 1.2
-        pulse1.autoreverses = true
-        pulse1.repeatCount = 1
-        pulse1.initialVelocity = 0.5
-        pulse1.damping = 0.8
-        let animationGroup = CAAnimationGroup()
-        animationGroup.duration = 2.7
-        animationGroup.repeatCount = 1
-        animationGroup.animations = [pulse1]
-        self.viewSelf.openArchiveButton.layer.add(animationGroup, forKey: "pulse")
-    }
+//    ///
+//    func animationPulse() {
+//        let pulse1 = CASpringAnimation(keyPath: "transform.scale")
+//        pulse1.duration = 0.6
+//        pulse1.fromValue = 1.0
+//        pulse1.toValue = 1.2
+//        pulse1.autoreverses = true
+//        pulse1.repeatCount = 1
+//        pulse1.initialVelocity = 0.5
+//        pulse1.damping = 0.8
+//        let animationGroup = CAAnimationGroup()
+//        animationGroup.duration = 2.7
+//        animationGroup.repeatCount = 1
+//        animationGroup.animations = [pulse1]
+//        self.viewSelf.openArchiveButton.layer.add(animationGroup, forKey: "pulse")
+//    }
 }

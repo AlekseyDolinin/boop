@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IQ9-6W-YkY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IQ9-6W-YkY">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,22 +23,20 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="StartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="StartViewController" customModule="boop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="StartViewController" customModule="boop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="StartView" customModule="boop" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.029999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circles" translatesAutoresizingMaskIntoConstraints="NO" id="oVW-cf-cpz">
-                                <rect key="frame" x="-124" y="0.0" width="568" height="568"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="oVW-cf-cpz" secondAttribute="height" multiplier="1:1" id="9rA-Hu-blW"/>
-                                </constraints>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="bg_1" translatesAutoresizingMaskIntoConstraints="NO" id="oVW-cf-cpz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWI-gY-FXf">
-                                <rect key="frame" x="65" y="213" width="190" height="38"/>
+                                <rect key="frame" x="53.5" y="209" width="213.5" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="copy link to clipboard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-Sk-QtK">
-                                        <rect key="frame" x="20" y="8" width="150" height="22"/>
+                                        <rect key="frame" x="20" y="8" width="173.5" height="21"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                         <color key="textColor" name="Violet_Dark_"/>
                                         <nil key="highlightedColor"/>
@@ -53,25 +51,25 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0j-IX-MBy">
-                                <rect key="frame" x="16" y="259" width="288" height="50"/>
+                                <rect key="frame" x="16" y="254" width="288" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste the link here" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL8-74-1fm">
-                                        <rect key="frame" x="16" y="11" width="256" height="28"/>
-                                        <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="23"/>
-                                        <color key="textColor" name="White_"/>
+                                        <rect key="frame" x="16" y="18.5" width="256" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="20"/>
+                                        <color key="textColor" name="Violet_Dark_"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyI-50-ow9">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
                                         <connections>
                                             <action selector="tapPlaceLinkAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vau-Qk-Rd2"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="Violet_Dark_"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="HyI-50-ow9" firstAttribute="leading" secondItem="Q0j-IX-MBy" secondAttribute="leading" id="2O4-FD-bpn"/>
-                                    <constraint firstAttribute="height" constant="50" id="8bc-kQ-8cY"/>
+                                    <constraint firstAttribute="height" constant="60" id="8bc-kQ-8cY"/>
                                     <constraint firstItem="HyI-50-ow9" firstAttribute="top" secondItem="Q0j-IX-MBy" secondAttribute="top" id="Cjr-vi-xB9"/>
                                     <constraint firstAttribute="trailing" secondItem="HL8-74-1fm" secondAttribute="trailing" constant="16" id="Dz6-J2-Wla"/>
                                     <constraint firstAttribute="bottom" secondItem="HyI-50-ow9" secondAttribute="bottom" id="S1z-kl-VX5"/>
@@ -81,7 +79,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlC-3F-WpC">
-                                <rect key="frame" x="10" y="333" width="300" height="60"/>
+                                <rect key="frame" x="10" y="338" width="300" height="60"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQD-85-HlX">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -89,6 +87,7 @@
                                             <constraint firstAttribute="width" constant="60" id="Bq5-av-Ir6"/>
                                             <constraint firstAttribute="height" constant="60" id="iby-Jf-Ucn"/>
                                         </constraints>
+                                        <color key="tintColor" name="Violet_Dark_"/>
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="backAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tf3-NV-AlE"/>
@@ -100,6 +99,7 @@
                                             <constraint firstAttribute="width" constant="60" id="4hO-vk-7mC"/>
                                             <constraint firstAttribute="height" constant="60" id="BW0-yS-AOt"/>
                                         </constraints>
+                                        <color key="tintColor" name="Violet_Dark_"/>
                                         <state key="normal" image="copy"/>
                                         <connections>
                                             <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rV4-Yh-ZjK"/>
@@ -111,6 +111,7 @@
                                             <constraint firstAttribute="height" constant="60" id="3o8-D1-KbX"/>
                                             <constraint firstAttribute="width" constant="60" id="zJA-ZX-tva"/>
                                         </constraints>
+                                        <color key="tintColor" name="Violet_Dark_"/>
                                         <state key="normal" image="qr"/>
                                         <connections>
                                             <action selector="showQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6md-2F-86R"/>
@@ -122,6 +123,7 @@
                                             <constraint firstAttribute="width" constant="60" id="Lwd-Ab-4JF"/>
                                             <constraint firstAttribute="height" constant="60" id="sUw-xs-yA7"/>
                                         </constraints>
+                                        <color key="tintColor" name="Violet_Dark_"/>
                                         <state key="normal" image="share"/>
                                         <connections>
                                             <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xis-Pf-M26"/>
@@ -133,6 +135,7 @@
                                             <constraint firstAttribute="width" constant="60" id="DPA-KR-STh"/>
                                             <constraint firstAttribute="height" constant="60" id="bCD-El-AJM"/>
                                         </constraints>
+                                        <color key="tintColor" name="Violet_Dark_"/>
                                         <state key="normal" image="markInArchive"/>
                                         <connections>
                                             <action selector="saveLinkAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LYR-qV-6JG"/>
@@ -144,7 +147,7 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ENn-iK-tIu">
-                                <rect key="frame" x="0.0" y="84" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Gvw-dd-hL8"/>
@@ -165,21 +168,21 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9z-Bb-cTL">
                                                     <rect key="frame" x="16" y="0.0" width="288" height="102"/>
-                                                    <color key="backgroundColor" white="1" alpha="0.09701849489795919" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="0.38039215686274508" green="0.66666666666666663" blue="0.86274509803921573" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j6r-Zf-ga9">
-                                                    <rect key="frame" x="16" y="19" width="288" height="64.5"/>
+                                                    <rect key="frame" x="16" y="19.5" width="288" height="63"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="36"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="30"/>
-                                                            <color key="textColor" name="White_"/>
+                                                            <color key="textColor" name="Violet_Dark_"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
-                                                            <rect key="frame" x="0.0" y="44" width="288" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
+                                                            <rect key="frame" x="0.0" y="43" width="288" height="20"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="17"/>
-                                                            <color key="textColor" name="White_"/>
+                                                            <color key="textColor" name="Violet_Dark_"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -205,66 +208,61 @@
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-b6-5mo">
-                                <rect key="frame" x="82.5" y="176" width="155.5" height="26"/>
+                                <rect key="frame" x="82.5" y="166" width="155.5" height="26"/>
+                                <color key="currentPageIndicatorTintColor" red="0.33725490200000002" green="0.25882352939999997" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXG-nM-vIJ">
-                                <rect key="frame" x="146" y="535" width="28.5" height="17"/>
-                                <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
-                                <color key="textColor" name="Violet_Dark_"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ7-zc-sjd">
-                                <rect key="frame" x="125" y="418" width="70" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="0.10091576986754967" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-3X-AQx">
+                                <rect key="frame" x="270" y="0.0" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="2SG-og-T8h"/>
-                                    <constraint firstAttribute="height" constant="70" id="fmr-Ea-lhk"/>
+                                    <constraint firstAttribute="width" constant="50" id="QmN-jH-wbF"/>
+                                    <constraint firstAttribute="height" constant="50" id="h4d-LV-Xx6"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
-                                <state key="normal" image="archiveIcon"/>
-                                <connections>
-                                    <action selector="openArchiveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0x-nq-Fe9"/>
-                                </connections>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="menu"/>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="W0k-Ym-PZD"/>
                         <color key="backgroundColor" name="Violet_"/>
                         <constraints>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="top" secondItem="JWI-gY-FXf" secondAttribute="bottom" constant="8" id="12R-JD-P7J"/>
-                            <constraint firstItem="8hJ-b6-5mo" firstAttribute="top" secondItem="ENn-iK-tIu" secondAttribute="bottom" constant="-8" id="1Gf-xL-DAe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zJ7-zc-sjd" secondAttribute="bottom" constant="80" id="5f8-UZ-Z5w"/>
-                            <constraint firstItem="ENn-iK-tIu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7ny-1W-nGx"/>
-                            <constraint firstItem="Q0j-IX-MBy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="88H-nI-7ub"/>
-                            <constraint firstItem="hXG-nM-vIJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BSM-PM-dP8"/>
+                            <constraint firstItem="8hJ-b6-5mo" firstAttribute="top" secondItem="ENn-iK-tIu" secondAttribute="bottom" constant="-4" id="1Gf-xL-DAe"/>
+                            <constraint firstItem="ENn-iK-tIu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="7ny-1W-nGx"/>
+                            <constraint firstItem="Q0j-IX-MBy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="88H-nI-7ub"/>
                             <constraint firstItem="Q0j-IX-MBy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D5C-3W-azp"/>
-                            <constraint firstItem="ENn-iK-tIu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="IP5-pX-ijc"/>
+                            <constraint firstItem="ENn-iK-tIu" firstAttribute="top" secondItem="W0k-Ym-PZD" secondAttribute="top" constant="70" id="IP5-pX-ijc"/>
                             <constraint firstItem="8hJ-b6-5mo" firstAttribute="centerX" secondItem="ENn-iK-tIu" secondAttribute="centerX" id="MqI-9b-EVL"/>
-                            <constraint firstItem="Q0j-IX-MBy" firstAttribute="centerY" secondItem="oVW-cf-cpz" secondAttribute="centerY" id="Ox7-n7-LOu"/>
                             <constraint firstItem="VlC-3F-WpC" firstAttribute="top" secondItem="Q0j-IX-MBy" secondAttribute="bottom" constant="24" id="OxV-9G-rSm"/>
-                            <constraint firstItem="oVW-cf-cpz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ScM-bQ-sIa"/>
-                            <constraint firstItem="oVW-cf-cpz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Taw-d0-yNz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q0j-IX-MBy" secondAttribute="trailing" constant="16" id="TxO-3R-i4z"/>
+                            <constraint firstItem="oVW-cf-cpz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TJs-nR-nz0"/>
+                            <constraint firstAttribute="trailing" secondItem="Q0j-IX-MBy" secondAttribute="trailing" constant="16" id="TxO-3R-i4z"/>
+                            <constraint firstItem="e2a-3X-AQx" firstAttribute="top" secondItem="W0k-Ym-PZD" secondAttribute="top" id="U3j-Mq-H2L"/>
+                            <constraint firstItem="oVW-cf-cpz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xk1-U3-Cfo"/>
                             <constraint firstItem="VlC-3F-WpC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZYd-YB-2N8"/>
-                            <constraint firstItem="oVW-cf-cpz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sQO-xG-HdP"/>
+                            <constraint firstItem="oVW-cf-cpz" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="qSz-TJ-Gv6"/>
                             <constraint firstItem="JWI-gY-FXf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ur4-UA-4Iv"/>
-                            <constraint firstItem="zJ7-zc-sjd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wG4-Fs-Fg2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hXG-nM-vIJ" secondAttribute="bottom" constant="16" id="xtX-5I-rgn"/>
-                            <constraint firstItem="ENn-iK-tIu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y27-Tb-SHt"/>
+                            <constraint firstAttribute="trailing" secondItem="oVW-cf-cpz" secondAttribute="trailing" id="x5S-St-rmo"/>
+                            <constraint firstItem="Q0j-IX-MBy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xDh-hv-uEu"/>
+                            <constraint firstItem="ENn-iK-tIu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y27-Tb-SHt"/>
+                            <constraint firstAttribute="trailing" secondItem="e2a-3X-AQx" secondAttribute="trailing" id="zIQ-xS-vhH"/>
                         </constraints>
                         <connections>
+                            <outlet property="backButton" destination="DQD-85-HlX" id="NRj-qL-8J3"/>
                             <outlet property="backViewLink" destination="Q0j-IX-MBy" id="hkp-TF-kLb"/>
                             <outlet property="collectionServices" destination="ENn-iK-tIu" id="FXw-HF-Zbu"/>
+                            <outlet property="copyButton" destination="lH7-Uc-U6l" id="AZC-iu-7Ov"/>
+                            <outlet property="generationQRButton" destination="Gxc-oo-HXr" id="y80-a1-7dI"/>
                             <outlet property="linkLabel" destination="HL8-74-1fm" id="Vpt-Xn-kxl"/>
-                            <outlet property="openArchiveButton" destination="zJ7-zc-sjd" id="cef-ce-XLq"/>
                             <outlet property="pagination" destination="8hJ-b6-5mo" id="XDn-dJ-ggY"/>
                             <outlet property="placeLinkButton" destination="HyI-50-ow9" id="XZa-9A-y7T"/>
+                            <outlet property="saveInArchiveButton" destination="I3d-ZO-4KW" id="WJn-4z-hS7"/>
+                            <outlet property="shareButton" destination="hqg-Rm-p1L" id="3PD-Na-HuW"/>
                             <outlet property="stackActionButtons" destination="VlC-3F-WpC" id="0d3-O5-YrF"/>
                             <outlet property="textMessage" destination="oYT-Sk-QtK" id="hBE-fg-Fp1"/>
-                            <outlet property="versionLabel" destination="hXG-nM-vIJ" id="Kpd-bL-hxj"/>
                             <outlet property="viewMessage" destination="JWI-gY-FXf" id="gz1-Kg-SZ0"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="RUc-Gz-qCG"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,17 +288,17 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHa-NP-DrZ">
-                                <rect key="frame" x="-26" y="74" width="372" height="372"/>
+                                <rect key="frame" x="-25.5" y="74.5" width="371" height="371"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-xX-7HG">
-                                        <rect key="frame" x="51" y="40" width="270" height="270"/>
+                                        <rect key="frame" x="50.5" y="40" width="270" height="270"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="270" id="HyU-2q-hIT"/>
                                             <constraint firstAttribute="height" constant="270" id="yfN-ru-Gc6"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6K-Jv-5nC">
-                                        <rect key="frame" x="168" y="310" width="36.5" height="22"/>
+                                        <rect key="frame" x="163.5" y="310" width="44.5" height="21"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                         <color key="textColor" name="Violet_Dark_"/>
                                         <nil key="highlightedColor"/>
@@ -317,7 +315,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mN3-X2-T06">
-                                <rect key="frame" x="130" y="446" width="60" height="60"/>
+                                <rect key="frame" x="130" y="445.5" width="60" height="60"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-8d-wlU">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -374,27 +372,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78E-Zs-h8h">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="v1b-p1-0zp">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="systemUltraThinMaterial"/>
+                            </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow tracking on the next screen for:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHv-Ft-I1N">
-                                <rect key="frame" x="32" y="64" width="256" height="57.5"/>
+                                <rect key="frame" x="32" y="64" width="256" height="56"/>
                                 <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="24"/>
                                 <color key="textColor" name="White_"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jAT-7b-vVd">
-                                <rect key="frame" x="32" y="169.5" width="256" height="154.5"/>
+                                <rect key="frame" x="32" y="168" width="256" height="171"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="M2D-KC-ECe">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="42"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="hmb-sD-aQ8">
-                                                <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                                                <rect key="frame" x="0.0" y="1" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="qUE-5L-OOb"/>
                                                     <constraint firstAttribute="width" constant="40" id="uUf-fP-bCW"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special ofers and promotions just for you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh2-dm-TXQ">
-                                                <rect key="frame" x="56" y="0.0" width="200" height="43.5"/>
+                                                <rect key="frame" x="56" y="0.0" width="200" height="42"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                                 <color key="textColor" name="White_"/>
                                                 <nil key="highlightedColor"/>
@@ -402,17 +408,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-z1-Btn">
-                                        <rect key="frame" x="0.0" y="55.5" width="256" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="54" width="256" height="42"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tap" translatesAutoresizingMaskIntoConstraints="NO" id="eeW-SZ-hJR">
-                                                <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                                                <rect key="frame" x="0.0" y="1" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="NDw-Q6-wuW"/>
                                                     <constraint firstAttribute="width" constant="40" id="oYs-F4-ZV2"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertisements that match your interests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa3-cN-Arr">
-                                                <rect key="frame" x="56" y="0.0" width="200" height="43.5"/>
+                                                <rect key="frame" x="56" y="0.0" width="200" height="42"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                                 <color key="textColor" name="White_"/>
                                                 <nil key="highlightedColor"/>
@@ -420,17 +426,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5iW-qh-qJc">
-                                        <rect key="frame" x="0.0" y="111" width="256" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="108" width="256" height="63"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagram" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-jY-Zqw">
-                                                <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                                                <rect key="frame" x="0.0" y="11.5" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="EK1-NH-uQW"/>
                                                     <constraint firstAttribute="height" constant="40" id="oNO-6g-NaT"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An improved personalized experience over time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-dI-hP5">
-                                                <rect key="frame" x="56" y="0.0" width="200" height="43.5"/>
+                                                <rect key="frame" x="56" y="0.0" width="200" height="63"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                                 <color key="textColor" name="White_"/>
                                                 <nil key="highlightedColor"/>
@@ -440,21 +446,21 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can change this option later in the Setting app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjb-rW-heH">
-                                <rect key="frame" x="32" y="364" width="256" height="43.5"/>
+                                <rect key="frame" x="32" y="379" width="256" height="42"/>
                                 <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="18"/>
                                 <color key="textColor" name="White_"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAq-zc-6IP">
-                                <rect key="frame" x="60" y="463.5" width="200" height="50"/>
-                                <color key="backgroundColor" name="Violet_"/>
+                                <rect key="frame" x="60" y="477" width="200" height="50"/>
+                                <color key="backgroundColor" name="White_"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="aU4-dv-DKU"/>
                                     <constraint firstAttribute="height" constant="50" id="mYS-Jh-e9L"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="20"/>
                                 <state key="normal" title="Continue">
-                                    <color key="titleColor" name="White_"/>
+                                    <color key="titleColor" name="Violet_Dark_"/>
                                 </state>
                                 <connections>
                                     <action selector="continueAction:" destination="nxn-sf-jWy" eventType="touchUpInside" id="IAh-py-VLQ"/>
@@ -462,18 +468,22 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cuS-4d-iDT"/>
-                        <color key="backgroundColor" name="Violet_Dark_"/>
+                        <color key="backgroundColor" red="0.33725490196078434" green="0.25882352941176473" blue="0.73333333333333328" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="78E-Zs-h8h" firstAttribute="top" secondItem="riF-JJ-Blw" secondAttribute="top" id="4Us-Ty-Dpx"/>
                             <constraint firstItem="vAq-zc-6IP" firstAttribute="centerX" secondItem="riF-JJ-Blw" secondAttribute="centerX" id="8pR-K9-FqO"/>
                             <constraint firstItem="ZHv-Ft-I1N" firstAttribute="top" secondItem="cuS-4d-iDT" secondAttribute="top" constant="64" id="8rf-VZ-52B"/>
                             <constraint firstItem="Wjb-rW-heH" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="32" id="C8V-Z1-73t"/>
                             <constraint firstItem="ZHv-Ft-I1N" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="32" id="DJG-Yk-hNU"/>
                             <constraint firstItem="jAT-7b-vVd" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" constant="32" id="Iob-4l-wY1"/>
                             <constraint firstItem="jAT-7b-vVd" firstAttribute="top" secondItem="ZHv-Ft-I1N" secondAttribute="bottom" constant="48" id="K01-40-Npx"/>
+                            <constraint firstItem="78E-Zs-h8h" firstAttribute="trailing" secondItem="cuS-4d-iDT" secondAttribute="trailing" id="MYB-kO-sUf"/>
+                            <constraint firstItem="78E-Zs-h8h" firstAttribute="leading" secondItem="cuS-4d-iDT" secondAttribute="leading" id="MvN-JJ-qPA"/>
                             <constraint firstItem="vAq-zc-6IP" firstAttribute="top" secondItem="Wjb-rW-heH" secondAttribute="bottom" constant="56" id="UP3-ng-vPx"/>
                             <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="jAT-7b-vVd" secondAttribute="trailing" constant="32" id="Vmo-ee-cA8"/>
                             <constraint firstItem="Wjb-rW-heH" firstAttribute="top" secondItem="jAT-7b-vVd" secondAttribute="bottom" constant="40" id="Xg7-ik-JQr"/>
                             <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="Wjb-rW-heH" secondAttribute="trailing" constant="32" id="gdI-dh-blw"/>
+                            <constraint firstItem="78E-Zs-h8h" firstAttribute="bottom" secondItem="riF-JJ-Blw" secondAttribute="bottom" id="hGv-bO-sqW"/>
                             <constraint firstItem="cuS-4d-iDT" firstAttribute="trailing" secondItem="ZHv-Ft-I1N" secondAttribute="trailing" constant="32" id="tqU-r4-aKK"/>
                         </constraints>
                     </view>
@@ -483,26 +493,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yQ-sk-X25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321" y="-678"/>
+            <point key="canvasLocation" x="320.625" y="-678.16901408450701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dOq-3Y-MUh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IQ9-6W-YkY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" navigationBarHidden="YES" id="IQ9-6W-YkY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xTE-m9-pxi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="compactAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fFl-4B-ORF"/>
+                        <segue destination="kgi-dk-C7s" kind="relationship" relationship="rootViewController" id="ULE-Qt-yki"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrJ-Gz-Zwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321" y="33"/>
+            <point key="canvasLocation" x="-482" y="33"/>
         </scene>
         <!--Archive-->
         <scene sceneID="yP0-Oa-FO2">
@@ -529,11 +538,11 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="kKu-Xe-YCj">
-                                    <rect key="frame" x="0.0" y="221.5" width="320" height="100"/>
+                                    <rect key="frame" x="0.0" y="220" width="320" height="100"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archive is empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxh-Th-zbV">
-                                            <rect key="frame" x="66" y="32" width="188.5" height="36"/>
+                                            <rect key="frame" x="49" y="32.5" width="222" height="35"/>
                                             <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="30"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -547,29 +556,29 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArchiveCell" id="j2v-Aq-msF" customClass="ArchiveCell" customModule="boop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="88.5" width="320" height="110.5"/>
+                                        <rect key="frame" x="0.0" y="88.5" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j2v-Aq-msF" id="mhy-pD-UsR">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="110.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pns-cR-TcX">
-                                                    <rect key="frame" x="8" y="0.0" width="304" height="102.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="304" height="101"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4U-q5-wEs">
-                                                            <rect key="frame" x="16" y="16" width="272" height="17"/>
+                                                            <rect key="frame" x="16" y="16" width="272" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
                                                             <color key="textColor" name="White_"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Shortlink" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQp-Dr-m75">
-                                                            <rect key="frame" x="16" y="37" width="272" height="24"/>
+                                                            <rect key="frame" x="16" y="36.5" width="272" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="20"/>
                                                             <color key="textColor" name="White_"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longlink" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNf-pb-Zh0">
-                                                            <rect key="frame" x="16" y="69" width="272" height="17.5"/>
+                                                            <rect key="frame" x="16" y="68" width="272" height="17"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
                                                             <color key="textColor" name="White_"/>
                                                             <nil key="highlightedColor"/>
@@ -632,17 +641,66 @@
             </objects>
             <point key="canvasLocation" x="1057.5" y="792.25352112676057"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="SCH-hX-Kaa">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kgi-dk-C7s" customClass="SplashViewController" customModule="boop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q9d-Qn-Hb1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="zSm-gk-8XP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vn3-bU-mKl">
+                                <rect key="frame" x="40" y="330" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vn3-bU-mKl" secondAttribute="height" multiplier="15:8" id="eOc-sA-bgq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXM-FQ-QDE">
+                                <rect key="frame" x="143" y="535" width="34.5" height="17"/>
+                                <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
+                                <color key="textColor" name="Violet_Dark_"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Violet_"/>
+                        <constraints>
+                            <constraint firstItem="xXM-FQ-QDE" firstAttribute="centerX" secondItem="q9d-Qn-Hb1" secondAttribute="centerX" id="6lQ-pK-sjq"/>
+                            <constraint firstAttribute="bottom" secondItem="xXM-FQ-QDE" secondAttribute="bottom" constant="16" id="7OT-nM-Nyj"/>
+                            <constraint firstItem="zSm-gk-8XP" firstAttribute="bottom" secondItem="q9d-Qn-Hb1" secondAttribute="bottom" id="NXp-SB-wPA"/>
+                            <constraint firstItem="zSm-gk-8XP" firstAttribute="top" secondItem="q9d-Qn-Hb1" secondAttribute="top" id="eLD-E9-sR0"/>
+                            <constraint firstItem="zSm-gk-8XP" firstAttribute="leading" secondItem="q9d-Qn-Hb1" secondAttribute="leading" id="eRC-Mf-bPe"/>
+                            <constraint firstItem="Vn3-bU-mKl" firstAttribute="centerY" secondItem="q9d-Qn-Hb1" secondAttribute="centerY" constant="110" id="fP4-NZ-gdr"/>
+                            <constraint firstItem="Vn3-bU-mKl" firstAttribute="leading" secondItem="q9d-Qn-Hb1" secondAttribute="leading" constant="40" id="hZe-W7-8as"/>
+                            <constraint firstAttribute="trailing" secondItem="Vn3-bU-mKl" secondAttribute="trailing" constant="40" id="p7u-q1-SUu"/>
+                            <constraint firstAttribute="trailing" secondItem="zSm-gk-8XP" secondAttribute="trailing" id="zQ5-ct-Je8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tbA-FR-bBh"/>
+                    <connections>
+                        <outlet property="versionLabel" destination="xXM-FQ-QDE" id="pCC-Yk-Uzl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fm-Ph-aRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="33"/>
+        </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="archiveIcon" width="60" height="60"/>
         <image name="back" width="60" height="60"/>
+        <image name="bg" width="320" height="568"/>
+        <image name="bg_1" width="320" height="568"/>
         <image name="circles" width="568" height="568"/>
         <image name="close" width="40" height="40"/>
         <image name="copy" width="60" height="60"/>
         <image name="diagram" width="50" height="50"/>
         <image name="heart" width="50" height="50"/>
+        <image name="logo" width="294" height="150"/>
         <image name="markInArchive" width="60" height="60"/>
+        <image name="menu" width="50" height="50"/>
         <image name="qr" width="60" height="60"/>
         <image name="save" width="60" height="60"/>
         <image name="share" width="60" height="60"/>

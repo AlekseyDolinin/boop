@@ -47,6 +47,7 @@
 		918528C0271E9A19002AE8A0 /* ArchiveLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BF271E9A19002AE8A0 /* ArchiveLink.swift */; };
 		91EA2D0A271D45A400EEC146 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */; };
 		91EA2D0F271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */; };
+		91F34FAB272856ED0094B119 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F34FAA272856ED0094B119 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		918528BF271E9A19002AE8A0 /* ArchiveLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveLink.swift; sourceTree = "<group>"; };
 		91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveBannerGoogleAds.swift; sourceTree = "<group>"; };
+		91F34FAA272856ED0094B119 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9C441682D755AA2C1FFB3547 /* Pods-pinch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.debug.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.debug.xcconfig"; sourceTree = "<group>"; };
 		C22ACD24A595DB77167AC3A6 /* Pods-boop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boop.debug.xcconfig"; path = "Target Support Files/Pods-boop/Pods-boop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +204,7 @@
 		1099ED7525EC212F00F53439 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				91F34FAA272856ED0094B119 /* SplashViewController.swift */,
 				103C5F5325F569FB004916E5 /* Start */,
 				91EA2D0B271D45AD00EEC146 /* Archive */,
 				10B0E633264DD6CB00003DA1 /* AppTrackingModal */,
@@ -430,6 +433,7 @@
 				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
 				102A845625F5121B00D78619 /* DelegatesStartVC.swift in Sources */,
 				103C5F5825F56A54004916E5 /* QRCodeModalView.swift in Sources */,
+				91F34FAB272856ED0094B119 /* SplashViewController.swift in Sources */,
 				102A845025F4EDE200D78619 /* Isgd copy.swift in Sources */,
 				10B0E632264DC67D00003DA1 /* AppTracking.swift in Sources */,
 				103C5F5625F56A41004916E5 /* QRCodeModalViewController.swift in Sources */,
@@ -598,7 +602,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.4;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -620,7 +624,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.4;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
