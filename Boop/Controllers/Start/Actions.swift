@@ -22,11 +22,11 @@ extension StartViewController {
         present(vc, animated: true)
     }
     
-//    ///
-//    @IBAction func openArchiveAction(_ sender: Any?) {
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
-//        navigationController?.pushViewController(vc!, animated: true)
-//    }
+    ///
+    @IBAction func openMenu(_ sender: Any?) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
+        navigationController?.pushViewController(vc!, animated: true)
+    }
     
     ///
     @IBAction func backAction(_ sender: UIButton) {
@@ -39,7 +39,7 @@ extension StartViewController {
     ///
     @IBAction func saveLinkAction(_ sender: UIButton) {
         print("saveLinkAction")
-//        animationPulse()
+        animationSaveInArchive()
         addItemInArchive()
     }
     
@@ -50,7 +50,6 @@ extension StartViewController {
             let encodeString: String = (pasteboard.string)?.encodeUrl() ?? ""
             print("encodeString: \(encodeString)")
             print("selectedService: \(StartViewController.selectedService)")
-            
             /// проверка вставлена ссылка или просто текст
             if let longLink = URL(string: encodeString), let scheme = longLink.scheme {
                 if scheme == "https" || scheme == "http" {

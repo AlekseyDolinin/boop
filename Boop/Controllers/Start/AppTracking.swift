@@ -4,6 +4,23 @@ import AppTrackingTransparency
 
 extension StartViewController {
     
+    func checkAppTrackingTransparency() {
+#if canImport(AppTrackingTransparency)
+        NotificationCenter.default.addObserver(self, selector: #selector(requestTrackingAuthorization), name: Notification.Name("requestAppTracking"), object: nil)
+        
+        if let statusATT =  UserDefaults.standard.string(forKey: "statusATTKey") {
+            print("statusATT: \(statusATT)")
+            if statusATT == "notDetermined" {
+                showModalAppTrackingDescription()
+            }
+        } else {
+            /// если статус нил - запроса не было
+            showModalAppTrackingDescription()
+        }
+#endif
+    }
+    
+    ///
     func showModalAppTrackingDescription() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             guard #available(iOS 14.5, *) else { return }
@@ -13,6 +30,7 @@ extension StartViewController {
         }
     }
     
+    ///
     @objc open func requestTrackingAuthorization() {
         
         var statusAppTracking: String!

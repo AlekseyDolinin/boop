@@ -7,7 +7,6 @@ class StartView: UIView {
     @IBOutlet weak var generationQRButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var saveInArchiveButton: UIButton!
-    
     @IBOutlet weak var backViewLink: UIView!
     @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var placeLinkButton: UIButton!
@@ -16,25 +15,9 @@ class StartView: UIView {
     @IBOutlet weak var stackActionButtons: UIStackView!
     @IBOutlet weak var collectionServices: UICollectionView!
     @IBOutlet weak var pagination: UIPageControl!
+    @IBOutlet weak var menuButton: UIButton!
     
     override func awakeFromNib() {
-        
-//        backButton.setImage(UIImage(named: "back")?.withRenderingMode(.alwaysTemplate), for: .normal)
-//        backButton.setTitleColor(.Violet_Dark_, for: .normal)
-//
-//        copyButton.setImage(UIImage(named: "copy")?.withRenderingMode(.alwaysTemplate), for: .normal)
-//        copyButton.setTitleColor(.Violet_Dark_, for: .normal)
-//
-//        generationQRButton.setImage(UIImage(named: "qr")?.withRenderingMode(.alwaysTemplate), for: .normal)
-//        generationQRButton.setTitleColor(.Violet_Dark_, for: .normal)
-//
-//        shareButton.setImage(UIImage(named: "share")?.withRenderingMode(.alwaysTemplate), for: .normal)
-//        shareButton.setTitleColor(.Violet_Dark_, for: .normal)
-//
-//        saveInArchiveButton.setImage(UIImage(named: "markInArchive")?.withRenderingMode(.alwaysTemplate), for: .normal)
-//        saveInArchiveButton.setTitleColor(.Violet_Dark_, for: .normal)
-        
-        
         viewMessage.clipsToBounds = true
         viewMessage.layer.cornerRadius = 4
     }
@@ -53,7 +36,7 @@ class StartView: UIView {
         UIView.animate(withDuration: 0.1, animations: {
             self.viewMessage.alpha = 1
         }) { (true) in
-            UIView.animate(withDuration: 0.1, delay: 1.0, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.1, delay: 2.0, options: .curveLinear, animations: {
                 self.viewMessage.alpha = 0
             }, completion: { (true) in
                 print("hide message")

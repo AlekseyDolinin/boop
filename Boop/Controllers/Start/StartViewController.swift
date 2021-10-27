@@ -19,6 +19,8 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         case Click = "https://clck.ru/*"
     }
     
+    static var selectedService: Service = .Isgd
+    
     let pasteboard = UIPasteboard.general
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
@@ -27,39 +29,18 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     var pressedButtonTag: Int!
     var arrayKeysServices: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
-    static var selectedService: Service = .Isgd
     var arrayArchive = [ArchiveLink]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.isHidden = true
         viewSelf.collectionServices.delegate = self
         viewSelf.collectionServices.dataSource = self
         viewSelf.configure()
-//        setGadBanner()
+        setGadBanner()
         setGadFullView()
         setPagination()
-        
-#if canImport(AppTrackingTransparency)
-        NotificationCenter.default.addObserver(self, selector: #selector(requestTrackingAuthorization), name: Notification.Name("requestAppTracking"), object: nil)
-        
-        if let statusATT =  UserDefaults.standard.string(forKey: "statusATTKey") {
-            print("statusATT: \(statusATT)")
-            if statusATT == "notDetermined" {
-                showModalAppTrackingDescription()
-            }
-        } else {
-            /// если статус нил - запроса не было
-            showModalAppTrackingDescription()
-        }
-#endif
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true);
-        navigationController?.navigationBar.isHidden = true // for navigation bar hide
-        UIApplication.shared.isStatusBarHidden = true // for status bar hide
+        checkAppTrackingTransparency()
+
     }
     
     ///
@@ -68,7 +49,6 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         viewSelf.pagination.currentPage = indexSelectedService
         viewSelf.pagination.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
     }
-
     
     ///
     func createShortLink() {
@@ -183,20 +163,13 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         }
     }
     
-//    ///
-//    func animationPulse() {
-//        let pulse1 = CASpringAnimation(keyPath: "transform.scale")
-//        pulse1.duration = 0.6
-//        pulse1.fromValue = 1.0
-//        pulse1.toValue = 1.2
-//        pulse1.autoreverses = true
-//        pulse1.repeatCount = 1
-//        pulse1.initialVelocity = 0.5
-//        pulse1.damping = 0.8
-//        let animationGroup = CAAnimationGroup()
-//        animationGroup.duration = 2.7
-//        animationGroup.repeatCount = 1
-//        animationGroup.animations = [pulse1]
-//        self.viewSelf.openArchiveButton.layer.add(animationGroup, forKey: "pulse")
-//    }
+    ///
+    func animationSaveInArchive() {
+        UIView.animate(withDuration: 0.4) {
+            self.viewSelf.menuButton.transform = CGAffineTransform(scaleX: 3, y: 3)
+            self.viewSelf.menuButton.transform = CGAffineTransform(rotationAngle: Double.pi * 3)
+        } completion: { bool in
+            self.viewSelf.menuButton.transform = .identity
+        }
+    }
 }
