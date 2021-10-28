@@ -9,6 +9,7 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         guard isViewLoaded else { return nil }
         return (view as! ArchiveView)
     }
+    
     var arrayArchive = [ArchiveLink]()
     var bannerView: GADBannerView!
     let pasteboard = UIPasteboard.general
@@ -82,5 +83,10 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
             }
         }
         present(shareController, animated: true)
+    }
+    
+    ///
+    @IBAction func back(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 }

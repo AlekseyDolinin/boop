@@ -141,11 +141,17 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     }
     
     ///
+    func openArchive() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
+        navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    ///
     func showAlert() {
         let alert = UIAlertController(title: "The archive is full", message: "You need to free up space", preferredStyle: .alert)
         let actionClose = UIAlertAction(title: "Close", style: .destructive)
         let actionGoToArchive = UIAlertAction(title: "Go to Archive", style: .default) { UIAlertAction in
-//            self.openArchiveAction(nil)
+            self.openArchive()
         }
         alert.addAction(actionGoToArchive)
         alert.addAction(actionClose)
