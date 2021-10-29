@@ -18,8 +18,7 @@ class StartView: UIView {
     @IBOutlet weak var menuButton: UIButton!
     
     override func awakeFromNib() {
-        viewMessage.clipsToBounds = true
-        viewMessage.layer.cornerRadius = 4
+        setUI()
     }
     
     
@@ -58,5 +57,39 @@ class StartView: UIView {
         UIView.animate(withDuration: duration) {
             self.stackActionButtons.alpha = valueAlpha
         }
+    }
+}
+
+extension StartView {
+    
+    ///
+    func setUI() {
+        setLabels()
+        
+        /// Color
+        
+        ///
+        menuButton.setImage(UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        backButton.setImage(UIImage(named: "back")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        copyButton.setImage(UIImage(named: "copy")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        generationQRButton.setImage(UIImage(named: "qr")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        shareButton.setImage(UIImage(named: "share")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        saveInArchiveButton.setImage(UIImage(named: "markInArchive")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        
+        menuButton.tintColor = .black
+        backButton.tintColor = .black
+        copyButton.tintColor = .black
+        generationQRButton.tintColor = .black
+        shareButton.tintColor = .black
+        saveInArchiveButton.tintColor = .black
+        
+        ///
+        viewMessage.clipsToBounds = true
+        viewMessage.layer.cornerRadius = 4
+    }
+    
+    ///
+    func setLabels() {
+
     }
 }
