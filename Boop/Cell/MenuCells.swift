@@ -3,6 +3,12 @@ import UIKit
 class ArchiveMenuCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitle: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print(AppLanguage.selectLanguage)
+        titleLabel.text = AppLanguage.dictionary["arhiveURL"]!.stringValue
+    }
 }
 
 class SettingsCell: UITableViewCell {

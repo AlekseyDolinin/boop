@@ -21,6 +21,16 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
         viewSelf.configure()
     }
     
+    @IBAction func changeLanguage(_ sender: UIButton) {
+        UserDefaults.standard.set(sender.tag, forKey: "TagSelectLanguage")
+        UserDefaults.standard.synchronize()
+        AppLanguage.setLanguage()
+        
+        self.view.layoutIfNeeded()
+        viewDidLoad()
+        viewSelf.menuTable.reloadData()
+    }
+    
     @IBAction func back(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }

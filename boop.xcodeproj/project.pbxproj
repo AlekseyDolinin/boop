@@ -50,6 +50,11 @@
 		91CDA706272A745700B1D9DD /* MenuDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CDA705272A745700B1D9DD /* MenuDelegates.swift */; };
 		91CDA708272A765E00B1D9DD /* MenuCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CDA707272A765E00B1D9DD /* MenuCells.swift */; };
 		91E7A727272C0468002B6CE7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7A726272C0468002B6CE7 /* MenuView.swift */; };
+		91E7A730272C281F002B6CE7 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7A72F272C281F002B6CE7 /* AppLanguage.swift */; };
+		91E7A733272C2FE2002B6CE7 /* Usa.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A732272C2FDC002B6CE7 /* Usa.json */; };
+		91E7A737272C3163002B6CE7 /* Vietnam.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A736272C3029002B6CE7 /* Vietnam.json */; };
+		91E7A738272C3166002B6CE7 /* Brazil.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A735272C3028002B6CE7 /* Brazil.json */; };
+		91E7A739272C316A002B6CE7 /* Russia.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A734272C3026002B6CE7 /* Russia.json */; };
 		91EA2D0A271D45A400EEC146 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */; };
 		91EA2D0F271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */; };
 		91F34FAB272856ED0094B119 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F34FAA272856ED0094B119 /* SplashViewController.swift */; };
@@ -103,6 +108,11 @@
 		91CDA705272A745700B1D9DD /* MenuDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegates.swift; sourceTree = "<group>"; };
 		91CDA707272A765E00B1D9DD /* MenuCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCells.swift; sourceTree = "<group>"; };
 		91E7A726272C0468002B6CE7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		91E7A72F272C281F002B6CE7 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
+		91E7A732272C2FDC002B6CE7 /* Usa.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Usa.json; sourceTree = "<group>"; };
+		91E7A734272C3026002B6CE7 /* Russia.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Russia.json; sourceTree = "<group>"; };
+		91E7A735272C3028002B6CE7 /* Brazil.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Brazil.json; sourceTree = "<group>"; };
+		91E7A736272C3029002B6CE7 /* Vietnam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Vietnam.json; sourceTree = "<group>"; };
 		91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveBannerGoogleAds.swift; sourceTree = "<group>"; };
 		91F34FAA272856ED0094B119 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +173,7 @@
 				1099ED7525EC212F00F53439 /* Controllers */,
 				1036513025EC1D62003F03D0 /* Extention&Utils */,
 				10ABC50725F16DBC00CD0CF6 /* Network */,
+				91E7A731272C2FCA002B6CE7 /* Dictionary */,
 				10ABC50825F16DDE00CD0CF6 /* Resourses */,
 			);
 			path = Boop;
@@ -177,6 +188,7 @@
 				103C5F5C25F57371004916E5 /* URL.swift */,
 				1051B07925F01D7500695C37 /* UIString.swift */,
 				1051B07B25F01F3400695C37 /* JSONSerialization.swift */,
+				91E7A72F272C281F002B6CE7 /* AppLanguage.swift */,
 			);
 			path = "Extention&Utils";
 			sourceTree = "<group>";
@@ -286,6 +298,17 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		91E7A731272C2FCA002B6CE7 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				91E7A734272C3026002B6CE7 /* Russia.json */,
+				91E7A732272C2FDC002B6CE7 /* Usa.json */,
+				91E7A735272C3028002B6CE7 /* Brazil.json */,
+				91E7A736272C3029002B6CE7 /* Vietnam.json */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
 		91EA2D0B271D45AD00EEC146 /* Archive */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,11 +401,15 @@
 			files = (
 				1036512925EC1C27003F03D0 /* LaunchScreen.storyboard in Resources */,
 				1036513825EC1F55003F03D0 /* AdventPro-Medium.ttf in Resources */,
+				91E7A733272C2FE2002B6CE7 /* Usa.json in Resources */,
+				91E7A738272C3166002B6CE7 /* Brazil.json in Resources */,
 				1036512625EC1C27003F03D0 /* Assets.xcassets in Resources */,
 				1036512425EC1C24003F03D0 /* Main.storyboard in Resources */,
+				91E7A739272C316A002B6CE7 /* Russia.json in Resources */,
 				1036513725EC1F55003F03D0 /* AdventPro-Regular.ttf in Resources */,
 				1036513925EC1F55003F03D0 /* AdventPro-Light.ttf in Resources */,
 				102A846225F5478400D78619 /* AdventPro-Bold.ttf in Resources */,
+				91E7A737272C3163002B6CE7 /* Vietnam.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +483,7 @@
 				1099ED7C25ED732A00F53439 /* StartBannerGoogleAds.swift in Sources */,
 				9144C8BF272BCA05006C17BF /* GetVersionApp.swift in Sources */,
 				913B133B27228AE7008C8D7F /* ADFullScreenQRCode.swift in Sources */,
+				91E7A730272C281F002B6CE7 /* AppLanguage.swift in Sources */,
 				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
 				102A845625F5121B00D78619 /* DelegatesStartVC.swift in Sources */,
 				103C5F5825F56A54004916E5 /* QRCodeModalView.swift in Sources */,
