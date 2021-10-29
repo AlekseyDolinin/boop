@@ -34,10 +34,10 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWI-gY-FXf">
-                                <rect key="frame" x="65" y="208" width="190" height="38"/>
+                                <rect key="frame" x="53.5" y="209" width="213.5" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="copy link to clipboard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-Sk-QtK">
-                                        <rect key="frame" x="20" y="8" width="150" height="22"/>
+                                        <rect key="frame" x="20" y="8" width="173.5" height="21"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                 <rect key="frame" x="16" y="254" width="288" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste the link here" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL8-74-1fm">
-                                        <rect key="frame" x="16" y="18" width="256" height="24"/>
+                                        <rect key="frame" x="16" y="18.5" width="256" height="23.5"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -172,16 +172,16 @@
                                                     <color key="backgroundColor" red="0.38039215686274508" green="0.66666666666666663" blue="0.86274509803921573" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j6r-Zf-ga9">
-                                                    <rect key="frame" x="16" y="19" width="288" height="64.5"/>
+                                                    <rect key="frame" x="16" y="19.5" width="288" height="63"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="36"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="30"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
-                                                            <rect key="frame" x="0.0" y="44" width="288" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
+                                                            <rect key="frame" x="0.0" y="43" width="288" height="20"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="17"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -225,6 +225,20 @@
                                     <action selector="openMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AG9-0u-nLR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUw-Vs-cef">
+                                <rect key="frame" x="125" y="418" width="70" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="0.49596440397350994" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="8Jl-zQ-8nZ"/>
+                                    <constraint firstAttribute="height" constant="70" id="fQs-Pw-iU7"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
+                                <state key="normal" image="archiveIcon"/>
+                                <connections>
+                                    <action selector="openArchiveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S6c-oF-lB7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W0k-Ym-PZD"/>
                         <color key="backgroundColor" name="Violet_"/>
@@ -240,8 +254,10 @@
                             <constraint firstItem="oVW-cf-cpz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TJs-nR-nz0"/>
                             <constraint firstAttribute="trailing" secondItem="Q0j-IX-MBy" secondAttribute="trailing" constant="16" id="TxO-3R-i4z"/>
                             <constraint firstItem="e2a-3X-AQx" firstAttribute="top" secondItem="W0k-Ym-PZD" secondAttribute="top" id="U3j-Mq-H2L"/>
+                            <constraint firstItem="W0k-Ym-PZD" firstAttribute="bottom" secondItem="lUw-Vs-cef" secondAttribute="bottom" constant="80" id="XhH-yS-hNu"/>
                             <constraint firstItem="oVW-cf-cpz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xk1-U3-Cfo"/>
                             <constraint firstItem="VlC-3F-WpC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZYd-YB-2N8"/>
+                            <constraint firstItem="lUw-Vs-cef" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kR1-n2-QOH"/>
                             <constraint firstItem="oVW-cf-cpz" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="qSz-TJ-Gv6"/>
                             <constraint firstItem="JWI-gY-FXf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ur4-UA-4Iv"/>
                             <constraint firstAttribute="trailing" secondItem="oVW-cf-cpz" secondAttribute="trailing" id="x5S-St-rmo"/>
@@ -257,6 +273,7 @@
                             <outlet property="generationQRButton" destination="Gxc-oo-HXr" id="y80-a1-7dI"/>
                             <outlet property="linkLabel" destination="HL8-74-1fm" id="Vpt-Xn-kxl"/>
                             <outlet property="menuButton" destination="e2a-3X-AQx" id="yFK-rM-7Fo"/>
+                            <outlet property="openArchiveButton" destination="lUw-Vs-cef" id="rC7-aO-Ms9"/>
                             <outlet property="pagination" destination="8hJ-b6-5mo" id="XDn-dJ-ggY"/>
                             <outlet property="placeLinkButton" destination="HyI-50-ow9" id="XZa-9A-y7T"/>
                             <outlet property="saveInArchiveButton" destination="I3d-ZO-4KW" id="WJn-4z-hS7"/>
@@ -294,81 +311,77 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHa-NP-DrZ">
-                                <rect key="frame" x="-26" y="74" width="372" height="372"/>
+                                <rect key="frame" x="-31.5" y="68.5" width="383" height="383"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-xX-7HG">
-                                        <rect key="frame" x="51" y="40" width="270" height="270"/>
+                                        <rect key="frame" x="56.5" y="76" width="270" height="270"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="270" id="HyU-2q-hIT"/>
                                             <constraint firstAttribute="height" constant="270" id="yfN-ru-Gc6"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6K-Jv-5nC">
-                                        <rect key="frame" x="168" y="310" width="36.5" height="22"/>
+                                        <rect key="frame" x="169.5" y="346" width="44.5" height="21"/>
                                         <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0lb-jZ-Dc6">
+                                        <rect key="frame" x="275" y="8" width="100" height="40"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="15d-nQ-sVZ"/>
+                                            <constraint firstAttribute="height" constant="40" id="HVZ-6a-s9x"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" name="White_"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="sL8-xX-7HG" firstAttribute="top" secondItem="nHa-NP-DrZ" secondAttribute="top" constant="40" id="HsR-4f-bgU"/>
+                                    <constraint firstAttribute="trailing" secondItem="0lb-jZ-Dc6" secondAttribute="trailing" constant="8" id="Fjf-aC-MNg"/>
+                                    <constraint firstItem="0lb-jZ-Dc6" firstAttribute="top" secondItem="nHa-NP-DrZ" secondAttribute="top" constant="8" id="Gqa-xN-U5B"/>
+                                    <constraint firstItem="sL8-xX-7HG" firstAttribute="top" secondItem="nHa-NP-DrZ" secondAttribute="top" constant="76" id="HsR-4f-bgU"/>
                                     <constraint firstItem="T6K-Jv-5nC" firstAttribute="top" secondItem="sL8-xX-7HG" secondAttribute="bottom" id="Kvs-9Q-q0x"/>
                                     <constraint firstItem="sL8-xX-7HG" firstAttribute="centerX" secondItem="nHa-NP-DrZ" secondAttribute="centerX" id="Vy7-9W-hVJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="T6K-Jv-5nC" secondAttribute="bottom" constant="40" id="bJ3-nU-BV1"/>
+                                    <constraint firstAttribute="bottom" secondItem="T6K-Jv-5nC" secondAttribute="bottom" constant="16" id="bJ3-nU-BV1"/>
                                     <constraint firstItem="T6K-Jv-5nC" firstAttribute="centerX" secondItem="nHa-NP-DrZ" secondAttribute="centerX" id="nHi-vL-9CL"/>
                                     <constraint firstAttribute="width" secondItem="nHa-NP-DrZ" secondAttribute="height" multiplier="1:1" id="xwk-Sj-pwf"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mN3-X2-T06">
-                                <rect key="frame" x="130" y="446" width="60" height="60"/>
-                                <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-8d-wlU">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="bNv-Lr-J9B"/>
-                                            <constraint firstAttribute="height" constant="60" id="rCL-lI-cCt"/>
-                                        </constraints>
-                                        <state key="normal" image="save"/>
-                                        <connections>
-                                            <action selector="saveQRCode:" destination="wld-vQ-As2" eventType="touchUpInside" id="wOP-q9-DTi"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHB-WU-X0h">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="5ns-Ug-ooy"/>
-                                            <constraint firstAttribute="width" constant="60" id="FhY-9V-9jg"/>
-                                        </constraints>
-                                        <state key="normal" image="share"/>
-                                        <connections>
-                                            <action selector="shareAction:" destination="wld-vQ-As2" eventType="touchUpInside" id="lJc-Ex-wc1"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHB-WU-X0h">
+                                <rect key="frame" x="130" y="483.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5ns-Ug-ooy"/>
+                                    <constraint firstAttribute="width" constant="60" id="FhY-9V-9jg"/>
+                                </constraints>
+                                <state key="normal" image="share"/>
+                                <connections>
+                                    <action selector="shareAction:" destination="wld-vQ-As2" eventType="touchUpInside" id="lJc-Ex-wc1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VlT-ks-NJ3"/>
                         <color key="backgroundColor" name="White_"/>
                         <constraints>
-                            <constraint firstItem="mN3-X2-T06" firstAttribute="centerX" secondItem="yeb-xn-ISI" secondAttribute="centerX" id="1HR-nI-BZF"/>
                             <constraint firstItem="VlT-ks-NJ3" firstAttribute="trailing" secondItem="1DU-3S-OI8" secondAttribute="trailing" constant="8" id="U7B-np-Az4"/>
                             <constraint firstItem="nHa-NP-DrZ" firstAttribute="centerX" secondItem="yeb-xn-ISI" secondAttribute="centerX" id="b6j-qV-w0q"/>
-                            <constraint firstItem="mN3-X2-T06" firstAttribute="top" secondItem="nHa-NP-DrZ" secondAttribute="bottom" id="cH2-MZ-xIp"/>
                             <constraint firstItem="1DU-3S-OI8" firstAttribute="top" secondItem="VlT-ks-NJ3" secondAttribute="top" constant="8" id="jIh-Pv-04P"/>
+                            <constraint firstItem="VHB-WU-X0h" firstAttribute="centerX" secondItem="yeb-xn-ISI" secondAttribute="centerX" id="nLi-Gr-lWN"/>
                             <constraint firstItem="nHa-NP-DrZ" firstAttribute="centerY" secondItem="yeb-xn-ISI" secondAttribute="centerY" constant="-24" id="tNU-PQ-Sw6"/>
+                            <constraint firstItem="VHB-WU-X0h" firstAttribute="top" secondItem="nHa-NP-DrZ" secondAttribute="bottom" constant="32" id="xgN-CB-KtU"/>
                         </constraints>
                         <connections>
                             <outlet property="backView" destination="nHa-NP-DrZ" id="eJ9-eN-byG"/>
                             <outlet property="closeButton" destination="1DU-3S-OI8" id="06U-m3-baT"/>
                             <outlet property="linkLabel" destination="T6K-Jv-5nC" id="Y9o-IB-KW4"/>
+                            <outlet property="logo" destination="0lb-jZ-Dc6" id="rRm-jw-uN4"/>
                             <outlet property="qrCodeImage" destination="sL8-xX-7HG" id="nLK-mM-XhW"/>
+                            <outlet property="shareButton" destination="VHB-WU-X0h" id="5dy-lw-wdl"/>
                         </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBv-6p-o8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061" y="-678"/>
+            <point key="canvasLocation" x="1059.375" y="-678.16901408450701"/>
         </scene>
         <!--App Tracking Modal View Controller-->
         <scene sceneID="BYK-zI-aW1">
@@ -387,26 +400,26 @@
                                 <blurEffect style="systemUltraThinMaterial"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow tracking on the next screen for:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHv-Ft-I1N">
-                                <rect key="frame" x="32" y="64" width="256" height="57.5"/>
+                                <rect key="frame" x="32" y="64" width="256" height="56"/>
                                 <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="24"/>
                                 <color key="textColor" name="White_"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jAT-7b-vVd">
-                                <rect key="frame" x="32" y="169.5" width="256" height="154.5"/>
+                                <rect key="frame" x="32" y="168" width="256" height="171"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="M2D-KC-ECe">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="42"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="hmb-sD-aQ8">
-                                                <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                                                <rect key="frame" x="0.0" y="1" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="qUE-5L-OOb"/>
                                                     <constraint firstAttribute="width" constant="40" id="uUf-fP-bCW"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special ofers and promotions just for you" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh2-dm-TXQ">
-                                                <rect key="frame" x="56" y="0.0" width="200" height="43.5"/>
+                                                <rect key="frame" x="56" y="0.0" width="200" height="42"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                                 <color key="textColor" name="White_"/>
                                                 <nil key="highlightedColor"/>
@@ -414,17 +427,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-z1-Btn">
-                                        <rect key="frame" x="0.0" y="55.5" width="256" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="54" width="256" height="42"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tap" translatesAutoresizingMaskIntoConstraints="NO" id="eeW-SZ-hJR">
-                                                <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                                                <rect key="frame" x="0.0" y="1" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="NDw-Q6-wuW"/>
                                                     <constraint firstAttribute="width" constant="40" id="oYs-F4-ZV2"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertisements that match your interests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa3-cN-Arr">
-                                                <rect key="frame" x="56" y="0.0" width="200" height="43.5"/>
+                                                <rect key="frame" x="56" y="0.0" width="200" height="42"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                                 <color key="textColor" name="White_"/>
                                                 <nil key="highlightedColor"/>
@@ -432,17 +445,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5iW-qh-qJc">
-                                        <rect key="frame" x="0.0" y="111" width="256" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="108" width="256" height="63"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagram" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-jY-Zqw">
-                                                <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                                                <rect key="frame" x="0.0" y="11.5" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="EK1-NH-uQW"/>
                                                     <constraint firstAttribute="height" constant="40" id="oNO-6g-NaT"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An improved personalized experience over time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-dI-hP5">
-                                                <rect key="frame" x="56" y="0.0" width="200" height="43.5"/>
+                                                <rect key="frame" x="56" y="0.0" width="200" height="63"/>
                                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="18"/>
                                                 <color key="textColor" name="White_"/>
                                                 <nil key="highlightedColor"/>
@@ -452,13 +465,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can change this option later in the Setting app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjb-rW-heH">
-                                <rect key="frame" x="32" y="364" width="256" height="43.5"/>
+                                <rect key="frame" x="32" y="379" width="256" height="42"/>
                                 <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="18"/>
                                 <color key="textColor" name="White_"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAq-zc-6IP">
-                                <rect key="frame" x="90" y="463.5" width="140" height="50"/>
+                                <rect key="frame" x="90" y="477" width="140" height="50"/>
                                 <color key="backgroundColor" name="White_"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mYS-Jh-e9L"/>
@@ -540,7 +553,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXM-FQ-QDE">
-                                <rect key="frame" x="146" y="535" width="28" height="17"/>
+                                <rect key="frame" x="143" y="535" width="34.5" height="17"/>
                                 <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -599,6 +612,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="8Ie-xv-xLq" secondAttribute="height" multiplier="1:1" id="chJ-Gg-4NH"/>
                                             </constraints>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="backArrow"/>
                                             <connections>
@@ -613,11 +627,11 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="E6f-ko-AHI">
-                                    <rect key="frame" x="0.0" y="681" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="597" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-iN-ATm">
-                                            <rect key="frame" x="31.5" y="40" width="312" height="84"/>
+                                            <rect key="frame" x="31.5" y="108" width="312" height="84"/>
                                             <subviews>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQT-2D-6Lq">
                                                     <rect key="frame" x="0.0" y="0.0" width="312" height="84"/>
@@ -682,17 +696,17 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhw-lp-f71">
-                                            <rect key="frame" x="173.5" y="167" width="28.5" height="17"/>
+                                            <rect key="frame" x="170.5" y="267.5" width="34.5" height="16.5"/>
                                             <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="nhw-lp-f71" secondAttribute="bottom" constant="16" id="FSU-xJ-9XP"/>
                                         <constraint firstItem="nhw-lp-f71" firstAttribute="centerX" secondItem="E6f-ko-AHI" secondAttribute="centerX" id="Nkm-Co-uDC"/>
-                                        <constraint firstItem="cQf-iN-ATm" firstAttribute="top" secondItem="E6f-ko-AHI" secondAttribute="top" constant="40" id="iFJ-HY-d0O"/>
+                                        <constraint firstItem="cQf-iN-ATm" firstAttribute="centerY" secondItem="E6f-ko-AHI" secondAttribute="centerY" id="QV6-2w-BR5"/>
                                         <constraint firstItem="cQf-iN-ATm" firstAttribute="centerX" secondItem="E6f-ko-AHI" secondAttribute="centerX" id="l37-LL-GIn"/>
                                     </constraints>
                                 </view>
@@ -705,13 +719,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archive URL &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwj-Rs-VYh">
-                                                    <rect key="frame" x="242" y="16" width="117" height="26.5"/>
+                                                    <rect key="frame" x="217" y="16" width="142" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status Archive" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pem-2t-ohf">
-                                                    <rect key="frame" x="253" y="42.5" width="74" height="19.5"/>
+                                                    <rect key="frame" x="238.5" y="42.5" width="88.5" height="19.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="19.333333333333314" id="Giy-1g-Qza"/>
                                                     </constraints>
@@ -736,67 +750,15 @@
                                             <outlet property="titleLabel" destination="lwj-Rs-VYh" id="XF9-dM-L6V"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RemoveADMenuCell" rowHeight="97" id="RBc-ub-i53" customClass="RemoveADMenuCell" customModule="boop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="172.5" width="375" height="97"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RBc-ub-i53" id="ty2-Ti-gOa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove AD &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-VI-XCy">
-                                                    <rect key="frame" x="246.5" y="16" width="112.5" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove all advertising" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1b-wn-vul">
-                                                    <rect key="frame" x="204.5" y="42.5" width="122.5" height="19"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="19.333333333333314" id="lbl-BJ-p1f"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited archive" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-ng-E51">
-                                                    <rect key="frame" x="234.5" y="61.5" width="92.5" height="19.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="19.333333333333329" id="mxW-RX-lfK"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Peo-VI-XCy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ty2-Ti-gOa" secondAttribute="leading" constant="20" symbolic="YES" id="2Ul-5k-sh3"/>
-                                                <constraint firstItem="aWI-ng-E51" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ty2-Ti-gOa" secondAttribute="leading" constant="20" symbolic="YES" id="4Yb-SB-J0O"/>
-                                                <constraint firstAttribute="trailing" secondItem="Peo-VI-XCy" secondAttribute="trailing" constant="16" id="61R-Rg-y1r"/>
-                                                <constraint firstItem="Peo-VI-XCy" firstAttribute="top" secondItem="ty2-Ti-gOa" secondAttribute="top" constant="16" id="795-6z-3hC"/>
-                                                <constraint firstAttribute="trailing" secondItem="aWI-ng-E51" secondAttribute="trailing" constant="48" id="NeN-uc-wjp"/>
-                                                <constraint firstItem="B1b-wn-vul" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ty2-Ti-gOa" secondAttribute="leading" constant="20" symbolic="YES" id="QvY-DN-pOT"/>
-                                                <constraint firstAttribute="trailing" secondItem="B1b-wn-vul" secondAttribute="trailing" constant="48" id="ZN8-q3-UPa"/>
-                                                <constraint firstItem="aWI-ng-E51" firstAttribute="top" secondItem="B1b-wn-vul" secondAttribute="bottom" id="gU5-h1-lzn"/>
-                                                <constraint firstAttribute="bottom" secondItem="aWI-ng-E51" secondAttribute="bottom" constant="16" id="qer-x5-UPo"/>
-                                                <constraint firstItem="B1b-wn-vul" firstAttribute="top" secondItem="Peo-VI-XCy" secondAttribute="bottom" id="uk6-iy-LuC"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="subTitleOne" destination="B1b-wn-vul" id="gCr-Cu-rgF"/>
-                                            <outlet property="subTitleTwo" destination="aWI-ng-E51" id="QOh-Fk-Iko"/>
-                                            <outlet property="titleLabel" destination="Peo-VI-XCy" id="V9J-1R-sx7"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="61" id="Za8-eh-mlS">
-                                        <rect key="frame" x="0.0" y="269.5" width="375" height="61"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsCell" rowHeight="61" id="Za8-eh-mlS" customClass="SettingsCell" customModule="boop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="172.5" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Za8-eh-mlS" id="hB7-71-4hm">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings App &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djv-Ce-OCF">
-                                                    <rect key="frame" x="236" y="16" width="123" height="29"/>
+                                                    <rect key="frame" x="212.5" y="16" width="146.5" height="29"/>
                                                     <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -811,44 +773,18 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="titleLabel" destination="djv-Ce-OCF" id="WHn-5p-5er"/>
+                                            <outlet property="titleLabel" destination="djv-Ce-OCF" id="xeA-JN-tFF"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="61" id="m5D-eW-FPB">
-                                        <rect key="frame" x="0.0" y="330.5" width="375" height="61"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m5D-eW-FPB" id="PDo-NC-Hon">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume purchase (remove ads) &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-UE-SCU">
-                                                    <rect key="frame" x="76" y="16" width="283" height="29"/>
-                                                    <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ZMa-UE-SCU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PDo-NC-Hon" secondAttribute="leading" constant="20" symbolic="YES" id="Vjj-ew-JgD"/>
-                                                <constraint firstAttribute="trailing" secondItem="ZMa-UE-SCU" secondAttribute="trailing" constant="16" id="k01-c7-Vtv"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZMa-UE-SCU" secondAttribute="bottom" constant="16" id="mc1-8t-Ibi"/>
-                                                <constraint firstItem="ZMa-UE-SCU" firstAttribute="top" secondItem="PDo-NC-Hon" secondAttribute="top" constant="16" id="o28-al-pq6"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="titleLabel" destination="ZMa-UE-SCU" id="EqM-zJ-PUk"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="61" id="Cfg-bV-Vng">
-                                        <rect key="frame" x="0.0" y="391.5" width="375" height="61"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RateCell" rowHeight="61" id="Cfg-bV-Vng" customClass="RateCell" customModule="boop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="233.5" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cfg-bV-Vng" id="Uxi-jS-7DZ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate and feedback &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYx-T6-smp">
-                                                    <rect key="frame" x="186.5" y="16" width="172.5" height="29"/>
+                                                    <rect key="frame" x="153" y="16" width="206" height="29"/>
                                                     <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -863,44 +799,18 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="titleLabel" destination="cYx-T6-smp" id="BwL-N3-wDm"/>
+                                            <outlet property="titleLabel" destination="cYx-T6-smp" id="Lya-4N-G1p"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="61" id="Bpy-ki-OhQ">
-                                        <rect key="frame" x="0.0" y="452.5" width="375" height="61"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bpy-ki-OhQ" id="TQ4-JU-IxC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward the author for a cup of coffee &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiN-mJ-jim">
-                                                    <rect key="frame" x="23" y="16" width="336" height="29"/>
-                                                    <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="FiN-mJ-jim" secondAttribute="trailing" constant="16" id="YnS-jj-v2f"/>
-                                                <constraint firstAttribute="bottom" secondItem="FiN-mJ-jim" secondAttribute="bottom" constant="16" id="b1p-Xn-wJO"/>
-                                                <constraint firstItem="FiN-mJ-jim" firstAttribute="top" secondItem="TQ4-JU-IxC" secondAttribute="top" constant="16" id="hgp-Xn-6a5"/>
-                                                <constraint firstItem="FiN-mJ-jim" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TQ4-JU-IxC" secondAttribute="leading" constant="20" symbolic="YES" id="oTp-Dm-FkU"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="titleLabel" destination="FiN-mJ-jim" id="soA-0I-qhg"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="61" id="Ibh-0z-jQa">
-                                        <rect key="frame" x="0.0" y="513.5" width="375" height="61"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShareCell" rowHeight="61" id="Ibh-0z-jQa" customClass="ShareCell" customModule="boop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="294.5" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ibh-0z-jQa" id="i84-Av-bEH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share this App &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exf-rN-KVG">
-                                                    <rect key="frame" x="216.5" y="16" width="142.5" height="29"/>
+                                                    <rect key="frame" x="195" y="16" width="164" height="29"/>
                                                     <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -915,17 +825,112 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="titleLabel" destination="exf-rN-KVG" id="iL6-aP-dKf"/>
+                                            <outlet property="titleLabel" destination="exf-rN-KVG" id="xGb-xa-OeY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="84" id="q7V-Uh-t55">
-                                        <rect key="frame" x="0.0" y="574.5" width="375" height="84"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RemoveADMenuCell" rowHeight="97" id="RBc-ub-i53" customClass="RemoveADMenuCell" customModule="boop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="355.5" width="375" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q7V-Uh-t55" id="EZ6-mR-hnl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RBc-ub-i53" id="ty2-Ti-gOa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove AD &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-VI-XCy">
+                                                    <rect key="frame" x="222.5" y="16" width="136.5" height="26.5"/>
+                                                    <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove all advertising" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1b-wn-vul">
+                                                    <rect key="frame" x="197" y="42.5" width="142" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="19.333333333333314" id="lbl-BJ-p1f"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited archive" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-ng-E51">
+                                                    <rect key="frame" x="230.5" y="61.5" width="108.5" height="19.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="19.333333333333329" id="mxW-RX-lfK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Peo-VI-XCy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ty2-Ti-gOa" secondAttribute="leading" constant="20" symbolic="YES" id="2Ul-5k-sh3"/>
+                                                <constraint firstItem="aWI-ng-E51" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ty2-Ti-gOa" secondAttribute="leading" constant="20" symbolic="YES" id="4Yb-SB-J0O"/>
+                                                <constraint firstAttribute="trailing" secondItem="Peo-VI-XCy" secondAttribute="trailing" constant="16" id="61R-Rg-y1r"/>
+                                                <constraint firstItem="Peo-VI-XCy" firstAttribute="top" secondItem="ty2-Ti-gOa" secondAttribute="top" constant="16" id="795-6z-3hC"/>
+                                                <constraint firstAttribute="trailing" secondItem="aWI-ng-E51" secondAttribute="trailing" constant="36" id="NeN-uc-wjp"/>
+                                                <constraint firstItem="B1b-wn-vul" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ty2-Ti-gOa" secondAttribute="leading" constant="20" symbolic="YES" id="QvY-DN-pOT"/>
+                                                <constraint firstAttribute="trailing" secondItem="B1b-wn-vul" secondAttribute="trailing" constant="36" id="ZN8-q3-UPa"/>
+                                                <constraint firstItem="aWI-ng-E51" firstAttribute="top" secondItem="B1b-wn-vul" secondAttribute="bottom" id="gU5-h1-lzn"/>
+                                                <constraint firstAttribute="bottom" secondItem="aWI-ng-E51" secondAttribute="bottom" constant="16" id="qer-x5-UPo"/>
+                                                <constraint firstItem="B1b-wn-vul" firstAttribute="top" secondItem="Peo-VI-XCy" secondAttribute="bottom" id="uk6-iy-LuC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="subTitleOne" destination="B1b-wn-vul" id="gCr-Cu-rgF"/>
+                                            <outlet property="subTitleTwo" destination="aWI-ng-E51" id="QOh-Fk-Iko"/>
+                                            <outlet property="titleLabel" destination="Peo-VI-XCy" id="V9J-1R-sx7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PurchaseCell" rowHeight="61" id="m5D-eW-FPB" customClass="PurchaseCell" customModule="boop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="452.5" width="375" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m5D-eW-FPB" id="PDo-NC-Hon">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume purchase (remove ads) &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-UE-SCU">
+                                                    <rect key="frame" x="29.5" y="16" width="329.5" height="29"/>
+                                                    <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZMa-UE-SCU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PDo-NC-Hon" secondAttribute="leading" constant="20" symbolic="YES" id="Vjj-ew-JgD"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZMa-UE-SCU" secondAttribute="trailing" constant="16" id="k01-c7-Vtv"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZMa-UE-SCU" secondAttribute="bottom" constant="16" id="mc1-8t-Ibi"/>
+                                                <constraint firstItem="ZMa-UE-SCU" firstAttribute="top" secondItem="PDo-NC-Hon" secondAttribute="top" constant="16" id="o28-al-pq6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="ZMa-UE-SCU" id="WU5-j3-Dud"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RewardCell" rowHeight="61" id="Bpy-ki-OhQ" customClass="RewardCell" customModule="boop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="513.5" width="375" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bpy-ki-OhQ" id="TQ4-JU-IxC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward the author for a cup of coffee &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiN-mJ-jim">
+                                                    <rect key="frame" x="20" y="16" width="339" height="29"/>
+                                                    <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="FiN-mJ-jim" secondAttribute="trailing" constant="16" id="YnS-jj-v2f"/>
+                                                <constraint firstAttribute="bottom" secondItem="FiN-mJ-jim" secondAttribute="bottom" constant="16" id="b1p-Xn-wJO"/>
+                                                <constraint firstItem="FiN-mJ-jim" firstAttribute="top" secondItem="TQ4-JU-IxC" secondAttribute="top" constant="16" id="hgp-Xn-6a5"/>
+                                                <constraint firstItem="FiN-mJ-jim" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TQ4-JU-IxC" secondAttribute="leading" constant="20" symbolic="YES" id="oTp-Dm-FkU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="FiN-mJ-jim" id="10q-3A-CIu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -944,6 +949,7 @@
                             <constraint firstItem="Lqb-WI-WJa" firstAttribute="top" secondItem="iIX-x3-SGn" secondAttribute="top" id="wEP-dq-Zs9"/>
                         </constraints>
                         <connections>
+                            <outlet property="backButton" destination="8Ie-xv-xLq" id="97K-ws-UnP"/>
                             <outlet property="container" destination="cQf-iN-ATm" id="jlr-Bf-rDw"/>
                             <outlet property="lButtonFour" destination="QAI-Br-eks" id="Y1z-Tw-w8M"/>
                             <outlet property="lButtonOne" destination="aWe-nN-oPR" id="J60-S1-jBv"/>
@@ -993,8 +999,7 @@
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="backArrow"/>
                                             <connections>
-                                                <action selector="back:" destination="fsQ-gK-oxx" eventType="touchUpInside" id="ESx-OL-1Db"/>
-                                                <action selector="back:" destination="kjE-90-pk8" eventType="touchUpInside" id="ETl-Ie-VG3"/>
+                                                <action selector="back:" destination="fsQ-gK-oxx" eventType="touchUpInside" id="7M8-va-uSh"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -1005,11 +1010,11 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="kKu-Xe-YCj">
-                                    <rect key="frame" x="0.0" y="227.5" width="320" height="100"/>
+                                    <rect key="frame" x="0.0" y="226" width="320" height="100"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archive is empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxh-Th-zbV">
-                                            <rect key="frame" x="66" y="32" width="188" height="36"/>
+                                            <rect key="frame" x="49" y="32.5" width="222" height="35"/>
                                             <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="30"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -1023,29 +1028,29 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArchiveCell" id="j2v-Aq-msF" customClass="ArchiveCell" customModule="boop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="94.5" width="320" height="110.5"/>
+                                        <rect key="frame" x="0.0" y="94.5" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j2v-Aq-msF" id="mhy-pD-UsR">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="110.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pns-cR-TcX">
-                                                    <rect key="frame" x="8" y="0.0" width="304" height="102.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="304" height="101"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4U-q5-wEs">
-                                                            <rect key="frame" x="16" y="16" width="272" height="17"/>
+                                                            <rect key="frame" x="16" y="16" width="272" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Shortlink" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQp-Dr-m75">
-                                                            <rect key="frame" x="16" y="37" width="272" height="24"/>
+                                                            <rect key="frame" x="16" y="36.5" width="272" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="20"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longlink" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNf-pb-Zh0">
-                                                            <rect key="frame" x="16" y="69" width="272" height="17.5"/>
+                                                            <rect key="frame" x="16" y="68" width="272" height="17"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Medium" family="Advent Pro" pointSize="14"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1099,6 +1104,7 @@
                         </constraints>
                         <connections>
                             <outlet property="archiveTable" destination="B1a-wW-FH3" id="FBZ-m4-WGa"/>
+                            <outlet property="backButton" destination="Wan-2f-yfp" id="gue-KC-KKF"/>
                             <outlet property="emptyLabel" destination="kxh-Th-zbV" id="rmU-ol-bIk"/>
                         </connections>
                     </view>
@@ -1113,6 +1119,7 @@
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <image name="archiveIcon" width="60" height="60"/>
         <image name="back" width="60" height="60"/>
         <image name="backArrow" width="50" height="50"/>
         <image name="bg" width="320" height="568"/>
@@ -1125,7 +1132,6 @@
         <image name="markInArchive" width="60" height="60"/>
         <image name="menu" width="50" height="50"/>
         <image name="qr" width="60" height="60"/>
-        <image name="save" width="60" height="60"/>
         <image name="share" width="60" height="60"/>
         <image name="tap" width="50" height="50"/>
         <namedColor name="Violet_">
@@ -1134,8 +1140,8 @@
         <namedColor name="White_">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

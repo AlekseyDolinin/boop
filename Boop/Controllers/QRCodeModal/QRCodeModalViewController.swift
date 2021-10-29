@@ -3,7 +3,7 @@ import GoogleMobileAds
 
 class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
 
-    var qrCodeModalView: QRCodeModalView! {
+    var viewSelf: QRCodeModalView! {
         guard isViewLoaded else {return nil}
         return (view as! QRCodeModalView)
     }
@@ -15,25 +15,23 @@ class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setGadFullView()
-//        let imageLogo = UIImage(named: "circleLogo")!
-//        let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: UIColor(named: "Violet_Dark_")!, logo: imageLogo)
-        let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: UIColor(named: "Violet_Dark_")!)
-        qrCodeModalView.qrCodeImage.image = convert(cmage: qrURLImage!)
-        qrCodeModalView.linkLabel.text = linkForQRCode
+        let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: .black)
+        viewSelf.qrCodeImage.image = convert(cmage: qrURLImage!)
+        viewSelf.linkLabel.text = linkForQRCode
         
         if #available(iOS 13, *) {
-            qrCodeModalView.closeButton.isHidden = true
+            viewSelf.closeButton.isHidden = true
         } else {
-            qrCodeModalView.closeButton.isHidden = false
+            viewSelf.closeButton.isHidden = false
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         /// рендер UIImage
-        let renderer = UIGraphicsImageRenderer(size: qrCodeModalView.backView.bounds.size)
+        let renderer = UIGraphicsImageRenderer(size: viewSelf.backView.bounds.size)
         let renderImage: UIImage = renderer.image { ctx in
-            qrCodeModalView.backView.drawHierarchy(in: qrCodeModalView.backView.bounds, afterScreenUpdates: true)
+            viewSelf.backView.drawHierarchy(in: viewSelf.backView.bounds, afterScreenUpdates: true)
         }
         /// Convert to data
         dataImageQRCode = renderImage.pngData()

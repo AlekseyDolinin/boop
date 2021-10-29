@@ -178,4 +178,21 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
             self.viewSelf.menuButton.transform = .identity
         }
     }
+    
+    ///
+    func animationPulse() {
+        let pulse1 = CASpringAnimation(keyPath: "transform.scale")
+        pulse1.duration = 0.6
+        pulse1.fromValue = 1.0
+        pulse1.toValue = 1.2
+        pulse1.autoreverses = true
+        pulse1.repeatCount = 1
+        pulse1.initialVelocity = 0.5
+        pulse1.damping = 0.8
+        let animationGroup = CAAnimationGroup()
+        animationGroup.duration = 2.7
+        animationGroup.repeatCount = 1
+        animationGroup.animations = [pulse1]
+        self.viewSelf.openArchiveButton.layer.add(animationGroup, forKey: "pulse")
+    }
 }

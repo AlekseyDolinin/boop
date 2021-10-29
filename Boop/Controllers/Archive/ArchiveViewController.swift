@@ -18,7 +18,9 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "Archive"
+        
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
         viewSelf.archiveTable.delegate = self
         viewSelf.archiveTable.dataSource = self

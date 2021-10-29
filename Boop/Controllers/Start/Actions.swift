@@ -40,7 +40,15 @@ extension StartViewController {
     @IBAction func saveLinkAction(_ sender: UIButton) {
         print("saveLinkAction")
         animationSaveInArchive()
+        animationPulse()
         addItemInArchive()
+    }
+    
+    
+    ///
+    @IBAction func openArchiveAction(_ sender: Any?) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
+        navigationController?.pushViewController(vc!, animated: true)
     }
     
     ///

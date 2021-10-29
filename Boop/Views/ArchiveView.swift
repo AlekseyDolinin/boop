@@ -4,7 +4,8 @@ class ArchiveView: UIView {
     
     @IBOutlet weak var archiveTable: UITableView!
     @IBOutlet weak var emptyLabel: UILabel!
-    
+    @IBOutlet weak var backButton: UIButton!
+
     
     override func awakeFromNib() {
 
@@ -21,6 +22,12 @@ class ArchiveView: UIView {
 extension ArchiveView {
     
     func setUI() {
+        
+        ///
+        backButton.setImage(UIImage(named: "backArrow")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        backButton.tintColor = .black
+        
+        ///
         emptyLabel.isHidden = true
     }
 }

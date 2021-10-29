@@ -16,11 +16,11 @@ class StartView: UIView {
     @IBOutlet weak var collectionServices: UICollectionView!
     @IBOutlet weak var pagination: UIPageControl!
     @IBOutlet weak var menuButton: UIButton!
-    
+    @IBOutlet weak var openArchiveButton: UIButton!
+
     override func awakeFromNib() {
         setUI()
     }
-    
     
     func configure() {
         
@@ -75,6 +75,7 @@ extension StartView {
         generationQRButton.setImage(UIImage(named: "qr")?.withRenderingMode(.alwaysTemplate), for: .normal)
         shareButton.setImage(UIImage(named: "share")?.withRenderingMode(.alwaysTemplate), for: .normal)
         saveInArchiveButton.setImage(UIImage(named: "markInArchive")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        openArchiveButton.setImage(UIImage(named: "archiveIcon")?.withRenderingMode(.alwaysTemplate), for: .normal)
         
         menuButton.tintColor = .black
         backButton.tintColor = .black
@@ -86,6 +87,7 @@ extension StartView {
         ///
         viewMessage.clipsToBounds = true
         viewMessage.layer.cornerRadius = 4
+        openArchiveButton.layer.cornerRadius = openArchiveButton.frame.height / 2
     }
     
     ///
