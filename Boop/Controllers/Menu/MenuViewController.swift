@@ -16,6 +16,11 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
         viewSelf.menuTable.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewSelf.configure()
+    }
+    
     @IBAction func back(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -29,7 +34,7 @@ class MenuView: UIView {
     
     @IBOutlet weak var menuTable: UITableView!
     @IBOutlet weak var container: UIView!
-    
+    @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var lButtonOne: UIButton!
     @IBOutlet weak var lButtonTwo: UIButton!
     @IBOutlet weak var lButtonThree: UIButton!
@@ -44,7 +49,7 @@ class MenuView: UIView {
     
     
     func configure() {
-
+        versionLabel.text = GetVersionApp.get()
     }
 }
 

@@ -9,11 +9,13 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVersionApp()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        versionLabel.text = GetVersionApp.get()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             UIView.animate(withDuration: 0.2) {
@@ -27,12 +29,5 @@ class SplashViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    /// получение номера версии приложения
-    func getVersionApp() {
-        let nsObject: AnyObject? = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as AnyObject
-        let version = nsObject as! String
-        versionLabel.text = "version: \(version)"
     }
 }

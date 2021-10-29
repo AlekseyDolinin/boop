@@ -40,6 +40,7 @@
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
 		91376A5C27292FDF0023BE51 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91376A5B27292FDF0023BE51 /* MenuViewController.swift */; };
 		913B133B27228AE7008C8D7F /* ADFullScreenQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */; };
+		9144C8BF272BCA05006C17BF /* GetVersionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144C8BE272BCA05006C17BF /* GetVersionApp.swift */; };
 		9152E048272685CB003FF6F0 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152E047272685CB003FF6F0 /* SafariViewController.swift */; };
 		9152E04A27268DF0003FF6F0 /* ADFullScreenArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152E04927268DF0003FF6F0 /* ADFullScreenArchive.swift */; };
 		918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528B9271E9461002AE8A0 /* ArchiveCell.swift */; };
@@ -93,6 +94,7 @@
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91376A5B27292FDF0023BE51 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenQRCode.swift; sourceTree = "<group>"; };
+		9144C8BE272BCA05006C17BF /* GetVersionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVersionApp.swift; sourceTree = "<group>"; };
 		9152E047272685CB003FF6F0 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		9152E04927268DF0003FF6F0 /* ADFullScreenArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenArchive.swift; sourceTree = "<group>"; };
 		918528B9271E9461002AE8A0 /* ArchiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCell.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		1036513025EC1D62003F03D0 /* Extention&Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9144C8BE272BCA05006C17BF /* GetVersionApp.swift */,
 				1036513125EC1D7D003F03D0 /* UIColors.swift */,
 				103C5F5925F57332004916E5 /* CIImage.swift */,
 				103C5F5C25F57371004916E5 /* URL.swift */,
@@ -462,6 +465,7 @@
 				10ABC50E25F1803F00CD0CF6 /* Shortener.swift in Sources */,
 				91EA2D0F271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift in Sources */,
 				1099ED7C25ED732A00F53439 /* StartBannerGoogleAds.swift in Sources */,
+				9144C8BF272BCA05006C17BF /* GetVersionApp.swift in Sources */,
 				913B133B27228AE7008C8D7F /* ADFullScreenQRCode.swift in Sources */,
 				10ABC50A25F174C400CD0CF6 /* Actions.swift in Sources */,
 				102A845625F5121B00D78619 /* DelegatesStartVC.swift in Sources */,
