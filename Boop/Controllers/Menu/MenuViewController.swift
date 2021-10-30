@@ -45,7 +45,15 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
 
     ///
     func shareThisApp() {
-        print("shareThisApp")
+        let shareController = UIActivityViewController(activityItems: [shortLink as Any], applicationActivities: nil)
+        shareController.completionWithItemsHandler = {_, bool, _, _ in
+            if bool {
+                print("share app done!")
+            } else {
+                print("error share app")
+            }
+        }
+        present(shareController, animated: true)
     }
 
     ///

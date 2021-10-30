@@ -52,8 +52,14 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
     }
     
     ///
-    func copyToClipboard(index: Int) {
+    func copyToClipboardShortLink(index: Int) {
         pasteboard.string = arrayArchive[index].shortLink
+        showAlertCopy()
+    }
+
+    ///
+    func copyToClipboardLongLink(index: Int) {
+        pasteboard.string = arrayArchive[index].longLink
         showAlertCopy()
     }
     

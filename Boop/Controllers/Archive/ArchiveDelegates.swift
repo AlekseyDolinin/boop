@@ -20,8 +20,13 @@ extension ArchiveViewController {
         self.shortLink = self.arrayArchive[indexPath.row].shortLink
         
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let actionCopy = UIAlertAction(title: "Copy short link to clipboard", style: .default) { action in
-            self.copyToClipboard(index: indexPath.row)
+
+        let actionCopyShortLink = UIAlertAction(title: "Copy short link", style: .default) { action in
+            self.copyToClipboardShortLink(index: indexPath.row)
+        }
+
+        let actionCopyLongLink = UIAlertAction(title: "Copy long link", style: .default) { action in
+            self.copyToClipboardLongLink(index: indexPath.row)
         }
         let actionQR = UIAlertAction(title: "QR code", style: .default) { action in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
@@ -46,7 +51,8 @@ extension ArchiveViewController {
             }
         }
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { action in }
-        actionSheet.addAction(actionCopy)
+        actionSheet.addAction(actionCopyShortLink)
+        actionSheet.addAction(actionCopyLongLink)
         actionSheet.addAction(actionQR)
         actionSheet.addAction(actionShareLink)
         actionSheet.addAction(actionOpenLink)
