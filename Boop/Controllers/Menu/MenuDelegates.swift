@@ -26,13 +26,25 @@ extension MenuViewController {
             return UITableViewCell()
         }
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
-            navigationController?.pushViewController(vc!, animated: true)        }
-        else {
-            print(indexPath.row)
+        switch indexPath.row {
+        case 0:
+            openArchive()
+        case 1:
+            openSettings()
+        case 2:
+            openAppStore()
+        case 3:
+            shareThisApp()
+        case 4:
+            removeAD()
+        case 5:
+            resumePurchase()
+        case 6:
+            reward()
+        default:
+            return UITableViewCell()
         }
     }
 }
