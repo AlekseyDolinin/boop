@@ -13,9 +13,7 @@ class MenuView: UIView {
     
     
     override func awakeFromNib() {
-
         setUI()
-        
     }
     
     

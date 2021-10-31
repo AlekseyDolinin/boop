@@ -1,5 +1,16 @@
 {
-    "arhiveURL":   "Архив URL", 
+    "arhive": "Архив URL >",
+    "settings": "Настройки >",
+    "rateAndFeedback": "Оценить или оставить отзыв >",
+    "shareThisApp": "Поделиться приложением >",
+    "contactAuthor": "Написать разработчику >",
+    "getFullVersion": "Получить полную версию >",
+    "resumePurchase": "Востановление покупки >",
+    "reward": "Подарить разработчику чашечку кофе >",
+    
+    "getFullVersionSubOne": "Удаление всей рекламы",
+    "getFullVersionSubTwo": "Базлимитный архив",
+    
     "version":   "Версия"
 }
 

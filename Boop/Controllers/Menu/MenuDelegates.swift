@@ -3,30 +3,55 @@ import UIKit
 extension MenuViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let menuCell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
+        
         switch indexPath.row {
         case 0:
-            return tableView.dequeueReusableCell(withIdentifier: "ArchiveMenuCell", for: indexPath) as! ArchiveMenuCell
+            menuCell.titleLabel.text = AppLanguage.dictionary["arhive"]!.stringValue
+            menuCell.subTitleOne.isHidden = false
+            menuCell.subTitleTwo.isHidden = true
         case 1:
-            return tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath) as! SettingsCell
+            menuCell.titleLabel.text = AppLanguage.dictionary["settings"]!.stringValue
+            menuCell.subTitleOne.isHidden = true
+            menuCell.subTitleTwo.isHidden = true
         case 2:
-            return tableView.dequeueReusableCell(withIdentifier: "RateCell", for: indexPath) as! RateCell
+            menuCell.titleLabel.text = AppLanguage.dictionary["rateAndFeedback"]!.stringValue
+            menuCell.subTitleOne.isHidden = true
+            menuCell.subTitleTwo.isHidden = true
         case 3:
-            return tableView.dequeueReusableCell(withIdentifier: "ShareCell", for: indexPath) as! ShareCell
+            menuCell.titleLabel.text = AppLanguage.dictionary["shareThisApp"]!.stringValue
+            menuCell.subTitleOne.isHidden = true
+            menuCell.subTitleTwo.isHidden = true
         case 4:
-            return tableView.dequeueReusableCell(withIdentifier: "Contact", for: indexPath) as! Contact
+            menuCell.titleLabel.text = AppLanguage.dictionary["contactAuthor"]!.stringValue
+            menuCell.subTitleOne.isHidden = true
+            menuCell.subTitleTwo.isHidden = true
         case 5:
-            return tableView.dequeueReusableCell(withIdentifier: "RemoveADMenuCell", for: indexPath) as! RemoveADMenuCell
+            menuCell.titleLabel.text = AppLanguage.dictionary["getFullVersion"]!.stringValue
+            menuCell.subTitleOne.isHidden = false
+            menuCell.subTitleTwo.isHidden = false
+            menuCell.subTitleOne.text = AppLanguage.dictionary["getFullVersionSubOne"]!.stringValue
+            menuCell.subTitleTwo.text = AppLanguage.dictionary["getFullVersionSubTwo"]!.stringValue
         case 6:
-            return tableView.dequeueReusableCell(withIdentifier: "PurchaseCell", for: indexPath) as! PurchaseCell
+            menuCell.titleLabel.text = AppLanguage.dictionary["resumePurchase"]!.stringValue
+            menuCell.subTitleOne.isHidden = true
+            menuCell.subTitleTwo.isHidden = true
         case 7:
-            return tableView.dequeueReusableCell(withIdentifier: "RewardCell", for: indexPath) as! RewardCell
+            menuCell.titleLabel.text = AppLanguage.dictionary["reward"]!.stringValue
+            menuCell.subTitleOne.isHidden = false
+            menuCell.subTitleTwo.isHidden = true
         default:
-            return UITableViewCell()
+            break
         }
+        
+        return menuCell
+        
+
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

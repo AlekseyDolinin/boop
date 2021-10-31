@@ -49,7 +49,7 @@
 		91E7A730272C281F002B6CE7 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7A72F272C281F002B6CE7 /* AppLanguage.swift */; };
 		91E7A733272C2FE2002B6CE7 /* Usa.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A732272C2FDC002B6CE7 /* Usa.json */; };
 		91E7A737272C3163002B6CE7 /* Vietnam.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A736272C3029002B6CE7 /* Vietnam.json */; };
-		91E7A738272C3166002B6CE7 /* Brazil.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A735272C3028002B6CE7 /* Brazil.json */; };
+		91E7A738272C3166002B6CE7 /* Portugal.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A735272C3028002B6CE7 /* Portugal.json */; };
 		91E7A739272C316A002B6CE7 /* Russia.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A734272C3026002B6CE7 /* Russia.json */; };
 		91E7A73B272EA16B002B6CE7 /* SendMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7A73A272EA16B002B6CE7 /* SendMail.swift */; };
 		91E7A745272EA3E2002B6CE7 /* SF-Compact-Rounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A73C272EA3E1002B6CE7 /* SF-Compact-Rounded-Light.otf */; };
@@ -113,7 +113,7 @@
 		91E7A72F272C281F002B6CE7 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		91E7A732272C2FDC002B6CE7 /* Usa.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Usa.json; sourceTree = "<group>"; };
 		91E7A734272C3026002B6CE7 /* Russia.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Russia.json; sourceTree = "<group>"; };
-		91E7A735272C3028002B6CE7 /* Brazil.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Brazil.json; sourceTree = "<group>"; };
+		91E7A735272C3028002B6CE7 /* Portugal.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Portugal.json; sourceTree = "<group>"; };
 		91E7A736272C3029002B6CE7 /* Vietnam.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Vietnam.json; sourceTree = "<group>"; };
 		91E7A73A272EA16B002B6CE7 /* SendMail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMail.swift; sourceTree = "<group>"; };
 		91E7A73C272EA3E1002B6CE7 /* SF-Compact-Rounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Light.otf"; sourceTree = "<group>"; };
@@ -321,7 +321,7 @@
 			children = (
 				91E7A734272C3026002B6CE7 /* Russia.json */,
 				91E7A732272C2FDC002B6CE7 /* Usa.json */,
-				91E7A735272C3028002B6CE7 /* Brazil.json */,
+				91E7A735272C3028002B6CE7 /* Portugal.json */,
 				91E7A736272C3029002B6CE7 /* Vietnam.json */,
 			);
 			path = Dictionary;
@@ -422,7 +422,7 @@
 				91E7A74B272EA3E2002B6CE7 /* SF-Compact-Rounded-Ultralight.otf in Resources */,
 				91E7A733272C2FE2002B6CE7 /* Usa.json in Resources */,
 				91E7A745272EA3E2002B6CE7 /* SF-Compact-Rounded-Light.otf in Resources */,
-				91E7A738272C3166002B6CE7 /* Brazil.json in Resources */,
+				91E7A738272C3166002B6CE7 /* Portugal.json in Resources */,
 				91E7A74A272EA3E2002B6CE7 /* SF-Compact-Rounded-Regular.otf in Resources */,
 				91E7A74D272EA3E2002B6CE7 /* SF-Compact-Rounded-Heavy.otf in Resources */,
 				1036512625EC1C27003F03D0 /* Assets.xcassets in Resources */,

@@ -28,7 +28,6 @@ class AppLanguage {
             print("default language")
             selectLanguage = .Usa
         }
-        
         setDictionary()
     }
     
