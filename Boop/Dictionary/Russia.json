@@ -11,5 +11,11 @@
     "getFullVersionSubOne": "Удаление всей рекламы",
     "getFullVersionSubTwo": "Базлимитный архив",
     
-    "version":   "Версия"
+    "version":   "Версия", 
+    "pleaseWait": "Пожалуйста подождите...", 
+    "shareDescription" : "Приложение для сокращения URL", 
+    "pasteLinkHere": "Вставьте ссылку здесь", 
+    "notFoundLink": "Ссылка не найдена \n(Пожалуйста, скопируйте ссылку)", 
+    "errorMsg": "ОШИБКА ☹️", 
+    "linkCopied": "Ссылка скопирована"
 }

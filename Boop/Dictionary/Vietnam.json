@@ -11,5 +11,11 @@
     "getFullVersionSubOne": "Ẩn tất cả các quảng cáo",
     "getFullVersionSubTwo": "Kho lưu trữ không giới hạn",
     
-    "version": "Phiên bản"
+    "version": "Phiên bản", 
+    "pleaseWait": "Vui lòng chờ...", 
+    "shareDescription" : "Ứng dụng rút gọn URL", 
+    "pasteLinkHere": "Dán liên kết vào đây", 
+    "notFoundLink": "Không tìm thấy liên kết \n(Vui lòng sao chép url vào khay nhớ tạm)", 
+    "errorMsg": "LỖI ☹️", 
+    "linkCopied": "Đã sao chép liên kết"
 }

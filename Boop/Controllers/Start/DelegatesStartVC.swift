@@ -20,7 +20,7 @@ extension StartViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 indexSelectedService = index
                 viewSelf.pagination.currentPage = index
                 StartViewController.selectedService = arrayKeysServices[index]
-                viewSelf.linkLabel.text = "Paste the link here"
+                viewSelf.linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
                 viewSelf.alphaStackActionButtons(valueAlpha: 0.0, duration: 0)
             }
         }

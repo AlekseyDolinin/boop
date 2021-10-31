@@ -11,5 +11,12 @@
     "getFullVersionSubOne": "Hide all ads",
     "getFullVersionSubTwo": "Unlimited archive",
     
-    "version": "Version"
+    "version": "Version", 
+    "pleaseWait": "Please Wait...", 
+    "shareDescription" : "URL shortener app", 
+    "pasteLinkHere": "Paste the link here", 
+    "notFoundLink": "Not Found Link \n(Please, copy url to clipboard)", 
+    "errorMsg": "ERROR ☹️",
+    "done": "DONE 🤗", 
+    "linkCopied": "Link copied"
 }

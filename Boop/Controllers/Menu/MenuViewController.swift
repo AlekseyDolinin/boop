@@ -45,7 +45,7 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
 
     ///
     func shareThisApp() {
-        let description = "Приложение для сокращения URL"
+        let description = AppLanguage.dictionary["shareDescription"]!.stringValue
         let link = "https://apps.apple.com/ru/app/booplink/id1556606517"
         let dataImage = UIImage(named: "logoShare")?.pngData()
         let viewController = UIActivityViewController(activityItems: [description, link, dataImage as Any], applicationActivities: nil)

@@ -30,7 +30,7 @@ extension StartViewController {
     
     ///
     @IBAction func backAction(_ sender: UIButton) {
-        viewSelf.linkLabel.text = "Paste the link here"
+        viewSelf.linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
         viewSelf.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
         self.longLink = nil
         self.shortLink = nil
@@ -61,7 +61,7 @@ extension StartViewController {
             /// проверка вставлена ссылка или просто текст
             if let longLink = URL(string: encodeString), let scheme = longLink.scheme {
                 if scheme == "https" || scheme == "http" {
-                    viewSelf.showMessage(text: "Please Wait...")
+                    viewSelf.showMessage(text: AppLanguage.dictionary["pleaseWait"]!.stringValue")
                     viewSelf.linkLabel.text = pasteboard.string
                     self.longLink = longLink.absoluteString
                     self.viewSelf.placeLinkButton.isUserInteractionEnabled = false
@@ -71,7 +71,7 @@ extension StartViewController {
                     self.viewSelf.animationLabel()
                 }
             } else {
-                viewSelf.showMessage(text: "Not Found Link \n(Please, copy url to clipboard)")
+                viewSelf.showMessage(text: AppLanguage.dictionary["notFoundLink"]!.stringValue")
             }
         }
     }

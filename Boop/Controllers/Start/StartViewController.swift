@@ -61,7 +61,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
                 if responseShortLink != "" {
                     self.showResult(resutShortUrl: responseShortLink)
                 } else {
-                    self.viewSelf.showMessage(text: "ERROR ☹️")
+                    self.viewSelf.showMessage(text: AppLanguage.dictionary["errorMsg"]!.stringValue)
                 }
             }
         }
@@ -69,7 +69,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     ///
     func showResult(resutShortUrl: String) {
-        self.viewSelf.showMessage(text: "DONE 🤗")
+        self.viewSelf.showMessage(text: AppLanguage.dictionary["done"]!.stringValue)
         self.viewSelf.linkLabel.text = resutShortUrl
         self.shortLink = resutShortUrl
         self.viewSelf.alphaStackActionButtons(valueAlpha: 1.0, duration: 0.2)
@@ -91,7 +91,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     ///
     func copiedShortLink() {
         pasteboard.string = self.shortLink
-        viewSelf.showMessage(text: "Link copied")
+        viewSelf.showMessage(text: AppLanguage.dictionary["linkCopied"]!.stringValue)
     }
     
     ///
