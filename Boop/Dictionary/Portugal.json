@@ -1,17 +1,15 @@
 {
+    "arhive": "URL do arquivo >",
+    "settings": "App de configurações>",
+    "rateAndFeedback": "Avaliação e feedback >",
+    "shareThisApp": "Compartilhe esse aplicativo >",
+    "contactAuthor": "Contato com o autor >",
+    "getFullVersion": "Obter a versão Pro >",
+    "restorePurchase": "Restaurar compra (versão pro) >",
+    "reward": "Recompense o autor por uma xícara de café >",
     
-    "arhive": "Archive URL >",
-    "settings": "Settings App>",
-    "rateAndFeedback": "Rate and feedback >",
-    "shareThisApp": "Share this App >",
-    "contactAuthor": "Contact author >",
-    "getFullVersion": "Get full version >",
-    "resumePurchase": "Resume purchase (remove ads) >",
-    "reward": "Reward the author for a cup of coffee >",
+    "getFullVersionSubOne": "Ocultar todos os anúncios",
+    "getFullVersionSubTwo": "Arquivo ilimitado",
     
-    
-    "getFullVersionSubOne": "Remove all advertising",
-    "getFullVersionSubTwo": "Unlimited archive",
-    
-    "version": "Version"
+    "version": "Versão"
 }

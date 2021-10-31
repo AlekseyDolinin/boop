@@ -1,17 +1,15 @@
 {
+    "arhive": "URL lưu trữ >",
+    "settings": "Ứng dụng Cài đặt >",
+    "rateAndFeedback": "Xếp hạng và phản hồi >",
+    "shareThisApp": "Chia sẻ ứng dụng này >",
+    "contactAuthor": "Viết cho nhà phát triển >",
+    "getFullVersion": "Lấy phiên bản đầy đủ >",
+    "restorePurchase": "Khôi phục mua hàng (phiên bản đầy đủ) >",
+    "reward": "Thưởng cho tác giả một tách cà phê >",
     
-    "arhive": "Archive URL >",
-    "settings": "Settings App>",
-    "rateAndFeedback": "Rate and feedback >",
-    "shareThisApp": "Share this App >",
-    "contactAuthor": "Contact author >",
-    "getFullVersion": "Get full version >",
-    "resumePurchase": "Resume purchase (remove ads) >",
-    "reward": "Reward the author for a cup of coffee >",
+    "getFullVersionSubOne": "Ẩn tất cả các quảng cáo",
+    "getFullVersionSubTwo": "Kho lưu trữ không giới hạn",
     
-    
-    "getFullVersionSubOne": "Remove all advertising",
-    "getFullVersionSubTwo": "Unlimited archive",
-    
-    "version": "Version"
+    "version": "Phiên bản"
 }

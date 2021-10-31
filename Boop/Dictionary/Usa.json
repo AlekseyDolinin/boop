@@ -1,19 +1,15 @@
-{
-    
+{  
     "arhive": "Archive URL >",
     "settings": "Settings App>",
     "rateAndFeedback": "Rate and feedback >",
     "shareThisApp": "Share this App >",
-    "contactAuthor": "Contact author >",
-    "getFullVersion": "Get full version >",
-    "resumePurchase": "Resume purchase (remove ads) >",
+    "contactAuthor": "Contact with  the author >",
+    "getFullVersion": "Get Pro version >",
+    "restorePurchase": "Restore purchase (full version) >",
     "reward": "Reward the author for a cup of coffee >",
     
-    
-    "getFullVersionSubOne": "Remove all advertising",
+    "getFullVersionSubOne": "Hide all ads",
     "getFullVersionSubTwo": "Unlimited archive",
     
     "version": "Version"
 }
-
-
