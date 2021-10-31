@@ -45,17 +45,14 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
 
     ///
     func shareThisApp() {
-        let shareController = UIActivityViewController(activityItems: [shortLink as Any], applicationActivities: nil)
-        shareController.completionWithItemsHandler = {_, bool, _, _ in
-            if bool {
-                print("share app done!")
-            } else {
-                print("error share app")
-            }
-        }
-        present(shareController, animated: true)
+        let description = "Приложение для сокращения URL"
+        let link = "https://apps.apple.com/ru/app/booplink/id1556606517"
+        let dataImage = UIImage(named: "logoShare")?.pngData()
+        let viewController = UIActivityViewController(activityItems: [description, link, dataImage as Any], applicationActivities: nil)
+        viewController.popoverPresentationController?.sourceView = self.view
+        self.present(viewController, animated: true, completion: nil)
     }
-
+    
     ///
     func removeAD() {
         print("removeAD")
@@ -86,3 +83,24 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
         navigationController?.popViewController(animated: true)
     }
 }
+
+
+
+//extension MenuViewController: UIActivityItemSource {
+//
+//    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+//        return ""
+//    }
+//
+//    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+//        return URL.init(string: "https://itunes.apple.com/app/id1170886809")!
+//    }
+//
+//    func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivity.ActivityType?) -> String {
+//        return "ScreenSort for iOS: https://itunes.apple.com/app/id1170886809"
+//    }
+//
+//    func activityViewController(_ activityViewController: UIActivityViewController, thumbnailImageForActivityType activityType: UIActivity.ActivityType?, suggestedSize size: CGSize) -> UIImage? {
+//        return nil
+//    }
+//}

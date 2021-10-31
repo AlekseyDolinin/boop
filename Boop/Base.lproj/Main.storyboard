@@ -174,13 +174,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j6r-Zf-ga9">
                                                     <rect key="frame" x="16" y="19" width="288" height="64.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
                                                             <rect key="frame" x="0.0" y="0.0" width="288" height="36"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="30"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
                                                             <rect key="frame" x="0.0" y="44" width="288" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="AdventPro-Regular" family="Advent Pro" pointSize="17"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -627,7 +627,7 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="E6f-ko-AHI">
-                                    <rect key="frame" x="0.0" y="597" width="375" height="300"/>
+                                    <rect key="frame" x="0.0" y="658" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-iN-ATm">
@@ -840,8 +840,34 @@
                                             <outlet property="titleLabel" destination="exf-rN-KVG" id="xGb-xa-OeY"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contact" rowHeight="61" id="62k-36-8Ng" customClass="Contact" customModule="boop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="355.5" width="375" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="62k-36-8Ng" id="BHd-2C-7fK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact author &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-Pk-XPQ">
+                                                    <rect key="frame" x="220.5" y="16" width="138.5" height="29"/>
+                                                    <fontDescription key="fontDescription" name="AdventPro-Bold" family="Advent Pro" pointSize="22"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="1hG-Pk-XPQ" secondAttribute="bottom" constant="16" id="4K1-tb-7sg"/>
+                                                <constraint firstItem="1hG-Pk-XPQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BHd-2C-7fK" secondAttribute="leading" constant="20" symbolic="YES" id="dDS-cy-mnf"/>
+                                                <constraint firstItem="1hG-Pk-XPQ" firstAttribute="top" secondItem="BHd-2C-7fK" secondAttribute="top" constant="16" id="gSl-zu-g6X"/>
+                                                <constraint firstAttribute="trailing" secondItem="1hG-Pk-XPQ" secondAttribute="trailing" constant="16" id="ikl-GS-wmy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="1hG-Pk-XPQ" id="dVV-Jp-CHm"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RemoveADMenuCell" rowHeight="97" id="RBc-ub-i53" customClass="RemoveADMenuCell" customModule="boop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="355.5" width="375" height="97"/>
+                                        <rect key="frame" x="0.0" y="416.5" width="375" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RBc-ub-i53" id="ty2-Ti-gOa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
@@ -893,7 +919,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PurchaseCell" rowHeight="61" id="m5D-eW-FPB" customClass="PurchaseCell" customModule="boop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="452.5" width="375" height="61"/>
+                                        <rect key="frame" x="0.0" y="513.5" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m5D-eW-FPB" id="PDo-NC-Hon">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
@@ -919,7 +945,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RewardCell" rowHeight="61" id="Bpy-ki-OhQ" customClass="RewardCell" customModule="boop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="513.5" width="375" height="61"/>
+                                        <rect key="frame" x="0.0" y="574.5" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bpy-ki-OhQ" id="TQ4-JU-IxC">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>

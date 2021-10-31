@@ -17,10 +17,12 @@ extension MenuViewController {
         case 3:
             return tableView.dequeueReusableCell(withIdentifier: "ShareCell", for: indexPath) as! ShareCell
         case 4:
-            return tableView.dequeueReusableCell(withIdentifier: "RemoveADMenuCell", for: indexPath) as! RemoveADMenuCell
+            return tableView.dequeueReusableCell(withIdentifier: "Contact", for: indexPath) as! Contact
         case 5:
-            return tableView.dequeueReusableCell(withIdentifier: "PurchaseCell", for: indexPath) as! PurchaseCell
+            return tableView.dequeueReusableCell(withIdentifier: "RemoveADMenuCell", for: indexPath) as! RemoveADMenuCell
         case 6:
+            return tableView.dequeueReusableCell(withIdentifier: "PurchaseCell", for: indexPath) as! PurchaseCell
+        case 7:
             return tableView.dequeueReusableCell(withIdentifier: "RewardCell", for: indexPath) as! RewardCell
         default:
             return UITableViewCell()
@@ -38,13 +40,15 @@ extension MenuViewController {
         case 3:
             shareThisApp()
         case 4:
-            removeAD()
+            contact()
         case 5:
-            resumePurchase()
+            removeAD()
         case 6:
+            resumePurchase()
+        case 7:
             reward()
         default:
-            return UITableViewCell()
+            break
         }
     }
 }

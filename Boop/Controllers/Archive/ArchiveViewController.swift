@@ -46,7 +46,7 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         if gestureRecognizer.state == .began {
             let touchPoint = gestureRecognizer.location(in: viewSelf.archiveTable)
             if let indexPath = viewSelf.archiveTable.indexPathForRow(at: touchPoint) {
-                copyToClipboard(index: indexPath.row)
+                copyToClipboardShortLink(index: indexPath.row)
             }
         }
     }

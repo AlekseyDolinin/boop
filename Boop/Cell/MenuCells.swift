@@ -23,6 +23,10 @@ class ShareCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
+class Contact: UITableViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+}
+
 class RemoveADMenuCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleOne: UILabel!
