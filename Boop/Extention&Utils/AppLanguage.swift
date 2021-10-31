@@ -6,7 +6,7 @@ class AppLanguage {
     enum Lang: String {
         case Russia = "Russia"
         case Usa = "Usa"
-        case Brazil = "Brazil"
+        case Portugal = "Portugal"
         case Vietnam = "Vietnam"
     }
     
@@ -21,7 +21,7 @@ class AppLanguage {
         case 2:
             selectLanguage = .Russia
         case 3:
-            selectLanguage = .Brazil
+            selectLanguage = .Portugal
         case 4:
             selectLanguage = .Vietnam
         default:

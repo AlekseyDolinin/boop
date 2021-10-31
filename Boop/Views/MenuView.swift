@@ -7,7 +7,7 @@ class MenuView: UIView {
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var lButtonRussia: UIButton!
     @IBOutlet weak var lButtonUsa: UIButton!
-    @IBOutlet weak var lButtonBrazil: UIButton!
+    @IBOutlet weak var lButtonPortugal: UIButton!
     @IBOutlet weak var lButtonVietnam: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
@@ -38,7 +38,7 @@ extension MenuView {
         
         lButtonRussia.layer.cornerRadius = lButtonRussia.frame.height / 2
         lButtonUsa.layer.cornerRadius = lButtonUsa.frame.height / 2
-        lButtonBrazil.layer.cornerRadius = lButtonBrazil.frame.height / 2
+        lButtonPortugal.layer.cornerRadius = lButtonPortugal.frame.height / 2
         lButtonVietnam.layer.cornerRadius = lButtonVietnam.frame.height / 2
     }
 }
