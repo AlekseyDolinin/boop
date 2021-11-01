@@ -42,7 +42,11 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         setGadFullView()
         setPagination()
         checkAppTrackingTransparency()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewSelf.configure()
     }
     
     ///

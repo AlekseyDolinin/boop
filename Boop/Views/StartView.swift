@@ -23,7 +23,7 @@ class StartView: UIView {
     }
     
     func configure() {
-        
+        setUI()
         backViewLink.layer.cornerRadius = backViewLink.frame.height / 2
         alphaStackActionButtons(valueAlpha: 0.0, duration: 0.0)
         viewMessage.alpha = 0
@@ -61,13 +61,10 @@ class StartView: UIView {
 }
 
 extension StartView {
-    
     ///
     func setUI() {
         setLabels()
-        
-        /// Color
-        
+                
         ///
         menuButton.setImage(UIImage(named: "menu")?.withRenderingMode(.alwaysTemplate), for: .normal)
         backButton.setImage(UIImage(named: "back")?.withRenderingMode(.alwaysTemplate), for: .normal)
@@ -92,6 +89,6 @@ extension StartView {
     
     ///
     func setLabels() {
-
+        linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
     }
 }

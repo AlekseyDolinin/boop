@@ -7,15 +7,15 @@
     "getFullVersion": "Lấy phiên bản đầy đủ >",
     "restorePurchase": "Khôi phục mua hàng (phiên bản đầy đủ) >",
     "reward": "Thưởng cho tác giả một tách cà phê >",
-    
-    "getFullVersionSubOne": "Ẩn tất cả các quảng cáo",
-    "getFullVersionSubTwo": "Kho lưu trữ không giới hạn",
-    
     "version": "Phiên bản", 
     "pleaseWait": "Vui lòng chờ...", 
     "shareDescription" : "Ứng dụng rút gọn URL", 
     "pasteLinkHere": "Dán liên kết vào đây", 
     "notFoundLink": "Không tìm thấy liên kết \n(Vui lòng sao chép url vào khay nhớ tạm)", 
-    "errorMsg": "LỖI ☹️", 
-    "linkCopied": "Đã sao chép liên kết"
+    "errorMsg": "LỖI ☹️",
+    "done": "SẴN SÀNG 🤗", 
+    "linkCopied": "Đã sao chép liên kết",
+    "rewardDescription": "0.99$",
+    "getFullVersionDescription": "Ẩn tất cả các quảng cáo\nKho lưu trữ không giới hạn\n(1.99$)",
+    "archiveDescription": "Đã lưu trữ:"
 }

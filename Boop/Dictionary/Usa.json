@@ -7,10 +7,6 @@
     "getFullVersion": "Get Pro version >",
     "restorePurchase": "Restore purchase (full version) >",
     "reward": "Reward the author for a cup of coffee >",
-    
-    "getFullVersionSubOne": "Hide all ads",
-    "getFullVersionSubTwo": "Unlimited archive",
-    
     "version": "Version", 
     "pleaseWait": "Please Wait...", 
     "shareDescription" : "URL shortener app", 
@@ -18,5 +14,8 @@
     "notFoundLink": "Not Found Link \n(Please, copy url to clipboard)", 
     "errorMsg": "ERROR ☹️",
     "done": "DONE 🤗", 
-    "linkCopied": "Link copied"
+    "linkCopied": "Link copied",
+    "rewardDescription": "0.99$",
+    "getFullVersionDescription": "Hide all ads\nUnlimited archive\n(1.99$)",
+    "archiveDescription": "Archived:"
 }

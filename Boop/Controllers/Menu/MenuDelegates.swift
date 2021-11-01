@@ -10,48 +10,36 @@ extension MenuViewController {
         
         let menuCell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
         
+        if indexPath.row == 0 || indexPath.row == 5 || indexPath.row == 7 {
+            menuCell.subLabel.isHidden = false
+        } else {
+            menuCell.subLabel.isHidden = true
+        }
+        
         switch indexPath.row {
         case 0:
             menuCell.titleLabel.text = AppLanguage.dictionary["arhive"]!.stringValue
-            menuCell.subTitleOne.isHidden = false
-            menuCell.subTitleTwo.isHidden = true
+            menuCell.subLabel.text = setDescriptionArchive()
         case 1:
             menuCell.titleLabel.text = AppLanguage.dictionary["settings"]!.stringValue
-            menuCell.subTitleOne.isHidden = true
-            menuCell.subTitleTwo.isHidden = true
         case 2:
             menuCell.titleLabel.text = AppLanguage.dictionary["rateAndFeedback"]!.stringValue
-            menuCell.subTitleOne.isHidden = true
-            menuCell.subTitleTwo.isHidden = true
         case 3:
             menuCell.titleLabel.text = AppLanguage.dictionary["shareThisApp"]!.stringValue
-            menuCell.subTitleOne.isHidden = true
-            menuCell.subTitleTwo.isHidden = true
         case 4:
             menuCell.titleLabel.text = AppLanguage.dictionary["contactAuthor"]!.stringValue
-            menuCell.subTitleOne.isHidden = true
-            menuCell.subTitleTwo.isHidden = true
         case 5:
             menuCell.titleLabel.text = AppLanguage.dictionary["getFullVersion"]!.stringValue
-            menuCell.subTitleOne.isHidden = false
-            menuCell.subTitleTwo.isHidden = false
-            menuCell.subTitleOne.text = AppLanguage.dictionary["getFullVersionSubOne"]!.stringValue
-            menuCell.subTitleTwo.text = AppLanguage.dictionary["getFullVersionSubTwo"]!.stringValue
+            menuCell.subLabel.text = AppLanguage.dictionary["getFullVersionDescription"]!.stringValue
         case 6:
-            menuCell.titleLabel.text = AppLanguage.dictionary["resumePurchase"]!.stringValue
-            menuCell.subTitleOne.isHidden = true
-            menuCell.subTitleTwo.isHidden = true
+            menuCell.titleLabel.text = AppLanguage.dictionary["restorePurchase"]!.stringValue
         case 7:
             menuCell.titleLabel.text = AppLanguage.dictionary["reward"]!.stringValue
-            menuCell.subTitleOne.isHidden = false
-            menuCell.subTitleTwo.isHidden = true
+            menuCell.subLabel.text = AppLanguage.dictionary["rewardDescription"]!.stringValue
         default:
             break
         }
-        
         return menuCell
-        
-
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

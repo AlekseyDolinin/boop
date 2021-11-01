@@ -7,15 +7,15 @@
     "getFullVersion": "Obter a versão Pro >",
     "restorePurchase": "Restaurar compra (versão pro) >",
     "reward": "Recompense o autor por uma xícara de café >",
-    
-    "getFullVersionSubOne": "Ocultar todos os anúncios",
-    "getFullVersionSubTwo": "Arquivo ilimitado",
-    
     "version": "Versão", 
     "pleaseWait": "Por favor, aguarde...", 
     "shareDescription" : "Aplicativo encurtador de URL", 
     "pasteLinkHere": "Cole o link aqui", 
     "notFoundLink": "Link não encontrado \n(Por favor, copie o url para a área de transferência)", 
-    "errorMsg": "ERRO ☹️", 
-    "linkCopied": "Link copiado"
+    "errorMsg": "ERRO ☹️",
+    "done": "PRONTO 🤗", 
+    "linkCopied": "Link copiado",
+    "rewardDescription": "0.99$",
+    "getFullVersionDescription": "Ocultar todos os anúncios\nArquivo ilimitado\n(1.99$)",
+    "archiveDescription": "Arquivado:"
 }

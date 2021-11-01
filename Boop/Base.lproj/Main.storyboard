@@ -171,13 +171,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j6r-Zf-ga9">
                                                     <rect key="frame" x="16" y="19.5" width="288" height="63.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
                                                             <rect key="frame" x="0.0" y="0.0" width="288" height="36"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="30"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
                                                             <rect key="frame" x="0.0" y="44" width="288" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -624,7 +624,7 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="E6f-ko-AHI">
-                                    <rect key="frame" x="0.0" y="210.5" width="375" height="300"/>
+                                    <rect key="frame" x="0.0" y="189" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-iN-ATm">
@@ -721,14 +721,14 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" id="RBc-ub-i53" customClass="MenuCell" customModule="boop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="94.5" width="375" height="93.5"/>
+                                        <rect key="frame" x="0.0" y="94.5" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RBc-ub-i53" id="ty2-Ti-gOa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="iST-uB-iSL">
-                                                    <rect key="frame" x="16" y="16" width="351" height="61.5"/>
+                                                    <rect key="frame" x="16" y="16" width="351" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-VI-XCy">
                                                             <rect key="frame" x="0.0" y="0.0" width="351" height="23"/>
@@ -736,20 +736,8 @@
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubOne" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1b-wn-vul">
-                                                            <rect key="frame" x="0.0" y="23" width="335" height="19"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="19.333333333333314" id="lbl-BJ-p1f"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="14"/>
-                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubTwo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-ng-E51">
-                                                            <rect key="frame" x="0.0" y="42" width="335" height="19.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="19.333333333333329" id="mxW-RX-lfK"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubLabel" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1b-wn-vul">
+                                                            <rect key="frame" x="0.0" y="23" width="335" height="17"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="14"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -759,13 +747,9 @@
                                                         <constraint firstItem="B1b-wn-vul" firstAttribute="leading" secondItem="iST-uB-iSL" secondAttribute="leading" id="B1E-iK-sPn"/>
                                                         <constraint firstItem="Peo-VI-XCy" firstAttribute="leading" secondItem="iST-uB-iSL" secondAttribute="leading" id="Hff-sa-cXm"/>
                                                         <constraint firstItem="B1b-wn-vul" firstAttribute="top" secondItem="Peo-VI-XCy" secondAttribute="bottom" id="KkF-cI-Nbr"/>
-                                                        <constraint firstAttribute="trailing" secondItem="aWI-ng-E51" secondAttribute="trailing" constant="16" id="NDf-ab-CMa"/>
                                                         <constraint firstItem="Peo-VI-XCy" firstAttribute="top" secondItem="iST-uB-iSL" secondAttribute="top" id="WOs-M6-7vi"/>
-                                                        <constraint firstItem="aWI-ng-E51" firstAttribute="top" secondItem="B1b-wn-vul" secondAttribute="bottom" id="dvF-mz-0Gk"/>
                                                         <constraint firstAttribute="trailing" secondItem="Peo-VI-XCy" secondAttribute="trailing" id="mxL-gE-Sgg"/>
                                                         <constraint firstAttribute="trailing" secondItem="B1b-wn-vul" secondAttribute="trailing" constant="16" id="n4T-Mj-a5P"/>
-                                                        <constraint firstAttribute="bottom" secondItem="aWI-ng-E51" secondAttribute="bottom" id="rW1-Qi-YtA"/>
-                                                        <constraint firstItem="aWI-ng-E51" firstAttribute="leading" secondItem="iST-uB-iSL" secondAttribute="leading" id="waS-c6-ohS"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -778,8 +762,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="subTitleOne" destination="B1b-wn-vul" id="gCr-Cu-rgF"/>
-                                            <outlet property="subTitleTwo" destination="aWI-ng-E51" id="QOh-Fk-Iko"/>
+                                            <outlet property="subLabel" destination="B1b-wn-vul" id="O77-bL-btL"/>
                                             <outlet property="titleLabel" destination="Peo-VI-XCy" id="V9J-1R-sx7"/>
                                         </connections>
                                     </tableViewCell>

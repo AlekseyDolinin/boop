@@ -54,14 +54,14 @@ extension StartViewController {
     ///
     @IBAction func tapPlaceLinkAction(_ sender: UIButton) {
         print("tapPlaceLinkAction")
-        if viewSelf.linkLabel.text == "Paste the link here" {
+        if viewSelf.linkLabel.text == AppLanguage.dictionary["pasteLinkHere"]!.stringValue {
             let encodeString: String = (pasteboard.string)?.encodeUrl() ?? ""
             print("encodeString: \(encodeString)")
             print("selectedService: \(StartViewController.selectedService)")
             /// проверка вставлена ссылка или просто текст
             if let longLink = URL(string: encodeString), let scheme = longLink.scheme {
                 if scheme == "https" || scheme == "http" {
-                    viewSelf.showMessage(text: AppLanguage.dictionary["pleaseWait"]!.stringValue")
+                    viewSelf.showMessage(text: AppLanguage.dictionary["pleaseWait"]!.stringValue)
                     viewSelf.linkLabel.text = pasteboard.string
                     self.longLink = longLink.absoluteString
                     self.viewSelf.placeLinkButton.isUserInteractionEnabled = false
@@ -71,7 +71,7 @@ extension StartViewController {
                     self.viewSelf.animationLabel()
                 }
             } else {
-                viewSelf.showMessage(text: AppLanguage.dictionary["notFoundLink"]!.stringValue")
+                viewSelf.showMessage(text: AppLanguage.dictionary["notFoundLink"]!.stringValue)
             }
         }
     }

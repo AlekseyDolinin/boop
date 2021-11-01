@@ -18,6 +18,7 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewSelf.configure()
+        viewSelf.menuTable.reloadData()
     }
     
     ///
@@ -41,6 +42,21 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
         if let url = URL(string: "itms-apps://apple.com/app/id1556606517") {
             UIApplication.shared.open(url)
         }
+    }
+    
+    ///
+    func setDescriptionArchive() -> String {
+        if let data = UserDefaults.standard.data(forKey: "arrayArchive") {
+            do {
+                let decoder = JSONDecoder()
+                let arrayArchive = try decoder.decode([ArchiveLink].self, from: data)
+                return AppLanguage.dictionary["archiveDescription"]!.stringValue + " \(arrayArchive.count)"
+                
+            } catch {
+                print("Unable to Decode Notes (\(error))")
+            }
+        }
+        return ""
     }
 
     ///
