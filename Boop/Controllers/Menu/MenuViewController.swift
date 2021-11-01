@@ -45,18 +45,14 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
     }
     
     ///
-    func setDescriptionArchive() -> String {
-        if let data = UserDefaults.standard.data(forKey: "arrayArchive") {
-            do {
-                let decoder = JSONDecoder()
-                let arrayArchive = try decoder.decode([ArchiveLink].self, from: data)
-                return AppLanguage.dictionary["archiveDescription"]!.stringValue + " \(arrayArchive.count)"
-                
-            } catch {
-                print("Unable to Decode Notes (\(error))")
+    func setDescriptionArchive(completion: @escaping (String) -> ()) {
+        ParseArhive.parse { array in
+            if array.isEmpty {
+                completion(AppLanguage.dictionary["archiveIsEmpty"]!.stringValue )
+            } else {
+                completion(AppLanguage.dictionary["archiveDescription"]!.stringValue + " \(array.count)")
             }
         }
-        return ""
     }
 
     ///

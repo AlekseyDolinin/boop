@@ -28,17 +28,10 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         setGadFullView()
         setupLongPressGesture()
         
-        if let data = UserDefaults.standard.data(forKey: "arrayArchive") {
-            do {
-                let decoder = JSONDecoder()
-                arrayArchive = try decoder.decode([ArchiveLink].self, from: data)
-                viewSelf.emptyLabel.isHidden = arrayArchive.isEmpty ? false : true
-            } catch {
-                print("Unable to Decode Notes (\(error))")
-            }
-        } else {
-            viewSelf.emptyLabel.isHidden = false
-        }
+        ParseArhive.parse(completion: { array in
+            self.viewSelf.emptyLabel.isHidden = array.isEmpty ? false : true
+            self.arrayArchive = array.isEmpty ? [] : array
+        })
     }
     
     ///

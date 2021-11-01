@@ -19,7 +19,9 @@ extension MenuViewController {
         switch indexPath.row {
         case 0:
             menuCell.titleLabel.text = AppLanguage.dictionary["arhive"]!.stringValue
-            menuCell.subLabel.text = setDescriptionArchive()
+            setDescriptionArchive { text in
+                menuCell.subLabel.text = text
+            }
         case 1:
             menuCell.titleLabel.text = AppLanguage.dictionary["settings"]!.stringValue
         case 2:

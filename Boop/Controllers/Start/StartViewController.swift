@@ -110,25 +110,13 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     ///
     func wrireArchive(completion: @escaping (Bool) -> ()) {
-        if let data = UserDefaults.standard.data(forKey: "arrayArchive") {
-            do {
-                let decoder = JSONDecoder()
-                self.arrayArchive = try decoder.decode([ArchiveLink].self, from: data)
-                print("arrayArchive_1: \(self.arrayArchive)")
-                completion (true)
-            } catch {
-                print("Unable to Decode Notes (\(error))")
-                completion (false)
-            }
-        } else {
-            print("Первая запись в архив")
+        ParseArhive.parse { array in
             completion (true)
         }
     }
     
     ///
     func addItemInArchive() {
-        ///
         wrireArchive { bool in
             /// если удалось прочитать и декодировать архив
             if bool == true {
