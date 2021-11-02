@@ -22,5 +22,14 @@
     "titleFullArchive": "Kho lưu trữ đã đầy",
     "messageFullArchive": "Bạn cần giải phóng dung lượng",
     "close": "Gần",
-    "gotoArchive": "Đi tới Lưu trữ"
+    "gotoArchive": "Đi tới Lưu trữ",
+    "copyShortLink": "Sao chép liên kết ngắn",
+    "copyLongLink": "Sao chép liên kết dài",
+    "qrCode": "mã QR",
+    "shareShortLink": "Chia sẻ liên kết ngắn",
+    "openLongLink": "Mở liên kết dài trong trình duyệt",
+    "cancel": "Hủy bỏ"
+    
+    
+    
 }

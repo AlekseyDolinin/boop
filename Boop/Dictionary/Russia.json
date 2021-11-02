@@ -22,5 +22,12 @@
     "titleFullArchive": "Архив заполнен",
     "messageFullArchive": "Необходимо освободить место в архиве",
     "close": "Закрыть",
-    "gotoArchive": "Перейти в архив"
+    "gotoArchive": "Перейти в архив",
+    "copyShortLink": "Скопировать короткую ссылку",
+    "copyLongLink": "Скопировать длинную ссылку",
+    "qrCode": "QR код",
+    "shareShortLink": "Поделиться короткой ссылкой",
+    "openLongLink": "Открыть длинную ссылку в браузере",
+    "cancel": "Отмена"
+    
 }

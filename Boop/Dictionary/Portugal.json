@@ -22,5 +22,11 @@
     "titleFullArchive": "O arquivo está cheio",
     "messageFullArchive": "Você precisa liberar espaço",
     "close": "Fechar",
-    "gotoArchive": "Vá para o Arquivo"
+    "gotoArchive": "Vá para o Arquivo",
+    "copyShortLink": "Copiar link curto",
+    "copyLongLink": "Copiar link longo",
+    "qrCode": "Código QR",
+    "shareShortLink": "Compartilhar link curto",
+    "openLongLink": "Abra o link longo no navegador",
+    "cancel": "Cancelar"
 }

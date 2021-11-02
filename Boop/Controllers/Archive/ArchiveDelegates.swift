@@ -21,21 +21,26 @@ extension ArchiveViewController {
         
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
-        let actionCopyShortLink = UIAlertAction(title: "Copy short link", style: .default) { action in
+        let copyShortLink = AppLanguage.dictionary["copyShortLink"]!.stringValue
+        let actionCopyShortLink = UIAlertAction(title: copyShortLink, style: .default) { action in
             self.copyToClipboardShortLink(index: indexPath.row)
         }
 
-        let actionCopyLongLink = UIAlertAction(title: "Copy long link", style: .default) { action in
+        let copyLongLink = AppLanguage.dictionary["copyLongLink"]!.stringValue
+        let actionCopyLongLink = UIAlertAction(title: copyLongLink, style: .default) { action in
             self.copyToClipboardLongLink(index: indexPath.row)
         }
-        let actionQR = UIAlertAction(title: "QR code", style: .default) { action in
+        
+        let qrCode = AppLanguage.dictionary["qrCode"]!.stringValue
+        let actionQR = UIAlertAction(title: qrCode, style: .default) { action in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
             vc.linkForQRCode = self.shortLink
             vc.modalPresentationStyle = .formSheet
             self.present(vc, animated: true)
         }
         
-        let actionShareLink = UIAlertAction(title: "Share link", style: .default) { action in
+        let shareShortLink = AppLanguage.dictionary["shareShortLink"]!.stringValue
+        let actionShareLink = UIAlertAction(title: shareShortLink, style: .default) { action in
             if self.interstitial.isReady == true {
                 print("ролик готов")
                 self.interstitial.present(fromRootViewController: self)
@@ -44,13 +49,16 @@ extension ArchiveViewController {
             }
         }
         
-        let actionOpenLink = UIAlertAction(title: "Open link", style: .default) { action in
+        let openLongLink = AppLanguage.dictionary["openLongLink"]!.stringValue
+        let actionOpenLink = UIAlertAction(title: openLongLink, style: .default) { action in
             if let url = URL(string: self.arrayArchive[indexPath.row].longLink) {
                 let vc = SafariViewController(url: url, configuration: SFSafariViewController.Configuration())
                 self.present(vc, animated: true)
             }
         }
-        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { action in }
+        
+        let titleCancel = AppLanguage.dictionary["cancel"]!.stringValue
+        let actionCancel = UIAlertAction(title: titleCancel, style: .cancel) { action in }
         actionSheet.addAction(actionCopyShortLink)
         actionSheet.addAction(actionCopyLongLink)
         actionSheet.addAction(actionQR)

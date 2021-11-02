@@ -22,5 +22,11 @@
     "titleFullArchive": "The archive is full",
     "messageFullArchive": "You need to free up space",
     "close": "Close",
-    "gotoArchive": "Go to Archive"
+    "gotoArchive": "Go to Archive",
+    "copyShortLink": "Copy short link",
+    "copyLongLink": "Copy long link",
+    "qrCode": "QR code",
+    "shareShortLink": "Share short link",
+    "openLongLink": "Open long link in browser",
+    "cancel": "Cancel"
 }
