@@ -29,7 +29,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     var pressedButtonTag: Int!
     var arrayKeysServices: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
-    var arrayArchive = [ArchiveLink]()
+    var arrayArchive = [ArchiveItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,13 +99,19 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     }
     
     ///
-    func createItem() -> ArchiveLink{
-        return ArchiveLink(id: UUID().uuidString,
-                           name: nil,
+    func createItem() -> ArchiveItem {
+        return ArchiveItem(id: UUID().uuidString,
+                           name: createName(longURL: self.longLink),
                            description: nil,
                            shortLink: self.shortLink,
                            longLink: self.longLink,
                            date: Date())
+    }
+    
+    ///
+    func createName(longURL: String) -> String {
+        let url = URL(string: longURL)
+        return url?.lastPathComponent ?? "Name"
     }
     
     ///

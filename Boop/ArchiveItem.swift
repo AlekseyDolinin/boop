@@ -1,6 +1,6 @@
 import UIKit
 
-struct ArchiveLink: Codable {
+struct ArchiveItem: Codable {
     
     var id: String
     var name: String?

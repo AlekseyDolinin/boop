@@ -3,11 +3,12 @@ import UIKit
 class ArchiveCell: UITableViewCell {
     
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var shortlink: UILabel!
     @IBOutlet weak var longlink: UILabel!
     
-    var archiveLink: ArchiveLink!
+    var archiveItem: ArchiveItem!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,21 +19,26 @@ class ArchiveCell: UITableViewCell {
         setShortLink()
         setLongtLink()
         setDate()
+        setName()
+    }
+    
+    func setName() {
+        name.text = archiveItem.name
     }
     
     func setShortLink() {
-        shortlink.text = archiveLink.shortLink
+        shortlink.text = archiveItem.shortLink
     }
     
     func setLongtLink() {
-        longlink.text = archiveLink.longLink
+        longlink.text = archiveItem.longLink
     }
     
     func setDate() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .short
-        dateLabel.text = dateFormatter.string(from: archiveLink.date)
+        dateLabel.text = dateFormatter.string(from: archiveItem.date)
     }
 }
 

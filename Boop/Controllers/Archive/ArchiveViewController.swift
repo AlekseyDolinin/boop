@@ -10,7 +10,7 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         return (view as! ArchiveView)
     }
     
-    var arrayArchive = [ArchiveLink]()
+    var arrayArchive = [ArchiveItem]()
     var bannerView: GADBannerView!
     let pasteboard = UIPasteboard.general
     var interstitial: GADInterstitial!
