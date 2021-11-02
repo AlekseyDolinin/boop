@@ -47,6 +47,9 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewSelf.configure()
+        ParseArhive.parse { array in
+            self.arrayArchive = array
+        }
     }
     
     ///
@@ -59,7 +62,6 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     ///
     func createShortLink() {
         API.post(inputLongLink: longLink) { (responseShortLink) in
-            print("short link: \(responseShortLink)")
             self.viewSelf.placeLinkButton.isUserInteractionEnabled = true
             DispatchQueue.main.async {
                 if responseShortLink != "" {
@@ -111,32 +113,18 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     ///
     func createName(longURL: String) -> String {
         let url = URL(string: longURL)
-        return url?.lastPathComponent ?? "Name"
-    }
-    
-    ///
-    func wrireArchive(completion: @escaping (Bool) -> ()) {
-        ParseArhive.parse { array in
-            completion (true)
-        }
+        let nameItem = (url?.lastPathComponent)?.capitalizingFirstLetter()
+        return nameItem ?? "Name"
     }
     
     ///
     func addItemInArchive() {
-        wrireArchive { bool in
-            /// если удалось прочитать и декодировать архив
-            if bool == true {
-                ///проверка количества записей
-                if self.arrayArchive.count >= 10 {
-                    ///
-                    self.showAlert()
-                } else {
-                    self.arrayArchive.append(self.createItem())
-                    /// сортировка массива по дате
-                    self.arrayArchive = self.arrayArchive.sorted {$0.date > $1.date}
-                    self.saveArchive()
-                }
-            }
+        ///проверка количества записей
+        if self.arrayArchive.count >= 10 {
+            self.showAlert()
+        } else {
+            self.arrayArchive.append(self.createItem())
+            ParseArhive.saveArchive(arrayArchive: self.arrayArchive)
         }
     }
     
@@ -148,51 +136,19 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     ///
     func showAlert() {
-        let alert = UIAlertController(title: "The archive is full", message: "You need to free up space", preferredStyle: .alert)
-        let actionClose = UIAlertAction(title: "Close", style: .destructive)
-        let actionGoToArchive = UIAlertAction(title: "Go to Archive", style: .default) { UIAlertAction in
+        
+        let titleFullArchive = AppLanguage.dictionary["archiveIsEmpty"]!.stringValue
+        let mesageFullArchive = AppLanguage.dictionary["messageFullArchive"]!.stringValue
+        let close = AppLanguage.dictionary["close"]!.stringValue
+        let gotoArchive = AppLanguage.dictionary["gotoArchive"]!.stringValue
+        
+        let alert = UIAlertController(title: titleFullArchive, message: mesageFullArchive, preferredStyle: .alert)
+        let actionClose = UIAlertAction(title: close, style: .destructive)
+        let actionGoToArchive = UIAlertAction(title: gotoArchive, style: .default) { UIAlertAction in
             self.openArchive()
         }
         alert.addAction(actionGoToArchive)
         alert.addAction(actionClose)
         present(alert, animated: true)
-    }
-    
-    ///
-    func saveArchive() {
-        do {
-            let encoder = JSONEncoder()
-            let data = try encoder.encode(self.arrayArchive)
-            UserDefaults.standard.set(data, forKey: "arrayArchive")
-        } catch {
-            print("Unable to Encode Note (\(error))")
-        }
-    }
-    
-    ///
-    func animationSaveInArchive() {
-        UIView.animate(withDuration: 0.4) {
-            self.viewSelf.menuButton.transform = CGAffineTransform(scaleX: 3, y: 3)
-            self.viewSelf.menuButton.transform = CGAffineTransform(rotationAngle: Double.pi * 3)
-        } completion: { bool in
-            self.viewSelf.menuButton.transform = .identity
-        }
-    }
-    
-    ///
-    func animationPulse() {
-        let pulse1 = CASpringAnimation(keyPath: "transform.scale")
-        pulse1.duration = 0.6
-        pulse1.fromValue = 1.0
-        pulse1.toValue = 1.2
-        pulse1.autoreverses = true
-        pulse1.repeatCount = 1
-        pulse1.initialVelocity = 0.5
-        pulse1.damping = 0.8
-        let animationGroup = CAAnimationGroup()
-        animationGroup.duration = 2.7
-        animationGroup.repeatCount = 1
-        animationGroup.animations = [pulse1]
-        self.viewSelf.openArchiveButton.layer.add(animationGroup, forKey: "pulse")
     }
 }

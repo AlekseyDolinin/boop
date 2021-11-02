@@ -29,6 +29,7 @@ class StartView: UIView {
         viewMessage.alpha = 0
     }
     
+    ///
     func showMessage(text: String) {
         textMessage.text = text
         
@@ -43,6 +44,7 @@ class StartView: UIView {
         }
     }
     
+    ///
     func animationLabel() {
         UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
             self.linkLabel.alpha = 0
@@ -53,10 +55,38 @@ class StartView: UIView {
         }
     }
     
+    ///
     func alphaStackActionButtons(valueAlpha: CGFloat, duration: Double) {
         UIView.animate(withDuration: duration) {
             self.stackActionButtons.alpha = valueAlpha
         }
+    }
+    
+    ///
+    func animationSaveInArchive() {
+        UIView.animate(withDuration: 0.4) {
+            self.menuButton.transform = CGAffineTransform(scaleX: 3, y: 3)
+            self.menuButton.transform = CGAffineTransform(rotationAngle: Double.pi * 3)
+        } completion: { bool in
+            self.menuButton.transform = .identity
+        }
+    }
+    
+    ///
+    func animationPulse() {
+        let pulse1 = CASpringAnimation(keyPath: "transform.scale")
+        pulse1.duration = 0.6
+        pulse1.fromValue = 1.0
+        pulse1.toValue = 1.2
+        pulse1.autoreverses = true
+        pulse1.repeatCount = 1
+        pulse1.initialVelocity = 0.5
+        pulse1.damping = 0.8
+        let animationGroup = CAAnimationGroup()
+        animationGroup.duration = 2.7
+        animationGroup.repeatCount = 1
+        animationGroup.animations = [pulse1]
+        openArchiveButton.layer.add(animationGroup, forKey: "pulse")
     }
 }
 

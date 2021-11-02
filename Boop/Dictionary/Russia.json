@@ -18,5 +18,9 @@
     "rewardDescription": "0.99$",
     "getFullVersionDescription": "Удаление всей рекламы\nБезлимитный архив\n(1.99$)",
     "archiveIsEmpty": "Архив пуст",
-    "archiveDescription": "В архиве:"
+    "archiveDescription": "В архиве:",
+    "titleFullArchive": "Архив заполнен",
+    "messageFullArchive": "Необходимо освободить место в архиве",
+    "close": "Закрыть",
+    "gotoArchive": "Перейти в архив"
 }

@@ -35,6 +35,7 @@
 		10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */; };
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
 		912E7E91273009D900ABCDA1 /* ParseArhive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E7E90273009D900ABCDA1 /* ParseArhive.swift */; };
+		912E7E95273112F900ABCDA1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E7E94273112F900ABCDA1 /* String.swift */; };
 		91376A5C27292FDF0023BE51 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91376A5B27292FDF0023BE51 /* MenuViewController.swift */; };
 		913B133B27228AE7008C8D7F /* ADFullScreenQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */; };
 		9144C8BF272BCA05006C17BF /* GetVersionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144C8BE272BCA05006C17BF /* GetVersionApp.swift */; };
@@ -100,6 +101,7 @@
 		47F3F927E3E85A7B61DEBA31 /* Pods-pinch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinch.release.xcconfig"; path = "Target Support Files/Pods-pinch/Pods-pinch.release.xcconfig"; sourceTree = "<group>"; };
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		912E7E90273009D900ABCDA1 /* ParseArhive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseArhive.swift; sourceTree = "<group>"; };
+		912E7E94273112F900ABCDA1 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		91376A5B27292FDF0023BE51 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenQRCode.swift; sourceTree = "<group>"; };
 		9144C8BE272BCA05006C17BF /* GetVersionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVersionApp.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				1051B07B25F01F3400695C37 /* JSONSerialization.swift */,
 				91E7A72F272C281F002B6CE7 /* AppLanguage.swift */,
 				912E7E90273009D900ABCDA1 /* ParseArhive.swift */,
+				912E7E94273112F900ABCDA1 /* String.swift */,
 			);
 			path = "Extention&Utils";
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */,
 				10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */,
 				102A845925F513A500D78619 /* ServiceCell.swift in Sources */,
+				912E7E95273112F900ABCDA1 /* String.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
 				1099ED7A25EC2E3300F53439 /* API.swift in Sources */,
 				102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */,

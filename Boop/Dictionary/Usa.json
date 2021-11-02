@@ -18,5 +18,9 @@
     "rewardDescription": "0.99$",
     "getFullVersionDescription": "Hide all ads\nUnlimited archive\n(1.99$)",
     "archiveIsEmpty": "Archive is empty",
-    "archiveDescription": "Archived:"
+    "archiveDescription": "Archived:",
+    "titleFullArchive": "The archive is full",
+    "messageFullArchive": "You need to free up space",
+    "close": "Close",
+    "gotoArchive": "Go to Archive"
 }

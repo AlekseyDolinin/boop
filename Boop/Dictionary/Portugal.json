@@ -18,5 +18,9 @@
     "rewardDescription": "0.99$",
     "getFullVersionDescription": "Ocultar todos os anúncios\nArquivo ilimitado\n(1.99$)",
     "archiveIsEmpty": "Arquivo está vazio",
-    "archiveDescription": "Arquivado:"
+    "archiveDescription": "Arquivado:", 
+    "titleFullArchive": "O arquivo está cheio",
+    "messageFullArchive": "Você precisa liberar espaço",
+    "close": "Fechar",
+    "gotoArchive": "Vá para o Arquivo"
 }

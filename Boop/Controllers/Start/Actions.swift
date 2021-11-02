@@ -38,9 +38,8 @@ extension StartViewController {
     
     ///
     @IBAction func saveLinkAction(_ sender: UIButton) {
-        print("saveLinkAction")
-        animationSaveInArchive()
-        animationPulse()
+        viewSelf.animationSaveInArchive()
+        viewSelf.animationPulse()
         addItemInArchive()
     }
     
