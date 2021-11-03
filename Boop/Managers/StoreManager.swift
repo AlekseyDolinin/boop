@@ -22,10 +22,13 @@ class StoreManager: NSObject {
             print("You can't make payments")
             return
         }
-        
         let request = SKProductsRequest(productIdentifiers: [inAppID])
         request.delegate = self
         request.start()
+    }
+    
+    func restorePurchase() {
+        SKPaymentQueue.default().restoreCompletedTransactions()
     }
 }
 
@@ -47,9 +50,6 @@ extension StoreManager: SKPaymentTransactionObserver {
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
-            if transaction.transactionState == SKPaymentTransactionState.purchasing {
-                
-            }
             
             print("State transaction product \(transaction.payment.productIdentifier): \(transaction.transactionState)")
             

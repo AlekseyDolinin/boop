@@ -1,36 +1,39 @@
 import UIKit
 import StoreKit
 
+let nPricesUpdated: NSNotification.Name = NSNotification.Name(rawValue: "nPricesUpdated")
+
 class PriceManager: NSObject {
     
-    var vc: UIViewController?
-    var sm: StoreManager = StoreManager()
-    
-    func buyFullVersion(showAlertInViewController: UIViewController) {
+    func getPricesForInApps(inAppsIDs: Set<String>) {
         if !SKPaymentQueue.canMakePayments() {
             print("You can't make payments")
             return
         }
-        self.vc = showAlertInViewController
-        let productRequest = SKProductsRequest(productIdentifiers: ["ToDoList.FullVersion"])
-        productRequest.delegate = self
-        productRequest.start()
+        
+        let request = SKProductsRequest(productIdentifiers: inAppsIDs)
+        request.delegate = self
+        request.start()
     }
-    
-    
-    
-    
-    
 }
-
-
 extension PriceManager: SKProductsRequestDelegate {
+    ///
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        if response.products.count > 0 {
+        
+        for product in response.products {
+            
             let nf = NumberFormatter()
-//            nf.numberStyle = NSNumberFormatterStyle.currency
-            nf.locale = response.products[0].priceLocale
-//            let price = String(response.products[0].price) + nf.
+            nf.numberStyle = NumberFormatter.Style.currency
+            nf.locale = product.priceLocale
+            let price: String = String(describing: product.price)  + nf.currencySymbol
+            
+            UserDefaults.standard.setValue(price, forKeyPath: product.productIdentifier)
+            UserDefaults.standard.synchronize()
         }
+        
+        NotificationCenter.default.post(name: nPricesUpdated, object: nil)
+        
+    
+        print("invalid ID: \(response.invalidProductIdentifiers)")
     }
 }

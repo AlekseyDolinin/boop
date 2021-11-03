@@ -8,11 +8,22 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     var storeManager = StoreManager()
+    let priceManager = PriceManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
+        
+        priceManager.getPricesForInApps(inAppsIDs: ["86720", "86730"])
+        
+        ///
+        NotificationCenter.default.addObserver(forName: nPricesUpdated, object: nil, queue: nil) { notification in
+            print("Обновление цен")
+            
+            print(UserDefaults.standard.object(forKey: "86720"))
+            print(UserDefaults.standard.object(forKey: "86730"))
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,21 +79,19 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     ///
     func getProVersion() {
         print("getProVersion")
-        storeManager.buyInApp(inAppID: "booplink.proversion")
-        
-        /// TEST
-        StoreManager.didBuyFullVersion()
+        storeManager.buyInApp(inAppID: "86730")
     }
 
     ///
     func resumePurchase() {
         print("resumePurchase")
+        storeManager.restorePurchase()
     }
 
     ///
     func reward() {
         print("reward")
-        storeManager.buyInApp(inAppID: "booplink.coffee")
+        storeManager.buyInApp(inAppID: "86720")
     }
 
     ///
