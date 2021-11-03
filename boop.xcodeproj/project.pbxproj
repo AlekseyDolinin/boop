@@ -36,6 +36,8 @@
 		573661AE3A4E6FE1F735A81E /* Pods_boop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6637510B2D57C73324A5058E /* Pods_boop.framework */; };
 		912E7E91273009D900ABCDA1 /* ParseArhive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E7E90273009D900ABCDA1 /* ParseArhive.swift */; };
 		912E7E95273112F900ABCDA1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E7E94273112F900ABCDA1 /* String.swift */; };
+		912E7E9827316FCB00ABCDA1 /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E7E9727316FCB00ABCDA1 /* PriceManager.swift */; };
+		912E7E9A273174FA00ABCDA1 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E7E99273174FA00ABCDA1 /* StoreManager.swift */; };
 		91376A5C27292FDF0023BE51 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91376A5B27292FDF0023BE51 /* MenuViewController.swift */; };
 		913B133B27228AE7008C8D7F /* ADFullScreenQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */; };
 		9144C8BF272BCA05006C17BF /* GetVersionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144C8BE272BCA05006C17BF /* GetVersionApp.swift */; };
@@ -102,6 +104,8 @@
 		6637510B2D57C73324A5058E /* Pods_boop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_boop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		912E7E90273009D900ABCDA1 /* ParseArhive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseArhive.swift; sourceTree = "<group>"; };
 		912E7E94273112F900ABCDA1 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		912E7E9727316FCB00ABCDA1 /* PriceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
+		912E7E99273174FA00ABCDA1 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		91376A5B27292FDF0023BE51 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenQRCode.swift; sourceTree = "<group>"; };
 		9144C8BE272BCA05006C17BF /* GetVersionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVersionApp.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				102A845725F5137E00D78619 /* Cell */,
 				1099ED7825EC217D00F53439 /* Views */,
 				1099ED7525EC212F00F53439 /* Controllers */,
+				912E7E9627316F9F00ABCDA1 /* Managers */,
 				1036513025EC1D62003F03D0 /* Extention&Utils */,
 				10ABC50725F16DBC00CD0CF6 /* Network */,
 				91E7A731272C2FCA002B6CE7 /* Dictionary */,
@@ -310,6 +315,15 @@
 				10B0E634264DD70900003DA1 /* AppTrackingModalViewController.swift */,
 			);
 			path = AppTrackingModal;
+			sourceTree = "<group>";
+		};
+		912E7E9627316F9F00ABCDA1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				912E7E9727316FCB00ABCDA1 /* PriceManager.swift */,
+				912E7E99273174FA00ABCDA1 /* StoreManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		91CDA704272A744A00B1D9DD /* Menu */ = {
@@ -510,6 +524,7 @@
 				912E7E91273009D900ABCDA1 /* ParseArhive.swift in Sources */,
 				1099ED7725EC215E00F53439 /* StartView.swift in Sources */,
 				10ABC50E25F1803F00CD0CF6 /* Shortener.swift in Sources */,
+				912E7E9827316FCB00ABCDA1 /* PriceManager.swift in Sources */,
 				91EA2D0F271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift in Sources */,
 				1099ED7C25ED732A00F53439 /* StartBannerGoogleAds.swift in Sources */,
 				9144C8BF272BCA05006C17BF /* GetVersionApp.swift in Sources */,
@@ -525,6 +540,7 @@
 				91CDA708272A765E00B1D9DD /* MenuCells.swift in Sources */,
 				103C5F5625F56A41004916E5 /* QRCodeModalViewController.swift in Sources */,
 				102A845425F500AE00D78619 /* Click.swift in Sources */,
+				912E7E9A273174FA00ABCDA1 /* StoreManager.swift in Sources */,
 				918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */,
 				10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */,
 				102A845925F513A500D78619 /* ServiceCell.swift in Sources */,
