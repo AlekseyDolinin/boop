@@ -24,15 +24,12 @@ extension StartViewController {
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         print("действие после рекламы")
         interstitial = createAndLoadInterstitial() // перезагрузка рекламного банера
-        
-        switch pressedButtonTag {
-        case 2:
-            copiedShortLink()
-        case 4:
+        if action == .share {
             showControllerShare()
-        default:
-            break
+        } else if action == .copy {
+            copiedShortLink()
         }
+        action = .none
     }
     
     /// Tells the delegate an ad request succeeded.

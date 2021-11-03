@@ -3,14 +3,32 @@ import UIKit
 extension StartViewController {
 
     ///
-    @IBAction func action(_ sender: UIButton) {
-        /// в зависимости от тэга - разные действия
-        pressedButtonTag = sender.tag
-        if interstitial.isReady == true {
-            print("ролик готов")
-            interstitial.present(fromRootViewController: self)
+    @IBAction func copyAction(_ sender: UIButton) {
+        if StoreManager.isFullVersion() {
+            copiedShortLink()
         } else {
-            pressedButtonTag == 2 ? copiedShortLink() : showControllerShare()
+            if interstitial.isReady == true {
+                print("ролик готов")
+                action = .copy
+                interstitial.present(fromRootViewController: self)
+            } else {
+                copiedShortLink()
+            }
+        }
+    }
+    
+    ///
+    @IBAction func shareAaction(_ sender: UIButton) {
+        if StoreManager.isFullVersion() {
+            showControllerShare()
+        } else {
+            if interstitial.isReady == true {
+                print("ролик готов")
+                action = .share
+                interstitial.present(fromRootViewController: self)
+            } else {
+                showControllerShare()
+            }
         }
     }
     
@@ -43,7 +61,6 @@ extension StartViewController {
         addItemInArchive()
     }
     
-    
     ///
     @IBAction func openArchiveAction(_ sender: Any?) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
@@ -67,7 +84,6 @@ extension StartViewController {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         self.createShortLink()
                     }
-                    self.viewSelf.animationLabel()
                 }
             } else {
                 viewSelf.showMessage(text: AppLanguage.dictionary["notFoundLink"]!.stringValue)

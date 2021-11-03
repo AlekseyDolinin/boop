@@ -18,15 +18,25 @@ class StartView: UIView {
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var openArchiveButton: UIButton!
 
+    var shortLink: String!
+    
     override func awakeFromNib() {
         setUI()
     }
     
     func configure() {
         setUI()
+//        linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
         backViewLink.layer.cornerRadius = backViewLink.frame.height / 2
-        alphaStackActionButtons(valueAlpha: 0.0, duration: 0.0)
+        
         viewMessage.alpha = 0
+        
+        if shortLink == nil {
+            alphaStackActionButtons(valueAlpha: 0.0, duration: 0.0)
+        } else {
+            alphaStackActionButtons(valueAlpha: 1.0, duration: 0.0)
+        }
+        
     }
     
     ///
@@ -40,17 +50,6 @@ class StartView: UIView {
                 self.viewMessage.alpha = 0
             }, completion: { (true) in
                 print("hide message")
-            })
-        }
-    }
-    
-    ///
-    func animationLabel() {
-        UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
-            self.linkLabel.alpha = 0
-        }) { (true) in
-            UIView.animate(withDuration: 0.1, animations: {
-                self.linkLabel.alpha = 1
             })
         }
     }
@@ -119,6 +118,6 @@ extension StartView {
     
     ///
     func setLabels() {
-        linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
+//        linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
     }
 }

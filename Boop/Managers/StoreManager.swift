@@ -6,6 +6,7 @@ let nTransactionComplate: NSNotification.Name = NSNotification.Name(rawValue: "n
 class StoreManager: NSObject {
     
     class func isFullVersion() -> Bool {
+        print("is full version: \(UserDefaults.standard.bool(forKey: "FullVersion"))")
         return UserDefaults.standard.bool(forKey: "FullVersion")
     }
     
@@ -13,6 +14,7 @@ class StoreManager: NSObject {
     class func didBuyFullVersion() {
         UserDefaults.standard.set(true, forKey: "FullVersion")
         UserDefaults.standard.synchronize()
+        NotificationCenter.default.post(name: nTransactionComplate, object: nil)
     }
     
     func buyInApp(inAppID: String) {
@@ -57,13 +59,11 @@ extension StoreManager: SKPaymentTransactionObserver {
             case .purchased:
                 queue.finishTransaction(transaction)
                 StoreManager.didBuyFullVersion()
-                NotificationCenter.default.post(name: nTransactionComplate, object: nil)
             case .failed:
                 queue.finishTransaction(transaction)
             case .restored:
                 queue.finishTransaction(transaction)
                 StoreManager.didBuyFullVersion()
-                NotificationCenter.default.post(name: nTransactionComplate, object: nil)
             case .deferred:
                 print("deferred")
             default:

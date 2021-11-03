@@ -1,6 +1,6 @@
 import UIKit
 
-class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITableViewDelegate, UITableViewDataSource {
+class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var viewSelf: MenuView! {
         guard isViewLoaded else { return nil }
@@ -11,14 +11,8 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
-        
-        NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
-            print("Покупка выполнена")
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,6 +69,9 @@ class MenuViewController: UIViewController, UIGestureRecognizerDelegate, UITable
     func getProVersion() {
         print("getProVersion")
         storeManager.buyInApp(inAppID: "booplink.proversion")
+        
+        /// TEST
+        StoreManager.didBuyFullVersion()
     }
 
     ///

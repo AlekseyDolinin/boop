@@ -41,11 +41,15 @@ extension ArchiveViewController {
         
         let shareShortLink = AppLanguage.dictionary["shareShortLink"]!.stringValue
         let actionShareLink = UIAlertAction(title: shareShortLink, style: .default) { action in
-            if self.interstitial.isReady == true {
-                print("ролик готов")
-                self.interstitial.present(fromRootViewController: self)
-            } else {
+            if StoreManager.isFullVersion() {
                 self.showControllerShare()
+            } else {
+                if self.interstitial.isReady == true {
+                    print("ролик готов")
+                    self.interstitial.present(fromRootViewController: self)
+                } else {
+                    self.showControllerShare()
+                }
             }
         }
         

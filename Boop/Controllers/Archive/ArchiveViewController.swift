@@ -3,7 +3,7 @@ import GoogleMobileAds
 import Foundation
 import GoogleMobileAds
 
-class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, GADInterstitialDelegate {
+class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource, GADInterstitialDelegate {
     
     var viewSelf: ArchiveView! {
         guard isViewLoaded else { return nil }
@@ -18,29 +18,17 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        
         viewSelf.archiveTable.delegate = self
         viewSelf.archiveTable.dataSource = self
-        setGadBanner()
-        setGadFullView()
-        setupLongPressGesture()
         
         ParseArhive.parse(completion: { array in
             self.viewSelf.emptyLabel.isHidden = array.isEmpty ? false : true
             self.arrayArchive = array.isEmpty ? [] : array
         })
-    }
-    
-    ///
-    @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer){
-        if gestureRecognizer.state == .began {
-            let touchPoint = gestureRecognizer.location(in: viewSelf.archiveTable)
-            if let indexPath = viewSelf.archiveTable.indexPathForRow(at: touchPoint) {
-                copyToClipboardShortLink(index: indexPath.row)
-            }
+        
+        if StoreManager.isFullVersion() == false {
+            setGadBanner()
+            setGadFullView()
         }
     }
     
@@ -63,14 +51,6 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             alert.dismiss(animated: true)
         }
-    }
-    
-    ///
-    func setupLongPressGesture() {
-        let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongPress))
-        longPressGesture.minimumPressDuration = 1.0 // 1 second press
-        longPressGesture.delegate = self
-        viewSelf.archiveTable.addGestureRecognizer(longPressGesture)
     }
     
     ///

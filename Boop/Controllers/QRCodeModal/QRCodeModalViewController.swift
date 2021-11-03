@@ -14,7 +14,7 @@ class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGadFullView()
+        
         let qrURLImage = URL(string: linkForQRCode)?.qrImage(using: .black)
         viewSelf.qrCodeImage.image = convert(cmage: qrURLImage!)
         viewSelf.linkLabel.text = linkForQRCode
@@ -23,6 +23,10 @@ class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
             viewSelf.closeButton.isHidden = true
         } else {
             viewSelf.closeButton.isHidden = false
+        }
+        
+        if StoreManager.isFullVersion() == false {
+            setGadFullView()
         }
     }
     
@@ -78,16 +82,15 @@ class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
     
     ///
     @IBAction func shareAction (_ sender: UIButton) {
-        if interstitial.isReady == true {
-            print("ролик готов")
-            interstitial.present(fromRootViewController: self)
-        } else {
+        if StoreManager.isFullVersion() {
             shareQRCode()
+        } else {
+            if interstitial.isReady == true {
+                print("ролик готов")
+                interstitial.present(fromRootViewController: self)
+            } else {
+                shareQRCode()
+            }
         }
-    }
-    
-    ///
-    @IBAction func saveQRCode (_ sender: UIButton) {
-        print("saveQRCode")
     }
 }

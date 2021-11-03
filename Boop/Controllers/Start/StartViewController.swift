@@ -3,7 +3,7 @@ import GoogleMobileAds
 import SwiftyJSON
 import Foundation
 
-class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate, UIGestureRecognizerDelegate {
+class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate {
     
     static let shared = StartViewController()
     
@@ -19,6 +19,12 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         case Click = "https://clck.ru/*"
     }
     
+    enum Actions: String {
+        case copy = "copy"
+        case share = "share"
+        case none = "none"
+    }
+    
     static var selectedService: Service = .Isgd
     
     let pasteboard = UIPasteboard.general
@@ -26,22 +32,26 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     var interstitial: GADInterstitial!
     var longLink: String!
     var shortLink: String!
-    var pressedButtonTag: Int!
     var arrayKeysServices: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
     var arrayArchive = [ArchiveItem]()
+    var action: Actions = .none
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSelf.collectionServices.delegate = self
         viewSelf.collectionServices.dataSource = self
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         viewSelf.configure()
-        setGadBanner()
-        setGadFullView()
         setPagination()
         checkAppTrackingTransparency()
+        
+        ///
+        NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
+            print("Покупка выполнена")
+            if let banner = self.bannerView {
+                banner.isHidden = true
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +59,14 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         viewSelf.configure()
         ParseArhive.parse { array in
             self.arrayArchive = array
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if StoreManager.isFullVersion() == false {
+            setGadBanner()
+            setGadFullView()
         }
     }
     
@@ -78,6 +96,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         self.viewSelf.showMessage(text: AppLanguage.dictionary["done"]!.stringValue)
         self.viewSelf.linkLabel.text = resutShortUrl
         self.shortLink = resutShortUrl
+        self.viewSelf.shortLink = resutShortUrl
         self.viewSelf.alphaStackActionButtons(valueAlpha: 1.0, duration: 0.2)
     }
     
@@ -119,12 +138,17 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     ///
     func addItemInArchive() {
-        ///проверка количества записей
-        if self.arrayArchive.count >= 10 {
-            self.showAlert()
-        } else {
+        if StoreManager.isFullVersion() {
             self.arrayArchive.append(self.createItem())
             ParseArhive.saveArchive(arrayArchive: self.arrayArchive)
+        } else {
+            ///проверка количества записей
+            if self.arrayArchive.count >= 10 {
+                self.showAlert()
+            } else {
+                self.arrayArchive.append(self.createItem())
+                ParseArhive.saveArchive(arrayArchive: self.arrayArchive)
+            }
         }
     }
     
@@ -137,7 +161,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     ///
     func showAlert() {
         
-        let titleFullArchive = AppLanguage.dictionary["archiveIsEmpty"]!.stringValue
+        let titleFullArchive = AppLanguage.dictionary["titleFullArchive"]!.stringValue
         let mesageFullArchive = AppLanguage.dictionary["messageFullArchive"]!.stringValue
         let close = AppLanguage.dictionary["close"]!.stringValue
         let gotoArchive = AppLanguage.dictionary["gotoArchive"]!.stringValue
