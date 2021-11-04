@@ -15,14 +15,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
         
-        priceManager.getPricesForInApps(inAppsIDs: ["86720", "86730"])
+        priceManager.getPricesForInApps(inAppsIDs: ["booplink.coffee", "booplink.fullversion"])
         
         ///
         NotificationCenter.default.addObserver(forName: nPricesUpdated, object: nil, queue: nil) { notification in
             print("Обновление цен")
             
-            print(UserDefaults.standard.object(forKey: "86720"))
-            print(UserDefaults.standard.object(forKey: "86730"))
+            print(UserDefaults.standard.object(forKey: "booplink.coffee"))
+            print(UserDefaults.standard.object(forKey: "booplink.fullversion"))
         }
     }
     
@@ -79,7 +79,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     ///
     func getProVersion() {
         print("getProVersion")
-        storeManager.buyInApp(inAppID: "86730")
+        storeManager.buyInApp(inAppID: "booplink.fullversion")
     }
 
     ///
@@ -91,7 +91,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     ///
     func reward() {
         print("reward")
-        storeManager.buyInApp(inAppID: "86720")
+        storeManager.buyInApp(inAppID: "booplink.coffee")
     }
 
     ///
