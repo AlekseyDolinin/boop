@@ -26,17 +26,14 @@ class StartView: UIView {
     
     func configure() {
         setUI()
-//        linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
+        linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
         backViewLink.layer.cornerRadius = backViewLink.frame.height / 2
-        
         viewMessage.alpha = 0
-        
         if shortLink == nil {
             alphaStackActionButtons(valueAlpha: 0.0, duration: 0.0)
         } else {
             alphaStackActionButtons(valueAlpha: 1.0, duration: 0.0)
         }
-        
     }
     
     ///

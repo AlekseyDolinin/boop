@@ -26,12 +26,12 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     }
     
     static var selectedService: Service = .Isgd
+    static var shortLink: String!
     
     let pasteboard = UIPasteboard.general
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
     var longLink: String!
-    var shortLink: String!
     var arrayKeysServices: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
     var arrayArchive = [ArchiveItem]()
@@ -56,9 +56,11 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewSelf.configure()
         ParseArhive.parse { array in
             self.arrayArchive = array
+        }
+        if StartViewController.shortLink == nil {
+            self.viewSelf.configure()
         }
     }
     
@@ -95,14 +97,14 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     func showResult(resutShortUrl: String) {
         self.viewSelf.showMessage(text: AppLanguage.dictionary["done"]!.stringValue)
         self.viewSelf.linkLabel.text = resutShortUrl
-        self.shortLink = resutShortUrl
+        StartViewController.shortLink = resutShortUrl
         self.viewSelf.shortLink = resutShortUrl
         self.viewSelf.alphaStackActionButtons(valueAlpha: 1.0, duration: 0.2)
     }
     
     ///
     func showControllerShare() {
-        let shareController = UIActivityViewController(activityItems: [shortLink as Any], applicationActivities: nil)
+        let shareController = UIActivityViewController(activityItems: [StartViewController.shortLink as Any], applicationActivities: nil)
         shareController.completionWithItemsHandler = {_, bool, _, _ in
             if bool {
                 print("it is done!")
@@ -115,7 +117,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     ///
     func copiedShortLink() {
-        pasteboard.string = self.shortLink
+        pasteboard.string = StartViewController.shortLink
         viewSelf.showMessage(text: AppLanguage.dictionary["linkCopied"]!.stringValue)
     }
     
@@ -124,7 +126,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         return ArchiveItem(id: UUID().uuidString,
                            name: createName(longURL: self.longLink),
                            description: nil,
-                           shortLink: self.shortLink,
+                           shortLink: StartViewController.shortLink,
                            longLink: self.longLink,
                            date: Date())
     }
