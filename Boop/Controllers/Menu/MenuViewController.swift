@@ -69,9 +69,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     ///
     func shareThisApp() {
         let description = AppLanguage.dictionary["shareDescription"]!.stringValue
-        let link = "https://apps.apple.com/ru/app/booplink/id1556606517"
+        let link = URL(string: "https://apps.apple.com/ru/app/booplink/id1556606517")
         let dataImage = UIImage(named: "logoShare")?.pngData()
-        let viewController = UIActivityViewController(activityItems: [description, link, dataImage as Any], applicationActivities: nil)
+        let viewController = UIActivityViewController(activityItems: [description, link!, dataImage as Any], applicationActivities: nil)
         viewController.popoverPresentationController?.sourceView = self.view
         self.present(viewController, animated: true, completion: nil)
     }
