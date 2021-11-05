@@ -3,7 +3,7 @@ import UIKit
 extension MenuViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,17 +30,18 @@ extension MenuViewController {
             menuCell.titleLabel.text = AppLanguage.dictionary["shareThisApp"]!.stringValue
         case 4:
             menuCell.titleLabel.text = AppLanguage.dictionary["contactAuthor"]!.stringValue
-        case 5:
-            menuCell.titleLabel.text = AppLanguage.dictionary["getFullVersion"]!.stringValue
-            menuCell.subLabel.text = AppLanguage.dictionary["getFullVersionDescription"]!.stringValue
-        case 6:
-            menuCell.titleLabel.text = AppLanguage.dictionary["restorePurchase"]!.stringValue
-        case 7:
-            menuCell.titleLabel.text = AppLanguage.dictionary["reward"]!.stringValue
-            menuCell.subLabel.text = AppLanguage.dictionary["rewardDescription"]!.stringValue
+//        case 5:
+//            menuCell.titleLabel.text = AppLanguage.dictionary["getFullVersion"]!.stringValue
+//            menuCell.subLabel.text = AppLanguage.dictionary["getFullVersionDescription"]!.stringValue
+//        case 6:
+//            menuCell.titleLabel.text = AppLanguage.dictionary["restorePurchase"]!.stringValue
+//        case 7:
+//            menuCell.titleLabel.text = AppLanguage.dictionary["reward"]!.stringValue
+//            menuCell.subLabel.text = AppLanguage.dictionary["rewardDescription"]!.stringValue
         default:
             break
         }
+        
         return menuCell
     }
 
@@ -56,12 +57,12 @@ extension MenuViewController {
             shareThisApp()
         case 4:
             contact()
-        case 5:
-            getProVersion()
-        case 6:
-            resumePurchase()
-        case 7:
-            reward()
+//        case 5:
+//            getProVersion()
+//        case 6:
+//            resumePurchase()
+//        case 7:
+//            reward()
         default:
             break
         }
