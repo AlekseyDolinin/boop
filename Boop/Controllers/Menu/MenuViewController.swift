@@ -1,4 +1,5 @@
 import UIKit
+import LinkPresentation
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -9,6 +10,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var storeManager = StoreManager()
     let priceManager = PriceManager()
+    var urlToShare: URL? = URL(string: "https://apps.apple.com/ru/app/booplink/id1556606517")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,10 +70,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     ///
     func shareThisApp() {
-        let description = AppLanguage.dictionary["shareDescription"]!.stringValue
-        let link = URL(string: "https://apps.apple.com/ru/app/booplink/id1556606517")
-        let dataImage = UIImage(named: "logoShare")?.pngData()
-        let viewController = UIActivityViewController(activityItems: [description, link!, dataImage as Any], applicationActivities: nil)
+        let viewController = UIActivityViewController(activityItems: [urlToShare as Any], applicationActivities: nil)
         viewController.popoverPresentationController?.sourceView = self.view
         self.present(viewController, animated: true, completion: nil)
     }
@@ -105,5 +104,26 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func back(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+}
+
+extension MenuViewController: UIActivityItemSource {
+
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        return UIImage() // an empty UIImage is sufficient to ensure share sheet shows right actions
+    }
+
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        return urlToShare
+    }
+
+    func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
+        let metadata = LPLinkMetadata()
+//        metadata.title = AppLanguage.dictionary["shareDescription"]!.stringValue
+//        metadata.originalURL = urlToShare
+//        metadata.url = urlToShare
+//        metadata.imageProvider = NSItemProvider.init(contentsOf: urlToShare)
+//        metadata.iconProvider = NSItemProvider.init(contentsOf: urlToShare)
+        return metadata
     }
 }
