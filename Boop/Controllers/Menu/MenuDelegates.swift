@@ -58,7 +58,7 @@ extension MenuViewController {
         case 4:
             contact()
 //        case 5:
-//            getProVersion()
+//            getFullVersion()
 //        case 6:
 //            resumePurchase()
 //        case 7:

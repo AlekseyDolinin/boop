@@ -17,13 +17,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
         
-        priceManager.getPricesForInApps(inAppsIDs: ["booplink.coffee", "booplink.fullversion"])
+//        priceManager.getPricesForInApps(inAppsIDs: ["booplink.supportProject", "booplink.fullversion"])
         
         ///
         NotificationCenter.default.addObserver(forName: nPricesUpdated, object: nil, queue: nil) { notification in
             print("Обновление цен")
             
-            print(UserDefaults.standard.object(forKey: "booplink.coffee"))
+            print(UserDefaults.standard.object(forKey: "booplink.supportProject"))
             print(UserDefaults.standard.object(forKey: "booplink.fullversion"))
         }
     }
@@ -76,21 +76,21 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     ///
-    func getProVersion() {
-        print("getProVersion")
-        storeManager.buyInApp(inAppID: "booplink.fullversion")
+    func getFullVersion() {
+//        print("getFullVersion")
+//        storeManager.buyInApp(inAppID: "booplink.fullversion")
     }
 
     ///
     func resumePurchase() {
-        print("resumePurchase")
-        storeManager.restorePurchase()
+//        print("resumePurchase")
+//        storeManager.restorePurchase()
     }
 
     ///
     func reward() {
-        print("reward")
-        storeManager.buyInApp(inAppID: "booplink.coffee")
+//        print("reward")
+//        storeManager.buyInApp(inAppID: "booplink.supportProject")
     }
 
     ///
