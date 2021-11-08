@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
+  - FaviconFinder (3.2.0):
+    - SwiftSoup (~> 2.3.2)
   - Google-Mobile-Ads-SDK (7.64.0):
     - GoogleAppMeasurement (~> 6.0)
     - GoogleUserMessagingPlatform (~> 1.1)
@@ -33,34 +35,40 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
+  - SwiftSoup (2.3.3)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - FaviconFinder (= 3.2.0)
   - Google-Mobile-Ads-SDK (~> 7.64.0)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FaviconFinder
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
     - GoogleUtilities
     - nanopb
     - PromisesObjC
+    - SwiftSoup
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  FaviconFinder: 29c049414a8e08cc1984727906399cd93c8ad82a
   Google-Mobile-Ads-SDK: aec52559ce73ddf1e6478d1904dd71a741f1bc61
   GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
   GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  SwiftSoup: 8e4844e785a975744f2c2606f8b3844ef67eb259
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 7e092db14ed1f2fecbb70e6a53ee8fbddca9469d
+PODFILE CHECKSUM: 4040f3bd2a4dd168995b4cca4e42916333ab18c2
 
 COCOAPODS: 1.11.2

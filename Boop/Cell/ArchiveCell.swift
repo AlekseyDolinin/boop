@@ -1,4 +1,5 @@
 import UIKit
+import FaviconFinder
 
 class ArchiveCell: UITableViewCell {
     
@@ -7,6 +8,7 @@ class ArchiveCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var shortlink: UILabel!
     @IBOutlet weak var longlink: UILabel!
+    @IBOutlet weak var favicon: UIImageView!
     
     var archiveItem: ArchiveItem!
     
@@ -20,6 +22,7 @@ class ArchiveCell: UITableViewCell {
         setLongtLink()
         setDate()
         setName()
+        getFavicon()
     }
     
     func setName() {
@@ -32,6 +35,21 @@ class ArchiveCell: UITableViewCell {
     
     func setLongtLink() {
         longlink.text = archiveItem.longLink
+    }
+    
+    ///
+    func getFavicon() {
+        guard let url: URL = URL(string: archiveItem.longLink) else {return}
+        FaviconFinder(url: url).downloadFavicon { result in
+            switch result {
+            case .success(let favicon):
+                DispatchQueue.main.async {
+                    self.favicon.image = favicon.image
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
     }
     
     func setDate() {

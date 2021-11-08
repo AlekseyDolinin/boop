@@ -133,8 +133,8 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     ///
     func createName(longURL: String) -> String {
-        let url = URL(string: longURL)
-        let nameItem = (url?.lastPathComponent)?.capitalizingFirstLetter()
+        let url = URL(string: self.longLink)
+        let nameItem = url?.host
         return nameItem ?? "Name"
     }
     
