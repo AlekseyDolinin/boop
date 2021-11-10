@@ -77,20 +77,20 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     ///
     func getFullVersion() {
-//        print("getFullVersion")
-//        storeManager.buyInApp(inAppID: "booplink.fullversion")
+        print("getFullVersion")
+        storeManager.buyInApp(inAppID: "booplink_fullversion")
     }
 
     ///
-    func resumePurchase() {
-//        print("resumePurchase")
-//        storeManager.restorePurchase()
+    func restorePurchase() {
+        print("restorePurchase")
+        storeManager.restorePurchase()
     }
 
     ///
-    func reward() {
-//        print("reward")
-//        storeManager.buyInApp(inAppID: "booplink.supportProject")
+    func support() {
+        print("support")
+        storeManager.buyInApp(inAppID: "booplink_support")
     }
 
     ///
