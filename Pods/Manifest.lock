@@ -42,7 +42,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
-  - FaviconFinder (= 3.2.0)
+  - FaviconFinder
   - Google-Mobile-Ads-SDK (~> 7.64.0)
   - Kingfisher (~> 4.0)
   - SwiftLinkPreview (~> 3.4.0)
@@ -77,6 +77,6 @@ SPEC CHECKSUMS:
   SwiftSoup: 8e4844e785a975744f2c2606f8b3844ef67eb259
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 16cb0586a287e1b1955378d994ea958f478cbb6b
+PODFILE CHECKSUM: 9357edfd49d37b43693108d7a1e9113a76f42b2d
 
 COCOAPODS: 1.11.2

@@ -12,6 +12,6 @@ pod 'Alamofire', '~> 4.0'
 pod 'Google-Mobile-Ads-SDK', '~> 7.64.0'
 pod 'SwiftLinkPreview', '~> 3.4.0'
 pod 'Kingfisher', '~> 4.0'
-pod 'FaviconFinder', '3.2.0'
+pod 'FaviconFinder'
 
 end
