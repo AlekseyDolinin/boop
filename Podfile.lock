@@ -29,12 +29,14 @@ PODS:
   - "GoogleUtilities/NSData+zlib (6.7.2)"
   - GoogleUtilities/Reachability (6.7.2):
     - GoogleUtilities/Logger
+  - Kingfisher (4.10.1)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
     - nanopb/encode (= 1.30906.0)
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
+  - SwiftLinkPreview (3.4.0)
   - SwiftSoup (2.3.3)
   - SwiftyJSON (4.3.0)
 
@@ -42,6 +44,8 @@ DEPENDENCIES:
   - Alamofire (~> 4.0)
   - FaviconFinder (= 3.2.0)
   - Google-Mobile-Ads-SDK (~> 7.64.0)
+  - Kingfisher (~> 4.0)
+  - SwiftLinkPreview (~> 3.4.0)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -52,8 +56,10 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
     - GoogleUtilities
+    - Kingfisher
     - nanopb
     - PromisesObjC
+    - SwiftLinkPreview
     - SwiftSoup
     - SwiftyJSON
 
@@ -64,11 +70,13 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
   GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  SwiftLinkPreview: c1bc5b2cb3cd42f2865137c1a61f5d788dcf5c9c
   SwiftSoup: 8e4844e785a975744f2c2606f8b3844ef67eb259
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 4040f3bd2a4dd168995b4cca4e42916333ab18c2
+PODFILE CHECKSUM: 16cb0586a287e1b1955378d994ea958f478cbb6b
 
 COCOAPODS: 1.11.2
