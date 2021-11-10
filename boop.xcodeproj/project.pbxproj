@@ -124,6 +124,7 @@
 		918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDelegates.swift; sourceTree = "<group>"; };
 		918528BD271E94D1002AE8A0 /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		918528BF271E9A19002AE8A0 /* ArchiveItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveItem.swift; sourceTree = "<group>"; };
+		91C949B2273B958300BC2606 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		91CDA705272A745700B1D9DD /* MenuDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegates.swift; sourceTree = "<group>"; };
 		91CDA707272A765E00B1D9DD /* MenuCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCells.swift; sourceTree = "<group>"; };
 		91E7A726272C0468002B6CE7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -439,6 +440,7 @@
 				uk,
 				"uk-UA",
 				"vi-VN",
+				ru,
 			);
 			mainGroup = 1036511225EC1C24003F03D0;
 			productRefGroup = 1036511C25EC1C24003F03D0 /* Products */;
@@ -594,6 +596,7 @@
 				910CFB6D273550F0003724DB /* uk */,
 				910CFB6E2735513D003724DB /* uk-UA */,
 				910CFB6F273551AB003724DB /* vi-VN */,
+				91C949B2273B958300BC2606 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
