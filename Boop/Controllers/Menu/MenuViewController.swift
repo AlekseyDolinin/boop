@@ -12,19 +12,30 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     let priceManager = PriceManager()
     var urlToShare: URL? = URL(string: "https://apps.apple.com/ru/app/booplink/id1556606517")
     
+    var priceSupport = UserDefaults.standard.object(forKey: "booplink_support")
+    var priceFullVersion = UserDefaults.standard.object(forKey: "booplink_fullversion")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
+        priceManager.getPricesForInApps(inAppsIDs: ["booplink_support", "booplink_fullversion"])
         
-//        priceManager.getPricesForInApps(inAppsIDs: ["booplink.supportProject", "booplink.fullversion"])
+        ///
+        NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
+            DispatchQueue.main.async {
+                self.viewSelf.menuTable.reloadData()
+            }
+        }
         
         ///
         NotificationCenter.default.addObserver(forName: nPricesUpdated, object: nil, queue: nil) { notification in
             print("Обновление цен")
-            
-            print(UserDefaults.standard.object(forKey: "booplink.supportProject"))
-            print(UserDefaults.standard.object(forKey: "booplink.fullversion"))
+            print(self.priceSupport ?? 0.99)
+            print(self.priceFullVersion ?? 2.99)
+            DispatchQueue.main.async {
+                self.viewSelf.menuTable.reloadData()
+            }
         }
     }
     

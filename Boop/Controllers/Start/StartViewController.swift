@@ -47,7 +47,6 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         
         ///
         NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
-            print("Покупка выполнена")
             if let banner = self.bannerView {
                 banner.isHidden = true
             }

@@ -593,18 +593,18 @@
             <objects>
                 <viewController storyboardIdentifier="MenuViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kjE-90-pk8" customClass="MenuViewController" customModule="boop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iIX-x3-SGn" customClass="MenuView" customModule="boop" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="bg_1" translatesAutoresizingMaskIntoConstraints="NO" id="Lqb-WI-WJa">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wrq-d9-LaK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="7Dn-XY-dWZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ie-xv-xLq">
@@ -627,11 +627,11 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="E6f-ko-AHI">
-                                    <rect key="frame" x="0.0" y="190" width="375" height="300"/>
+                                    <rect key="frame" x="0.0" y="190" width="320" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-iN-ATm">
-                                            <rect key="frame" x="31.5" y="108" width="312" height="84"/>
+                                            <rect key="frame" x="4" y="108" width="312" height="84"/>
                                             <subviews>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQT-2D-6Lq">
                                                     <rect key="frame" x="0.0" y="0.0" width="312" height="84"/>
@@ -708,7 +708,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhw-lp-f71">
-                                            <rect key="frame" x="171" y="267" width="33" height="17"/>
+                                            <rect key="frame" x="143.5" y="267" width="33" height="17"/>
                                             <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -724,23 +724,23 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" id="RBc-ub-i53" customClass="MenuCell" customModule="boop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="94.5" width="375" height="73"/>
+                                        <rect key="frame" x="0.0" y="94.5" width="320" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RBc-ub-i53" id="ty2-Ti-gOa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="iST-uB-iSL">
-                                                    <rect key="frame" x="16" y="16" width="351" height="41"/>
+                                                    <rect key="frame" x="16" y="16" width="296" height="41"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label &gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-VI-XCy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="351" height="24"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="296" height="24"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="20"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubLabel" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1b-wn-vul">
-                                                            <rect key="frame" x="0.0" y="24" width="335" height="17"/>
+                                                            <rect key="frame" x="0.0" y="24" width="280" height="17"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="14"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -772,16 +772,22 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Fjn-3m-d7U">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <color key="color" name="Violet_Dark_"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zJL-7c-PDB"/>
                         <color key="backgroundColor" name="Violet_"/>
                         <constraints>
                             <constraint firstItem="wrq-d9-LaK" firstAttribute="leading" secondItem="zJL-7c-PDB" secondAttribute="leading" id="3bu-EH-bHN"/>
+                            <constraint firstItem="Fjn-3m-d7U" firstAttribute="centerY" secondItem="iIX-x3-SGn" secondAttribute="centerY" id="98d-oB-NfS"/>
                             <constraint firstItem="Lqb-WI-WJa" firstAttribute="bottom" secondItem="iIX-x3-SGn" secondAttribute="bottom" id="Hgs-Fi-luF"/>
                             <constraint firstItem="wrq-d9-LaK" firstAttribute="top" secondItem="iIX-x3-SGn" secondAttribute="top" id="aHj-F2-aee"/>
                             <constraint firstItem="Lqb-WI-WJa" firstAttribute="leading" secondItem="iIX-x3-SGn" secondAttribute="leading" id="dog-lM-n71"/>
                             <constraint firstItem="wrq-d9-LaK" firstAttribute="trailing" secondItem="zJL-7c-PDB" secondAttribute="trailing" id="eyP-s8-TgD"/>
                             <constraint firstAttribute="trailing" secondItem="Lqb-WI-WJa" secondAttribute="trailing" id="nWc-VV-kAY"/>
+                            <constraint firstItem="Fjn-3m-d7U" firstAttribute="centerX" secondItem="iIX-x3-SGn" secondAttribute="centerX" id="rZ7-5f-6rS"/>
                             <constraint firstAttribute="bottom" secondItem="wrq-d9-LaK" secondAttribute="bottom" id="uMZ-rH-g3f"/>
                             <constraint firstItem="Lqb-WI-WJa" firstAttribute="top" secondItem="iIX-x3-SGn" secondAttribute="top" id="wEP-dq-Zs9"/>
                         </constraints>
@@ -792,6 +798,7 @@
                             <outlet property="lButtonRussia" destination="aWe-nN-oPR" id="gK8-9K-dsM"/>
                             <outlet property="lButtonUsa" destination="w0C-dg-S09" id="Vlc-tm-6Wj"/>
                             <outlet property="lButtonVietnam" destination="QAI-Br-eks" id="j1G-DJ-cFi"/>
+                            <outlet property="loader" destination="Fjn-3m-d7U" id="er0-Ni-aLD"/>
                             <outlet property="menuTable" destination="wrq-d9-LaK" id="qoq-nj-wam"/>
                             <outlet property="versionLabel" destination="nhw-lp-f71" id="OXZ-21-tRy"/>
                         </connections>
@@ -799,11 +806,10 @@
                     <navigationItem key="navigationItem" id="3oS-ti-wCM"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <size key="freeformSize" width="375" height="1200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofr-Re-sr5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821.5625" y="175.35211267605635"/>
+            <point key="canvasLocation" x="1796" y="33"/>
         </scene>
         <!--Archive View Controller-->
         <scene sceneID="1Cd-0g-42H">
@@ -971,7 +977,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xb-u1-4j0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2559.375" y="31.690140845070424"/>
+            <point key="canvasLocation" x="2543" y="33"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -997,6 +1003,9 @@
         <image name="vietnam" width="60" height="60"/>
         <namedColor name="Violet_">
             <color red="0.45490196078431372" green="0.38039215686274508" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Violet_Dark_">
+            <color red="0.33725490196078434" green="0.25882352941176473" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White_">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -10,6 +10,7 @@ class MenuView: UIView {
     @IBOutlet weak var lButtonPortugal: UIButton!
     @IBOutlet weak var lButtonVietnam: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     
     override func awakeFromNib() {
@@ -19,6 +20,18 @@ class MenuView: UIView {
     
     func configure() {
         versionLabel.text = GetVersionApp.get()
+    }
+    
+    ///
+    func showLoader() {
+        menuTable.alpha = 0.3
+        loader.startAnimating()
+        isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.menuTable.alpha = 1.0
+            self.loader.stopAnimating()
+            self.isUserInteractionEnabled = true
+        }
     }
 }
 
@@ -38,5 +51,8 @@ extension MenuView {
         lButtonUsa.layer.cornerRadius = lButtonUsa.frame.height / 2
         lButtonPortugal.layer.cornerRadius = lButtonPortugal.frame.height / 2
         lButtonVietnam.layer.cornerRadius = lButtonVietnam.frame.height / 2
+        
+        ///
+        loader.stopAnimating()
     }
 }

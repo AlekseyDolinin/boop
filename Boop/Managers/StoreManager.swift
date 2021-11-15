@@ -10,10 +10,11 @@ class StoreManager: NSObject {
         return UserDefaults.standard.bool(forKey: "FullVersion")
     }
     
-    /// запись после покупки проверсии
+    /// запись после покупки полной версии
     class func didBuyFullVersion() {
         UserDefaults.standard.set(true, forKey: "FullVersion")
         UserDefaults.standard.synchronize()
+        print("Покупка выполнена")
         NotificationCenter.default.post(name: nTransactionComplate, object: nil)
     }
     
@@ -28,6 +29,7 @@ class StoreManager: NSObject {
     }
     
     func restorePurchase() {
+        SKPaymentQueue.default().add(self)
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
 }
@@ -51,7 +53,7 @@ extension StoreManager: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             
-            print("State transaction product \(transaction.payment.productIdentifier): \(transaction.transactionState)")
+            print("State transaction product \(transaction.payment.productIdentifier): \(transaction.transactionState.rawValue)")
             
             switch transaction.transactionState {
             case .purchasing:
