@@ -4,9 +4,11 @@ import StoreKit
 let nTransactionComplate: NSNotification.Name = NSNotification.Name(rawValue: "nTransactionComplate")
 
 class StoreManager: NSObject {
-    
+    ///
     class func isFullVersion() -> Bool {
+        #if DEBUG
         print("is full version: \(UserDefaults.standard.bool(forKey: "FullVersion"))")
+        #endif
         return UserDefaults.standard.bool(forKey: "FullVersion")
     }
     
@@ -18,6 +20,7 @@ class StoreManager: NSObject {
         NotificationCenter.default.post(name: nTransactionComplate, object: nil)
     }
     
+    ///
     func buyInApp(inAppID: String) {
         if !SKPaymentQueue.canMakePayments() {
             print("You can't make payments")
@@ -28,6 +31,7 @@ class StoreManager: NSObject {
         request.start()
     }
     
+    ///
     func restorePurchase() {
         SKPaymentQueue.default().add(self)
         SKPaymentQueue.default().restoreCompletedTransactions()
@@ -49,7 +53,7 @@ extension StoreManager: SKProductsRequestDelegate {
 }
 
 extension StoreManager: SKPaymentTransactionObserver {
-    
+    ///
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             
@@ -59,12 +63,14 @@ extension StoreManager: SKPaymentTransactionObserver {
             case .purchasing:
                 print("purchasing")
             case .purchased:
+                print("purchased")
                 queue.finishTransaction(transaction)
                 StoreManager.didBuyFullVersion()
             case .failed:
                 queue.finishTransaction(transaction)
             case .restored:
                 print("restored")
+                print("модалка благодарности за возврат")
                 queue.finishTransaction(transaction)
                 StoreManager.didBuyFullVersion()
             case .deferred:

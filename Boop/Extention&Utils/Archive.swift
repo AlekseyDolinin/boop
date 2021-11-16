@@ -8,7 +8,6 @@ class Archive {
                 let decoder = JSONDecoder()
                 var arrayArchive = try decoder.decode([ArchiveItem].self, from: data)
                 arrayArchive = arrayArchive.sorted {$0.date > $1.date}
-                print(arrayArchive)
                 completion (arrayArchive)
             } catch {
                 print("Unable to Decode Notes (\(error))")

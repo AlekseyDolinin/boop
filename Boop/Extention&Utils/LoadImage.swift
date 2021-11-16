@@ -1,5 +1,5 @@
 import UIKit
-import Foundation
+import Kingfisher
 
 class LoadImage {
     class func get(urlImage: URL, completion: @escaping (UIImage?) -> ()) {

@@ -1,6 +1,5 @@
 import UIKit
 import SwiftLinkPreview
-import Kingfisher
 import FaviconFinder
 
 class ArchiveCell: UITableViewCell {
@@ -45,7 +44,9 @@ class ArchiveCell: UITableViewCell {
     
     func getFavicon() {
         guard let url: URL = URL(string: archiveItem.iconLink ?? "") else {
+            #if DEBUG
             print("error url iconLink")
+            #endif
             getFaviconAlternative()
             return
         }
