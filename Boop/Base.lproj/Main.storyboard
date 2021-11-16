@@ -819,7 +819,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="bg_1" translatesAutoresizingMaskIntoConstraints="NO" id="hap-CD-ONN">
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="bg_1" translatesAutoresizingMaskIntoConstraints="NO" id="hap-CD-ONN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
@@ -948,7 +948,7 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="0.30259209437086093" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="fgc-ce-cnz" secondAttribute="trailing" id="0ZR-BF-Wk5"/>
                                                         <constraint firstAttribute="bottom" secondItem="fgc-ce-cnz" secondAttribute="bottom" id="OHz-hn-uYz"/>
@@ -974,6 +974,7 @@
                                             <outlet property="longlink" destination="eNf-pb-Zh0" id="9KV-Os-wzm"/>
                                             <outlet property="name" destination="mKy-Fu-TxA" id="XjJ-od-KSB"/>
                                             <outlet property="shortlink" destination="KQp-Dr-m75" id="IDc-YU-9Nu"/>
+                                            <outlet property="topConstraint" destination="Zrn-nz-7QU" id="yI0-jk-tKo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

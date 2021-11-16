@@ -3,9 +3,6 @@ import SwiftLinkPreview
 import Kingfisher
 import FaviconFinder
 
-//import WebLinkPreview
-//import SwiftLinkPreview
-
 class ArchiveCell: UITableViewCell {
     
     @IBOutlet weak var backView: UIView!
@@ -15,6 +12,7 @@ class ArchiveCell: UITableViewCell {
     @IBOutlet weak var longlink: UILabel!
     @IBOutlet weak var favicon: UIImageView!
     @IBOutlet weak var imagePreview: UIImageView!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     var archiveItem: ArchiveItem!
     let slp = SwiftLinkPreview(session: URLSession.shared, workQueue: SwiftLinkPreview.defaultWorkQueue, responseQueue: DispatchQueue.main, cache: DisabledCache.instance)
@@ -84,6 +82,7 @@ class ArchiveCell: UITableViewCell {
         guard let url: URL = URL(string: archiveItem.previewLink ?? "") else {
             print("error url previewLink")
             imagePreview.isHidden = true
+            topConstraint.constant = 16
             return
         }
         LoadImage.get(urlImage: url) { image in

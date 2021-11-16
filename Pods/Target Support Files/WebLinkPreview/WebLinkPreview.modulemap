@@ -1,6 +1,0 @@
-framework module WebLinkPreview {
-  umbrella header "WebLinkPreview-umbrella.h"
-
-  export *
-  module * { export * }
-}

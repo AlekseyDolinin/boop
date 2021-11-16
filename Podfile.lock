@@ -39,7 +39,6 @@ PODS:
   - SwiftLinkPreview (3.4.0)
   - SwiftSoup (2.3.3)
   - SwiftyJSON (4.3.0)
-  - WebLinkPreview (1.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -48,7 +47,6 @@ DEPENDENCIES:
   - Kingfisher (~> 4.0)
   - SwiftLinkPreview (~> 3.4.0)
   - SwiftyJSON (~> 4.0)
-  - WebLinkPreview
 
 SPEC REPOS:
   trunk:
@@ -64,7 +62,6 @@ SPEC REPOS:
     - SwiftLinkPreview
     - SwiftSoup
     - SwiftyJSON
-    - WebLinkPreview
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -79,8 +76,7 @@ SPEC CHECKSUMS:
   SwiftLinkPreview: c1bc5b2cb3cd42f2865137c1a61f5d788dcf5c9c
   SwiftSoup: 8e4844e785a975744f2c2606f8b3844ef67eb259
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
-  WebLinkPreview: baaa0850bbbf1c01efbaab5482c2ad586d9531a7
 
-PODFILE CHECKSUM: d8cd2c71a7787b1ccb2092d9b2b65b45287ab1be
+PODFILE CHECKSUM: 42736fe850a5aa5bd68f4b4b51f57f6934999a65
 
 COCOAPODS: 1.11.2

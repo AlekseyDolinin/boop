@@ -3,7 +3,6 @@ import UIKit
 class Archive {
     
     class func parse(completion: @escaping ([ArchiveItem]) -> ()) {
-        print("ParseArhive")
         if let data = UserDefaults.standard.data(forKey: "arrayArchive") {
             do {
                 let decoder = JSONDecoder()
@@ -15,7 +14,6 @@ class Archive {
                 print("Unable to Decode Notes (\(error))")
             }
         } else {
-            print("+++")
             completion ([])
         }
     }
@@ -41,9 +39,7 @@ class Archive {
     
     ///
     class func createArchiveItem(longLink: String, completion: @escaping (ArchiveItem) -> ()) {
-        print("createArchiveItem")
         ParseHTML.parse(link: longLink) { response in
-            print(response)
             completion(ArchiveItem(id: UUID().uuidString,
                                    name: response.title,
                                    description: nil,
