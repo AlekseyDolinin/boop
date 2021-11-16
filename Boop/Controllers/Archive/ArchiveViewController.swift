@@ -21,7 +21,7 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
         viewSelf.archiveTable.delegate = self
         viewSelf.archiveTable.dataSource = self
         
-        ParseArhive.parse(completion: { array in
+        Archive.parse(completion: { array in
             self.viewSelf.emptyLabel.isHidden = array.isEmpty ? false : true
             self.arrayArchive = array.isEmpty ? [] : array
         })

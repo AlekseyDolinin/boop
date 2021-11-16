@@ -70,7 +70,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     ///
     func setDescriptionArchive(completion: @escaping (String) -> ()) {
-        ParseArhive.parse { array in
+        Archive.parse { array in
             if array.isEmpty {
                 completion(AppLanguage.dictionary["archiveIsEmpty"]!.stringValue )
             } else {

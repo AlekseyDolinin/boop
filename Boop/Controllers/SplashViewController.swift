@@ -6,11 +6,14 @@ class SplashViewController: UIViewController {
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var bg: UIImageView!
     
+    static var archive = [ArchiveItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         AppLanguage.setLanguage()
-        
+        Archive.parse { arrayArchive in
+            SplashViewController.archive = arrayArchive
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -34,7 +34,6 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     var longLink: String!
     var arrayKeysServices: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
-    var arrayArchive = [ArchiveItem]()
     var action: Actions = .none
     
     override func viewDidLoad() {
@@ -44,7 +43,6 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         viewSelf.configure()
         setPagination()
         checkAppTrackingTransparency()
-        
         ///
         NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
             if let banner = self.bannerView {
@@ -55,9 +53,6 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ParseArhive.parse { array in
-            self.arrayArchive = array
-        }
         if StartViewController.shortLink == nil {
             self.viewSelf.configure()
         }
@@ -119,36 +114,17 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
         pasteboard.string = StartViewController.shortLink
         viewSelf.showMessage(text: AppLanguage.dictionary["linkCopied"]!.stringValue)
     }
-    
-    ///
-    func createItem() -> ArchiveItem {
-        return ArchiveItem(id: UUID().uuidString,
-                           name: createName(longURL: self.longLink),
-                           description: nil,
-                           shortLink: StartViewController.shortLink,
-                           longLink: self.longLink,
-                           date: Date())
-    }
-    
-    ///
-    func createName(longURL: String) -> String {
-        let url = URL(string: self.longLink)
-        let nameItem = url?.host
-        return nameItem ?? "Name"
-    }
-    
+
     ///
     func addItemInArchive() {
         if StoreManager.isFullVersion() {
-            self.arrayArchive.append(self.createItem())
-            ParseArhive.saveArchive(arrayArchive: self.arrayArchive)
+            Archive.addItemInArchive(longLink: self.longLink)
         } else {
             ///проверка количества записей
-            if self.arrayArchive.count >= 10 {
+            if SplashViewController.archive.count >= 10 {
                 self.showAlert()
             } else {
-                self.arrayArchive.append(self.createItem())
-                ParseArhive.saveArchive(arrayArchive: self.arrayArchive)
+                Archive.addItemInArchive(longLink: self.longLink)
             }
         }
     }
