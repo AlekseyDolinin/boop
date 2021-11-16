@@ -888,7 +888,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKy-Fu-TxA">
-                                                            <rect key="frame" x="44" y="16" width="244" height="26.5"/>
+                                                            <rect key="frame" x="44" y="16" width="162" height="26.5"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Semibold" family="SF Compact Rounded" pointSize="22"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -911,23 +911,32 @@
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="peP-iE-YQ5">
+                                                            <rect key="frame" x="218" y="16" width="70" height="101"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="70" id="ch9-ll-y2z"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="eNf-pb-Zh0" firstAttribute="top" secondItem="KQp-Dr-m75" secondAttribute="bottom" constant="4" id="0ov-fl-35s"/>
                                                         <constraint firstAttribute="trailing" secondItem="KQp-Dr-m75" secondAttribute="trailing" constant="16" id="5r6-Np-MBd"/>
                                                         <constraint firstAttribute="trailing" secondItem="F4U-q5-wEs" secondAttribute="trailing" constant="16" id="Afi-hV-RMI"/>
+                                                        <constraint firstItem="peP-iE-YQ5" firstAttribute="leading" secondItem="mKy-Fu-TxA" secondAttribute="trailing" constant="12" id="BKE-h5-cBb"/>
                                                         <constraint firstItem="mKy-Fu-TxA" firstAttribute="leading" secondItem="Oh9-yv-eam" secondAttribute="trailing" constant="8" id="CEE-5E-Z3z"/>
                                                         <constraint firstAttribute="trailing" secondItem="eNf-pb-Zh0" secondAttribute="trailing" constant="16" id="Hl7-3u-sbc"/>
+                                                        <constraint firstItem="peP-iE-YQ5" firstAttribute="top" secondItem="pns-cR-TcX" secondAttribute="top" constant="16" id="Jw5-CO-YWq"/>
                                                         <constraint firstItem="F4U-q5-wEs" firstAttribute="leading" secondItem="pns-cR-TcX" secondAttribute="leading" constant="16" id="Jz0-sC-fgz"/>
                                                         <constraint firstAttribute="bottom" secondItem="eNf-pb-Zh0" secondAttribute="bottom" constant="16" id="SxF-Cx-XHL"/>
                                                         <constraint firstItem="eNf-pb-Zh0" firstAttribute="leading" secondItem="pns-cR-TcX" secondAttribute="leading" constant="16" id="UVP-nh-XyO"/>
                                                         <constraint firstItem="mKy-Fu-TxA" firstAttribute="top" secondItem="pns-cR-TcX" secondAttribute="top" constant="16" id="Uf1-QT-lTl"/>
+                                                        <constraint firstAttribute="bottom" secondItem="peP-iE-YQ5" secondAttribute="bottom" constant="16" id="VvR-1A-YdF"/>
                                                         <constraint firstItem="F4U-q5-wEs" firstAttribute="top" secondItem="mKy-Fu-TxA" secondAttribute="bottom" constant="4" id="WTF-m8-4n3"/>
                                                         <constraint firstItem="Oh9-yv-eam" firstAttribute="leading" secondItem="pns-cR-TcX" secondAttribute="leading" constant="16" id="XmM-GF-CS9"/>
+                                                        <constraint firstAttribute="trailing" secondItem="peP-iE-YQ5" secondAttribute="trailing" constant="16" id="Zs9-kV-u7z"/>
                                                         <constraint firstItem="KQp-Dr-m75" firstAttribute="leading" secondItem="pns-cR-TcX" secondAttribute="leading" constant="16" id="aHI-qO-4N6"/>
                                                         <constraint firstItem="Oh9-yv-eam" firstAttribute="top" secondItem="mKy-Fu-TxA" secondAttribute="top" constant="4" id="alU-E3-eK4"/>
-                                                        <constraint firstAttribute="trailing" secondItem="mKy-Fu-TxA" secondAttribute="trailing" constant="16" id="joo-b6-DbH"/>
                                                         <constraint firstItem="KQp-Dr-m75" firstAttribute="top" secondItem="F4U-q5-wEs" secondAttribute="bottom" constant="8" id="mYd-fd-4MF"/>
                                                     </constraints>
                                                 </view>
@@ -945,6 +954,7 @@
                                             <outlet property="backView" destination="pns-cR-TcX" id="hKv-xr-FdR"/>
                                             <outlet property="dateLabel" destination="F4U-q5-wEs" id="keN-KU-6bi"/>
                                             <outlet property="favicon" destination="Oh9-yv-eam" id="YYg-mc-3Tv"/>
+                                            <outlet property="imagePreview" destination="peP-iE-YQ5" id="BVb-Mt-Ik2"/>
                                             <outlet property="longlink" destination="eNf-pb-Zh0" id="9KV-Os-wzm"/>
                                             <outlet property="name" destination="mKy-Fu-TxA" id="XjJ-od-KSB"/>
                                             <outlet property="shortlink" destination="KQp-Dr-m75" id="IDc-YU-9Nu"/>
@@ -977,7 +987,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xb-u1-4j0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2543" y="33"/>
+            <point key="canvasLocation" x="2542.5" y="32.74647887323944"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
