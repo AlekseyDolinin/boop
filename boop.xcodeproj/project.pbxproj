@@ -57,6 +57,7 @@
 		918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BD271E94D1002AE8A0 /* ArchiveView.swift */; };
 		918528C0271E9A19002AE8A0 /* ArchiveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BF271E9A19002AE8A0 /* ArchiveItem.swift */; };
 		91CDA708272A765E00B1D9DD /* MenuCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CDA707272A765E00B1D9DD /* MenuCells.swift */; };
+		91DD59782745323300CE0200 /* ArchiveCellFullVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */; };
 		91E7A727272C0468002B6CE7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7A726272C0468002B6CE7 /* MenuView.swift */; };
 		91E7A730272C281F002B6CE7 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7A72F272C281F002B6CE7 /* AppLanguage.swift */; };
 		91E7A733272C2FE2002B6CE7 /* Usa.json in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A732272C2FDC002B6CE7 /* Usa.json */; };
@@ -142,6 +143,7 @@
 		918528BF271E9A19002AE8A0 /* ArchiveItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveItem.swift; sourceTree = "<group>"; };
 		91C949B2273B958300BC2606 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		91CDA707272A765E00B1D9DD /* MenuCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCells.swift; sourceTree = "<group>"; };
+		91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCellFullVersion.swift; sourceTree = "<group>"; };
 		91E7A726272C0468002B6CE7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		91E7A72F272C281F002B6CE7 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		91E7A732272C2FDC002B6CE7 /* Usa.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Usa.json; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				102A845825F513A500D78619 /* ServiceCell.swift */,
 				91CDA707272A765E00B1D9DD /* MenuCells.swift */,
 				918528B9271E9461002AE8A0 /* ArchiveCell.swift */,
+				91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				912E7E95273112F900ABCDA1 /* String.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
 				1099ED7A25EC2E3300F53439 /* API.swift in Sources */,
+				91DD59782745323300CE0200 /* ArchiveCellFullVersion.swift in Sources */,
 				102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */,
 				911007492744E216004B7785 /* MenuNoFullViewController.swift in Sources */,
 				918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */,
@@ -782,7 +786,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -792,7 +796,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.3;
+				MARKETING_VERSION = 6.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -806,7 +810,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MKHF2R38BL;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -816,7 +820,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.3;
+				MARKETING_VERSION = 6.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

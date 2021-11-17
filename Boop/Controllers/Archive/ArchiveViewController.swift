@@ -48,7 +48,7 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
     func showAlertCopy() {
         let alert = UIAlertController(title: nil, message: "Link copied", preferredStyle: .alert)
         present(alert, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             alert.dismiss(animated: true)
         }
     }

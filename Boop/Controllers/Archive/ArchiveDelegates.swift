@@ -10,9 +10,12 @@ extension ArchiveViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let archiveCell = tableView.dequeueReusableCell(withIdentifier: "ArchiveCell", for: indexPath) as! ArchiveCell
+        let archiveCellFullVersion = tableView.dequeueReusableCell(withIdentifier: "ArchiveCellFullVersion", for: indexPath) as! ArchiveCellFullVersion
         archiveCell.archiveItem = arrayArchive[indexPath.row]
         archiveCell.setCell()
-        return archiveCell
+        archiveCellFullVersion.archiveItem = arrayArchive[indexPath.row]
+        archiveCellFullVersion.setCell()
+        return StoreManager.isFullVersion() ? archiveCellFullVersion : archiveCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
