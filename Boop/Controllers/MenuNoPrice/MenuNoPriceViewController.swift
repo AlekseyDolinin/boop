@@ -1,7 +1,7 @@
 import UIKit
 import LinkPresentation
 
-class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MenuNoPriceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var viewSelf: MenuView! {
         guard isViewLoaded else { return nil }
@@ -19,7 +19,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
-        priceManager.getPricesForInApps(inAppsIDs: ["booplink_support", "booplink_fullversion"])
         
         ///
         NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
@@ -118,7 +117,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 }
 
-extension MenuViewController: UIActivityItemSource {
+extension MenuNoPriceViewController: UIActivityItemSource {
 
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
         return UIImage() // an empty UIImage is sufficient to ensure share sheet shows right actions

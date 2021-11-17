@@ -42,8 +42,22 @@ extension StartViewController {
     
     ///
     @IBAction func openMenu(_ sender: Any?) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
-        navigationController?.pushViewController(vc!, animated: true)
+        /// проверка сосотояния покупок
+        let priceFullVersion = UserDefaults.standard.object(forKey: "booplink_fullversion")
+        let priceSupport = UserDefaults.standard.object(forKey: "booplink_support")
+        if priceFullVersion == nil && priceSupport == nil {
+            print("цены не получены")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "MenuNoPriceViewController") as! MenuNoPriceViewController
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            if StoreManager.isFullVersion() {
+                let vc = storyboard?.instantiateViewController(withIdentifier: "MenuFullVersionViewController") as! MenuFullVersionViewController
+                navigationController?.pushViewController(vc, animated: true)
+            } else {
+                let vc = storyboard?.instantiateViewController(withIdentifier: "MenuNoFullViewController") as! MenuNoFullViewController
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
     
     ///

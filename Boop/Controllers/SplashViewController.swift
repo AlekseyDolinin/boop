@@ -7,6 +7,7 @@ class SplashViewController: UIViewController {
     @IBOutlet weak var bg: UIImageView!
     
     static var archive = [ArchiveItem]()
+    let priceManager = PriceManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class SplashViewController: UIViewController {
         super.viewWillAppear(animated)
         versionLabel.text = GetVersionApp.get()
         startAnimation()
+        /// получение цен покупок
+        priceManager.getPricesForInApps(inAppsIDs: ["booplink_support", "booplink_fullversion"])
     }
     
     ///

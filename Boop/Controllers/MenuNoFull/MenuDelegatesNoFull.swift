@@ -1,26 +1,18 @@
 import UIKit
 
-extension MenuViewController {
+extension MenuNoFullViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if StoreManager.isFullVersion() {
-            return 6
-        } else {
-            return 8
-        }
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let menuCell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
-        
         if indexPath.row == 0 || indexPath.row == 5 || indexPath.row == 7 {
             menuCell.subLabel.isHidden = false
         } else {
             menuCell.subLabel.isHidden = true
         }
-        
-        
         switch indexPath.row {
         case 0:
             menuCell.titleLabel.text = AppLanguage.dictionary["arhive"]!.stringValue
@@ -60,7 +52,7 @@ extension MenuViewController {
         }
         return menuCell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
@@ -73,7 +65,8 @@ extension MenuViewController {
         case 3:
             shareThisApp()
         case 4:
-            contact()
+            print("contact")
+//            contact()
         case 5:
             viewSelf.showLoader()
             StoreManager.isFullVersion() ? support() : getFullVersion()

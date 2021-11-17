@@ -1,7 +1,7 @@
 import UIKit
 import MessageUI
 
-extension MenuViewController: MFMailComposeViewControllerDelegate {
+extension MenuNoPriceViewController: MFMailComposeViewControllerDelegate {
 
     ///
     func contact(){
