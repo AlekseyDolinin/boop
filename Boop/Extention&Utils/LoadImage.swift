@@ -3,9 +3,11 @@ import Kingfisher
 
 class LoadImage {
     class func get(urlImage: URL, completion: @escaping (UIImage?) -> ()) {
+                
         UIImageView().kf.setImage(with: urlImage,
                                   placeholder: UIImage(named: ""),
-                                  options: [ .scaleFactor(UIScreen.main.scale),
+                                  options: [ .fromMemoryCacheOrRefresh,
+                                             .scaleFactor(UIScreen.main.scale),
                                              .transition(.fade(0.2)),
                                              .cacheOriginalImage]) { receivedSize, totalSize in
         } completionHandler: { image, error, cacheType, imageURL in
