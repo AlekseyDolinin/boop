@@ -24,6 +24,7 @@ extension PriceManager: SKProductsRequestDelegate {
             nf.numberStyle = NumberFormatter.Style.currency
             nf.locale = product.priceLocale
             let price: String = String(describing: product.price) + nf.currencySymbol
+            print(price)
             UserDefaults.standard.setValue(price, forKeyPath: product.productIdentifier)
             UserDefaults.standard.synchronize()
         }

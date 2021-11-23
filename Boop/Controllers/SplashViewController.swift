@@ -22,7 +22,7 @@ class SplashViewController: UIViewController {
         versionLabel.text = GetVersionApp.get()
         startAnimation()
         /// получение цен покупок
-        priceManager.getPricesForInApps(inAppsIDs: ["booplink_support", "booplink_fullversion"])
+        priceManager.getPricesForInApps(inAppsIDs: [booplinkFullversionID, booplinkSupportID])
     }
     
     ///

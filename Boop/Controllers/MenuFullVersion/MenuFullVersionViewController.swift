@@ -12,8 +12,8 @@ class MenuFullVersionViewController: UIViewController, UITableViewDelegate, UITa
     let priceManager = PriceManager()
     var urlToShare: URL? = URL(string: "https://apps.apple.com/ru/app/booplink/id1556606517")
     
-    var priceSupport = UserDefaults.standard.object(forKey: "booplink_support")
-    var priceFullVersion = UserDefaults.standard.object(forKey: "booplink_fullversion")
+    var priceSupport = UserDefaults.standard.object(forKey: booplinkSupportID)
+    var priceFullVersion = UserDefaults.standard.object(forKey: booplinkFullversionID)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +88,7 @@ class MenuFullVersionViewController: UIViewController, UITableViewDelegate, UITa
     ///
     func getFullVersion() {
         print("getFullVersion")
-        storeManager.buyInApp(inAppID: "booplink_fullversion")
+        storeManager.buyInApp(inAppID: booplinkFullversionID)
     }
 
     ///
@@ -100,7 +100,7 @@ class MenuFullVersionViewController: UIViewController, UITableViewDelegate, UITa
     ///
     func support() {
         print("support")
-        storeManager.buyInApp(inAppID: "booplink_support")
+        storeManager.buyInApp(inAppID: booplinkSupportID)
     }
 
     ///

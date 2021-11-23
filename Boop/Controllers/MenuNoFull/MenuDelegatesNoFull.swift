@@ -30,12 +30,12 @@ extension MenuNoFullViewController {
         case 5:
             if StoreManager.isFullVersion() {
                 menuCell.titleLabel.text = AppLanguage.dictionary["support"]!.stringValue
-                if let priceSupport = UserDefaults.standard.object(forKey: "booplink_support") {
+                if let priceSupport = UserDefaults.standard.object(forKey: booplinkSupportID) {
                     menuCell.subLabel.text = "\(priceSupport)"
                 }
             } else {
                 menuCell.titleLabel.text = AppLanguage.dictionary["getFullVersion"]!.stringValue
-                if let priceFullVersion = UserDefaults.standard.object(forKey: "booplink_fullversion") {
+                if let priceFullVersion = UserDefaults.standard.object(forKey: booplinkFullversionID) {
                     let textDescription = AppLanguage.dictionary["getFullVersionDescription"]!.stringValue + "(\(priceFullVersion))"
                     menuCell.subLabel.text = textDescription
                 }
@@ -44,7 +44,7 @@ extension MenuNoFullViewController {
             menuCell.titleLabel.text = AppLanguage.dictionary["restorePurchase"]!.stringValue
         case 7:
             menuCell.titleLabel.text = AppLanguage.dictionary["support"]!.stringValue
-            if let priceSupport = UserDefaults.standard.object(forKey: "booplink_support") {
+            if let priceSupport = UserDefaults.standard.object(forKey: booplinkSupportID) {
                 menuCell.subLabel.text = "\(priceSupport)"
             }
         default:

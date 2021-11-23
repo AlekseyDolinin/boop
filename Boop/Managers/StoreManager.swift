@@ -2,6 +2,8 @@ import UIKit
 import StoreKit
 
 let nTransactionComplate: NSNotification.Name = NSNotification.Name(rawValue: "nTransactionComplate")
+let booplinkFullversionID = "booplinkFullversionID"
+let booplinkSupportID = "booplinkSupportID"
 
 class StoreManager: NSObject {
     ///

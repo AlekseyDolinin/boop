@@ -43,8 +43,8 @@ extension StartViewController {
     ///
     @IBAction func openMenu(_ sender: Any?) {
         /// проверка сосотояния покупок
-        let priceFullVersion = UserDefaults.standard.object(forKey: "booplink_fullversion")
-        let priceSupport = UserDefaults.standard.object(forKey: "booplink_support")
+        let priceFullVersion = UserDefaults.standard.object(forKey: booplinkFullversionID)
+        let priceSupport = UserDefaults.standard.object(forKey: booplinkSupportID)
         if priceFullVersion == nil && priceSupport == nil {
             print("цены не получены")
             let vc = storyboard?.instantiateViewController(withIdentifier: "MenuNoPriceViewController") as! MenuNoPriceViewController
