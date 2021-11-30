@@ -67,7 +67,9 @@ extension StoreManager: SKPaymentTransactionObserver {
             case .purchased:
                 print("purchased")
                 queue.finishTransaction(transaction)
-                StoreManager.didBuyFullVersion()
+                if transaction.payment.productIdentifier == booplinkFullversionID {
+                    StoreManager.didBuyFullVersion()
+                }
             case .failed:
                 queue.finishTransaction(transaction)
             case .restored:
