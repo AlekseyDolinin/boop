@@ -65,8 +65,7 @@ extension MenuNoFullViewController {
         case 3:
             shareThisApp()
         case 4:
-            print("contact")
-//            contact()
+            contact()
         case 5:
             viewSelf.showLoader()
             StoreManager.isFullVersion() ? support() : getFullVersion()

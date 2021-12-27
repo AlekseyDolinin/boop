@@ -38,7 +38,7 @@
 		911007182743CD01004B7785 /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911007172743CD01004B7785 /* LoadImage.swift */; };
 		9110071A2743CD1E004B7785 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911007192743CD1E004B7785 /* Response.swift */; };
 		9110073F2744DF94004B7785 /* MenuDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110073E2744DF94004B7785 /* MenuDelegates.swift */; };
-		911007432744DFB1004B7785 /* SendMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911007422744DFB1004B7785 /* SendMail.swift */; };
+		911007432744DFB1004B7785 /* SendMailNoPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911007422744DFB1004B7785 /* SendMailNoPrice.swift */; };
 		911007452744DFED004B7785 /* MenuNoPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911007442744DFED004B7785 /* MenuNoPriceViewController.swift */; };
 		911007492744E216004B7785 /* MenuNoFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911007472744E1D6004B7785 /* MenuNoFullViewController.swift */; };
 		9110074A2744E21A004B7785 /* MenuDelegatesNoFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911007482744E1D9004B7785 /* MenuDelegatesNoFull.swift */; };
@@ -56,6 +56,8 @@
 		918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */; };
 		918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BD271E94D1002AE8A0 /* ArchiveView.swift */; };
 		918528C0271E9A19002AE8A0 /* ArchiveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BF271E9A19002AE8A0 /* ArchiveItem.swift */; };
+		919BED74277A0DCA0030612A /* SendMailNoFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED73277A0DCA0030612A /* SendMailNoFull.swift */; };
+		919BED76277A0E0E0030612A /* SendMailFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED75277A0E0E0030612A /* SendMailFull.swift */; };
 		91CDA708272A765E00B1D9DD /* MenuCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CDA707272A765E00B1D9DD /* MenuCells.swift */; };
 		91DD59782745323300CE0200 /* ArchiveCellFullVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */; };
 		91E7A727272C0468002B6CE7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7A726272C0468002B6CE7 /* MenuView.swift */; };
@@ -123,7 +125,7 @@
 		911007172743CD01004B7785 /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 		911007192743CD1E004B7785 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		9110073E2744DF94004B7785 /* MenuDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDelegates.swift; sourceTree = "<group>"; };
-		911007422744DFB1004B7785 /* SendMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMail.swift; sourceTree = "<group>"; };
+		911007422744DFB1004B7785 /* SendMailNoPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMailNoPrice.swift; sourceTree = "<group>"; };
 		911007442744DFED004B7785 /* MenuNoPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuNoPriceViewController.swift; sourceTree = "<group>"; };
 		911007472744E1D6004B7785 /* MenuNoFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNoFullViewController.swift; sourceTree = "<group>"; };
 		911007482744E1D9004B7785 /* MenuDelegatesNoFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegatesNoFull.swift; sourceTree = "<group>"; };
@@ -141,6 +143,8 @@
 		918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDelegates.swift; sourceTree = "<group>"; };
 		918528BD271E94D1002AE8A0 /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		918528BF271E9A19002AE8A0 /* ArchiveItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveItem.swift; sourceTree = "<group>"; };
+		919BED73277A0DCA0030612A /* SendMailNoFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailNoFull.swift; sourceTree = "<group>"; };
+		919BED75277A0E0E0030612A /* SendMailFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailFull.swift; sourceTree = "<group>"; };
 		91C949B2273B958300BC2606 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		91CDA707272A765E00B1D9DD /* MenuCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCells.swift; sourceTree = "<group>"; };
 		91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCellFullVersion.swift; sourceTree = "<group>"; };
@@ -362,6 +366,7 @@
 			children = (
 				911007472744E1D6004B7785 /* MenuNoFullViewController.swift */,
 				911007482744E1D9004B7785 /* MenuDelegatesNoFull.swift */,
+				919BED73277A0DCA0030612A /* SendMailNoFull.swift */,
 			);
 			path = MenuNoFull;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 			children = (
 				9110074C2744E2FF004B7785 /* MenuFullVersionViewController.swift */,
 				9110074D2744E301004B7785 /* MenuDelegateFullVersion.swift */,
+				919BED75277A0E0E0030612A /* SendMailFull.swift */,
 			);
 			path = MenuFullVersion;
 			sourceTree = "<group>";
@@ -389,7 +395,7 @@
 			children = (
 				911007442744DFED004B7785 /* MenuNoPriceViewController.swift */,
 				9110073E2744DF94004B7785 /* MenuDelegates.swift */,
-				911007422744DFB1004B7785 /* SendMail.swift */,
+				911007422744DFB1004B7785 /* SendMailNoPrice.swift */,
 			);
 			path = MenuNoPrice;
 			sourceTree = "<group>";
@@ -575,12 +581,13 @@
 			files = (
 				103C5F5A25F57332004916E5 /* CIImage.swift in Sources */,
 				918528C0271E9A19002AE8A0 /* ArchiveItem.swift in Sources */,
+				919BED76277A0E0E0030612A /* SendMailFull.swift in Sources */,
 				1036512125EC1C24003F03D0 /* StartViewController.swift in Sources */,
 				1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */,
 				911007452744DFED004B7785 /* MenuNoPriceViewController.swift in Sources */,
 				103C5F5D25F57371004916E5 /* URL.swift in Sources */,
 				9110071A2743CD1E004B7785 /* Response.swift in Sources */,
-				911007432744DFB1004B7785 /* SendMail.swift in Sources */,
+				911007432744DFB1004B7785 /* SendMailNoPrice.swift in Sources */,
 				9152E048272685CB003FF6F0 /* SafariViewController.swift in Sources */,
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */,
@@ -623,6 +630,7 @@
 				102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */,
 				911007492744E216004B7785 /* MenuNoFullViewController.swift in Sources */,
 				918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */,
+				919BED74277A0DCA0030612A /* SendMailNoFull.swift in Sources */,
 				912E7E9C2732C9A500ABCDA1 /* PriceManager.swift in Sources */,
 				9110074F2744E313004B7785 /* MenuDelegateFullVersion.swift in Sources */,
 			);
@@ -796,7 +804,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.7;
+				MARKETING_VERSION = 6.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -820,7 +828,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.7;
+				MARKETING_VERSION = 6.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
