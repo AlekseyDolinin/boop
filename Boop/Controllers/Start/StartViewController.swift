@@ -60,6 +60,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         if StoreManager.isFullVersion() == false {
             setGadBanner()
             setGadFullView()

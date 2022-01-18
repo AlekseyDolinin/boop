@@ -1,7 +1,7 @@
 import UIKit
 import LinkPresentation
 
-class MenuNoFullViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MenuNoFullViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
     
     var viewSelf: MenuView! {
         guard isViewLoaded else { return nil }
@@ -19,13 +19,14 @@ class MenuNoFullViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
         ///
         NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
             DispatchQueue.main.async {
                 print("модалка благодарности покупки")
                 self.navigationController?.popViewController(animated: true)
-//                self.viewSelf.menuTable.reloadData()
             }
         }
         
@@ -44,6 +45,12 @@ class MenuNoFullViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewWillAppear(animated)
         viewSelf.configure()
         viewSelf.menuTable.reloadData()
+    }
+    
+    ///
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+//        print("back")
+        return true
     }
     
     ///

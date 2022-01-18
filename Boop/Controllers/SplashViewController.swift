@@ -34,6 +34,8 @@ class SplashViewController: UIViewController {
                 UIView.animate(withDuration: 0.2) {
                     self.bg.alpha = 0
                 } completion: { bool in
+                                        
+                    
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "StartViewController")
                     self.navigationController?.pushViewController(vc!, animated: false)
                 }
