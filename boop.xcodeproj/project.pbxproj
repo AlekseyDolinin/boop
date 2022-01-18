@@ -58,6 +58,8 @@
 		918528C0271E9A19002AE8A0 /* ArchiveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BF271E9A19002AE8A0 /* ArchiveItem.swift */; };
 		919BED74277A0DCA0030612A /* SendMailNoFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED73277A0DCA0030612A /* SendMailNoFull.swift */; };
 		919BED76277A0E0E0030612A /* SendMailFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED75277A0E0E0030612A /* SendMailFull.swift */; };
+		91BAFFBB27970B31008F3BEF /* ADFullScreenDetailArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BAFFBA27970B31008F3BEF /* ADFullScreenDetailArchive.swift */; };
+		91BAFFBD27970BA3008F3BEF /* DetailArchiveDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BAFFBC27970BA3008F3BEF /* DetailArchiveDelegates.swift */; };
 		91CDA708272A765E00B1D9DD /* MenuCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CDA707272A765E00B1D9DD /* MenuCells.swift */; };
 		91DD59782745323300CE0200 /* ArchiveCellFullVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */; };
 		91E7A727272C0468002B6CE7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7A726272C0468002B6CE7 /* MenuView.swift */; };
@@ -75,6 +77,9 @@
 		91E7A74B272EA3E2002B6CE7 /* SF-Compact-Rounded-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A742272EA3E2002B6CE7 /* SF-Compact-Rounded-Ultralight.otf */; };
 		91E7A74C272EA3E2002B6CE7 /* SF-Compact-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A743272EA3E2002B6CE7 /* SF-Compact-Rounded-Bold.otf */; };
 		91E7A74D272EA3E2002B6CE7 /* SF-Compact-Rounded-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91E7A744272EA3E2002B6CE7 /* SF-Compact-Rounded-Heavy.otf */; };
+		91EA04EA2796F92600002E8F /* DetailArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA04E92796F92600002E8F /* DetailArchiveViewController.swift */; };
+		91EA04EC2796F95100002E8F /* DetailArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA04EB2796F95100002E8F /* DetailArchiveView.swift */; };
+		91EA04EE2797050900002E8F /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA04ED2797050900002E8F /* Buttons.swift */; };
 		91EA2D0A271D45A400EEC146 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */; };
 		91EA2D0F271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */; };
 		91F34FAB272856ED0094B119 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F34FAA272856ED0094B119 /* SplashViewController.swift */; };
@@ -145,6 +150,8 @@
 		918528BF271E9A19002AE8A0 /* ArchiveItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveItem.swift; sourceTree = "<group>"; };
 		919BED73277A0DCA0030612A /* SendMailNoFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailNoFull.swift; sourceTree = "<group>"; };
 		919BED75277A0E0E0030612A /* SendMailFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailFull.swift; sourceTree = "<group>"; };
+		91BAFFBA27970B31008F3BEF /* ADFullScreenDetailArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenDetailArchive.swift; sourceTree = "<group>"; };
+		91BAFFBC27970BA3008F3BEF /* DetailArchiveDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArchiveDelegates.swift; sourceTree = "<group>"; };
 		91C949B2273B958300BC2606 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		91CDA707272A765E00B1D9DD /* MenuCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCells.swift; sourceTree = "<group>"; };
 		91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCellFullVersion.swift; sourceTree = "<group>"; };
@@ -163,6 +170,9 @@
 		91E7A742272EA3E2002B6CE7 /* SF-Compact-Rounded-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Ultralight.otf"; sourceTree = "<group>"; };
 		91E7A743272EA3E2002B6CE7 /* SF-Compact-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Bold.otf"; sourceTree = "<group>"; };
 		91E7A744272EA3E2002B6CE7 /* SF-Compact-Rounded-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Heavy.otf"; sourceTree = "<group>"; };
+		91EA04E92796F92600002E8F /* DetailArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArchiveViewController.swift; sourceTree = "<group>"; };
+		91EA04EB2796F95100002E8F /* DetailArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArchiveView.swift; sourceTree = "<group>"; };
+		91EA04ED2797050900002E8F /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveBannerGoogleAds.swift; sourceTree = "<group>"; };
 		91F34FAA272856ED0094B119 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +244,7 @@
 		1036513025EC1D62003F03D0 /* Extention&Utils */ = {
 			isa = PBXGroup;
 			children = (
+				91EA04ED2797050900002E8F /* Buttons.swift */,
 				91E7A72F272C281F002B6CE7 /* AppLanguage.swift */,
 				912E7E90273009D900ABCDA1 /* Archive.swift */,
 				103C5F5925F57332004916E5 /* CIImage.swift */,
@@ -292,6 +303,7 @@
 				91F34FAA272856ED0094B119 /* SplashViewController.swift */,
 				103C5F5325F569FB004916E5 /* Start */,
 				91EA2D0B271D45AD00EEC146 /* Archive */,
+				91BAFFBE27970C2F008F3BEF /* DetailArchive */,
 				10B0E633264DD6CB00003DA1 /* AppTrackingModal */,
 				103C5F5425F56A1A004916E5 /* QRCodeModal */,
 				91CDA704272A744A00B1D9DD /* MenuNoPrice */,
@@ -309,6 +321,7 @@
 				103C5F5725F56A54004916E5 /* QRCodeModalView.swift */,
 				91E7A726272C0468002B6CE7 /* MenuView.swift */,
 				918528BD271E94D1002AE8A0 /* ArchiveView.swift */,
+				91EA04EB2796F95100002E8F /* DetailArchiveView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,6 +401,16 @@
 				912E7E99273174FA00ABCDA1 /* StoreManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		91BAFFBE27970C2F008F3BEF /* DetailArchive */ = {
+			isa = PBXGroup;
+			children = (
+				91EA04E92796F92600002E8F /* DetailArchiveViewController.swift */,
+				91BAFFBC27970BA3008F3BEF /* DetailArchiveDelegates.swift */,
+				91BAFFBA27970B31008F3BEF /* ADFullScreenDetailArchive.swift */,
+			);
+			path = DetailArchive;
 			sourceTree = "<group>";
 		};
 		91CDA704272A744A00B1D9DD /* MenuNoPrice */ = {
@@ -588,6 +611,7 @@
 				103C5F5D25F57371004916E5 /* URL.swift in Sources */,
 				9110071A2743CD1E004B7785 /* Response.swift in Sources */,
 				911007432744DFB1004B7785 /* SendMailNoPrice.swift in Sources */,
+				91EA04EC2796F95100002E8F /* DetailArchiveView.swift in Sources */,
 				9152E048272685CB003FF6F0 /* SafariViewController.swift in Sources */,
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */,
@@ -618,6 +642,7 @@
 				911007162743CCEB004B7785 /* ParseHTML.swift in Sources */,
 				103C5F5625F56A41004916E5 /* QRCodeModalViewController.swift in Sources */,
 				9110074E2744E30C004B7785 /* MenuFullVersionViewController.swift in Sources */,
+				91BAFFBB27970B31008F3BEF /* ADFullScreenDetailArchive.swift in Sources */,
 				102A845425F500AE00D78619 /* Click.swift in Sources */,
 				912E7E9A273174FA00ABCDA1 /* StoreManager.swift in Sources */,
 				918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */,
@@ -626,11 +651,14 @@
 				912E7E95273112F900ABCDA1 /* String.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
 				1099ED7A25EC2E3300F53439 /* API.swift in Sources */,
+				91EA04EA2796F92600002E8F /* DetailArchiveViewController.swift in Sources */,
 				91DD59782745323300CE0200 /* ArchiveCellFullVersion.swift in Sources */,
 				102A844E25F4DE9F00D78619 /* Chlli copy.swift in Sources */,
 				911007492744E216004B7785 /* MenuNoFullViewController.swift in Sources */,
 				918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */,
+				91BAFFBD27970BA3008F3BEF /* DetailArchiveDelegates.swift in Sources */,
 				919BED74277A0DCA0030612A /* SendMailNoFull.swift in Sources */,
+				91EA04EE2797050900002E8F /* Buttons.swift in Sources */,
 				912E7E9C2732C9A500ABCDA1 /* PriceManager.swift in Sources */,
 				9110074F2744E313004B7785 /* MenuDelegateFullVersion.swift in Sources */,
 			);

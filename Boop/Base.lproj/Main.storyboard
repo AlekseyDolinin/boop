@@ -174,13 +174,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j6r-Zf-ga9">
                                                     <rect key="frame" x="16" y="19.5" width="288" height="63.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Tc-eSD">
                                                             <rect key="frame" x="0.0" y="0.0" width="288" height="36"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="30"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-1G-lQ0">
                                                             <rect key="frame" x="0.0" y="44" width="288" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -809,7 +809,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofr-Re-sr5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869" y="780"/>
+            <point key="canvasLocation" x="1868" y="848"/>
         </scene>
         <!--Archive View Controller-->
         <scene sceneID="1Cd-0g-42H">
@@ -1095,6 +1095,174 @@
             </objects>
             <point key="canvasLocation" x="1868" y="-37"/>
         </scene>
+        <!--Detail Archive View Controller-->
+        <scene sceneID="s68-7w-7ox">
+            <objects>
+                <viewController storyboardIdentifier="DetailArchiveViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HAQ-5j-PMP" customClass="DetailArchiveViewController" customModule="boop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uh2-Q9-AQB" customClass="DetailArchiveView" customModule="boop" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OYY-vn-INZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Y0w-cJ-VZK">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Xhp-HN-HOQ">
+                                    <rect key="frame" x="0.0" y="164.5" width="320" height="350"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PHy-au-Nm0">
+                                            <rect key="frame" x="10" y="34" width="300" height="282"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DP2-sN-OaA" customClass="ButtonBasic" customModule="boop" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                    <color key="backgroundColor" name="Violet_"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="fXY-FQ-OTI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
+                                                    <state key="normal" title="Continue">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="continueAction:" destination="nxn-sf-jWy" eventType="touchUpInside" id="4oK-5L-PZv"/>
+                                                        <action selector="copyShortLink:" destination="HAQ-5j-PMP" eventType="touchUpInside" id="W6v-3g-2M2"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYf-8m-wj6" customClass="ButtonBasic" customModule="boop" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="58" width="300" height="50"/>
+                                                    <color key="backgroundColor" name="Violet_"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Jia-88-7lZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
+                                                    <state key="normal" title="Continue">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="continueAction:" destination="nxn-sf-jWy" eventType="touchUpInside" id="7zr-RZ-ycl"/>
+                                                        <action selector="copyLongLink:" destination="HAQ-5j-PMP" eventType="touchUpInside" id="Fu4-EL-2xS"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uy2-jc-Nzn" customClass="ButtonBasic" customModule="boop" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="116" width="300" height="50"/>
+                                                    <color key="backgroundColor" name="Violet_"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="ViW-ju-4ge"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
+                                                    <state key="normal" title="Continue">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="continueAction:" destination="nxn-sf-jWy" eventType="touchUpInside" id="tlr-O8-qR2"/>
+                                                        <action selector="qrCode:" destination="HAQ-5j-PMP" eventType="touchUpInside" id="Wii-rI-hOI"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acw-Tj-u0k" customClass="ButtonBasic" customModule="boop" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="174" width="300" height="50"/>
+                                                    <color key="backgroundColor" name="Violet_"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="ydW-vq-qX3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
+                                                    <state key="normal" title="Continue">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="continueAction:" destination="nxn-sf-jWy" eventType="touchUpInside" id="kIA-BK-mVR"/>
+                                                        <action selector="shareShortLink:" destination="HAQ-5j-PMP" eventType="touchUpInside" id="beh-gZ-Pod"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0g-MV-cli" customClass="ButtonBasic" customModule="boop" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="232" width="300" height="50"/>
+                                                    <color key="backgroundColor" name="Violet_"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="zwd-Za-aUq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="16"/>
+                                                    <state key="normal" title="Continue">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="continueAction:" destination="nxn-sf-jWy" eventType="touchUpInside" id="MLD-BG-GXN"/>
+                                                        <action selector="openLongLink:" destination="HAQ-5j-PMP" eventType="touchUpInside" id="nDG-Kn-xAV"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DP2-sN-OaA" firstAttribute="leading" secondItem="PHy-au-Nm0" secondAttribute="leading" id="0Kb-f3-ijB"/>
+                                                <constraint firstItem="M0g-MV-cli" firstAttribute="leading" secondItem="PHy-au-Nm0" secondAttribute="leading" id="43m-mA-0ln"/>
+                                                <constraint firstAttribute="trailing" secondItem="acw-Tj-u0k" secondAttribute="trailing" id="786-U9-4Ov"/>
+                                                <constraint firstAttribute="trailing" secondItem="DP2-sN-OaA" secondAttribute="trailing" id="9hz-MI-OK2"/>
+                                                <constraint firstItem="acw-Tj-u0k" firstAttribute="leading" secondItem="PHy-au-Nm0" secondAttribute="leading" id="NRy-lH-zQH"/>
+                                                <constraint firstItem="qYf-8m-wj6" firstAttribute="leading" secondItem="PHy-au-Nm0" secondAttribute="leading" id="XXB-Ul-uj0"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uy2-jc-Nzn" secondAttribute="trailing" id="bIc-d5-x8h"/>
+                                                <constraint firstAttribute="trailing" secondItem="qYf-8m-wj6" secondAttribute="trailing" id="jxH-3f-WgI"/>
+                                                <constraint firstItem="Uy2-jc-Nzn" firstAttribute="leading" secondItem="PHy-au-Nm0" secondAttribute="leading" id="pDE-0F-DRF"/>
+                                                <constraint firstAttribute="width" constant="300" id="qw7-me-LWB"/>
+                                                <constraint firstAttribute="trailing" secondItem="M0g-MV-cli" secondAttribute="trailing" id="whG-j8-HVX"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="PHy-au-Nm0" firstAttribute="centerY" secondItem="Xhp-HN-HOQ" secondAttribute="centerY" id="1qZ-Mz-Nwz"/>
+                                        <constraint firstItem="PHy-au-Nm0" firstAttribute="centerX" secondItem="Xhp-HN-HOQ" secondAttribute="centerX" id="jp0-js-Cnc"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XW7-CU-Hwy">
+                                        <rect key="frame" x="0.0" y="98.5" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XW7-CU-Hwy" id="CtN-CV-mla">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvG-Th-B8p">
+                                <rect key="frame" x="272" y="8" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="45s-Uo-vF8"/>
+                                    <constraint firstAttribute="height" constant="40" id="epA-fE-6nS"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeView:" destination="HAQ-5j-PMP" eventType="touchUpInside" id="C8Q-RG-mQM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iCr-SV-Qu4"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OYY-vn-INZ" firstAttribute="bottom" secondItem="uh2-Q9-AQB" secondAttribute="bottom" id="GS4-qm-Avk"/>
+                            <constraint firstItem="zvG-Th-B8p" firstAttribute="top" secondItem="iCr-SV-Qu4" secondAttribute="top" constant="8" id="Iyl-9o-zNr"/>
+                            <constraint firstItem="OYY-vn-INZ" firstAttribute="top" secondItem="iCr-SV-Qu4" secondAttribute="top" id="OtU-b1-yyu"/>
+                            <constraint firstItem="OYY-vn-INZ" firstAttribute="leading" secondItem="iCr-SV-Qu4" secondAttribute="leading" id="Plm-An-t0o"/>
+                            <constraint firstItem="iCr-SV-Qu4" firstAttribute="trailing" secondItem="zvG-Th-B8p" secondAttribute="trailing" constant="8" id="ZOX-fe-BVf"/>
+                            <constraint firstItem="OYY-vn-INZ" firstAttribute="trailing" secondItem="iCr-SV-Qu4" secondAttribute="trailing" id="xgn-vu-idP"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="archiveItemTable" destination="OYY-vn-INZ" id="4x9-y5-0Vk"/>
+                            <outlet property="copyLongLinkButton" destination="qYf-8m-wj6" id="FXM-Dl-oQv"/>
+                            <outlet property="copyShortLinkButton" destination="DP2-sN-OaA" id="hzg-xh-q7H"/>
+                            <outlet property="openLongLinkButton" destination="M0g-MV-cli" id="ffc-mb-6Ey"/>
+                            <outlet property="qrCodeButton" destination="Uy2-jc-Nzn" id="8Cq-td-aG8"/>
+                            <outlet property="shareShortLinkButton" destination="acw-Tj-u0k" id="vhq-le-w4p"/>
+                        </connections>
+                    </view>
+                    <size key="freeformSize" width="320" height="800"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p51-Yz-MJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626.875" y="14.788732394366198"/>
+        </scene>
         <!--Menu No Full View Controller-->
         <scene sceneID="k7H-53-apu">
             <objects>
@@ -1316,7 +1484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4OH-Yp-6uN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2616" y="780"/>
+            <point key="canvasLocation" x="2627" y="849"/>
         </scene>
         <!--Menu Full Version View Controller-->
         <scene sceneID="yTG-vl-IYO">
@@ -1539,7 +1707,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmr-23-JCK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3369" y="780"/>
+            <point key="canvasLocation" x="3356" y="848"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1574,6 +1742,9 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

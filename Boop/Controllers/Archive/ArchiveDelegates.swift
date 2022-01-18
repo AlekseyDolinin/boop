@@ -2,7 +2,7 @@ import UIKit
 import SafariServices
 import GoogleMobileAds
 
-extension ArchiveViewController {
+extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayArchive.count
@@ -19,6 +19,13 @@ extension ArchiveViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailArchiveViewController") as! DetailArchiveViewController
+        vc.archiveItem = arrayArchive[indexPath.row]
+        vc.modalPresentationStyle = .pageSheet
+        present(vc, animated: true)
+        
+        
         
         self.shortLink = self.arrayArchive[indexPath.row].shortLink
         
@@ -56,23 +63,23 @@ extension ArchiveViewController {
             }
         }
         
-        let openLongLink = AppLanguage.dictionary["openLongLink"]!.stringValue
-        let actionOpenLink = UIAlertAction(title: openLongLink, style: .default) { action in
-            if let url = URL(string: self.arrayArchive[indexPath.row].longLink) {
-                let vc = SafariViewController(url: url, configuration: SFSafariViewController.Configuration())
-                self.present(vc, animated: true)
-            }
-        }
+//        let openLongLink = AppLanguage.dictionary["openLongLink"]!.stringValue
+//        let actionOpenLink = UIAlertAction(title: openLongLink, style: .default) { action in
+//            if let url = URL(string: self.arrayArchive[indexPath.row].longLink) {
+//                let vc = SafariViewController(url: url, configuration: SFSafariViewController.Configuration())
+//                self.present(vc, animated: true)
+//            }
+//        }
         
-        let titleCancel = AppLanguage.dictionary["cancel"]!.stringValue
-        let actionCancel = UIAlertAction(title: titleCancel, style: .cancel) { action in }
-        actionSheet.addAction(actionCopyShortLink)
-        actionSheet.addAction(actionCopyLongLink)
-        actionSheet.addAction(actionQR)
-        actionSheet.addAction(actionShareLink)
-        actionSheet.addAction(actionOpenLink)
-        actionSheet.addAction(actionCancel)
-        present(actionSheet, animated: true)
+//        let titleCancel = AppLanguage.dictionary["cancel"]!.stringValue
+//        let actionCancel = UIAlertAction(title: titleCancel, style: .cancel) { action in }
+//        actionSheet.addAction(actionCopyShortLink)
+//        actionSheet.addAction(actionCopyLongLink)
+//        actionSheet.addAction(actionQR)
+//        actionSheet.addAction(actionShareLink)
+//        actionSheet.addAction(actionOpenLink)
+//        actionSheet.addAction(actionCancel)
+//        present(actionSheet, animated: true)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

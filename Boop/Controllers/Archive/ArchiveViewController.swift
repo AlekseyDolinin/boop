@@ -1,9 +1,8 @@
 import UIKit
 import GoogleMobileAds
 import Foundation
-import GoogleMobileAds
 
-class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource, GADInterstitialDelegate {
+class ArchiveViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate {
     
     var viewSelf: ArchiveView! {
         guard isViewLoaded else { return nil }
