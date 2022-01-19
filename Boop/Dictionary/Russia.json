@@ -28,5 +28,7 @@
     "qrCode": "QR код",
     "shareShortLink": "Поделиться короткой ссылкой",
     "openLongLink": "Открыть длинную ссылку в браузере",
-    "cancel": "Отмена"
+    "cancel": "Отмена",
+    "descriptionPreview": "Превью доступно только в полной версии приложения",
+    "getFullVersionInButton": "Получить полную версию"
 }

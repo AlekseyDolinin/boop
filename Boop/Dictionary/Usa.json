@@ -28,5 +28,7 @@
     "qrCode": "QR code",
     "shareShortLink": "Share short link",
     "openLongLink": "Open long link in browser",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "descriptionPreview": "Preview is only available in the full version of the App",
+    "getFullVersionInButton": "Get Full version"
 }

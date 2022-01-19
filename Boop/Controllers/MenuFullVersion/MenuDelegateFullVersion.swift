@@ -50,8 +50,7 @@ extension MenuFullVersionViewController {
         case 3:
             shareThisApp()
         case 4:
-            print("contact")
-//            contact()
+            contact()
         case 5:
             viewSelf.showLoader()
             support()

@@ -3,7 +3,7 @@ import GoogleMobileAds
 import SwiftyJSON
 import Foundation
 
-class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate {
+class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate, UIGestureRecognizerDelegate {
     
     static let shared = StartViewController()
     
@@ -65,6 +65,12 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
             setGadBanner()
             setGadFullView()
         }
+    }
+    
+    ///
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
     
     ///

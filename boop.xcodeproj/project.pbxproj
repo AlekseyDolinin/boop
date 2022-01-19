@@ -51,6 +51,7 @@
 		913B133B27228AE7008C8D7F /* ADFullScreenQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */; };
 		9144C8BF272BCA05006C17BF /* GetVersionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144C8BE272BCA05006C17BF /* GetVersionApp.swift */; };
 		9152E048272685CB003FF6F0 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152E047272685CB003FF6F0 /* SafariViewController.swift */; };
+		91545266279830A700ACB851 /* ArchiveDetailCellFullVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91545265279830A700ACB851 /* ArchiveDetailCellFullVersion.swift */; };
 		918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528B9271E9461002AE8A0 /* ArchiveCell.swift */; };
 		918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */; };
 		918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BD271E94D1002AE8A0 /* ArchiveView.swift */; };
@@ -143,6 +144,7 @@
 		913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenQRCode.swift; sourceTree = "<group>"; };
 		9144C8BE272BCA05006C17BF /* GetVersionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVersionApp.swift; sourceTree = "<group>"; };
 		9152E047272685CB003FF6F0 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
+		91545265279830A700ACB851 /* ArchiveDetailCellFullVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDetailCellFullVersion.swift; sourceTree = "<group>"; };
 		918528B9271E9461002AE8A0 /* ArchiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCell.swift; sourceTree = "<group>"; };
 		918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDelegates.swift; sourceTree = "<group>"; };
 		918528BD271E94D1002AE8A0 /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
@@ -198,8 +200,9 @@
 				102A845825F513A500D78619 /* ServiceCell.swift */,
 				91CDA707272A765E00B1D9DD /* MenuCells.swift */,
 				918528B9271E9461002AE8A0 /* ArchiveCell.swift */,
-				91BAFFBF2797F309008F3BEF /* ArchiveDetailCell.swift */,
 				91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */,
+				91BAFFBF2797F309008F3BEF /* ArchiveDetailCell.swift */,
+				91545265279830A700ACB851 /* ArchiveDetailCellFullVersion.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				10ABC51025F1843000CD0CF6 /* TinyURL.swift in Sources */,
 				102A845925F513A500D78619 /* ServiceCell.swift in Sources */,
 				912E7E95273112F900ABCDA1 /* String.swift in Sources */,
+				91545266279830A700ACB851 /* ArchiveDetailCellFullVersion.swift in Sources */,
 				1051B07A25F01D7500695C37 /* UIString.swift in Sources */,
 				1099ED7A25EC2E3300F53439 /* API.swift in Sources */,
 				91EA04EA2796F92600002E8F /* DetailArchiveViewController.swift in Sources */,
@@ -832,7 +836,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.8;
+				MARKETING_VERSION = 6.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -856,7 +860,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.8;
+				MARKETING_VERSION = 6.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alekseydolinin.boop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

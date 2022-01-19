@@ -1,12 +1,15 @@
 import UIKit
+import SwiftLinkPreview
+import FaviconFinder
 
-class ArchiveDetailCell: UITableViewCell {
+class ArchiveDetailCellFullVersion: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var shortlink: UILabel!
     @IBOutlet weak var longlink: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var favicon: UIImageView!
     
     var archiveItem: ArchiveItem!
     
@@ -20,7 +23,36 @@ class ArchiveDetailCell: UITableViewCell {
         setLongtLink()
         setDate()
         setName()
+        getFavicon()
         setDescription()
+    }
+    
+    func getFavicon() {
+        guard let url: URL = URL(string: archiveItem.iconLink ?? "") else {
+            #if DEBUG
+            print("error url iconLink")
+            #endif
+            getFaviconAlternative()
+            return
+        }
+        LoadImage.get(urlImage: url) { image in
+            self.favicon.image = image
+        }
+    }
+    
+    ///
+    func getFaviconAlternative() {
+        guard let url: URL = URL(string: archiveItem.longLink) else {return}
+        FaviconFinder(url: url).downloadFavicon { result in
+            switch result {
+            case .success(let favicon):
+                DispatchQueue.main.async {
+                    self.favicon.image = favicon.image
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
     }
     
     func setDescription() {
@@ -48,7 +80,7 @@ class ArchiveDetailCell: UITableViewCell {
     }
 }
 
-extension ArchiveDetailCell {
+extension ArchiveDetailCellFullVersion {
     func setUI() {
 
     }

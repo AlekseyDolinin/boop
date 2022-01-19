@@ -41,7 +41,7 @@ class Archive {
         ParseHTML.parse(link: longLink) { response in
             completion(ArchiveItem(id: UUID().uuidString,
                                    name: response.title,
-                                   description: nil,
+                                   description: response.description,
                                    shortLink: shortLink,
                                    longLink: longLink,
                                    date: Date(),

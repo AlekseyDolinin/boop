@@ -28,5 +28,7 @@
     "qrCode": "Código QR",
     "shareShortLink": "Compartilhar link curto",
     "openLongLink": "Abra o link longo no navegador",
-    "cancel": "Cancelar"
+    "cancel": "Cancelar",
+    "descriptionPreview": "A visualização está disponível apenas na versão completa do aplicativo",
+    "getFullVersionInButton": "Tenha a versão completa"
 }

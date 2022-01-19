@@ -28,7 +28,9 @@
     "qrCode": "mã QR",
     "shareShortLink": "Chia sẻ liên kết ngắn",
     "openLongLink": "Mở liên kết dài trong trình duyệt",
-    "cancel": "Hủy bỏ"
+    "cancel": "Hủy bỏ",
+    "descriptionPreview": "Bản xem trước chỉ có sẵn trong phiên bản đầy đủ của ứng dụng",
+    "getFullVersionInButton": "Lấy phiên bản đầy đủ"
     
     
     

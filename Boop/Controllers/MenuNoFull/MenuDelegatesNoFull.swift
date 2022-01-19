@@ -68,7 +68,7 @@ extension MenuNoFullViewController {
             contact()
         case 5:
             viewSelf.showLoader()
-            StoreManager.isFullVersion() ? support() : getFullVersion()
+            getFullVersion()
         case 6:
             viewSelf.showLoader()
             restorePurchase()

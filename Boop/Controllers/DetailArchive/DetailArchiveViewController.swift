@@ -12,6 +12,7 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
     var archiveItem: ArchiveItem!
     var interstitial: GADInterstitial!
     let pasteboard = UIPasteboard.general
+    var storeManager = StoreManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +90,13 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
             let vc = SafariViewController(url: url, configuration: SFSafariViewController.Configuration())
             self.present(vc, animated: true)
         }
+    }
+    
+    ///
+    @IBAction func getFullVersion(_ sender: UIButton) {
+        print("getFullVersion")
+        viewSelf.showLoader()
+        storeManager.buyInApp(inAppID: booplinkFullversionID)
     }
     
     ///

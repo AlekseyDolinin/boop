@@ -17,7 +17,6 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate {
         super.viewDidLoad()
         viewSelf.archiveTable.delegate = self
         viewSelf.archiveTable.dataSource = self
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
         Archive.parse(completion: { array in
             self.viewSelf.emptyLabel.isHidden = array.isEmpty ? false : true
