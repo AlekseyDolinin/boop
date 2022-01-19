@@ -5,11 +5,13 @@ import GoogleMobileAds
 extension DetailArchiveViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let archiveDetailCell = tableView.dequeueReusableCell(withIdentifier: "ArchiveDetailCell", for: indexPath) as! ArchiveDetailCell
+        
+        return archiveDetailCell
     }
     
 }

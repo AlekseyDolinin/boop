@@ -51,7 +51,6 @@
 		913B133B27228AE7008C8D7F /* ADFullScreenQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */; };
 		9144C8BF272BCA05006C17BF /* GetVersionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9144C8BE272BCA05006C17BF /* GetVersionApp.swift */; };
 		9152E048272685CB003FF6F0 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152E047272685CB003FF6F0 /* SafariViewController.swift */; };
-		9152E04A27268DF0003FF6F0 /* ADFullScreenArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152E04927268DF0003FF6F0 /* ADFullScreenArchive.swift */; };
 		918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528B9271E9461002AE8A0 /* ArchiveCell.swift */; };
 		918528BC271E9488002AE8A0 /* ArchiveDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */; };
 		918528BE271E94D1002AE8A0 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918528BD271E94D1002AE8A0 /* ArchiveView.swift */; };
@@ -60,6 +59,7 @@
 		919BED76277A0E0E0030612A /* SendMailFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919BED75277A0E0E0030612A /* SendMailFull.swift */; };
 		91BAFFBB27970B31008F3BEF /* ADFullScreenDetailArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BAFFBA27970B31008F3BEF /* ADFullScreenDetailArchive.swift */; };
 		91BAFFBD27970BA3008F3BEF /* DetailArchiveDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BAFFBC27970BA3008F3BEF /* DetailArchiveDelegates.swift */; };
+		91BAFFC02797F309008F3BEF /* ArchiveDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BAFFBF2797F309008F3BEF /* ArchiveDetailCell.swift */; };
 		91CDA708272A765E00B1D9DD /* MenuCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CDA707272A765E00B1D9DD /* MenuCells.swift */; };
 		91DD59782745323300CE0200 /* ArchiveCellFullVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */; };
 		91E7A727272C0468002B6CE7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E7A726272C0468002B6CE7 /* MenuView.swift */; };
@@ -143,7 +143,6 @@
 		913B133A27228AE7008C8D7F /* ADFullScreenQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenQRCode.swift; sourceTree = "<group>"; };
 		9144C8BE272BCA05006C17BF /* GetVersionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVersionApp.swift; sourceTree = "<group>"; };
 		9152E047272685CB003FF6F0 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
-		9152E04927268DF0003FF6F0 /* ADFullScreenArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenArchive.swift; sourceTree = "<group>"; };
 		918528B9271E9461002AE8A0 /* ArchiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCell.swift; sourceTree = "<group>"; };
 		918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDelegates.swift; sourceTree = "<group>"; };
 		918528BD271E94D1002AE8A0 /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
@@ -152,6 +151,7 @@
 		919BED75277A0E0E0030612A /* SendMailFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailFull.swift; sourceTree = "<group>"; };
 		91BAFFBA27970B31008F3BEF /* ADFullScreenDetailArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFullScreenDetailArchive.swift; sourceTree = "<group>"; };
 		91BAFFBC27970BA3008F3BEF /* DetailArchiveDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArchiveDelegates.swift; sourceTree = "<group>"; };
+		91BAFFBF2797F309008F3BEF /* ArchiveDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDetailCell.swift; sourceTree = "<group>"; };
 		91C949B2273B958300BC2606 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		91CDA707272A765E00B1D9DD /* MenuCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCells.swift; sourceTree = "<group>"; };
 		91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCellFullVersion.swift; sourceTree = "<group>"; };
@@ -198,6 +198,7 @@
 				102A845825F513A500D78619 /* ServiceCell.swift */,
 				91CDA707272A765E00B1D9DD /* MenuCells.swift */,
 				918528B9271E9461002AE8A0 /* ArchiveCell.swift */,
+				91BAFFBF2797F309008F3BEF /* ArchiveDetailCell.swift */,
 				91DD59772745323300CE0200 /* ArchiveCellFullVersion.swift */,
 			);
 			path = Cell;
@@ -440,7 +441,6 @@
 				91EA2D09271D45A400EEC146 /* ArchiveViewController.swift */,
 				918528BB271E9488002AE8A0 /* ArchiveDelegates.swift */,
 				91EA2D0E271D4CA100EEC146 /* ArchiveBannerGoogleAds.swift */,
-				9152E04927268DF0003FF6F0 /* ADFullScreenArchive.swift */,
 			);
 			path = Archive;
 			sourceTree = "<group>";
@@ -604,6 +604,7 @@
 			files = (
 				103C5F5A25F57332004916E5 /* CIImage.swift in Sources */,
 				918528C0271E9A19002AE8A0 /* ArchiveItem.swift in Sources */,
+				91BAFFC02797F309008F3BEF /* ArchiveDetailCell.swift in Sources */,
 				919BED76277A0E0E0030612A /* SendMailFull.swift in Sources */,
 				1036512125EC1C24003F03D0 /* StartViewController.swift in Sources */,
 				1036511F25EC1C24003F03D0 /* AppDelegate.swift in Sources */,
@@ -616,7 +617,6 @@
 				1051B07C25F01F3400695C37 /* JSONSerialization.swift in Sources */,
 				10B0E635264DD70900003DA1 /* AppTrackingModalViewController.swift in Sources */,
 				918528BA271E9461002AE8A0 /* ArchiveCell.swift in Sources */,
-				9152E04A27268DF0003FF6F0 /* ADFullScreenArchive.swift in Sources */,
 				1036513225EC1D7D003F03D0 /* UIColors.swift in Sources */,
 				911007182743CD01004B7785 /* LoadImage.swift in Sources */,
 				9110074A2744E21A004B7785 /* MenuDelegatesNoFull.swift in Sources */,

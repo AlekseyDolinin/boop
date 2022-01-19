@@ -11,7 +11,7 @@ class ParseHTML {
                     onError: { error in
             print("Error parse html: \(error)")},
                     onSuccess: { result in
-            completion(Response(title: result.title ?? "",
+            completion(Response(title: result.title ?? "Title not found",
                                 description: result.description ?? "",
                                 image: result.image ?? "",
                                 icon: result.icon ?? ""))

@@ -19,6 +19,7 @@ class MenuFullVersionViewController: UIViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
         ///
         NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in

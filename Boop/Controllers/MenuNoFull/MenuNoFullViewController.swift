@@ -1,7 +1,7 @@
 import UIKit
 import LinkPresentation
 
-class MenuNoFullViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
+class MenuNoFullViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var viewSelf: MenuView! {
         guard isViewLoaded else { return nil }
@@ -19,7 +19,6 @@ class MenuNoFullViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
         ///
@@ -45,12 +44,6 @@ class MenuNoFullViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewWillAppear(animated)
         viewSelf.configure()
         viewSelf.menuTable.reloadData()
-    }
-    
-    ///
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-//        print("back")
-        return true
     }
     
     ///

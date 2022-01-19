@@ -26,12 +26,12 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     }
     
     static var selectedService: Service = .Isgd
-    static var shortLink: String!
     
     let pasteboard = UIPasteboard.general
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
     var longLink: String!
+    var shortLink: String!
     var arrayKeysServices: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     var indexSelectedService = 0
     var action: Actions = .none
@@ -53,7 +53,7 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if StartViewController.shortLink == nil {
+        if self.shortLink == nil {
             self.viewSelf.configure()
         }
     }
@@ -92,40 +92,36 @@ class StartViewController: UIViewController, GADBannerViewDelegate, GADInterstit
     func showResult(resutShortUrl: String) {
         self.viewSelf.showMessage(text: AppLanguage.dictionary["done"]!.stringValue)
         self.viewSelf.linkLabel.text = resutShortUrl
-        StartViewController.shortLink = resutShortUrl
+        self.shortLink = resutShortUrl
         self.viewSelf.shortLink = resutShortUrl
         self.viewSelf.alphaStackActionButtons(valueAlpha: 1.0, duration: 0.2)
     }
     
     ///
     func showControllerShare() {
-        let shareController = UIActivityViewController(activityItems: [StartViewController.shortLink as Any], applicationActivities: nil)
+        let shareController = UIActivityViewController(activityItems: [self.shortLink as Any], applicationActivities: nil)
         shareController.completionWithItemsHandler = {_, bool, _, _ in
-            if bool {
-                print("it is done!")
-            } else {
-                print("error send")
-            }
+            bool == true ? print("it is done!") : print("error send")
         }
         present(shareController, animated: true)
     }
     
     ///
     func copiedShortLink() {
-        pasteboard.string = StartViewController.shortLink
+        pasteboard.string = self.shortLink
         viewSelf.showMessage(text: AppLanguage.dictionary["linkCopied"]!.stringValue)
     }
 
     ///
     func addItemInArchive() {
         if StoreManager.isFullVersion() {
-            Archive.addItemInArchive(longLink: self.longLink)
+            Archive.addItemInArchive(longLink: self.longLink, shortLink: self.shortLink)
         } else {
             ///проверка количества записей
             if SplashViewController.archive.count >= 10 {
                 self.showAlert()
             } else {
-                Archive.addItemInArchive(longLink: self.longLink)
+                Archive.addItemInArchive(longLink: self.longLink, shortLink: self.shortLink)
             }
         }
     }

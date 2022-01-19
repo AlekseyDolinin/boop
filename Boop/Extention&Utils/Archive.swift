@@ -29,20 +29,20 @@ class Archive {
     }
     
     ///
-    class func addItemInArchive(longLink: String) {
-        Archive.createArchiveItem(longLink: longLink) { archiveItem in
+    class func addItemInArchive(longLink: String, shortLink: String) {
+        Archive.createArchiveItem(longLink: longLink, shortLink: shortLink) { archiveItem in
             SplashViewController.archive.append(archiveItem)
             saveArchive(arrayArchive: SplashViewController.archive)
         }
     }
     
     ///
-    class func createArchiveItem(longLink: String, completion: @escaping (ArchiveItem) -> ()) {
+    class func createArchiveItem(longLink: String, shortLink: String, completion: @escaping (ArchiveItem) -> ()) {
         ParseHTML.parse(link: longLink) { response in
             completion(ArchiveItem(id: UUID().uuidString,
                                    name: response.title,
                                    description: nil,
-                                   shortLink: StartViewController.shortLink,
+                                   shortLink: shortLink,
                                    longLink: longLink,
                                    date: Date(),
                                    iconLink: response.icon,

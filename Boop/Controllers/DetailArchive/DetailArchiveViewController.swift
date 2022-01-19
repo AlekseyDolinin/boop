@@ -11,6 +11,7 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
     
     var archiveItem: ArchiveItem!
     var interstitial: GADInterstitial!
+    let pasteboard = UIPasteboard.general
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,25 +19,13 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
         viewSelf.archiveItemTable.delegate = self
         viewSelf.archiveItemTable.dataSource = self
         
+        viewSelf.archiveItem = self.archiveItem
+        viewSelf.configure()
+        
         if StoreManager.isFullVersion() == false {
             setGadFullView()
         }
-        
-//        print(archiveItem.id)
-//        print(archiveItem.name)
-//        print(archiveItem.description)
-//        print(archiveItem.shortLink)
-//        print(archiveItem.longLink)
-//        print(archiveItem.date)
-//        print(archiveItem.iconLink)
-//        print(archiveItem.previewLink)
-
     }
-
-    
-    
-    
-    
     
     ///
     func showControllerShare() {
@@ -51,21 +40,33 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
         present(shareController, animated: true)
     }
     
-    
+    ///
+    func showAlertCopy() {
+        let alert = UIAlertController(title: nil, message: AppLanguage.dictionary["linkCopied"]!.stringValue, preferredStyle: .alert)
+        present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            alert.dismiss(animated: true)
+        }
+    }
     
     //
     @IBAction func copyShortLink(_ sender: Any) {
-        
+        pasteboard.string = archiveItem.shortLink
+        showAlertCopy()
     }
     
     //
     @IBAction func copyLongLink(_ sender: Any) {
-        
+        pasteboard.string = archiveItem.longLink
+        showAlertCopy()
     }
     
     //
     @IBAction func qrCode(_ sender: Any) {
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
+        vc.linkForQRCode = archiveItem.shortLink
+        vc.modalPresentationStyle = .formSheet
+        self.present(vc, animated: true)
     }
     
     //
@@ -89,11 +90,6 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
             self.present(vc, animated: true)
         }
     }
-    
-    
-    
-    
-    
     
     ///
     @IBAction func closeView (_ sender: UIButton) {

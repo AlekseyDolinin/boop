@@ -35,7 +35,7 @@ extension StartViewController {
     ///
     @IBAction func showQRCode(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
-        vc.linkForQRCode = StartViewController.shortLink
+        vc.linkForQRCode = self.shortLink
         vc.modalPresentationStyle = .formSheet
         present(vc, animated: true)
     }
@@ -65,7 +65,7 @@ extension StartViewController {
         viewSelf.linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
         viewSelf.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
         self.longLink = nil
-        StartViewController.shortLink = nil
+        self.shortLink = nil
     }
     
     ///

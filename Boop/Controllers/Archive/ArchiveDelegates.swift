@@ -1,6 +1,4 @@
 import UIKit
-import SafariServices
-import GoogleMobileAds
 
 extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -19,67 +17,10 @@ extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailArchiveViewController") as! DetailArchiveViewController
         vc.archiveItem = arrayArchive[indexPath.row]
         vc.modalPresentationStyle = .pageSheet
         present(vc, animated: true)
-        
-        
-        
-        self.shortLink = self.arrayArchive[indexPath.row].shortLink
-        
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-
-        let copyShortLink = AppLanguage.dictionary["copyShortLink"]!.stringValue
-        let actionCopyShortLink = UIAlertAction(title: copyShortLink, style: .default) { action in
-            self.copyToClipboardShortLink(index: indexPath.row)
-        }
-
-        let copyLongLink = AppLanguage.dictionary["copyLongLink"]!.stringValue
-        let actionCopyLongLink = UIAlertAction(title: copyLongLink, style: .default) { action in
-            self.copyToClipboardLongLink(index: indexPath.row)
-        }
-        
-        let qrCode = AppLanguage.dictionary["qrCode"]!.stringValue
-        let actionQR = UIAlertAction(title: qrCode, style: .default) { action in
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
-            vc.linkForQRCode = self.shortLink
-            vc.modalPresentationStyle = .formSheet
-            self.present(vc, animated: true)
-        }
-        
-        let shareShortLink = AppLanguage.dictionary["shareShortLink"]!.stringValue
-        let actionShareLink = UIAlertAction(title: shareShortLink, style: .default) { action in
-            if StoreManager.isFullVersion() {
-                self.showControllerShare()
-            } else {
-                if self.interstitial.isReady == true {
-                    print("ролик готов")
-                    self.interstitial.present(fromRootViewController: self)
-                } else {
-                    self.showControllerShare()
-                }
-            }
-        }
-        
-//        let openLongLink = AppLanguage.dictionary["openLongLink"]!.stringValue
-//        let actionOpenLink = UIAlertAction(title: openLongLink, style: .default) { action in
-//            if let url = URL(string: self.arrayArchive[indexPath.row].longLink) {
-//                let vc = SafariViewController(url: url, configuration: SFSafariViewController.Configuration())
-//                self.present(vc, animated: true)
-//            }
-//        }
-        
-//        let titleCancel = AppLanguage.dictionary["cancel"]!.stringValue
-//        let actionCancel = UIAlertAction(title: titleCancel, style: .cancel) { action in }
-//        actionSheet.addAction(actionCopyShortLink)
-//        actionSheet.addAction(actionCopyLongLink)
-//        actionSheet.addAction(actionQR)
-//        actionSheet.addAction(actionShareLink)
-//        actionSheet.addAction(actionOpenLink)
-//        actionSheet.addAction(actionCancel)
-//        present(actionSheet, animated: true)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
