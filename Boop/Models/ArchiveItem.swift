@@ -10,6 +10,7 @@ struct ArchiveItem: Codable {
     var date: Date
     var iconLink: String?
     var previewLink: String?
+    var tagColor: String?
     
     init(
         id: String,
@@ -19,7 +20,8 @@ struct ArchiveItem: Codable {
         longLink: String,
         date: Date,
         iconLink: String? = nil,
-        previewLink: String? = nil
+        previewLink: String? = nil,
+        tagColor: String? = nil
     ){
         self.id = id
         self.name = name
@@ -29,5 +31,6 @@ struct ArchiveItem: Codable {
         self.date = date
         self.iconLink = iconLink
         self.previewLink = previewLink
+        self.tagColor = tagColor
     }
 }

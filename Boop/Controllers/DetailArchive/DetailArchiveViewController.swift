@@ -51,6 +51,36 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
     }
     
     //
+    @IBAction func selectColorTag(_ sender: UIButton) {
+        print(sender.restorationIdentifier)
+        
+        archiveItem.tagColor = sender.restorationIdentifier
+        
+        viewSelf.yellowTagButton.setImage(UIImage(named: "colorTagDeselect"), for: .normal)
+        viewSelf.blueTagButton.setImage(UIImage(named: "colorTagDeselect"), for: .normal)
+        viewSelf.greenTagButton.setImage(UIImage(named: "colorTagDeselect"), for: .normal)
+        viewSelf.redTagButton.setImage(UIImage(named: "colorTagDeselect"), for: .normal)
+
+        switch archiveItem.tagColor {
+        case "yellowTag":
+            viewSelf.topIndicatorColorTag.backgroundColor = .Yellow_
+            viewSelf.yellowTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
+        case "blueTag":
+            viewSelf.topIndicatorColorTag.backgroundColor = .Blue_
+            viewSelf.blueTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
+        case "greenTag":
+            viewSelf.topIndicatorColorTag.backgroundColor = .Green_
+            viewSelf.greenTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
+        case "redTag":
+            viewSelf.topIndicatorColorTag.backgroundColor = .Red_
+            viewSelf.redTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
+        default:
+            viewSelf.topIndicatorColorTag.backgroundColor = .clear
+        }
+        
+    }
+    
+    //
     @IBAction func copyShortLink(_ sender: Any) {
         pasteboard.string = archiveItem.shortLink
         showAlertCopy()

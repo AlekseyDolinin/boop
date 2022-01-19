@@ -15,6 +15,16 @@ class DetailArchiveView: UIView {
     @IBOutlet weak var getFullVersionButton: UIButton!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
+    @IBOutlet weak var topIndicatorColorTag: UIView!
+    @IBOutlet weak var yellowTagButton: UIButton!
+    @IBOutlet weak var blueTagButton: UIButton!
+    @IBOutlet weak var greenTagButton: UIButton!
+    @IBOutlet weak var redTagButton: UIButton!
+    @IBOutlet weak var clearTagButton: UIButton!
+    
+    
+    
+    
     var archiveItem: ArchiveItem!
     
     override func awakeFromNib() {
