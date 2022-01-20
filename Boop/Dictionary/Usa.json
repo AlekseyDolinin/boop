@@ -30,5 +30,6 @@
     "openLongLink": "Open long link in browser",
     "cancel": "Cancel",
     "descriptionPreview": "Preview is only available in the full version of the App",
-    "getFullVersionInButton": "Get Full version"
+    "getFullVersionInButton": "Get Full version",
+    "errorGetLinkPrew": "Error getting preview link"
 }

@@ -10,7 +10,6 @@ class DetailArchiveView: UIView {
     @IBOutlet weak var openLongLinkButton: ButtonBasic!
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var containerForPreviewImage: UIView!
-    @IBOutlet weak var blureView: UIVisualEffectView!
     @IBOutlet weak var descriptionPreviewLabel: UILabel!
     @IBOutlet weak var getFullVersionButton: UIButton!
     @IBOutlet weak var loader: UIActivityIndicatorView!
@@ -50,15 +49,25 @@ class DetailArchiveView: UIView {
     
     ///
     func setPreview() {
-        guard let url: URL = URL(string: archiveItem.previewLink ?? "") else {
-            print("error url previewLink")
-            previewImage.isHidden = true
+                
+        if !StoreManager.isFullVersion() {
+            descriptionPreviewLabel.isHidden = false
+            previewImage.image = UIImage(named: "bg_1")
+            descriptionPreviewLabel.text = AppLanguage.dictionary["descriptionPreview"]!.stringValue
             return
         }
-        blureView.isHidden = StoreManager.isFullVersion()
-        descriptionPreviewLabel.isHidden = StoreManager.isFullVersion()
-        LoadImage.get(urlImage: url) { image in
-            self.previewImage.image = image
+        
+        self.previewImage.image = UIImage(named: "bg_1")
+        self.descriptionPreviewLabel.text = AppLanguage.dictionary["errorGetLinkPrew"]!.stringValue + "\n🤷🏽"
+        
+        if let previewLink = archiveItem.previewLink {
+            guard let url: URL = URL(string: previewLink) else {
+                return
+            }
+            LoadImage.get(urlImage: url) { image in
+                self.descriptionPreviewLabel.isHidden = true
+                self.previewImage.image = image
+            }
         }
     }
 }
@@ -79,6 +88,5 @@ extension DetailArchiveView {
         shareShortLinkButton.setTitle(AppLanguage.dictionary["shareShortLink"]!.stringValue, for: .normal)
         openLongLinkButton.setTitle(AppLanguage.dictionary["openLongLink"]!.stringValue, for: .normal)
         getFullVersionButton.setTitle(AppLanguage.dictionary["getFullVersionInButton"]!.stringValue, for: .normal)
-        descriptionPreviewLabel.text = AppLanguage.dictionary["descriptionPreview"]!.stringValue
     }
 }

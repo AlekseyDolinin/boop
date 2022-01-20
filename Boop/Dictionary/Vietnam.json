@@ -30,7 +30,8 @@
     "openLongLink": "Mở liên kết dài trong trình duyệt",
     "cancel": "Hủy bỏ",
     "descriptionPreview": "Bản xem trước chỉ có sẵn trong phiên bản đầy đủ của ứng dụng",
-    "getFullVersionInButton": "Lấy phiên bản đầy đủ"
+    "getFullVersionInButton": "Lấy phiên bản đầy đủ",
+    "errorGetLinkPrew": "Lỗi khi nhận liên kết xem trước"
     
     
     
