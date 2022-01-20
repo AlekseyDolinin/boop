@@ -30,5 +30,6 @@
     "openLongLink": "Открыть длинную ссылку в браузере",
     "cancel": "Отмена",
     "descriptionPreview": "Превью доступно только в полной версии приложения",
-    "getFullVersionInButton": "Получить полную версию"
+    "getFullVersionInButton": "Получить полную версию",
+    "errorGetLinkPrew": "Ошибка получения превью ссылки"
 }
