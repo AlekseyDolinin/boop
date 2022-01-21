@@ -12,6 +12,7 @@ class ArchiveCellFullVersion: UITableViewCell {
     @IBOutlet weak var favicon: UIImageView!
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var colorTagView: UIView!
     
     var archiveItem: ArchiveItem!
     let slp = SwiftLinkPreview(session: URLSession.shared, workQueue: SwiftLinkPreview.defaultWorkQueue, responseQueue: DispatchQueue.main, cache: DisabledCache.instance)
@@ -28,6 +29,24 @@ class ArchiveCellFullVersion: UITableViewCell {
         setName()
         getFavicon()
         setPreview()
+        setColorTag()
+    }
+    
+    func setColorTag() {
+        switch archiveItem.tagColor {
+        case "yellowTag":
+            colorTagView.backgroundColor = .Yellow_
+        case "blueTag":
+            colorTagView.backgroundColor = .Blue_
+        case "greenTag":
+            colorTagView.backgroundColor = .Green_
+        case "redTag":
+            colorTagView.backgroundColor = .Red_
+        case "clearTag":
+            colorTagView.backgroundColor = .clear
+        default:
+            break
+        }
     }
     
     func setShortLink() {
@@ -96,5 +115,6 @@ extension ArchiveCellFullVersion {
     func setUI() {
         backView.layer.cornerRadius = 8.0
         backView.clipsToBounds = true
+        colorTagView.layer.cornerRadius = colorTagView.frame.width / 2
     }
 }

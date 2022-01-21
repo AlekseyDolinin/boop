@@ -10,10 +10,10 @@ class DetailArchiveView: UIView {
     @IBOutlet weak var openLongLinkButton: ButtonBasic!
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var containerForPreviewImage: UIView!
+    @IBOutlet weak var msgPreviewLabel: UILabel!
     @IBOutlet weak var descriptionPreviewLabel: UILabel!
     @IBOutlet weak var getFullVersionButton: UIButton!
     @IBOutlet weak var loader: UIActivityIndicatorView!
-    
     @IBOutlet weak var topIndicatorColorTag: UIView!
     @IBOutlet weak var yellowTagButton: UIButton!
     @IBOutlet weak var blueTagButton: UIButton!
@@ -21,8 +21,8 @@ class DetailArchiveView: UIView {
     @IBOutlet weak var redTagButton: UIButton!
     @IBOutlet weak var clearTagButton: UIButton!
     
-    
-    
+    @IBOutlet weak var stackTagButtons: UIStackView!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     var archiveItem: ArchiveItem!
     
@@ -33,6 +33,28 @@ class DetailArchiveView: UIView {
     ///
     func configure() {
         setPreview()
+        setColorTag()
+    }
+    
+    func setColorTag() {
+        switch archiveItem.tagColor {
+        case "yellowTag":
+            topIndicatorColorTag.backgroundColor = .Yellow_
+            yellowTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
+        case "blueTag":
+            topIndicatorColorTag.backgroundColor = .Blue_
+            blueTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
+        case "greenTag":
+            topIndicatorColorTag.backgroundColor = .Green_
+            greenTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
+        case "redTag":
+            topIndicatorColorTag.backgroundColor = .Red_
+            redTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
+        case "clearTag":
+            topIndicatorColorTag.backgroundColor = .clear
+        default:
+            break
+        }
     }
     
     ///
@@ -49,22 +71,26 @@ class DetailArchiveView: UIView {
     
     ///
     func setPreview() {
-                
+        
         if !StoreManager.isFullVersion() {
-            descriptionPreviewLabel.isHidden = false
+            msgPreviewLabel.isHidden = false
             previewImage.image = UIImage(named: "bg_1")
-            descriptionPreviewLabel.text = AppLanguage.dictionary["descriptionPreview"]!.stringValue
+            msgPreviewLabel.text = AppLanguage.dictionary["descriptionPreview"]!.stringValue
+            descriptionPreviewLabel.isHidden = true
             return
         }
         
         self.previewImage.image = UIImage(named: "bg_1")
-        self.descriptionPreviewLabel.text = AppLanguage.dictionary["errorGetLinkPrew"]!.stringValue + "\n🤷🏽"
+        self.msgPreviewLabel.text = AppLanguage.dictionary["errorGetLinkPrew"]!.stringValue
+        descriptionPreviewLabel.isHidden = false
+        descriptionPreviewLabel.text = AppLanguage.dictionary["errorGetLinkPrewDescription"]!.stringValue
         
         if let previewLink = archiveItem.previewLink {
             guard let url: URL = URL(string: previewLink) else {
                 return
             }
             LoadImage.get(urlImage: url) { image in
+                self.msgPreviewLabel.isHidden = true
                 self.descriptionPreviewLabel.isHidden = true
                 self.previewImage.image = image
             }
@@ -76,9 +102,17 @@ extension DetailArchiveView {
     ///
     func setUI() {
         setLabels()
-        ///
+        
+        //
         getFullVersionButton.isHidden = StoreManager.isFullVersion()
         loader.stopAnimating()
+        
+        //
+        if !StoreManager.isFullVersion() {
+            stackTagButtons.isHidden = true
+            topConstraint.constant = 40
+        }
+        
     }
     ///
     func setLabels() {

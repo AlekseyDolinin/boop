@@ -31,7 +31,8 @@
     "cancel": "Hủy bỏ",
     "descriptionPreview": "Bản xem trước chỉ có sẵn trong phiên bản đầy đủ của ứng dụng",
     "getFullVersionInButton": "Lấy phiên bản đầy đủ",
-    "errorGetLinkPrew": "Lỗi khi nhận liên kết xem trước"
+    "errorGetLinkPrew": "Lỗi khi nhận liên kết xem trước \n🤷🏽",
+    "errorGetLinkPrewDescription": "Bản xem trước có thể không được hiển thị nếu trang web không cung cấp nội dung này"
     
     
     

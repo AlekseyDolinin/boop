@@ -56,6 +56,8 @@ class ArchiveDetailCellFullVersion: UITableViewCell {
     }
     
     func setDescription() {
+        
+        print(archiveItem.description)
         descriptionLabel.text = archiveItem.description
     }
     

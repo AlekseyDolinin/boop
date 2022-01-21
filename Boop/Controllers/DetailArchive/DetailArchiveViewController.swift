@@ -16,15 +16,35 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         viewSelf.archiveItemTable.delegate = self
         viewSelf.archiveItemTable.dataSource = self
-        
         viewSelf.archiveItem = self.archiveItem
         viewSelf.configure()
-        
         if StoreManager.isFullVersion() == false {
             setGadFullView()
+        }
+        ///
+        NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
+            DispatchQueue.main.async {
+                print("модалка благодарности покупки")
+                self.dismiss(animated: true) {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
+        
+        viewSelf.setColorTag()
+    }
+    
+    /// авторесайз футера таблицы
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        guard let footerView = viewSelf.archiveItemTable.tableFooterView else {return}
+        let size = footerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        if footerView.frame.size.height != size.height {
+            footerView.frame.size.height = size.height
+            viewSelf.archiveItemTable.tableFooterView = footerView
+            viewSelf.archiveItemTable.layoutIfNeeded()
         }
     }
     
@@ -52,32 +72,26 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
     
     //
     @IBAction func selectColorTag(_ sender: UIButton) {
-        print(sender.restorationIdentifier)
-        
-        archiveItem.tagColor = sender.restorationIdentifier
+        archiveItem.tagColor = sender.restorationIdentifier ?? "clearTag"
         
         viewSelf.yellowTagButton.setImage(UIImage(named: "colorTagDeselect"), for: .normal)
         viewSelf.blueTagButton.setImage(UIImage(named: "colorTagDeselect"), for: .normal)
         viewSelf.greenTagButton.setImage(UIImage(named: "colorTagDeselect"), for: .normal)
         viewSelf.redTagButton.setImage(UIImage(named: "colorTagDeselect"), for: .normal)
-
-        switch archiveItem.tagColor {
-        case "yellowTag":
-            viewSelf.topIndicatorColorTag.backgroundColor = .Yellow_
-            viewSelf.yellowTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
-        case "blueTag":
-            viewSelf.topIndicatorColorTag.backgroundColor = .Blue_
-            viewSelf.blueTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
-        case "greenTag":
-            viewSelf.topIndicatorColorTag.backgroundColor = .Green_
-            viewSelf.greenTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
-        case "redTag":
-            viewSelf.topIndicatorColorTag.backgroundColor = .Red_
-            viewSelf.redTagButton.setImage(UIImage(named: "colorTag"), for: .normal)
-        default:
-            viewSelf.topIndicatorColorTag.backgroundColor = .clear
-        }
         
+        // назначение тэга
+        self.archiveItem.tagColor = sender.restorationIdentifier ?? "clearTag"
+        viewSelf.archiveItem = self.archiveItem
+        viewSelf.setColorTag()
+        
+        // поиск и замена ссылки в архиве
+        for (index, archiveItem) in  SplashViewController.archive.enumerated() {
+            if archiveItem.id == self.archiveItem.id {
+                SplashViewController.archive[index] = self.archiveItem
+                // сообщение что ссылка изменена
+                NotificationCenter.default.post(name: nArchiveItemEdit, object: nil)
+            }
+        }
     }
     
     //

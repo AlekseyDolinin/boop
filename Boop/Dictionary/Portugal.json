@@ -31,5 +31,6 @@
     "cancel": "Cancelar",
     "descriptionPreview": "A visualização está disponível apenas na versão completa do aplicativo",
     "getFullVersionInButton": "Tenha a versão completa",
-    "errorGetLinkPrew": "Erro ao obter o link de visualização"
+    "errorGetLinkPrew": "Erro ao obter o link de visualização \n🤷🏽",
+    "errorGetLinkPrewDescription": "A visualização pode não ser exibida se o site não fornecer esse conteúdo"
 }

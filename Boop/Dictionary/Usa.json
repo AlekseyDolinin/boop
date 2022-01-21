@@ -31,5 +31,6 @@
     "cancel": "Cancel",
     "descriptionPreview": "Preview is only available in the full version of the App",
     "getFullVersionInButton": "Get Full version",
-    "errorGetLinkPrew": "Error getting preview link"
+    "errorGetLinkPrew": "Error getting preview link \n🤷🏽",
+    "errorGetLinkPrewDescription": "Preview may not be displayed if the site does not provide this content"
 }

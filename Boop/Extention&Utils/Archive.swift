@@ -46,7 +46,8 @@ class Archive {
                                    longLink: longLink,
                                    date: Date(),
                                    iconLink: response.icon,
-                                   previewLink: response.image))
+                                   previewLink: response.image,
+                                   tagColor: "clearTag"))
         }
     }
 }
