@@ -32,14 +32,7 @@ extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
             self.arrayArchive.remove(at: indexPath.row)
             self.viewSelf.archiveTable.reloadData()
             /// запись нового массива
-            do {
-                let encoder = JSONEncoder()
-                let data = try encoder.encode(self.arrayArchive)
-                UserDefaults.standard.set(data, forKey: "arrayArchive")
-            } catch {
-                print("Unable to Encode Note (\(error))")
-            }
-            completion(true)
+            Archive.saveArchive(arrayArchive: self.arrayArchive)
         }
         deleteAction.image = UIImage(named: "trash.png")
         deleteAction.backgroundColor = .Violet_Dark_
