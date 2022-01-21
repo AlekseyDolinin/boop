@@ -19,12 +19,15 @@ class Archive {
     
     ///
     class func saveArchive(arrayArchive: [ArchiveItem]) {
-        do {
-            let encoder = JSONEncoder()
-            let data = try encoder.encode(arrayArchive)
-            UserDefaults.standard.set(data, forKey: "arrayArchive")
-        } catch {
-            print("Unable to Encode Note (\(error))")
+        print("save: \(arrayArchive.count)")
+        DispatchQueue.main.async {
+            do {
+                let encoder = JSONEncoder()
+                let data = try encoder.encode(arrayArchive)
+                UserDefaults.standard.set(data, forKey: "arrayArchive")
+            } catch {
+                print("Unable to Encode Note (\(error))")
+            }
         }
     }
     

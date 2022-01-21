@@ -88,6 +88,9 @@ class DetailArchiveViewController: UIViewController, GADInterstitialDelegate {
         for (index, archiveItem) in  SplashViewController.archive.enumerated() {
             if archiveItem.id == self.archiveItem.id {
                 SplashViewController.archive[index] = self.archiveItem
+                // запись обновлённого массива ссылок в дефолт
+                Archive.saveArchive(arrayArchive: SplashViewController.archive)
+                
                 // сообщение что ссылка изменена
                 NotificationCenter.default.post(name: nArchiveItemEdit, object: nil)
             }

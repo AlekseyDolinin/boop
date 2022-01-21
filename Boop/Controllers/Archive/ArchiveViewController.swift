@@ -28,17 +28,14 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate {
         
         /// 
         NotificationCenter.default.addObserver(forName: nArchiveItemEdit, object: nil, queue: nil) { notification in
-            self.parseArchive()
+            self.arrayArchive = SplashViewController.archive
+            self.viewSelf.archiveTable.reloadData()
         }
     }
     
     // парсинг архива при первом заходе и при изменении данных по ссылке
     func parseArchive() {
-        
-        // запись обновлённого массива ссылок в дефолт
-        Archive.saveArchive(arrayArchive: SplashViewController.archive)
-        
-        // парсинг обновлённого массива ссылок
+        // парсинг массива ссылок
         Archive.parse(completion: { array in
             self.viewSelf.emptyLabel.isHidden = array.isEmpty ? false : true
             self.arrayArchive = array.isEmpty ? [] : array
