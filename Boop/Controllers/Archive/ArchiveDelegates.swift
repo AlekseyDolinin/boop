@@ -1,6 +1,5 @@
 import UIKit
 import SafariServices
-import GoogleMobileAds
 
 extension ArchiveViewController {
     
@@ -44,16 +43,7 @@ extension ArchiveViewController {
         
         let shareShortLink = AppLanguage.dictionary["shareShortLink"]!.stringValue
         let actionShareLink = UIAlertAction(title: shareShortLink, style: .default) { action in
-            if StoreManager.isFullVersion() {
-                self.showControllerShare()
-            } else {
-                if self.interstitial.isReady == true {
-                    print("ролик готов")
-                    self.interstitial.present(fromRootViewController: self)
-                } else {
-                    self.showControllerShare()
-                }
-            }
+            self.showControllerShare()
         }
         
         let openLongLink = AppLanguage.dictionary["openLongLink"]!.stringValue

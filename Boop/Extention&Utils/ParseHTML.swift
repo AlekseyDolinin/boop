@@ -8,13 +8,12 @@ class ParseHTML {
                                    responseQueue: DispatchQueue.main,
                                    cache: DisabledCache.instance)
         slp.preview(link,
-                    onError: { error in
-            print("Error parse html: \(error)")},
                     onSuccess: { result in
             completion(Response(title: result.title ?? "",
                                 description: result.description ?? "",
                                 image: result.image ?? "",
                                 icon: result.icon ?? ""))
-        })
+        }, onError: { error in
+            print("Error parse html: \(error)")})
     }
 }

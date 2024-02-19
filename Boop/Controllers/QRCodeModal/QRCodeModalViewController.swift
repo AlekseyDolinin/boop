@@ -1,7 +1,6 @@
 import UIKit
-import GoogleMobileAds
 
-class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
+class QRCodeModalViewController: UIViewController {
 
     var viewSelf: QRCodeModalView! {
         guard isViewLoaded else {return nil}
@@ -10,7 +9,6 @@ class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
     
     var linkForQRCode: String!
     var dataImageQRCode: Data!
-    var interstitial: GADInterstitial!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +23,9 @@ class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
             viewSelf.closeButton.isHidden = false
         }
         
-        if StoreManager.isFullVersion() == false {
-            setGadFullView()
-        }
+//        if StoreManager.isFullVersion() == false {
+//            setGadFullView()
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,15 +80,6 @@ class QRCodeModalViewController: UIViewController, GADInterstitialDelegate {
     
     ///
     @IBAction func shareAction (_ sender: UIButton) {
-        if StoreManager.isFullVersion() {
-            shareQRCode()
-        } else {
-            if interstitial.isReady == true {
-                print("ролик готов")
-                interstitial.present(fromRootViewController: self)
-            } else {
-                shareQRCode()
-            }
-        }
+        shareQRCode()
     }
 }

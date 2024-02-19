@@ -82,7 +82,7 @@ open class SwiftLinkPreview: NSObject {
     // MARK: - Functions
     // Make preview
     //Swift-only preview function using Swift specific closure types
-    @nonobjc @discardableResult open func preview(_ text: String, onError: @escaping (PreviewError) -> (), onSuccess: @escaping (Response) -> ()) -> Cancellable {
+    @nonobjc @discardableResult open func preview(_ text: String, onSuccess: @escaping (Response) -> Void, onError: @escaping (PreviewError) -> Void) -> Cancellable {
 
         let cancellable = Cancellable()
 
@@ -222,7 +222,7 @@ open class SwiftLinkPreview: NSObject {
                             userInfo: [NSLocalizedDescriptionKey: theError.description]))
         }
 
-        return self.preview(text, onError: failure, onSuccess: success)
+        return self.preview(text, onSuccess: success, onError: failure)
     }
 }
 

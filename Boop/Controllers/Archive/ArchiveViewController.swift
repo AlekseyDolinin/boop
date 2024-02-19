@@ -1,9 +1,7 @@
 import UIKit
-import GoogleMobileAds
 import Foundation
-import GoogleMobileAds
 
-class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource, GADInterstitialDelegate {
+class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var viewSelf: ArchiveView! {
         guard isViewLoaded else { return nil }
@@ -11,9 +9,7 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
     }
     
     var arrayArchive = [ArchiveItem]()
-    var bannerView: GADBannerView!
     let pasteboard = UIPasteboard.general
-    var interstitial: GADInterstitial!
     var shortLink: String!
     
     override func viewDidLoad() {
@@ -25,11 +21,11 @@ class ArchiveViewController: UIViewController, GADBannerViewDelegate, UITableVie
             self.viewSelf.emptyLabel.isHidden = array.isEmpty ? false : true
             self.arrayArchive = array.isEmpty ? [] : array
         })
-        
-        if StoreManager.isFullVersion() == false {
-            setGadBanner()
-            setGadFullView()
-        }
+//        
+//        if StoreManager.isFullVersion() == false {
+//            setGadBanner()
+//            setGadFullView()
+//        }
     }
     
     ///
