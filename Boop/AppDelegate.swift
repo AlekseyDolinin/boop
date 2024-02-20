@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = nc
         window?.makeKeyAndVisible()
         
+        AppLanguage.setLanguage()
         return true
     }
 

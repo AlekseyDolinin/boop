@@ -2,10 +2,12 @@ import UIKit
 
 class API {
     
-//    /// выбоор сервиса
-//    /// в serviceName приходит имя выбраного сервиса
-//    class func post(inputLongLink: String, completion: @escaping (String) -> Void) {
-//        
+    // выбоор сервиса
+    // в serviceName приходит имя выбраного сервиса
+    class func selectService(_ inputLongLink: String, service: Service, completion: @escaping (String) -> Void) {
+        
+        print(inputLongLink)
+        print(service)
 //        switch StartViewController.selectedService {
 //            
 //        case .Isgd:
@@ -28,5 +30,5 @@ class API {
 //                completion(outShortLink)
 //            }
 //        }
-//    }
+    }
 }

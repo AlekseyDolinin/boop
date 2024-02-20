@@ -2,6 +2,13 @@ import UIKit
 import SwiftyJSON
 import Foundation
 
+enum Service: String, CaseIterable {
+    case Isgd = "https://is.gd/*"
+    case Shortener = "https://goolnk.com/*"
+    case TinyURL = "https://tiny.one/*"
+    case Click = "https://clck.ru/*"
+}
+
 final class StartViewController: UIViewController {
     
     private let bgImage = UIImageView()
@@ -9,7 +16,7 @@ final class StartViewController: UIViewController {
     private let scrollServices = UIScrollView()
     private let pageControl = UIPageControl()
     private let pastLinkButton = UIButton()
-    private let infoLabel = UILabel()
+    private let infoLabel = PaddingLabel()
     private let archiveButton = UIButton()
     private let stackActionsButton = UIStackView()
     private let backButton = UIButton()
@@ -20,15 +27,19 @@ final class StartViewController: UIViewController {
     
 //    static let shared = StartViewController()
     
-    enum Service: String, CaseIterable {
-        case Isgd = "https://is.gd/*"
-        case Shortener = "https://goolnk.com/*"
-        case TinyURL = "https://tiny.one/*"
-        case Click = "https://clck.ru/*"
-    }
+
     
-    var currentIndexCard = 0
+    var currentIndexService = 0
     var selectedService: Service = .Isgd
+    
+    func animationSaveInArchive() {
+        UIView.animate(withDuration: 0.4) {
+            self.menuButton.transform = CGAffineTransform(scaleX: 3, y: 3)
+            self.menuButton.transform = CGAffineTransform(rotationAngle: Double.pi * 3)
+        } completion: { bool in
+            self.menuButton.transform = .identity
+        }
+    }
     
 //    var services: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
     
@@ -43,6 +54,7 @@ final class StartViewController: UIViewController {
     
 //    let pasteboard = UIPasteboard.general
 //    var longLink: String!
+    var shortLink: String!
 //    var services: [Service] = [.Isgd, .Shortener, .TinyURL, .Click]
 //    var indexSelectedService = 0
 //    var action: Actions = .none
@@ -86,19 +98,7 @@ final class StartViewController: UIViewController {
 //        viewSelf.pagination.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
     }
     
-    ///
-    func createShortLink() {
-//        API.post(inputLongLink: longLink) { (responseShortLink) in
-//            self.viewSelf.placeLinkButton.isUserInteractionEnabled = true
-//            DispatchQueue.main.async {
-//                if responseShortLink != "" {
-//                    self.showResult(resutShortUrl: responseShortLink)
-//                } else {
-//                    self.viewSelf.showMessage(text: AppLanguage.dictionary["errorMsg"]!.stringValue)
-//                }
-//            }
-//        }
-    }
+
     
     ///
 //    func showResult(resutShortUrl: String) {
@@ -221,16 +221,74 @@ final class StartViewController: UIViewController {
     }
     
     @objc func pastAction(_ sender: UIButton) {
-        print("pastAction")
+        if shortLink != nil { return }
+        guard let text = UIPasteboard.general.string else {
+            print("text is empty")
+            return
+        }
+        guard let encodeString = text.encodeUrl() else {
+            print("error encodeString")
+            return
+        }
+//        print("encodeString: \(encodeString)")
+//        print("currentIndexService: \(currentIndexService)")
+        
+        // проверка вставлена ссылка или просто текст
+        if let longLink = URL(string: encodeString), let scheme = longLink.scheme {
+            if scheme != "https" && scheme != "http" {
+                showMessage(text: AppLanguage.dictionary["notFoundLink"]!.stringValue)
+                return
+            }
+            showMessage(text: AppLanguage.dictionary["pleaseWait"]!.stringValue)
+            pastLinkButton.setTitle(UIPasteboard.general.string, for: .normal)
+            pastLinkButton.isUserInteractionEnabled = false
+            createShortLink(longLink.absoluteString)
+        }
     }
+    
+
+
+    func createShortLink(_ longLink: String) {
+        print("longLink: \(longLink)")
+        API.selectService(longLink, service: Service.allCases[currentIndexService]) { (shortLink) in
+            
+            print("shortLink: \(shortLink)")
+            
+//            self.viewSelf.placeLinkButton.isUserInteractionEnabled = true
+//            DispatchQueue.main.async {
+//                if responseShortLink != "" {
+//                    self.showResult(resutShortUrl: responseShortLink)
+//                } else {
+//                    self.viewSelf.showMessage(text: AppLanguage.dictionary["errorMsg"]!.stringValue)
+//                }
+//            }
+        }
+    }
+    
+    
+    //
+    func showMessage(text: String) {
+        infoLabel.text = text
+
+        UIView.animate(withDuration: 0.1, animations: {
+            self.infoLabel.alpha = 1
+        }) { (true) in
+            UIView.animate(withDuration: 0.1, delay: 2.0, options: .curveLinear, animations: {
+                self.infoLabel.alpha = 0
+            }, completion: { (true) in
+                print("hide message")
+            })
+        }
+    }
+    
     
     @objc private func pageControlDidChange(_ sender: UIPageControl) {
         let newIndex = sender.currentPage
         if newIndex < 0 { return }
-        if newIndex != currentIndexCard {
-            currentIndexCard = newIndex
-            selectedService = Service.allCases[currentIndexCard]
-            scrollServices.setContentOffset(CGPoint(x: CGFloat(currentIndexCard) * view.frame.size.width, y: 0), animated: true)
+        if newIndex != currentIndexService {
+            currentIndexService = newIndex
+            selectedService = Service.allCases[currentIndexService]
+            scrollServices.setContentOffset(CGPoint(x: CGFloat(currentIndexService) * view.frame.size.width, y: 0), animated: true)
         }
     }
 }
@@ -241,10 +299,10 @@ extension StartViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let newIndex = Int(floorf(Float(scrollView.contentOffset.x) / Float(view.frame.size.width)))
         if newIndex < 0 { return }
-        if newIndex != currentIndexCard {
-            currentIndexCard = newIndex
-            pageControl.currentPage = currentIndexCard
-            selectedService = Service.allCases[currentIndexCard]
+        if newIndex != currentIndexService {
+            currentIndexService = newIndex
+            pageControl.currentPage = currentIndexService
+            selectedService = Service.allCases[currentIndexService]
         }
     }
 }
@@ -336,10 +394,10 @@ extension StartViewController {
     private func createPastLinkButton() {
         view.addSubview(pastLinkButton)
         pastLinkButton.setTitleColor(.black, for: .normal)
-        pastLinkButton.setTitle("pasteLinkHere", for: .normal)
-//        pastLinkButton.setTitle(AppLanguage.dictionary["pasteLinkHere"]!.stringValue, for: .normal)
+        pastLinkButton.setTitle(AppLanguage.dictionary["pasteLinkHere"]!.stringValue, for: .normal)
         pastLinkButton.backgroundColor = .white
         pastLinkButton.layer.cornerRadius = 30
+        pastLinkButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
         pastLinkButton.addTarget(self, action: #selector(pastAction), for: .touchUpInside)
         //
         pastLinkButton.translatesAutoresizingMaskIntoConstraints = false
@@ -352,17 +410,17 @@ extension StartViewController {
     
     private func createInfoLabel() {
         view.addSubview(infoLabel)
-//        gameCount.font = UIFont(name: "PTRootUI-Regular", size: 12.0)
+        infoLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         infoLabel.textColor = .black
         infoLabel.backgroundColor = .white
-        infoLabel.text = "56789"
         infoLabel.layer.cornerRadius = 4.0
         infoLabel.clipsToBounds = true
+        infoLabel.alpha = 0
         //
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
         infoLabel.bottomAnchor.constraint(equalTo: pastLinkButton.topAnchor, constant: -12).isActive = true
         infoLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        infoLabel.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        infoLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
     private func createStackActionsButton() {
@@ -460,76 +518,66 @@ extension StartViewController {
 
 
 
-
-
-
-
-
-
-
-
 import UIKit
 
-final class ServiceCard: UIView {
-            
-    private let backView = UIView()
-    private let titleLabel = UILabel()
-    private let subtitleLabel = UILabel()
-            
-    init(frame: CGRect, title: String, subtitle: String) {
-        super.init(frame: frame)
-        titleLabel.text = title
-        subtitleLabel.text = subtitle
-        createSubviews()
-    }
+extension StartViewController {
+
+//    ///
+//    @IBAction func copyAction(_ sender: UIButton) {
+//        copiedShortLink()
+//    }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-}
+//    ///
+//    @IBAction func shareAaction(_ sender: UIButton) {
+//        showControllerShare()
+//    }
     
+//    ///
+//    @IBAction func showQRCode(_ sender: Any) {
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
+//        vc.linkForQRCode = StartViewController.shortLink
+//        vc.modalPresentationStyle = .formSheet
+//        present(vc, animated: true)
+//    }
     
-extension ServiceCard {
+//    ///
+//    @IBAction func openMenu(_ sender: Any?) {
+//        /// проверка сосотояния покупок
+//        let priceFullVersion = UserDefaults.standard.object(forKey: booplinkFullversionID)
+//        let priceSupport = UserDefaults.standard.object(forKey: booplinkSupportID)
+//        if priceFullVersion == nil && priceSupport == nil {
+//            print("цены не получены")
+//            let vc = storyboard?.instantiateViewController(withIdentifier: "MenuNoPriceViewController") as! MenuNoPriceViewController
+//            navigationController?.pushViewController(vc, animated: true)
+//        } else {
+//            if StoreManager.isFullVersion() {
+//                let vc = storyboard?.instantiateViewController(withIdentifier: "MenuFullVersionViewController") as! MenuFullVersionViewController
+//                navigationController?.pushViewController(vc, animated: true)
+//            } else {
+//                let vc = storyboard?.instantiateViewController(withIdentifier: "MenuNoFullViewController") as! MenuNoFullViewController
+//                navigationController?.pushViewController(vc, animated: true)
+//            }
+//        }
+//    }
     
-    private func createSubviews() {
-        createBackView()
-        createtTitleLabel()
-        createSubtitleLabel()
-    }
+    ///
+//    @IBAction func backAction(_ sender: UIButton) {
+//        viewSelf.linkLabel.text = AppLanguage.dictionary["pasteLinkHere"]!.stringValue
+//        viewSelf.alphaStackActionButtons(valueAlpha: 0.0, duration: 0.2)
+//        self.longLink = nil
+//        StartViewController.shortLink = nil
+//    }
     
-    private func createBackView() {
-        addSubview(backView)
-        backView.backgroundColor = .white.withAlphaComponent(0.5)
-        backView.layer.cornerRadius = 8.0
-        //
-        backView.translatesAutoresizingMaskIntoConstraints = false
-        backView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        backView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        backView.leftAnchor.constraint(equalTo: leftAnchor, constant: 24).isActive = true
-        backView.rightAnchor.constraint(equalTo: rightAnchor, constant: -24).isActive = true
-    }
+    ///
+//    @IBAction func saveLinkAction(_ sender: UIButton) {
+//        viewSelf.animationSaveInArchive()
+//        viewSelf.animationPulse()
+//        addItemInArchive()
+//    }
     
-    private func createtTitleLabel() {
-        backView.addSubview(titleLabel)
-//        gameCount.font = UIFont(name: "PTRootUI-Regular", size: 12.0)
-        titleLabel.textColor = .black
-        titleLabel.textAlignment = .center
-        //
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
-        titleLabel.leftAnchor.constraint(equalTo: backView.leftAnchor, constant: 12).isActive = true
-        titleLabel.rightAnchor.constraint(equalTo: backView.rightAnchor, constant: -12).isActive = true
-    }
-    
-    private func createSubtitleLabel() {
-        backView.addSubview(subtitleLabel)
-//        gameCount.font = UIFont(name: "PTRootUI-Regular", size: 12.0)
-        subtitleLabel.textColor = .black
-        subtitleLabel.textAlignment = .center
-        //
-        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        subtitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
-        subtitleLabel.leftAnchor.constraint(equalTo: backView.leftAnchor, constant: 12).isActive = true
-        subtitleLabel.rightAnchor.constraint(equalTo: backView.rightAnchor, constant: -12).isActive = true
-    }
+    ///
+//    @IBAction func openArchiveAction(_ sender: Any?) {
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "ArchiveViewController")
+//        navigationController?.pushViewController(vc!, animated: true)
+//    }
 }

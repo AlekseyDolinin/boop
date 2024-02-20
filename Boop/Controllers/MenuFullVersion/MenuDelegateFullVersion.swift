@@ -29,9 +29,9 @@ extension MenuFullVersionViewController {
             menuCell.titleLabel.text = AppLanguage.dictionary["contactAuthor"]!.stringValue
         case 5:
             menuCell.titleLabel.text = AppLanguage.dictionary["support"]!.stringValue
-            if let priceSupport = UserDefaults.standard.object(forKey: booplinkSupportID) {
-                menuCell.subLabel.text = "\(priceSupport)"
-            }
+//            if let priceSupport = UserDefaults.standard.object(forKey: booplinkSupportID) {
+//                menuCell.subLabel.text = "\(priceSupport)"
+//            }
         default:
             break
         }

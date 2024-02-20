@@ -1,22 +1,7 @@
 //import UIKit
 //
 //class StartView: UIView {
-//    
-//    @IBOutlet weak var backButton: UIButton!
-//    @IBOutlet weak var copyButton: UIButton!
-//    @IBOutlet weak var generationQRButton: UIButton!
-//    @IBOutlet weak var shareButton: UIButton!
-//    @IBOutlet weak var saveInArchiveButton: UIButton!
-//    @IBOutlet weak var backViewLink: UIView!
-//    @IBOutlet weak var linkLabel: UILabel!
-//    @IBOutlet weak var placeLinkButton: UIButton!
-//    @IBOutlet weak var viewMessage: UIView!
-//    @IBOutlet weak var textMessage: UILabel!
-//    @IBOutlet weak var stackActionButtons: UIStackView!
-//    @IBOutlet weak var collectionServices: UICollectionView!
-//    @IBOutlet weak var pagination: UIPageControl!
-//    @IBOutlet weak var menuButton: UIButton!
-//    @IBOutlet weak var openArchiveButton: UIButton!
+//
 //
 //    var shortLink: String!
 //    
@@ -59,14 +44,7 @@
 //    }
 //    
 //    ///
-//    func animationSaveInArchive() {
-//        UIView.animate(withDuration: 0.4) {
-//            self.menuButton.transform = CGAffineTransform(scaleX: 3, y: 3)
-//            self.menuButton.transform = CGAffineTransform(rotationAngle: Double.pi * 3)
-//        } completion: { bool in
-//            self.menuButton.transform = .identity
-//        }
-//    }
+
 //    
 //    ///
 //    func animationPulse() {

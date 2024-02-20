@@ -8,34 +8,14 @@ class MenuFullVersionViewController: UIViewController, UITableViewDelegate, UITa
         return (view as! MenuView)
     }
     
-    var storeManager = StoreManager()
-    let priceManager = PriceManager()
     var urlToShare: URL? = URL(string: "https://apps.apple.com/ru/app/booplink/id1556606517")
-    
-    var priceSupport = UserDefaults.standard.object(forKey: booplinkSupportID)
-    var priceFullVersion = UserDefaults.standard.object(forKey: booplinkFullversionID)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSelf.menuTable.delegate = self
         viewSelf.menuTable.dataSource = self
         
-        ///
-        NotificationCenter.default.addObserver(forName: nTransactionComplate, object: nil, queue: nil) { notification in
-            DispatchQueue.main.async {
-                self.viewSelf.menuTable.reloadData()
-            }
-        }
-        
-        ///
-        NotificationCenter.default.addObserver(forName: nPricesUpdated, object: nil, queue: nil) { notification in
-            print("Обновление цен")
-            print(self.priceSupport ?? 0.99)
-            print(self.priceFullVersion ?? 2.99)
-            DispatchQueue.main.async {
-                self.viewSelf.menuTable.reloadData()
-            }
-        }
+        viewSelf.menuTable.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,23 +64,10 @@ class MenuFullVersionViewController: UIViewController, UITableViewDelegate, UITa
         viewController.popoverPresentationController?.sourceView = self.view
         self.present(viewController, animated: true, completion: nil)
     }
-    
-    ///
-    func getFullVersion() {
-        print("getFullVersion")
-        storeManager.buyInApp(inAppID: booplinkFullversionID)
-    }
-
-    ///
-    func restorePurchase() {
-        print("restorePurchase")
-        storeManager.restorePurchase()
-    }
 
     ///
     func support() {
         print("support")
-        storeManager.buyInApp(inAppID: booplinkSupportID)
     }
 
     ///
