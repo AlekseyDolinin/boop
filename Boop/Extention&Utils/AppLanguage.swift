@@ -1,5 +1,4 @@
 import UIKit
-import SwiftyJSON
 
 class AppLanguage {
     
@@ -31,7 +30,6 @@ class AppLanguage {
         setDictionary()
     }
     
-    ///
     class func setDictionary() {
         if let path = Bundle.main.path(forResource: AppLanguage.selectLanguage.rawValue, ofType: "json") {
             do {
