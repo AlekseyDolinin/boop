@@ -24,6 +24,7 @@
 		10B16E392BB366A100C6CA6E /* Vietnam.json in Resources */ = {isa = PBXBuildFile; fileRef = 10B16E382BB366A100C6CA6E /* Vietnam.json */; };
 		10B16E3C2BB3676800C6CA6E /* ServicesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E3B2BB3676800C6CA6E /* ServicesContainer.swift */; };
 		10B16E3E2BB4A06C00C6CA6E /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E3D2BB4A06C00C6CA6E /* MainVM.swift */; };
+		10B16E402BB4A81D00C6CA6E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E3F2BB4A81D00C6CA6E /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		10B16E382BB366A100C6CA6E /* Vietnam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Vietnam.json; sourceTree = "<group>"; };
 		10B16E3B2BB3676800C6CA6E /* ServicesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesContainer.swift; sourceTree = "<group>"; };
 		10B16E3D2BB4A06C00C6CA6E /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		10B16E3F2BB4A81D00C6CA6E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				10B16E3D2BB4A06C00C6CA6E /* MainVM.swift */,
 				10B16E3B2BB3676800C6CA6E /* ServicesContainer.swift */,
 				10B16E2E2BB3648600C6CA6E /* ServiceCard.swift */,
+				10B16E3F2BB4A81D00C6CA6E /* API.swift */,
 				10B16E252BB361F700C6CA6E /* Extention&Utils */,
 				10B16E3A2BB366AB00C6CA6E /* Dictionary */,
 				10B16E182BB35E9500C6CA6E /* Assets.xcassets */,
@@ -200,6 +203,7 @@
 				10B16E122BB35E9400C6CA6E /* SceneDelegate.swift in Sources */,
 				10B16E3E2BB4A06C00C6CA6E /* MainVM.swift in Sources */,
 				10B16E2B2BB3637000C6CA6E /* AppLanguage.swift in Sources */,
+				10B16E402BB4A81D00C6CA6E /* API.swift in Sources */,
 				10B16E272BB3623A00C6CA6E /* UIColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

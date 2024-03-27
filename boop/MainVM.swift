@@ -12,10 +12,21 @@ final class MainVM {
     var shortLink: String!
     
     func createShortLink(_ longLink: String) {
+        print("createShortLink")
+        
+        Task(priority: .userInitiated) {
+            switch selectedService {
+            case .Isgd:
+                print("Isgd")
+                await isgd(longLink: longLink)
+            default:
+                break
+            }
+            print("shortLink: \(shortLink)")
+        }
+
         
         
-        print("longLink: \(longLink)")
-        print("selectedService: \(selectedService)")
         
 //        API.selectService(longLink, service: Service.allCases[currentIndexService]) { (shortLink) in
 //
@@ -30,5 +41,16 @@ final class MainVM {
 ////                }
 ////            }
 //        }
+    }
+    
+    
+    private func isgd(longLink: String) async {
+        print("isgd")
+        let urlService = "https://is.gd/create.php?format=json&url=\(longLink)"
+        let json = await API.shared._request(urlService, method: .get)
+        if let json = json {
+            print(json)
+            shortLink = json["shorturl"].stringValue
+        }
     }
 }
