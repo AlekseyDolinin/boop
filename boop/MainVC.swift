@@ -1,7 +1,7 @@
 import UIKit
 
 final class MainVC: UIViewController {
-
+    
     private var vm: MainVM!
     
     private let bgImage = UIImageView()
@@ -10,12 +10,14 @@ final class MainVC: UIViewController {
     private let pastLinkButton = UIButton()
     private let infoLabel = PaddingLabel()
     private let archiveButton = UIButton()
-    private let stackActionsButton = UIStackView()
+    private let stackActionsButtons = UIStackView()
     private let backButton = UIButton()
     private let copyButton = UIButton()
     private let qrButton = UIButton()
     private let shareButton = UIButton()
     private let saveButton = UIButton()
+    
+    private var shareController: UIActivityViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +35,12 @@ final class MainVC: UIViewController {
     }
 
     //
-    func showMessage(text: String) {
+    func showMessage(text: String, autoHide: Bool = true) {
         infoLabel.text = text
         UIView.animate(withDuration: 0.1, animations: {
             self.infoLabel.alpha = 1
         }) { (true) in
+            if autoHide == false { return }
             UIView.animate(withDuration: 0.1, delay: 2.0, options: .curveLinear, animations: {
                 self.infoLabel.alpha = 0
             }, completion: { (true) in
@@ -58,33 +61,51 @@ final class MainVC: UIViewController {
     
     @objc func backAction(_ sender: UIButton) {
         print("backAction")
+        pastLinkButton.isUserInteractionEnabled = true
+        pastLinkButton.setTitle(AppLanguage.dictionary["pasteLinkHere"]!.stringValue, for: .normal)
+        UIView.animate(withDuration: 0.2) {
+            self.stackActionsButtons.alpha = 0
+        }
+        vm.shortLink = nil
     }
     
     @objc func copyAction(_ sender: UIButton) {
         print("copyAction")
+        vm.pasteboard.string = vm.shortLink
+        showMessage(text: AppLanguage.dictionary["linkCopied"]!.stringValue)
     }
     
     @objc func qrAction(_ sender: UIButton) {
         print("qrAction")
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
+//        vc.linkForQRCode = StartViewController.shortLink
+//        vc.modalPresentationStyle = .formSheet
+//        present(vc, animated: true)
     }
     
     @objc func shareAction(_ sender: UIButton) {
         print("shareAction")
+        shareController = UIActivityViewController(activityItems: [vm.shortLink as Any], applicationActivities: nil)
+        shareController.completionWithItemsHandler = {_, bool, _, _ in
+            bool == true ? print("it is done!") : print("error send")
+        }
+        present(shareController, animated: true)
     }
     
     @objc func saveAction(_ sender: UIButton) {
         print("saveAction")
+//        Archive.addItemInArchive(longLink: self.longLink)
     }
     
     @objc func pastAction(_ sender: UIButton) {
         print("pastAction")
         if vm.shortLink != nil { return }
-        guard let text = UIPasteboard.general.string else {
+        guard let link = UIPasteboard.general.string else {
             print("text is empty")
             showMessage(text: AppLanguage.dictionary["notFoundLink"]!.stringValue)
             return
         }
-        guard let encodeString = text.encodeUrl() else {
+        guard let encodeString = link.encodeUrl() else {
             print("error encodeString")
             return
         }
@@ -94,13 +115,13 @@ final class MainVC: UIViewController {
                 showMessage(text: AppLanguage.dictionary["notFoundLink"]!.stringValue)
                 return
             }
-            showMessage(text: AppLanguage.dictionary["pleaseWait"]!.stringValue)
+            showMessage(text: AppLanguage.dictionary["pleaseWait"]!.stringValue, autoHide: false)
             pastLinkButton.setTitle(UIPasteboard.general.string, for: .normal)
             pastLinkButton.isUserInteractionEnabled = false
-            vm.createShortLink(longLink.absoluteString)
+            vm.createShortLink(link: link)
         } else {
             showMessage(text: AppLanguage.dictionary["notFoundLink"]!.stringValue)
-            print("error link: \(text)")
+            print("error link: \(link)")
         }
     }
 }
@@ -108,6 +129,16 @@ final class MainVC: UIViewController {
 
 extension MainVC: MainVMDelegate {
 
+    func getShortLinkSuccess() {
+        DispatchQueue.main.async {
+            print("getShortLinkSuccess: \(self.vm.shortLink)")
+            self.pastLinkButton.setTitle(self.vm.shortLink, for: .normal)
+            UIView.animate(withDuration: 0.3) {
+                self.stackActionsButtons.alpha = 1
+                self.infoLabel.alpha = 0
+            }
+        }
+    }
 }
 
 
@@ -127,7 +158,7 @@ extension MainVC {
         createServicesContainer()
         createPastLinkButton()
         createInfoLabel()
-        createStackActionsButton()
+        createStackActionsButtons()
         createBackButton()
         createCopyButton()
         createQrButton()
@@ -206,24 +237,27 @@ extension MainVC {
         infoLabel.heightAnchor.constraint(equalToConstant: 48).isActive = true
     }
     
-    private func createStackActionsButton() {
-        view.addSubview(stackActionsButton)
-        stackActionsButton.axis = .horizontal
-        stackActionsButton.spacing = 6
-        stackActionsButton.alignment = .center
-        stackActionsButton.distribution = .fill
+    private func createStackActionsButtons() {
+        view.addSubview(stackActionsButtons)
+        stackActionsButtons.axis = .horizontal
+        stackActionsButtons.spacing = 6
+        stackActionsButtons.alignment = .center
+        stackActionsButtons.distribution = .fill
+        stackActionsButtons.alpha = 0
         //
-        stackActionsButton.translatesAutoresizingMaskIntoConstraints = false
-        stackActionsButton.topAnchor.constraint(equalTo: pastLinkButton.bottomAnchor, constant: 24).isActive = true
-        stackActionsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        stackActionsButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        stackActionsButtons.translatesAutoresizingMaskIntoConstraints = false
+        stackActionsButtons.topAnchor.constraint(equalTo: pastLinkButton.bottomAnchor, constant: 24).isActive = true
+        stackActionsButtons.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stackActionsButtons.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     
     
     private func createBackButton() {
-        stackActionsButton.addArrangedSubview(backButton)
+        stackActionsButtons.addArrangedSubview(backButton)
         backButton.tintColor = .Violet_Dark_
-        backButton.setImage(UIImage(named: "back"), for: .normal)
+        let configuration = UIImage.SymbolConfiguration(pointSize: 32, weight: .regular)
+        let image = UIImage(systemName: "arrow.turn.up.left", withConfiguration: configuration)
+        backButton.setImage(image, for: .normal)
         backButton.addTarget(self, action: #selector(backAction), for: .touchUpInside)
         //
         backButton.translatesAutoresizingMaskIntoConstraints = false
@@ -232,9 +266,11 @@ extension MainVC {
     }
     
     private func createCopyButton() {
-        stackActionsButton.addArrangedSubview(copyButton)
+        stackActionsButtons.addArrangedSubview(copyButton)
         copyButton.tintColor = .Violet_Dark_
-        copyButton.setImage(UIImage(named: "copy"), for: .normal)
+        let configuration = UIImage.SymbolConfiguration(pointSize: 32, weight: .regular)
+        let image = UIImage(systemName: "doc.on.doc", withConfiguration: configuration)
+        copyButton.setImage(image, for: .normal)
         copyButton.addTarget(self, action: #selector(copyAction), for: .touchUpInside)
         //
         copyButton.translatesAutoresizingMaskIntoConstraints = false
@@ -243,9 +279,11 @@ extension MainVC {
     }
     
     private func createQrButton() {
-        stackActionsButton.addArrangedSubview(qrButton)
+        stackActionsButtons.addArrangedSubview(qrButton)
         qrButton.tintColor = .Violet_Dark_
-        qrButton.setImage(UIImage(named: "qr"), for: .normal)
+        let configuration = UIImage.SymbolConfiguration(pointSize: 32, weight: .regular)
+        let image = UIImage(systemName: "qrcode", withConfiguration: configuration)
+        qrButton.setImage(image, for: .normal)
         qrButton.addTarget(self, action: #selector(qrAction), for: .touchUpInside)
         //
         qrButton.translatesAutoresizingMaskIntoConstraints = false
@@ -254,9 +292,11 @@ extension MainVC {
     }
     
     private func createShareButton() {
-        stackActionsButton.addArrangedSubview(shareButton)
+        stackActionsButtons.addArrangedSubview(shareButton)
         shareButton.tintColor = .Violet_Dark_
-        shareButton.setImage(UIImage(named: "share"), for: .normal)
+        let configuration = UIImage.SymbolConfiguration(pointSize: 32, weight: .regular)
+        let image = UIImage(systemName: "square.and.arrow.up", withConfiguration: configuration)
+        shareButton.setImage(image, for: .normal)
         shareButton.addTarget(self, action: #selector(shareAction), for: .touchUpInside)
         //
         shareButton.translatesAutoresizingMaskIntoConstraints = false
@@ -265,9 +305,11 @@ extension MainVC {
     }
     
     private func createSaveButton() {
-        stackActionsButton.addArrangedSubview(saveButton)
+        stackActionsButtons.addArrangedSubview(saveButton)
         saveButton.tintColor = .Violet_Dark_
-        saveButton.setImage(UIImage(named: "markInArchive"), for: .normal)
+        let configuration = UIImage.SymbolConfiguration(pointSize: 32, weight: .regular)
+        let image = UIImage(systemName: "bookmark", withConfiguration: configuration)
+        saveButton.setImage(image, for: .normal)
         saveButton.addTarget(self, action: #selector(saveAction), for: .touchUpInside)
         //
         saveButton.translatesAutoresizingMaskIntoConstraints = false

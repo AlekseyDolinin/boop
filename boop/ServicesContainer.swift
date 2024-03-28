@@ -5,6 +5,7 @@ protocol ServicesContainerDelegate: AnyObject {
 }
 
 enum Service: String, CaseIterable {
+    case Ulvis = "https://ulvis.net/*"
     case Isgd = "https://is.gd/*"
     case Shortener = "https://goolnk.com/*"
     case TinyURL = "https://tiny.one/*"
