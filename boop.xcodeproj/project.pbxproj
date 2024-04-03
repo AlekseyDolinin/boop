@@ -25,6 +25,8 @@
 		10B16E3C2BB3676800C6CA6E /* ServicesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E3B2BB3676800C6CA6E /* ServicesContainer.swift */; };
 		10B16E3E2BB4A06C00C6CA6E /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E3D2BB4A06C00C6CA6E /* MainVM.swift */; };
 		10B16E402BB4A81D00C6CA6E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E3F2BB4A81D00C6CA6E /* API.swift */; };
+		10B16E432BBDD7A600C6CA6E /* QRCodeModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E422BBDD7A600C6CA6E /* QRCodeModalVC.swift */; };
+		10B16E452BBDE74500C6CA6E /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E442BBDE74500C6CA6E /* CIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		10B16E3B2BB3676800C6CA6E /* ServicesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesContainer.swift; sourceTree = "<group>"; };
 		10B16E3D2BB4A06C00C6CA6E /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		10B16E3F2BB4A81D00C6CA6E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		10B16E422BBDD7A600C6CA6E /* QRCodeModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeModalVC.swift; sourceTree = "<group>"; };
+		10B16E442BBDE74500C6CA6E /* CIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				10B16E3D2BB4A06C00C6CA6E /* MainVM.swift */,
 				10B16E3B2BB3676800C6CA6E /* ServicesContainer.swift */,
 				10B16E2E2BB3648600C6CA6E /* ServiceCard.swift */,
+				10B16E422BBDD7A600C6CA6E /* QRCodeModalVC.swift */,
+				10B16E442BBDE74500C6CA6E /* CIImage.swift */,
 				10B16E412BB602B000C6CA6E /* Network */,
 				10B16E252BB361F700C6CA6E /* Extention&Utils */,
 				10B16E3A2BB366AB00C6CA6E /* Dictionary */,
@@ -206,10 +212,12 @@
 				10B16E242BB361D900C6CA6E /* PaddingLabel.swift in Sources */,
 				10B16E2F2BB3648600C6CA6E /* ServiceCard.swift in Sources */,
 				10B16E142BB35E9400C6CA6E /* MainVC.swift in Sources */,
+				10B16E452BBDE74500C6CA6E /* CIImage.swift in Sources */,
 				10B16E2D2BB363A400C6CA6E /* SwiftyJSON.swift in Sources */,
 				10B16E102BB35E9400C6CA6E /* AppDelegate.swift in Sources */,
 				10B16E122BB35E9400C6CA6E /* SceneDelegate.swift in Sources */,
 				10B16E3E2BB4A06C00C6CA6E /* MainVM.swift in Sources */,
+				10B16E432BBDD7A600C6CA6E /* QRCodeModalVC.swift in Sources */,
 				10B16E2B2BB3637000C6CA6E /* AppLanguage.swift in Sources */,
 				10B16E402BB4A81D00C6CA6E /* API.swift in Sources */,
 				10B16E272BB3623A00C6CA6E /* UIColors.swift in Sources */,

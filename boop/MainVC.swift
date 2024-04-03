@@ -76,11 +76,7 @@ final class MainVC: UIViewController {
     }
     
     @objc func qrAction(_ sender: UIButton) {
-        print("qrAction")
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeModalViewController") as! QRCodeModalViewController
-//        vc.linkForQRCode = StartViewController.shortLink
-//        vc.modalPresentationStyle = .formSheet
-//        present(vc, animated: true)
+        present(QRCodeModalVC(shortLink: vm.shortLink), animated: true)
     }
     
     @objc func shareAction(_ sender: UIButton) {
