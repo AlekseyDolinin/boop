@@ -18,48 +18,27 @@ final class MainVM {
             switch selectedService {
             case .Ulvis:
                 await ulvis(longLink: link)
-            case .Isgd:
-                await isgd(longLink: link)
+            case .Click:
+                await click(longLink: link)
             case .Shortener:
                 await shortener(longLink: link)
             default:
                 print("selectedService: \(selectedService)")
                 break
             }
-            print("shortLink___: \(shortLink)")
             delegate?.getShortLinkSuccess()
         }
     }
     
     private func ulvis(longLink: String) async {
-        let urlService = "https://ulvis.net/api.php?url=\(longLink)&custom=\(createName())&private=1"
+        let name = CreateName.shared.createName()
+        let urlService = "https://ulvis.net/api.php?url=\(longLink)&custom=\(name)&private=1"
         shortLink = await API.shared._requestGetString(urlService, method: .get)
     }
 
-    
-    private func createName() -> String {
-        let letters : NSString = "abcdefghijklmnopqrstuvwxyz0123456789"
-        let len = UInt32(letters.length)
-        var randomString = ""
-        for _ in 0 ..< 5 {
-            let rand = arc4random_uniform(len)
-            var nextChar = letters.character(at: Int(rand))
-            randomString += NSString(characters: &nextChar, length: 1) as String
-        }
-        return randomString
-    }
-    
-    
-    
-    private func isgd(longLink: String) async {
-//        print("isgd")
-//        let urlService = "https://is.gd/create.php?format=json&url=\(longLink)"
-//        print(urlService)
-//        let json = await API.shared._request(urlService, method: .get)
-//        if let json = json {
-//            print(json)
-//            shortLink = json["shorturl"].stringValue
-//        }
+    private func click(longLink: String) async {
+        let urlService = "https://clck.ru/--?url=\(longLink)"
+        shortLink = await API.shared._requestGetString(urlService, method: .get)
     }
     
     private func shortener(longLink: String) async {

@@ -27,6 +27,7 @@
 		10B16E402BB4A81D00C6CA6E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E3F2BB4A81D00C6CA6E /* API.swift */; };
 		10B16E432BBDD7A600C6CA6E /* QRCodeModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E422BBDD7A600C6CA6E /* QRCodeModalVC.swift */; };
 		10B16E452BBDE74500C6CA6E /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E442BBDE74500C6CA6E /* CIImage.swift */; };
+		10B16E652BC6F1A500C6CA6E /* CreateName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B16E642BC6F1A500C6CA6E /* CreateName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		10B16E3F2BB4A81D00C6CA6E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		10B16E422BBDD7A600C6CA6E /* QRCodeModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeModalVC.swift; sourceTree = "<group>"; };
 		10B16E442BBDE74500C6CA6E /* CIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
+		10B16E642BC6F1A500C6CA6E /* CreateName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				10B16E282BB3631C00C6CA6E /* UIString.swift */,
 				10B16E2A2BB3637000C6CA6E /* AppLanguage.swift */,
 				10B16E2C2BB363A400C6CA6E /* SwiftyJSON.swift */,
+				10B16E642BC6F1A500C6CA6E /* CreateName.swift */,
 			);
 			path = "Extention&Utils";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				10B16E102BB35E9400C6CA6E /* AppDelegate.swift in Sources */,
 				10B16E122BB35E9400C6CA6E /* SceneDelegate.swift in Sources */,
 				10B16E3E2BB4A06C00C6CA6E /* MainVM.swift in Sources */,
+				10B16E652BC6F1A500C6CA6E /* CreateName.swift in Sources */,
 				10B16E432BBDD7A600C6CA6E /* QRCodeModalVC.swift in Sources */,
 				10B16E2B2BB3637000C6CA6E /* AppLanguage.swift in Sources */,
 				10B16E402BB4A81D00C6CA6E /* API.swift in Sources */,

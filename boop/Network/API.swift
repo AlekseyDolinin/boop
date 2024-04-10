@@ -4,7 +4,9 @@ public class API {
     
     public static let shared = API()
         
-    public func _requestGetString(_ link: String, method: HTTPMethod = .get, parameters: Any? = nil, needCookie: Bool = true) async -> String? {
+    public func _requestGetString(_ link: String, 
+                                  method: HTTPMethod = .get,
+                                  parameters: Any? = nil) async -> String? {
         print("_request")
         guard let url = URL(string: link) else {
             print("BAD LINK: \(link)")
@@ -21,6 +23,8 @@ public class API {
                 print("method: \(method)")
                 print("parameters: \(parameters ?? "")")
                 print("response: \(response)")
+                print("description: \(response.description)")
+                print("debugDescription: \(response.debugDescription)")
                 return nil
             } else {
                 return String(data: data, encoding: .utf8)

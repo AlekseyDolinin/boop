@@ -6,10 +6,8 @@ protocol ServicesContainerDelegate: AnyObject {
 
 enum Service: String, CaseIterable {
     case Ulvis = "https://ulvis.net/*"
-    case Isgd = "https://is.gd/*"
-    case Shortener = "https://goolnk.com/*"
-    case TinyURL = "https://tiny.one/*"
     case Click = "https://clck.ru/*"
+    case Shortener = "https://goolnk.com/*"
 }
 
 final class ServicesContainer: UIView {
@@ -21,7 +19,6 @@ final class ServicesContainer: UIView {
          
     private var widthCard: CGFloat = UIScreen.main.bounds.width
     private var currentIndexService = 0
-//    var selectedService: Service = .Isgd
     
     override init(frame: CGRect) {
         super.init(frame: frame)

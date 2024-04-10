@@ -21,7 +21,6 @@ final class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         vm = MainVM()
         vm.delegate = self
         servicesContainer.delegate = self
@@ -81,7 +80,8 @@ final class MainVC: UIViewController {
     
     @objc func shareAction(_ sender: UIButton) {
         print("shareAction")
-        shareController = UIActivityViewController(activityItems: [vm.shortLink as Any], applicationActivities: nil)
+        shareController = UIActivityViewController(activityItems: [vm.shortLink as Any], 
+                                                   applicationActivities: nil)
         shareController.completionWithItemsHandler = {_, bool, _, _ in
             bool == true ? print("it is done!") : print("error send")
         }
